@@ -26,5 +26,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Install ripgrep
+        run: choco install ripgrep -y
+
       - name: Test
         run: npm test
