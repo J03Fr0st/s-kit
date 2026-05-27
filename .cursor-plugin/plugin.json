@@ -1,0 +1,27 @@
+{
+  "name": "s-kit",
+  "displayName": "s-kit",
+  "description": "Agent workflow kit for brainstorming, dated specs, implementation waves, TDD, debugging, review, and delivery.",
+  "version": "1.0.0",
+  "author": {
+    "name": "J03Fr0st",
+    "email": ""
+  },
+  "homepage": "https://github.com/J03Fr0st/s-kit",
+  "repository": "https://github.com/J03Fr0st/s-kit",
+  "license": "MIT",
+  "keywords": [
+    "skills",
+    "brainstorming",
+    "create-spec",
+    "implement-feature",
+    "tdd",
+    "debugging",
+    "review",
+    "workflow"
+  ],
+  "skills": "./skills/",
+  "agents": "./agents/",
+  "commands": "./commands/",
+  "hooks": "./hooks/hooks-cursor.json"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "s-kit-dev",
+  "description": "Development marketplace for the s-kit agent workflow kit",
+  "owner": {
+    "name": "J03Fr0st",
+    "email": ""
+  },
+  "plugins": [
+    {
+      "name": "s-kit",
+      "description": "Agent workflow kit for Claude Code: brainstorming, dated specs, implementation waves, TDD, debugging, review, and delivery.",
+      "version": "1.0.0",
+      "source": "./",
+      "author": {
+        "name": "J03Fr0st",
+        "email": ""
+      }
+    }
+  ]
+}

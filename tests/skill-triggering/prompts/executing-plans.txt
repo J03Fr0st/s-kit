@@ -1,0 +1,1 @@
+I have a plan document at docs/specs/2024-01-15-auth-system/README.md that needs to be executed. Please implement it.

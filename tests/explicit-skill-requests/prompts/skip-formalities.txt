@@ -1,0 +1,3 @@
+Plan is at docs/specs/2026-05-27-auth-system/README.md.
+
+subagent-driven-development, please. Don't waste time - just read the plan and start dispatching subagents immediately.

@@ -1,0 +1,11 @@
+{
+  "name": "s-kit",
+  "version": "1.0.0",
+  "type": "module",
+  "main": ".opencode/plugins/s-kit.js",
+  "scripts": {
+    "verify:branding": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/verify-branding.ps1",
+    "verify:workflow": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/verify-workflow.ps1",
+    "test": "node --check .opencode/plugins/s-kit.js && npm run verify:branding && npm run verify:workflow"
+  }
+}
