@@ -44,6 +44,7 @@ brainstorming -> plan-feature -> build-feature -> verification/review -> ship
 ```
 
 - `brainstorming` is the front door. It explores intent, presents a design, waits for approval, then writes `docs/design/YYYY-MM-DD-{feature-name}/design.md`.
+- `grill-with-docs` is optional before or during `brainstorming` when a plan needs project-language, `CONTEXT.md`, ADR, bounded-context, or code-backed terminology pressure. It supports design approval; it does not replace the dated design/spec workflow.
 - `plan-feature` only runs from an approved design. It expands that design into the matching `docs/specs/YYYY-MM-DD-{feature-name}/` folder with `spec.json`, `implementation-log.md`, requirements, and self-contained task files.
 - `build-feature` only runs from a spec folder and its matching approved design. It executes task waves, runs spec-compliance review before code-quality review, and updates `spec.json`, task files, README checkboxes, and the implementation log.
 

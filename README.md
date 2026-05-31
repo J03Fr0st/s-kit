@@ -10,6 +10,8 @@ brainstorming -> plan-feature -> build-feature -> verification/review -> ship
 
 `brainstorming` is the front door. It clarifies the idea, explores options, gets design approval before any implementation starts, and writes that approved solution to `docs/design/YYYY-MM-DD-{feature-name}/design.md`. `plan-feature` expands the approved design into a matching dated spec folder under `docs/specs/YYYY-MM-DD-{feature-name}/`, including a manifest and execution log. `build-feature` reads the spec and matching design, works through task waves, runs a behavior-preserving simplification pass before spec-compliance and code-quality review gates, and tracks progress in the spec files.
 
+For domain-heavy work, `grill-with-docs` can run before or during `brainstorming` to challenge project language and ADR-worthy decisions against `CONTEXT.md`, `docs/adr/`, and existing code. It supports the workflow without replacing the dated design/spec artifacts.
+
 ## Install Targets
 
 The repo keeps packaging surfaces for:
@@ -24,6 +26,7 @@ The repo keeps packaging surfaces for:
 ## Workflow
 
 1. Use `brainstorming` for any creative or behavior-changing work.
+   - If the idea depends on project-specific language, bounded contexts, or durable architecture decisions, use `grill-with-docs` to sharpen those terms and trade-offs before final design approval.
 2. After the design is approved and written to `docs/design/YYYY-MM-DD-{feature-name}/design.md`, use `plan-feature`.
 3. Designs and specs are created as:
 
@@ -55,6 +58,7 @@ Primary workflow:
 
 Supporting workflow:
 
+- `grill-with-docs` - stress-tests plans against project language, `CONTEXT.md`, ADRs, and code before design/spec work locks in terminology
 - `test-driven-development` - test-first implementation discipline
 - `systematic-debugging` - root-cause debugging process
 - `verification-before-completion` - proof before completion claims

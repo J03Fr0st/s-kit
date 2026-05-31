@@ -12,7 +12,7 @@ OUTPUT_DIR="/tmp/s-kit-tests/${TIMESTAMP}/explicit-skill-requests/claude-describ
 mkdir -p "$OUTPUT_DIR"
 
 PROJECT_DIR="$OUTPUT_DIR/project"
-mkdir -p "$PROJECT_DIR/docs/specs"
+mkdir -p "$PROJECT_DIR/docs/specs/2026-05-27-auth-system"
 
 echo "=== Test: Claude Describes Build Feature First ==="
 echo "Output dir: $OUTPUT_DIR"
@@ -41,6 +41,7 @@ claude -p "I have a plan at docs/specs/2026-05-27-auth-system/README.md. Tell me
     --plugin-dir "$PLUGIN_DIR" \
     --dangerously-skip-permissions \
     --max-turns 3 \
+    --verbose \
     --output-format stream-json \
     > "$OUTPUT_DIR/turn1.json" 2>&1 || true
 echo "Done."
@@ -54,6 +55,7 @@ claude -p "build-feature, please" \
     --plugin-dir "$PLUGIN_DIR" \
     --dangerously-skip-permissions \
     --max-turns 2 \
+    --verbose \
     --output-format stream-json \
     > "$FINAL_LOG" 2>&1 || true
 echo "Done."

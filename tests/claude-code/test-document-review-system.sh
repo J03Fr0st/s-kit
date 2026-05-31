@@ -26,7 +26,7 @@ trap "cleanup_test_project $TEST_PROJECT" EXIT
 cd "$TEST_PROJECT"
 
 # Create directory structure
-mkdir -p docs/specs
+mkdir -p docs/specs/2026-05-27-test-feature
 
 # Create a spec document WITH INTENTIONAL ERRORS for the reviewer to catch
 cat > docs/specs/2026-05-27-test-feature/README.md <<'EOF'

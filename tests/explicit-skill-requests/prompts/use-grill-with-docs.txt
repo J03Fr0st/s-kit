@@ -1,0 +1,1 @@
+Please use grill-with-docs to stress-test my payment workflow plan against our project glossary, ADRs, and code before we approve the feature design.

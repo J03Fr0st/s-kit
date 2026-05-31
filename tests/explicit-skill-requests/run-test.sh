@@ -43,7 +43,7 @@ cp "$PROMPT_FILE" "$OUTPUT_DIR/prompt.txt"
 
 # Create a minimal project directory for the test
 PROJECT_DIR="$OUTPUT_DIR/project"
-mkdir -p "$PROJECT_DIR/docs/specs"
+mkdir -p "$PROJECT_DIR/docs/specs/2026-05-27-auth-system"
 
 # Create a dummy plan file for mid-conversation tests
 cat > "$PROJECT_DIR/docs/specs/2026-05-27-auth-system/README.md" << 'EOF'
@@ -72,6 +72,7 @@ timeout 300 claude -p "$PROMPT" \
     --plugin-dir "$PLUGIN_DIR" \
     --dangerously-skip-permissions \
     --max-turns "$MAX_TURNS" \
+    --verbose \
     --output-format stream-json \
     > "$LOG_FILE" 2>&1 || true
 

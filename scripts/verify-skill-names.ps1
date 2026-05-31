@@ -78,6 +78,9 @@ $requiredFiles = @(
   'skills/plan-feature/references/action-required-template.md',
   'skills/plan-feature/references/task-template.md',
   'skills/plan-feature/references/spec-json-template.json',
+  'skills/grill-with-docs/SKILL.md',
+  'skills/grill-with-docs/CONTEXT-FORMAT.md',
+  'skills/grill-with-docs/ADR-FORMAT.md',
   'skills/build-feature/SKILL.md',
   'skills/build-feature/references/coder-prompt-template.md',
   'skills/build-feature/references/review-prompt-template.md',
@@ -90,6 +93,7 @@ foreach ($file in $requiredFiles) {
 
 Require-Contains 'skills/plan-feature/SKILL.md' 'name: plan-feature'
 Require-Contains 'skills/build-feature/SKILL.md' 'name: build-feature'
+Require-Contains 'skills/grill-with-docs/SKILL.md' 'name: grill-with-docs'
 Require-MissingPath "skills/$oldPlanName"
 Require-MissingPath "skills/$oldBuildName"
 Require-MissingPath "skills/$oldWritingPlansName"
@@ -116,6 +120,8 @@ foreach ($file in $canonicalFiles) {
 
 Require-Contains 'README.md' 'brainstorming -> plan-feature -> build-feature -> verification/review -> ship'
 Require-Contains 'skills/using-s-kit/SKILL.md' 'brainstorming -> plan-feature -> build-feature -> verification/review -> ship'
+Require-Contains 'README.md' 'grill-with-docs'
+Require-Contains 'skills/using-s-kit/SKILL.md' 'grill-with-docs'
 
 $legacyPattern = "$oldPlanName|$oldBuildName|$oldWritingPlansName|$oldExecutingPlansName|$oldSubagentDrivenName|$oldAliasTerm|$oldAliasTermLower|$retiredNameTerm|Workflow redirects|Workflow Redirect"
 $legacyMatches = & rg -n $legacyPattern -g '!scripts/verify-skill-names.ps1' $root

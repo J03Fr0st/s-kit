@@ -42,7 +42,7 @@ cat > package.json <<'EOF'
 }
 EOF
 
-mkdir -p src test docs/specs
+mkdir -p src test docs/specs/2026-05-27-implementation-plan
 
 # Create a simple implementation plan
 cat > docs/specs/2026-05-27-implementation-plan/README.md <<'EOF'

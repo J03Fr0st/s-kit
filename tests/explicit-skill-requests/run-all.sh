@@ -58,6 +58,17 @@ else
 fi
 echo ""
 
+# Test: use grill-with-docs
+echo ">>> Test 5: use-grill-with-docs"
+if "$SCRIPT_DIR/run-test.sh" "grill-with-docs" "$PROMPTS_DIR/use-grill-with-docs.txt"; then
+    PASSED=$((PASSED + 1))
+    RESULTS="$RESULTS\nPASS: use-grill-with-docs"
+else
+    FAILED=$((FAILED + 1))
+    RESULTS="$RESULTS\nFAIL: use-grill-with-docs"
+fi
+echo ""
+
 echo "=== Summary ==="
 echo -e "$RESULTS"
 echo ""

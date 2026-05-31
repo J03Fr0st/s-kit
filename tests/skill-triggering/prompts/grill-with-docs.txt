@@ -1,0 +1,3 @@
+I have a plan for adding invoice cancellation, but our product docs use terms like customer, account, order, invoice, and reversal inconsistently.
+
+Before we write the design, can you challenge the plan against the existing CONTEXT.md, ADRs, and code so we settle the canonical language and capture any durable architecture decision?
