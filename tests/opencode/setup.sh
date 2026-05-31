@@ -19,21 +19,21 @@ export OPENCODE_CONFIG_DIR="$TEST_HOME/.config/opencode"
 #   $OPENCODE_CONFIG_DIR/s-kit/.opencode/plugins/s-kit.js ← plugin file
 #   $OPENCODE_CONFIG_DIR/plugins/s-kit.js   ← symlink OpenCode reads
 
-s-kit_DIR="$OPENCODE_CONFIG_DIR/s-kit"
-s-kit_SKILLS_DIR="$s-kit_DIR/skills"
-s-kit_PLUGIN_FILE="$s-kit_DIR/.opencode/plugins/s-kit.js"
+SKIT_DIR="$OPENCODE_CONFIG_DIR/s-kit"
+SKIT_SKILLS_DIR="$SKIT_DIR/skills"
+SKIT_PLUGIN_FILE="$SKIT_DIR/.opencode/plugins/s-kit.js"
 
 # Install skills
-mkdir -p "$s-kit_DIR"
-cp -r "$REPO_ROOT/skills" "$s-kit_DIR/"
+mkdir -p "$SKIT_DIR"
+cp -r "$REPO_ROOT/skills" "$SKIT_DIR/"
 
 # Install plugin
-mkdir -p "$(dirname "$s-kit_PLUGIN_FILE")"
-cp "$REPO_ROOT/.opencode/plugins/s-kit.js" "$s-kit_PLUGIN_FILE"
+mkdir -p "$(dirname "$SKIT_PLUGIN_FILE")"
+cp "$REPO_ROOT/.opencode/plugins/s-kit.js" "$SKIT_PLUGIN_FILE"
 
 # Register plugin via symlink (what OpenCode actually reads)
 mkdir -p "$OPENCODE_CONFIG_DIR/plugins"
-ln -sf "$s-kit_PLUGIN_FILE" "$OPENCODE_CONFIG_DIR/plugins/s-kit.js"
+ln -sf "$SKIT_PLUGIN_FILE" "$OPENCODE_CONFIG_DIR/plugins/s-kit.js"
 
 # Create test skills in different locations for testing
 
@@ -67,9 +67,9 @@ EOF
 
 echo "Setup complete: $TEST_HOME"
 echo "OPENCODE_CONFIG_DIR:  $OPENCODE_CONFIG_DIR"
-echo "s-kit dir:      $s-kit_DIR"
-echo "Skills dir:           $s-kit_SKILLS_DIR"
-echo "Plugin file:          $s-kit_PLUGIN_FILE"
+echo "s-kit dir:      $SKIT_DIR"
+echo "Skills dir:           $SKIT_SKILLS_DIR"
+echo "Plugin file:          $SKIT_PLUGIN_FILE"
 echo "Plugin registered at: $OPENCODE_CONFIG_DIR/plugins/s-kit.js"
 echo "Test project at:      $TEST_HOME/test-project"
 
@@ -83,6 +83,6 @@ cleanup_test_env() {
 # Export for use in tests
 export -f cleanup_test_env
 export REPO_ROOT
-export s-kit_DIR
-export s-kit_SKILLS_DIR
-export s-kit_PLUGIN_FILE
+export SKIT_DIR
+export SKIT_SKILLS_DIR
+export SKIT_PLUGIN_FILE
