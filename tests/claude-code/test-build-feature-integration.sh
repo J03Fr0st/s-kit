@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Integration Test: subagent-driven-development workflow
+# Integration Test: build-feature workflow
 # Actually executes a plan and verifies the new workflow behaviors
 set -euo pipefail
 
@@ -7,13 +7,13 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 source "$SCRIPT_DIR/test-helpers.sh"
 
 echo "========================================"
-echo " Integration Test: subagent-driven-development"
+echo " Integration Test: build-feature"
 echo "========================================"
 echo ""
 echo "This test executes a real plan using the skill and verifies:"
-echo "  1. Plan is read once (not per task)"
+echo "  1. Spec manifest is loaded before dispatch"
 echo "  2. Full task text provided to subagents"
-echo "  3. Subagents perform self-review"
+echo "  3. Simplification pass runs before review"
 echo "  4. Spec compliance review before code quality"
 echo "  5. Review loops when issues found"
 echo "  6. Spec reviewer reads code independently"
@@ -48,7 +48,7 @@ mkdir -p src test docs/specs
 cat > docs/specs/2026-05-27-implementation-plan/README.md <<'EOF'
 # Test Implementation Plan
 
-This is a minimal plan to test the subagent-driven-development workflow.
+This is a minimal plan to test the build-feature workflow.
 
 ## Task 1: Create Add Function
 
@@ -115,18 +115,18 @@ echo ""
 echo "Project setup complete. Starting execution..."
 echo ""
 
-# Run Claude with subagent-driven-development
+# Run Claude with build-feature
 # Capture full output to analyze
 OUTPUT_FILE="$TEST_PROJECT/claude-output.txt"
 
 # Create prompt file
 cat > "$TEST_PROJECT/prompt.txt" <<'EOF'
-I want you to execute the implementation plan at docs/specs/2026-05-27-implementation-plan/README.md using the subagent-driven-development skill.
+I want you to execute the implementation plan at docs/specs/2026-05-27-implementation-plan/README.md using the build-feature skill.
 
 IMPORTANT: Follow the skill exactly. I will be verifying that you:
-1. Read the plan once at the beginning
+1. Load the spec manifest before dispatch
 2. Provide full task text to subagents (don't make them read files)
-3. Ensure subagents do self-review before reporting
+3. Run the simplification pass before review
 4. Run spec compliance review before code quality review
 5. Use review loops when issues are found
 
@@ -135,12 +135,12 @@ EOF
 
 # Note: We use a longer timeout since this is integration testing
 # Use --allowed-tools to enable tool usage in headless mode
-PROMPT="Execute the implementation plan at docs/specs/2026-05-27-implementation-plan/README.md using the subagent-driven-development skill.
+PROMPT="Execute the implementation plan at docs/specs/2026-05-27-implementation-plan/README.md using the build-feature skill.
 
 IMPORTANT: Follow the skill exactly. I will be verifying that you:
-1. Read the plan once at the beginning
+1. Load the spec manifest before dispatch
 2. Provide full task text to subagents (don't make them read files)
-3. Ensure subagents do self-review before reporting
+3. Run the simplification pass before review
 4. Run spec compliance review before code quality review
 5. Use review loops when issues are found
 
@@ -194,8 +194,8 @@ echo ""
 
 # Test 1: Skill was invoked
 echo "Test 1: Skill tool invoked..."
-if grep -q '"name":"Skill".*"skill":"s-kit:subagent-driven-development"' "$SESSION_FILE"; then
-    echo "  [PASS] subagent-driven-development skill was invoked"
+if grep -q '"name":"Skill".*"skill":"s-kit:build-feature"' "$SESSION_FILE"; then
+    echo "  [PASS] build-feature skill was invoked"
 else
     echo "  [FAIL] Skill was not invoked"
     FAILED=$((FAILED + 1))
@@ -303,10 +303,10 @@ if [ $FAILED -eq 0 ]; then
     echo "STATUS: PASSED"
     echo "All verification tests passed!"
     echo ""
-    echo "The subagent-driven-development skill correctly:"
-    echo "  ✓ Reads plan once at start"
+    echo "The build-feature skill correctly:"
+    echo "  ✓ Loads the spec manifest before dispatch"
     echo "  ✓ Provides full task text to subagents"
-    echo "  ✓ Enforces self-review"
+    echo "  ✓ Runs simplification before review"
     echo "  ✓ Runs spec compliance before code quality"
     echo "  ✓ Spec reviewer verifies independently"
     echo "  ✓ Produces working implementation"

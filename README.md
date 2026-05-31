@@ -66,14 +66,6 @@ Supporting workflow:
 - `writing-skills` - skill creation and maintenance
 - `using-s-kit` - bootstrap/router instructions for skill use
 
-Workflow redirects:
-
-- `writing-plans`
-- `executing-plans`
-- `subagent-driven-development`
-
-These skills redirect to `plan-feature` or `build-feature`; they are not a separate planning or execution path.
-
 ## Agents
 
 The repo also includes a compact first-class agent catalog for runtimes that support reusable agent prompts. These agents are intentionally scoped to the dated design/spec workflow instead of mirroring a larger upstream orchestration system.

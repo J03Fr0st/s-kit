@@ -53,8 +53,6 @@ docs/specs/YYYY-MM-DD-{feature-name}/
 
 `design.md` is the direct output of brainstorming. It should capture the approved solution shape: context, selected approach, alternatives considered, architecture, major decisions, open risks, and verification strategy. `plan-feature` uses it as the source material for `requirements.md`, `README.md`, `spec.json`, `implementation-log.md`, and task files. After the spec is reviewed, `build-feature` executes it wave by wave.
 
-Do not hand off to `writing-plans`, `executing-plans`, or `subagent-driven-development` as separate workflows. Those are workflow redirects only.
-
 ## Visual Companion
 
 If visual questions are likely, offer this exact message by itself:

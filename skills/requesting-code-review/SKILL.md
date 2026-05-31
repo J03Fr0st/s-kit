@@ -12,7 +12,7 @@ Dispatch a code reviewer subagent to catch issues before they cascade. The revie
 ## When to Request Review
 
 **Mandatory:**
-- After each task in subagent-driven development
+- After each accepted `build-feature` task or wave
 - After completing major feature
 - Before merge to main
 
@@ -74,14 +74,10 @@ You: [Fix progress indicators]
 
 ## Integration with Workflows
 
-**Subagent-Driven Development:**
+**Build Feature:**
 - Review after EACH task
 - Catch issues before they compound
 - Fix before moving to next task
-
-**Executing Plans:**
-- Review after each task or at natural checkpoints
-- Get feedback, apply, continue
 
 **Ad-Hoc Development:**
 - Review before merge

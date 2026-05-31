@@ -7,6 +7,9 @@ $oldBuildName = 'implement' + '-feature'
 $retiredNameTerm = 'retired ' + 'name'
 $oldAliasTerm = 'Legacy ' + 'alias'
 $oldAliasTermLower = 'legacy ' + 'alias'
+$oldWritingPlansName = 'writing' + '-plans'
+$oldExecutingPlansName = 'executing' + '-plans'
+$oldSubagentDrivenName = 'subagent' + '-driven-development'
 
 function Add-Failure {
   param([string] $Message)
@@ -89,14 +92,14 @@ Require-Contains 'skills/plan-feature/SKILL.md' 'name: plan-feature'
 Require-Contains 'skills/build-feature/SKILL.md' 'name: build-feature'
 Require-MissingPath "skills/$oldPlanName"
 Require-MissingPath "skills/$oldBuildName"
+Require-MissingPath "skills/$oldWritingPlansName"
+Require-MissingPath "skills/$oldExecutingPlansName"
+Require-MissingPath "skills/$oldSubagentDrivenName"
 
 $canonicalFiles = @(
   'README.md',
   'skills/using-s-kit/SKILL.md',
   'skills/brainstorming/SKILL.md',
-  'skills/writing-plans/SKILL.md',
-  'skills/executing-plans/SKILL.md',
-  'skills/subagent-driven-development/SKILL.md',
   'agents/s-kit-codebase-mapper.md',
   'agents/s-kit-pattern-mapper.md'
 )
@@ -106,12 +109,15 @@ foreach ($file in $canonicalFiles) {
   Require-Contains $file 'build-feature'
   Require-NotContains $file $oldPlanName
   Require-NotContains $file $oldBuildName
+  Require-NotContains $file $oldWritingPlansName
+  Require-NotContains $file $oldExecutingPlansName
+  Require-NotContains $file $oldSubagentDrivenName
 }
 
 Require-Contains 'README.md' 'brainstorming -> plan-feature -> build-feature -> verification/review -> ship'
 Require-Contains 'skills/using-s-kit/SKILL.md' 'brainstorming -> plan-feature -> build-feature -> verification/review -> ship'
 
-$legacyPattern = "$oldPlanName|$oldBuildName|$oldAliasTerm|$oldAliasTermLower|$retiredNameTerm"
+$legacyPattern = "$oldPlanName|$oldBuildName|$oldWritingPlansName|$oldExecutingPlansName|$oldSubagentDrivenName|$oldAliasTerm|$oldAliasTermLower|$retiredNameTerm|Workflow redirects|Workflow Redirect"
 $legacyMatches = & rg -n $legacyPattern -g '!scripts/verify-skill-names.ps1' $root
 if ($LASTEXITCODE -eq 0) {
   Add-Failure "Legacy naming remains in active repo surface:`n$legacyMatches"

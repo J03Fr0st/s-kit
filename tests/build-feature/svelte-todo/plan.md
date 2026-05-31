@@ -1,6 +1,6 @@
 # Svelte Todo List - Implementation Plan
 
-Execute this plan using the `s-kit:subagent-driven-development` skill.
+Execute this plan using the `s-kit:build-feature` skill.
 
 ## Context
 

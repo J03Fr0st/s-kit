@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Run a subagent-driven-development test
+# Run a build-feature test
 # Usage: ./run-test.sh <test-name> [--plugin-dir <path>]
 #
 # Example:
@@ -43,11 +43,11 @@ fi
 
 # Create timestamped output directory
 TIMESTAMP=$(date +%s)
-OUTPUT_BASE="/tmp/s-kit-tests/$TIMESTAMP/subagent-driven-development"
+OUTPUT_BASE="/tmp/s-kit-tests/$TIMESTAMP/build-feature"
 OUTPUT_DIR="$OUTPUT_BASE/$TEST_NAME"
 mkdir -p "$OUTPUT_DIR"
 
-echo "=== Subagent-Driven Development Test ==="
+echo "=== Build Feature Test ==="
 echo "Test: $TEST_NAME"
 echo "Output: $OUTPUT_DIR"
 echo "Plugin: $PLUGIN_DIR"
@@ -60,7 +60,7 @@ echo ""
 
 # Prepare the prompt
 PLAN_PATH="$OUTPUT_DIR/project/plan.md"
-PROMPT="Execute this plan using s-kit:subagent-driven-development. The plan is at: $PLAN_PATH"
+PROMPT="Execute this plan using s-kit:build-feature. The plan is at: $PLAN_PATH"
 
 # Run Claude with JSON output for token tracking
 LOG_FILE="$OUTPUT_DIR/claude-output.json"
