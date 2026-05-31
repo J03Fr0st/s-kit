@@ -16,35 +16,37 @@ trap cleanup_test_env EXIT
 plugin_link="$OPENCODE_CONFIG_DIR/plugins/s-kit.js"
 
 # Test 1: Verify plugin file exists and is registered
+# On Unix the registration is a symlink; on Windows/git-bash without symlink
+# support `ln -sf` falls back to a copy, so accept either form here.
 echo "Test 1: Checking plugin registration..."
-if [ -L "$plugin_link" ]; then
-    echo "  [PASS] Plugin symlink exists"
+if [ -L "$plugin_link" ] || [ -f "$plugin_link" ]; then
+    echo "  [PASS] Plugin is registered at $plugin_link"
 else
-    echo "  [FAIL] Plugin symlink not found at $plugin_link"
+    echo "  [FAIL] Plugin not registered at $plugin_link"
     exit 1
 fi
 
-# Verify symlink target exists
+# Verify the registered plugin resolves to a real file
 if [ -f "$(readlink -f "$plugin_link")" ]; then
-    echo "  [PASS] Plugin symlink target exists"
+    echo "  [PASS] Registered plugin target exists"
 else
-    echo "  [FAIL] Plugin symlink target does not exist"
+    echo "  [FAIL] Registered plugin target does not exist"
     exit 1
 fi
 
 # Test 2: Verify skills directory is populated
 echo "Test 2: Checking skills directory..."
-skill_count=$(find "$s-kit_SKILLS_DIR" -name "SKILL.md" | wc -l)
+skill_count=$(find "$SKIT_SKILLS_DIR" -name "SKILL.md" | wc -l)
 if [ "$skill_count" -gt 0 ]; then
     echo "  [PASS] Found $skill_count skills"
 else
-    echo "  [FAIL] No skills found in $s-kit_SKILLS_DIR"
+    echo "  [FAIL] No skills found in $SKIT_SKILLS_DIR"
     exit 1
 fi
 
 # Test 3: Check using-s-kit skill exists (critical for bootstrap)
 echo "Test 3: Checking using-s-kit skill (required for bootstrap)..."
-if [ -f "$s-kit_SKILLS_DIR/using-s-kit/SKILL.md" ]; then
+if [ -f "$SKIT_SKILLS_DIR/using-s-kit/SKILL.md" ]; then
     echo "  [PASS] using-s-kit skill exists"
 else
     echo "  [FAIL] using-s-kit skill not found (required for bootstrap)"
@@ -53,7 +55,7 @@ fi
 
 # Test 4: Verify plugin JavaScript syntax (basic check)
 echo "Test 4: Checking plugin JavaScript syntax..."
-if node --check "$s-kit_PLUGIN_FILE" 2>/dev/null; then
+if node --check "$SKIT_PLUGIN_FILE" 2>/dev/null; then
     echo "  [PASS] Plugin JavaScript syntax is valid"
 else
     echo "  [FAIL] Plugin has JavaScript syntax errors"
@@ -62,7 +64,7 @@ fi
 
 # Test 5: Verify bootstrap text does not reference a hardcoded skills path
 echo "Test 5: Checking bootstrap does not advertise a wrong skills path..."
-if grep -q 'configDir}/skills/s-kit/' "$s-kit_PLUGIN_FILE"; then
+if grep -q 'configDir}/skills/s-kit/' "$SKIT_PLUGIN_FILE"; then
     echo "  [FAIL] Plugin still references old configDir skills path"
     exit 1
 else

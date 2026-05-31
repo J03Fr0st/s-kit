@@ -11,13 +11,13 @@ source "$SCRIPT_DIR/setup.sh"
 trap cleanup_test_env EXIT
 
 run_present_file_check() {
-    node "$SCRIPT_DIR/test-bootstrap-caching.mjs" "$s-kit_PLUGIN_FILE" present
+    node "$SCRIPT_DIR/test-bootstrap-caching.mjs" "$SKIT_PLUGIN_FILE" present
 }
 
 run_missing_file_check() {
-    mv "$s-kit_SKILLS_DIR/using-s-kit/SKILL.md" "$TEST_HOME/using-s-kit.SKILL.md.bak"
+    mv "$SKIT_SKILLS_DIR/using-s-kit/SKILL.md" "$TEST_HOME/using-s-kit.SKILL.md.bak"
 
-    node "$SCRIPT_DIR/test-bootstrap-caching.mjs" "$s-kit_PLUGIN_FILE" missing
+    node "$SCRIPT_DIR/test-bootstrap-caching.mjs" "$SKIT_PLUGIN_FILE" missing
 }
 
 echo "Test 1: Caches bootstrap after the first successful transform..."

@@ -20,7 +20,7 @@ Complete these in order:
 3. Ask clarifying questions one at a time.
 4. Propose 2-3 approaches with trade-offs and a recommendation.
 5. Present the design in sections and get user approval.
-6. Choose the dated feature folder name and write the approved design to `docs/design/YYYY-MM-DD-{feature-name}/design.md`.
+6. Choose the dated feature folder name and write the approved design to `docs/design/YYYY-MM-DD-{feature-name}/design.md` using the structure in `references/design-template.md`.
 7. Hand off to `plan-feature` with that exact design path so it can expand the design into requirements, manifest, execution log, orchestration, and task files under the matching `docs/specs/YYYY-MM-DD-{feature-name}/` folder.
 8. Ask the user to review the written spec before implementation with `build-feature`.
 
@@ -51,7 +51,7 @@ docs/specs/YYYY-MM-DD-{feature-name}/
     └── task-02-{name}.md
 ```
 
-`design.md` is the direct output of brainstorming. It should capture the approved solution shape: context, selected approach, alternatives considered, architecture, major decisions, open risks, and verification strategy. `plan-feature` uses it as the source material for `requirements.md`, `README.md`, `spec.json`, `implementation-log.md`, and task files. After the spec is reviewed, `build-feature` executes it wave by wave.
+`design.md` is the direct output of brainstorming. Follow `references/design-template.md`. It should capture the approved solution shape: context, selected approach, alternatives considered, architecture, major decisions, open risks, and verification strategy. `plan-feature` uses it as the source material for `requirements.md`, `README.md`, `spec.json`, `implementation-log.md`, and task files. After the spec is reviewed, `build-feature` executes it wave by wave.
 
 ## Visual Companion
 

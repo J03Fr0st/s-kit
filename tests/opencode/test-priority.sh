@@ -21,8 +21,8 @@ trap cleanup_test_env EXIT
 echo "Setting up priority test fixtures..."
 
 # 1. Create in s-kit location (lowest priority)
-mkdir -p "$s-kit_SKILLS_DIR/priority-test"
-cat > "$s-kit_SKILLS_DIR/priority-test/SKILL.md" <<'EOF'
+mkdir -p "$SKIT_SKILLS_DIR/priority-test"
+cat > "$SKIT_SKILLS_DIR/priority-test/SKILL.md" <<'EOF'
 ---
 name: priority-test
 description: s-kit version of priority test skill
@@ -68,7 +68,7 @@ echo "  Created priority-test skill in all three locations"
 echo ""
 echo "Test 1: Verifying test fixtures..."
 
-if [ -f "$s-kit_SKILLS_DIR/priority-test/SKILL.md" ]; then
+if [ -f "$SKIT_SKILLS_DIR/priority-test/SKILL.md" ]; then
     echo "  [PASS] s-kit version exists"
 else
     echo "  [FAIL] s-kit version missing"
@@ -199,8 +199,8 @@ describe_priority_result \
 echo ""
 echo "Test 4: Testing non-colliding s-kit skill remains available..."
 
-mkdir -p "$s-kit_SKILLS_DIR/s-kit-only-test"
-cat > "$s-kit_SKILLS_DIR/s-kit-only-test/SKILL.md" <<'EOF'
+mkdir -p "$SKIT_SKILLS_DIR/s-kit-only-test"
+cat > "$SKIT_SKILLS_DIR/s-kit-only-test/SKILL.md" <<'EOF'
 ---
 name: s-kit-only-test
 description: s-kit-only priority test skill
