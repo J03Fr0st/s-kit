@@ -9,6 +9,7 @@ $failures = [System.Collections.Generic.List[string]]::new()
 $expectedAgents = @(
   's-kit-codebase-mapper',
   's-kit-code-reviewer',
+  's-kit-code-simplifier',
   's-kit-coder',
   's-kit-fixer',
   's-kit-pattern-mapper',

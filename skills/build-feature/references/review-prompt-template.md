@@ -34,12 +34,13 @@ If this is a Spec Compliance review:
 3. Verify each task stayed within its manifest file ownership and did not add unrelated behavior.
 4. Verify status updates are consistent across spec.json, task files, and README checkboxes.
 5. Verify manual assumptions match action-required.md.
+6. Verify the simplification pass stayed within the changed-file scope and did not alter approved behavior.
 
 If this is a Code Quality review:
 
 1. Run the listed verification commands and report results. Fix nothing.
 2. Verify integration across task outputs: imports, types, module boundaries, configuration, generated artifacts, and environment assumptions.
-3. Check maintainability, security, performance, error handling, and project conventions.
+3. Check maintainability, simplicity, security, performance, error handling, and project conventions.
 4. Check for cleanup or workflow invariant regressions when the repository has those checks.
 5. Flag test gaps or skipped checks that should block completion.
 
@@ -64,5 +65,5 @@ Group issues by the task they most closely relate to based on the manifest file 
 - **{wave_number}**: the current wave number, such as `2`, or `final` for the full-feature review.
 - **{requirements}**: full text of `requirements.md`.
 - **{design}**: full text of `design.md`.
-- **{task_summaries}**: for each task in the wave, include the task title, manifest entry, task file content, files created/modified, verification evidence, and coder completion summary.
+- **{task_summaries}**: for each task in the wave, include the task title, manifest entry, task file content, files created/modified, verification evidence, coder or fixer completion summary, and simplifier summary and verification evidence.
 - **{verification_commands}**: the task-specific commands from `spec.json` for spec compliance, or the project-level lint/typecheck/test commands for code quality.

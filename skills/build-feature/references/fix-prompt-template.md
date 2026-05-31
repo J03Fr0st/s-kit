@@ -18,7 +18,7 @@ You are fixing specific issues found during review. Address every issue listed b
 ## Instructions
 
 1. Fix each issue listed above. The review provided file paths, line numbers, and suggested fixes — use those as your starting point.
-2. Keep the review type clear: spec-compliance issues must align implementation with the task/design; code-quality issues must improve implementation quality without changing the approved scope.
+2. Keep the issue source clear: simplification issues must restore a behavior-preserving simplification path; spec-compliance issues must align implementation with the task/design; code-quality issues must improve implementation quality without changing the approved scope.
 3. Run the task's targeted verification commands and the project's lint/typecheck commands after making fixes. Resolve any new errors your fixes introduce.
 4. Do NOT commit your changes.
 5. Do NOT make changes beyond what's needed to fix the listed issues. Stay within scope.

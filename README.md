@@ -8,7 +8,7 @@ The core workflow is:
 brainstorming -> plan-feature -> build-feature -> verification/review -> ship
 ```
 
-`brainstorming` is the front door. It clarifies the idea, explores options, gets design approval before any implementation starts, and writes that approved solution to `docs/design/YYYY-MM-DD-{feature-name}/design.md`. `plan-feature` expands the approved design into a matching dated spec folder under `docs/specs/YYYY-MM-DD-{feature-name}/`, including a manifest and execution log. `build-feature` reads the spec and matching design, works through task waves, runs spec-compliance and code-quality review gates, and tracks progress in the spec files.
+`brainstorming` is the front door. It clarifies the idea, explores options, gets design approval before any implementation starts, and writes that approved solution to `docs/design/YYYY-MM-DD-{feature-name}/design.md`. `plan-feature` expands the approved design into a matching dated spec folder under `docs/specs/YYYY-MM-DD-{feature-name}/`, including a manifest and execution log. `build-feature` reads the spec and matching design, works through task waves, runs a behavior-preserving simplification pass before spec-compliance and code-quality review gates, and tracks progress in the spec files.
 
 ## Install Targets
 
@@ -82,6 +82,7 @@ The repo also includes a compact first-class agent catalog for runtimes that sup
 - [`s-kit-pattern-mapper`](agents/s-kit-pattern-mapper.md) - finds local implementation patterns that specs and coders should follow.
 - [`s-kit-spec-reviewer`](agents/s-kit-spec-reviewer.md) - checks dated specs for coverage, wave safety, verification quality, and manifest consistency.
 - [`s-kit-coder`](agents/s-kit-coder.md) - implements one spec task with scoped file ownership and verification evidence.
+- [`s-kit-code-simplifier`](agents/s-kit-code-simplifier.md) - refines recently changed code for clarity while preserving behavior, scope, and verification evidence.
 - [`s-kit-code-reviewer`](agents/s-kit-code-reviewer.md) - reviews completed work for spec compliance, correctness, security, maintainability, and tests.
 - [`s-kit-fixer`](agents/s-kit-fixer.md) - applies scoped fixes for review findings without widening the task.
 - [`s-kit-security-auditor`](agents/s-kit-security-auditor.md) - audits specs or implementation touching secrets, shell commands, packages, files, auth, permissions, or user input.

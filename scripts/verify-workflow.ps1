@@ -3,6 +3,9 @@ $ErrorActionPreference = 'Stop'
 $root = (Resolve-Path (Join-Path $PSScriptRoot '..')).Path
 $specRoot = Join-Path $root 'docs/specs'
 $designRoot = Join-Path $root 'docs/design'
+$buildFeatureSkillPath = Join-Path $root 'skills/build-feature/SKILL.md'
+$reviewPromptTemplatePath = Join-Path $root 'skills/build-feature/references/review-prompt-template.md'
+$simplifierPromptTemplatePath = Join-Path $root 'skills/build-feature/references/simplifier-prompt-template.md'
 $failures = [System.Collections.Generic.List[string]]::new()
 $allowedStatuses = @(
   'pending',
@@ -116,6 +119,45 @@ if (Test-Path $designRoot) {
   Get-ChildItem $designRoot -Filter 'design.md' -File | ForEach-Object {
     Add-Failure "Loose design file is not allowed directly under docs/design: $(Get-RelativePath $_.FullName)"
   }
+}
+
+if (-not (Test-Path $simplifierPromptTemplatePath)) {
+  Add-Failure 'Missing build-feature simplifier prompt template: skills/build-feature/references/simplifier-prompt-template.md'
+}
+
+if (Test-Path $buildFeatureSkillPath) {
+  $buildFeatureSkill = Get-Content $buildFeatureSkillPath -Raw
+  foreach ($requiredText in @(
+    '### Step 5A: Simplification Pass',
+    'references/simplifier-prompt-template.md',
+    's-kit-code-simplifier',
+    'After coder or fix agents complete',
+    'If Step 5A fails or either review returns **FAIL**',
+    'Check maintainability, simplicity, security',
+    'The simplification pass stayed within the changed-file scope and did not alter approved behavior',
+    'coder or fixer completion summary, simplifier summary, and simplifier verification evidence'
+  )) {
+    if (-not $buildFeatureSkill.Contains($requiredText)) {
+      Add-Failure "build-feature workflow must include simplifier orchestration text: $requiredText"
+    }
+  }
+} else {
+  Add-Failure 'Missing build-feature skill: skills/build-feature/SKILL.md'
+}
+
+if (Test-Path $reviewPromptTemplatePath) {
+  $reviewPromptTemplate = Get-Content $reviewPromptTemplatePath -Raw
+  foreach ($requiredText in @(
+    'Verify the simplification pass stayed within the changed-file scope and did not alter approved behavior.',
+    'Check maintainability, simplicity, security, performance, error handling, and project conventions.',
+    'simplifier summary and verification evidence'
+  )) {
+    if (-not $reviewPromptTemplate.Contains($requiredText)) {
+      Add-Failure "review prompt must include simplifier review text: $requiredText"
+    }
+  }
+} else {
+  Add-Failure 'Missing build-feature review prompt template: skills/build-feature/references/review-prompt-template.md'
 }
 
 if ((Test-Path $specRoot) -and (Test-Path $designRoot)) {

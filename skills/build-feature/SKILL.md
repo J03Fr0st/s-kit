@@ -12,16 +12,17 @@ description: >
 
 # Build Feature
 
-Orchestrate the parallel implementation of a feature specification by dispatching coder agents wave by wave. This skill reads a spec folder created by `plan-feature`, uses `spec.json` as the machine-readable contract, spawns coder agents for each ready task, runs spec-compliance review before code-quality review, and appends execution evidence to `implementation-log.md`.
+Orchestrate the parallel implementation of a feature specification by dispatching coder agents wave by wave. This skill reads a spec folder created by `plan-feature`, uses `spec.json` as the machine-readable contract, spawns coder agents for each ready task, runs a behavior-preserving simplification pass, runs spec-compliance review before code-quality review, and appends execution evidence to `implementation-log.md`.
 
 The orchestrator never writes code itself when subagents are available. Its job is to:
 
 1. Parse the spec manifest and determine what to do next
 2. Give each coder agent exactly the context it needs
 3. Verify task output against the approved design and task specs
-4. Verify code quality, integration, security, and maintainability
-5. Manage the fix loop if either review stage finds issues
-6. Track progress in `spec.json`, task files, README checkboxes, and `implementation-log.md`
+4. Run a behavior-preserving simplification pass on changed implementation files
+5. Verify code quality, integration, security, simplicity, and maintainability
+6. Manage the fix loop if either review stage finds issues
+7. Track progress in `spec.json`, task files, README checkboxes, and `implementation-log.md`
 
 ## Prerequisites
 
@@ -124,12 +125,12 @@ Before starting a wave, append a dated entry to `implementation-log.md` with the
 
 Before dispatching, choose the host adapter:
 
-| Host | Coder dispatch | Review dispatch |
-|------|----------------|-----------------|
-| Claude Code | `Task` tool with the strongest available coding/general agent | `Task` tool with a review-focused prompt |
-| Copilot CLI | `task` with `agent_type: "general-purpose"` unless a coding-specific type exists | `task` with `agent_type: "general-purpose"` and the review prompt |
-| Codex with multi-agent enabled | `spawn_agent` for each coder prompt, then wait for all spawned agents | `spawn_agent` once with the review prompt |
-| No subagent tool | Report the limitation and ask whether to execute the wave sequentially in the current session |
+| Host | Coder dispatch | Simplifier dispatch | Review dispatch |
+|------|----------------|---------------------|-----------------|
+| Claude Code | `Task` tool with the strongest available coding/general agent | `Task` tool with `s-kit-code-simplifier` when available, otherwise the simplifier prompt | `Task` tool with a review-focused prompt |
+| Copilot CLI | `task` with `agent_type: "general-purpose"` unless a coding-specific type exists | `task` with `agent_type: "general-purpose"` and the simplifier prompt | `task` with `agent_type: "general-purpose"` and the review prompt |
+| Codex with multi-agent enabled | `spawn_agent` for each coder prompt, then wait for all spawned agents | `spawn_agent` once with the simplifier prompt | `spawn_agent` once with the review prompt |
+| No subagent tool | Report the limitation and ask whether to execute the wave sequentially in the current session | Run the simplification pass sequentially only if the user chose current-session execution | Report the limitation and ask whether to execute the wave sequentially in the current session |
 
 For each incomplete task in the wave, spawn one coder agent using the selected host adapter. Spawn all coder agents for the wave in a single message when the host supports parallel dispatch.
 
@@ -156,6 +157,23 @@ Wait for all coder agents in the wave to complete. Each agent should report:
 
 If any agent fails, returns an error, or reports missing context, set that task to `needs-context` or `blocked` as appropriate, update spec files consistently, append the outcome to `implementation-log.md`, and continue collecting remaining results. Report unresolved failures before review.
 
+### Step 5A: Simplification Pass
+
+After coder or fix agents complete and before review, run one behavior-preserving simplification pass for the current wave.
+
+1. Build the changed-file scope from the latest coder or fix completion reports and the current wave's `spec.json.tasks[].files.create` and `spec.json.tasks[].files.modify` entries. Restrict the simplifier to this set. If an agent reports no changed files, use that task's manifest file ownership as the fallback scope.
+2. Spawn one simplifier agent using the selected host adapter. Prefer the named `s-kit-code-simplifier` agent when the host supports bundled agents. Otherwise, read `references/simplifier-prompt-template.md` and construct the prompt by filling in:
+   - **{wave_number}**: current wave number
+   - **{requirements}**: full text of `requirements.md`
+   - **{design}**: full text of the matching `docs/design/YYYY-MM-DD-{feature-name}/design.md`
+   - **{task_summaries}**: for each task in this wave, the task title, manifest entry, task file content, files created/modified, verification evidence, and coder or fixer completion summary
+   - **{changed_files}**: the exact changed-file scope for this wave
+   - **{verification_commands}**: the targeted commands from `spec.json.tasks[].verificationCommands` plus any affected project-level lint, typecheck, or test commands
+3. The simplifier may edit only files in the changed-file scope and may return `no-op` when the implementation is already clear. It must preserve behavior, avoid unrelated fixes, and rerun relevant verification after edits.
+4. Collect the simplifier result and append its status, files modified, simplifications, verification evidence, and concerns to `implementation-log.md`.
+5. Include the coder or fixer completion summary, simplifier summary, and simplifier verification evidence in the task summaries passed to later review agents.
+6. If the simplifier reports `blocked`, fails verification, changes behavior, or edits outside the changed-file scope, set the affected tasks to `review-failed`, append the details to `implementation-log.md`, and go to Step 7.
+
 ### Step 6A: Spec Compliance Review
 
 Spawn a single review agent using the selected host adapter.
@@ -165,7 +183,7 @@ Read `references/review-prompt-template.md` and construct the prompt with **{rev
 - **{wave_number}**: current wave number
 - **{requirements}**: full text of `requirements.md`
 - **{design}**: full text of the matching `docs/design/YYYY-MM-DD-{feature-name}/design.md`
-- **{task_summaries}**: for each task in this wave, the task title, manifest entry, task file content, and coder agent completion summary
+- **{task_summaries}**: for each task in this wave, the task title, manifest entry, task file content, coder or fixer completion summary, simplifier summary, and simplifier verification evidence
 - **{verification_commands}**: the targeted commands from `spec.json.tasks[].verificationCommands`
 
 The review agent should verify:
@@ -175,6 +193,7 @@ The review agent should verify:
 3. Each task stayed within scope and did not add unrelated behavior.
 4. Manual action assumptions match `action-required.md`.
 5. The manifest, task file status, and README checkbox updates are consistent.
+6. The simplification pass stayed within the changed-file scope and did not alter approved behavior.
 
 Return a structured verdict: **PASS** or **FAIL** with specific issues grouped by task.
 
@@ -182,7 +201,7 @@ If this review fails, do not run code-quality review yet. Set affected tasks to 
 
 ### Step 6B: Code Quality Review
 
-Run this only after spec-compliance review passes.
+Run this only after simplification and spec-compliance review pass.
 
 Spawn a single review agent using the selected host adapter and the same `references/review-prompt-template.md`, with **{review_type}** set to `Code Quality`.
 
@@ -190,7 +209,7 @@ The review agent should:
 
 1. Run the listed verification commands and report results. Fix nothing.
 2. Check integration across task outputs: imports, types, module boundaries, configuration, environment assumptions, and generated artifacts.
-3. Check maintainability, security, performance, error handling, and adherence to project conventions.
+3. Check maintainability, simplicity, security, performance, error handling, and adherence to project conventions.
 4. Check that no hidden branding/path cleanup regressions or workflow invariant regressions were introduced when the repo has those checks.
 
 Return a structured verdict: **PASS** or **FAIL** with specific issues grouped by task.
@@ -199,17 +218,17 @@ If this review fails, set affected tasks to `review-failed`, append the verdict 
 
 ### Step 7: Fix Loop
 
-If either review returns **FAIL**:
+If Step 5A fails or either review returns **FAIL**:
 
-1. Parse the issues from the review: review type, file paths, descriptions, severity, and suggested fixes.
+1. Parse the issues from the simplifier result or review: source, file paths, descriptions, severity, and suggested fixes.
 2. Group issues by the task they most closely relate to, using `spec.json.tasks[].files.create` and `spec.json.tasks[].files.modify`.
 3. For each group, spawn a coder agent with a fix prompt. Read `references/fix-prompt-template.md` and fill in:
-   - **{issues}**: the specific issues for this task group, including whether they came from spec-compliance or code-quality review
+   - **{issues}**: the specific issues for this task group, including whether they came from simplification, spec-compliance review, or code-quality review
    - **{task_content}**: the original task file for context
 4. After fix agents complete, append the fix result to `implementation-log.md`.
-5. Re-run Step 6A. Only run Step 6B after Step 6A passes.
+5. Re-run Step 5A, then Step 6A. Only run Step 6B after Step 5A and Step 6A pass.
 
-Cap at 3 review cycles per wave. If the third cycle still fails, stop and report to the user:
+Cap at 3 simplification/review cycles per wave. If the third cycle still fails, stop and report to the user:
 
 ```text
 Wave {N} review failed after 3 cycles. Outstanding issues:
@@ -228,7 +247,7 @@ After both reviews pass, or the user explicitly chooses to proceed:
 1. Update task files: for each accepted task, change the Status field to `complete`; if proceeding with concerns, use `done-with-concerns`.
 2. Update `spec.json.tasks[].status` to match each task file.
 3. Update `README.md` checkboxes: `[x]` only for `complete`; `[ ]` for all other statuses.
-4. Append the spec-compliance verdict, code-quality verdict, verification evidence, and final task statuses to `implementation-log.md`.
+4. Append the simplification result, spec-compliance verdict, code-quality verdict, verification evidence, and final task statuses to `implementation-log.md`.
 5. Commit policy: do not commit if the user asked not to commit. Otherwise, follow the repository's delivery instructions for commits.
 6. Report wave completion:
 
@@ -240,6 +259,7 @@ After both reviews pass, or the user explicitly chooses to proceed:
    - task-{mm}-{name}: {one-line summary}
 
    Spec compliance review: PASS
+   Simplification: {status}
    Code quality review: PASS
    Commit: {hash or "not committed by request"}
 
