@@ -89,7 +89,7 @@ pending
 
 ## Key Points
 
-- The **Status** field is updated by the `implement-feature` skill. Allowed values are `pending`, `in-progress`, `blocked`, `needs-context`, `done-with-concerns`, `review-failed`, and `complete`.
+- The **Status** field is updated by the `build-feature` skill. Allowed values are `pending`, `in-progress`, `blocked`, `needs-context`, `done-with-concerns`, `review-failed`, and `complete`.
 - The **Dependencies** section includes prose context (not just filenames) so the agent understands its inputs without reading other files. This is the most important part of making task files self-contained.
 - **Files to Create** and **Files to Modify** make the task's scope explicit. Tasks in the same wave should not overlap on these lists.
 - **Technical Details** captures everything from the planning conversation — CLI commands, schemas, code snippets, file paths, env vars, API endpoints. If it was discussed during planning and is relevant to this task, it belongs here.

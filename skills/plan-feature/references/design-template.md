@@ -43,5 +43,5 @@ Use this structure for `docs/design/YYYY-MM-DD-{feature-name}/design.md`. This f
 
 - `design.md` is approved before implementation work starts.
 - `brainstorming` owns the dated design folder name.
-- `create-spec` derives `requirements.md`, the orchestration `README.md`, `spec.json`, `implementation-log.md`, and task files from this design.
+- `plan-feature` derives `requirements.md`, the orchestration `README.md`, `spec.json`, `implementation-log.md`, and task files from this design.
 - Keep it focused on solution shape and decisions. Implementation minutiae belongs in task files.

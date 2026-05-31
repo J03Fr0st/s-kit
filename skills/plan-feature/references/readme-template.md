@@ -1,6 +1,6 @@
 # README Template
 
-Use this structure for the README.md at the root of each spec folder. The README serves as the orchestration index — the `implement-feature` skill reads it to determine wave order, task assignments, and completion status.
+Use this structure for the README.md at the root of each spec folder. The README serves as the orchestration index — the `build-feature` skill reads it to determine wave order, task assignments, and completion status.
 
 ## Template
 
@@ -51,7 +51,7 @@ graph TD
 
 - The **Dependency Graph** uses Mermaid syntax (widely rendered in GitHub, VS Code, etc.). Each node shows the task number and title for quick reference.
 - The **Waves** table provides a scannable overview of what runs in parallel.
-- The **Task Status** section uses markdown checkboxes that the `implement-feature` skill updates as tasks complete. The orchestrator parses these to determine which wave to resume from.
+- The **Task Status** section uses markdown checkboxes that the `build-feature` skill updates as tasks complete. The orchestrator parses these to determine which wave to resume from.
 - The **Manifest** link points to `spec.json`, which owns task IDs, waves, statuses, file ownership, dependencies, and verification commands.
 - The **Implementation Log** link points to `implementation-log.md`, which records wave starts, task results, review verdicts, verification evidence, blockers, and final integration notes.
 - Use the exact dated design/spec folder name for `{feature-folder-name}`.

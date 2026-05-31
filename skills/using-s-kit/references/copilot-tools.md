@@ -19,7 +19,7 @@ Skills use Claude Code tool names. When you encounter these in a skill, use your
 | `WebSearch` | No equivalent — use `web_fetch` with a search engine URL |
 | `EnterPlanMode` / `ExitPlanMode` | No equivalent — stay in the main session |
 
-For `implement-feature`, use `task` with `agent_type: "general-purpose"` for coder prompts unless a coding-specific agent type exists in the current Copilot CLI build. Use separate `general-purpose` tasks for the spec-compliance review and the code-quality review.
+For `build-feature`, use `task` with `agent_type: "general-purpose"` for coder prompts unless a coding-specific agent type exists in the current Copilot CLI build. Use separate `general-purpose` tasks for the spec-compliance review and the code-quality review.
 
 ## Async shell sessions
 

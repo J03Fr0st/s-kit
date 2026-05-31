@@ -40,13 +40,13 @@ If CLAUDE.md, GEMINI.md, or AGENTS.md says "don't use TDD" and a skill says "alw
 For creative or behavior-changing work, the default path is:
 
 ```text
-brainstorming -> create-spec -> implement-feature -> verification/review -> ship
+brainstorming -> plan-feature -> build-feature -> verification/review -> ship
 ```
 
 - `brainstorming` is the front door. It explores intent, presents a design, waits for approval, then writes `docs/design/YYYY-MM-DD-{feature-name}/design.md`.
-- `create-spec` only runs from an approved design. It expands that design into the matching `docs/specs/YYYY-MM-DD-{feature-name}/` folder with `spec.json`, `implementation-log.md`, requirements, and self-contained task files.
-- `implement-feature` only runs from a spec folder and its matching approved design. It executes task waves, runs spec-compliance review before code-quality review, and updates `spec.json`, task files, README checkboxes, and the implementation log.
-- `writing-plans`, `executing-plans`, and `subagent-driven-development` are compatibility wrappers. Redirect them into `create-spec` or `implement-feature`; do not treat them as separate workflows.
+- `plan-feature` only runs from an approved design. It expands that design into the matching `docs/specs/YYYY-MM-DD-{feature-name}/` folder with `spec.json`, `implementation-log.md`, requirements, and self-contained task files.
+- `build-feature` only runs from a spec folder and its matching approved design. It executes task waves, runs spec-compliance review before code-quality review, and updates `spec.json`, task files, README checkboxes, and the implementation log.
+- `writing-plans`, `executing-plans`, and `subagent-driven-development` are workflow redirects. Redirect them into `plan-feature` or `build-feature`; do not treat them as separate workflows.
 
 ## Platform Adaptation
 

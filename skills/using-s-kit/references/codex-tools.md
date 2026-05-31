@@ -22,9 +22,9 @@ Add to your Codex config (`~/.codex/config.toml`):
 multi_agent = true
 ```
 
-This enables `spawn_agent`, `wait_agent`, and `close_agent` for skills like `dispatching-parallel-agents` and `implement-feature`.
+This enables `spawn_agent`, `wait_agent`, and `close_agent` for skills like `dispatching-parallel-agents` and `build-feature`.
 
-If these tools are not available, `implement-feature` must report the limitation and ask before executing spec tasks sequentially in the current session.
+If these tools are not available, `build-feature` must report the limitation and ask before executing spec tasks sequentially in the current session.
 
 Legacy note: Codex builds before `rust-v0.115.0` exposed spawned-agent
 waiting as `wait`. Current Codex uses `wait_agent` for spawned agents. The

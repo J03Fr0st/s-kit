@@ -1,18 +1,18 @@
 ---
-name: implement-feature
+name: build-feature
 description: >
   Orchestrate parallel implementation of a feature specification by dispatching coder agents
   wave-by-wave with spec-compliance and code-quality review gates between waves. Use this
   skill when the user says "implement this feature", "start implementing", "run the spec",
   "execute the plan", "continue implementing", or wants to begin coding a previously planned
   feature from a docs/specs/YYYY-MM-DD-{feature-name}/ folder. Also use when the user says
-  "/implement-feature" or drags a spec folder into the conversation and asks to implement it.
+  "/build-feature" or drags a spec folder into the conversation and asks to implement it.
   This skill does NOT write code itself - it orchestrates coder subagents that work in parallel.
 ---
 
-# Implement Feature
+# Build Feature
 
-Orchestrate the parallel implementation of a feature specification by dispatching coder agents wave by wave. This skill reads a spec folder created by `create-spec`, uses `spec.json` as the machine-readable contract, spawns coder agents for each ready task, runs spec-compliance review before code-quality review, and appends execution evidence to `implementation-log.md`.
+Orchestrate the parallel implementation of a feature specification by dispatching coder agents wave by wave. This skill reads a spec folder created by `plan-feature`, uses `spec.json` as the machine-readable contract, spawns coder agents for each ready task, runs spec-compliance review before code-quality review, and appends execution evidence to `implementation-log.md`.
 
 The orchestrator never writes code itself when subagents are available. Its job is to:
 
@@ -36,7 +36,7 @@ A `docs/specs/YYYY-MM-DD-{feature-name}/` directory containing:
 
 The matching approved design must exist at `docs/design/YYYY-MM-DD-{feature-name}/design.md`.
 
-This structure is produced by the `create-spec` skill. If the user does not have a spec folder, suggest creating one first.
+This structure is produced by the `plan-feature` skill. If the user does not have a spec folder, suggest creating one first.
 
 ## Status Values
 
@@ -59,7 +59,7 @@ Only `complete` maps to a checked README checkbox. Every other status maps to an
 1. Resolve the spec folder. Accept either the full dated folder name or an undated feature name.
    - If the full dated folder exists, use it.
    - For undated names, search `docs/specs/*-{feature-name}`.
-   - If there are no matches, ask for the spec folder or suggest `create-spec`.
+   - If there are no matches, ask for the spec folder or suggest `plan-feature`.
    - If there is exactly one match, use it.
    - If there are multiple matches, list the candidates and ask the user which one to execute. Do not silently choose the newest match.
 2. Derive the matching design path at `docs/design/<resolved-spec-folder-name>/design.md`.
@@ -216,7 +216,7 @@ Wave {N} review failed after 3 cycles. Outstanding issues:
 {list of remaining issues}
 
 Options:
-1. Fix these manually and re-run /implement-feature
+1. Fix these manually and re-run /build-feature
 2. Proceed to the next wave anyway
 3. Stop here
 ```
@@ -278,7 +278,7 @@ Next steps:
 - **Dependency not complete**: mark the dependent task as `blocked`, report the missing dependency, and stop before dispatching the wave.
 - **Verification failure after fix attempts**: report the specific errors and ask the user whether to commit anyway or fix manually.
 - **All tasks already complete**: report completion and stop.
-- **Missing spec folder**: ask the user to provide the feature name or suggest creating a spec with `create-spec`.
+- **Missing spec folder**: ask the user to provide the feature name or suggest creating a spec with `plan-feature`.
 - **Ambiguous undated spec name**: list all matching dated spec folders and ask the user to choose one.
 - **Preflight failure**: report the failing invariant and stop before dispatching agents.
 

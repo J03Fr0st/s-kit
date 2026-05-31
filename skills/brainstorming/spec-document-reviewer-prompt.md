@@ -2,7 +2,7 @@
 
 Use this template when dispatching a spec document reviewer subagent.
 
-**Purpose:** Verify the approved design/spec material is complete, consistent, and ready for `create-spec` or `implement-feature`.
+**Purpose:** Verify the approved design/spec material is complete, consistent, and ready for `plan-feature` or `build-feature`.
 
 **Dispatch after:** The design/spec documents are written under `docs/design/` or `docs/specs/`.
 

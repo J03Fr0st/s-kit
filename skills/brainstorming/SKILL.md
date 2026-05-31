@@ -1,6 +1,6 @@
 ---
 name: brainstorming
-description: "Use before creative or behavior-changing work. Clarifies intent, explores options, presents a design for approval, then hands off to create-spec."
+description: "Use before creative or behavior-changing work. Clarifies intent, explores options, presents a design for approval, then hands off to plan-feature."
 ---
 
 # Brainstorming Ideas Into Designs
@@ -21,8 +21,8 @@ Complete these in order:
 4. Propose 2-3 approaches with trade-offs and a recommendation.
 5. Present the design in sections and get user approval.
 6. Choose the dated feature folder name and write the approved design to `docs/design/YYYY-MM-DD-{feature-name}/design.md`.
-7. Hand off to `create-spec` with that exact design path so it can expand the design into requirements, manifest, execution log, orchestration, and task files under the matching `docs/specs/YYYY-MM-DD-{feature-name}/` folder.
-8. Ask the user to review the written spec before implementation.
+7. Hand off to `plan-feature` with that exact design path so it can expand the design into requirements, manifest, execution log, orchestration, and task files under the matching `docs/specs/YYYY-MM-DD-{feature-name}/` folder.
+8. Ask the user to review the written spec before implementation with `build-feature`.
 
 ## Process
 
@@ -34,7 +34,7 @@ When you understand the work, propose approaches. Lead with the recommended appr
 
 Present the design after the approach is selected. Scale the depth to the work. Cover architecture, components, data flow, error handling, verification, and rollout where relevant.
 
-After approval, write `design.md` first, then invoke `create-spec`. `brainstorming` owns the dated folder name. `create-spec` must reuse that same folder name for the spec.
+After approval, write `design.md` first, then invoke `plan-feature`. `brainstorming` owns the dated folder name. `plan-feature` must reuse that same folder name for the spec.
 
 ```text
 docs/design/YYYY-MM-DD-{feature-name}/
@@ -51,9 +51,9 @@ docs/specs/YYYY-MM-DD-{feature-name}/
     └── task-02-{name}.md
 ```
 
-`design.md` is the direct output of brainstorming. It should capture the approved solution shape: context, selected approach, alternatives considered, architecture, major decisions, open risks, and verification strategy. `create-spec` uses it as the source material for `requirements.md`, `README.md`, `spec.json`, `implementation-log.md`, and task files.
+`design.md` is the direct output of brainstorming. It should capture the approved solution shape: context, selected approach, alternatives considered, architecture, major decisions, open risks, and verification strategy. `plan-feature` uses it as the source material for `requirements.md`, `README.md`, `spec.json`, `implementation-log.md`, and task files. After the spec is reviewed, `build-feature` executes it wave by wave.
 
-Do not hand off to `writing-plans`, `executing-plans`, or `subagent-driven-development` as separate workflows. Those are compatibility wrappers only.
+Do not hand off to `writing-plans`, `executing-plans`, or `subagent-driven-development` as separate workflows. Those are workflow redirects only.
 
 ## Visual Companion
 

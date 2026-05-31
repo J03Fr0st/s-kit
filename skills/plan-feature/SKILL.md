@@ -1,5 +1,5 @@
 ---
-name: create-spec
+name: plan-feature
 description: >
   Create a structured feature specification with design context and self-contained task files organized into
   parallel execution waves. Use this skill after brainstorming has produced an approved docs/design/YYYY-MM-DD-{feature-name}/design.md,
@@ -7,7 +7,7 @@ description: >
   waves. This skill produces local spec files under docs/specs/YYYY-MM-DD-{feature-name}/ using the same dated folder name as the design — no GitHub integration.
 ---
 
-# Create Feature Specification
+# Plan Feature
 
 Transform an approved design into a structured spec folder that enables parallel agent implementation. The approved design lives under `docs/design/YYYY-MM-DD-{feature-name}/design.md`; the generated spec uses the matching `docs/specs/YYYY-MM-DD-{feature-name}/` folder and breaks the feature into self-contained task files — each one detailed enough that a coder agent can pick it up cold and implement it without reading anything else.
 
@@ -23,19 +23,19 @@ The key insight: implementation plans that live in a single file are either too 
 
 ### Step 1: Verify Approved Design
 
-`create-spec` does not interview the user or discover requirements from scratch. `brainstorming` owns discovery and approval.
+`plan-feature` does not interview the user or discover requirements from scratch. `brainstorming` owns discovery and approval.
 
 Before writing requirements or tasks:
 
 1. Find the approved `design.md` in `docs/design/YYYY-MM-DD-{feature-name}/design.md`, or use the explicit design path supplied by the user after placing it in that structure.
 2. Confirm the design is approved. Approval can be explicit in the current conversation, stated in the design document, or inherited from the immediately preceding `brainstorming` handoff.
-3. If no approved design exists, stop and invoke `brainstorming` first. Do not ask standalone requirements-interview questions from `create-spec`.
+3. If no approved design exists, stop and invoke `brainstorming` first. Do not ask standalone requirements-interview questions from `plan-feature`.
 4. Read `design.md` and use it as the source of truth. Review the current conversation only to preserve approved details that are missing from the file.
 5. Derive the spec folder name from the design folder name. For example, `docs/design/2026-05-27-add-user-auth/design.md` becomes `docs/specs/2026-05-27-add-user-auth/`.
 
 ### Step 2: Derive the Spec Folder
 
-Do not choose a new feature name in `create-spec`. Reuse the exact dated folder name already chosen by `brainstorming` under `docs/design/`.
+Do not choose a new feature name in `plan-feature`. Reuse the exact dated folder name already chosen by `brainstorming` under `docs/design/`.
 
 Example: `docs/design/2026-05-27-add-user-auth/design.md` expands to `docs/specs/2026-05-27-add-user-auth/`.
 
@@ -148,7 +148,7 @@ Wave breakdown:
 Next steps:
 1. Review action-required.md for tasks you need to complete manually
 2. Review the approved design, requirements, and task files
-3. Use /implement-feature to start implementation
+3. Use /build-feature to start implementation
 ```
 
 ## Critical Rules
