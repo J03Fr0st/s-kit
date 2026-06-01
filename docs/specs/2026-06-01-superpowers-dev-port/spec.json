@@ -1,0 +1,145 @@
+{
+  "feature": "Superpowers Dev Port Review",
+  "created": "2026-06-01",
+  "designPath": "docs/design/2026-06-01-superpowers-dev-port/design.md",
+  "specPath": "docs/specs/2026-06-01-superpowers-dev-port",
+  "requirementsPath": "docs/specs/2026-06-01-superpowers-dev-port/requirements.md",
+  "actionRequiredPath": "docs/specs/2026-06-01-superpowers-dev-port/action-required.md",
+  "implementationLogPath": "docs/specs/2026-06-01-superpowers-dev-port/implementation-log.md",
+  "allowedTaskStatuses": [
+    "pending",
+    "in-progress",
+    "blocked",
+    "needs-context",
+    "done-with-concerns",
+    "review-failed",
+    "complete"
+  ],
+  "tasks": [
+    {
+      "id": "task-01-reviewer-safety-scoped-ranges",
+      "title": "Reviewer Safety and Scoped Ranges",
+      "file": "tasks/task-01-reviewer-safety-scoped-ranges.md",
+      "wave": 1,
+      "status": "complete",
+      "dependsOn": [],
+      "blocks": [
+        "task-04-action-language-cleanup"
+      ],
+      "files": {
+        "create": [],
+        "modify": [
+          "skills/build-feature/SKILL.md",
+          "skills/build-feature/references/review-prompt-template.md",
+          "agents/s-kit-spec-reviewer.md",
+          "agents/s-kit-code-reviewer.md",
+          "scripts/verify-workflow.ps1"
+        ]
+      },
+      "verificationCommands": [
+        "npm test",
+        "npm run doctor"
+      ]
+    },
+    {
+      "id": "task-02-harness-porting-playbook",
+      "title": "Harness Porting Playbook",
+      "file": "tasks/task-02-harness-porting-playbook.md",
+      "wave": 1,
+      "status": "complete",
+      "dependsOn": [],
+      "blocks": [
+        "task-05-codex-native-hooks"
+      ],
+      "files": {
+        "create": [
+          "docs/playbooks/port-new-harness.md"
+        ],
+        "modify": [
+          "scripts/verify-branding.ps1",
+          "scripts/verify-skill-names.ps1"
+        ]
+      },
+      "verificationCommands": [
+        "git diff --check -- docs/playbooks/port-new-harness.md",
+        "npm run doctor"
+      ]
+    },
+    {
+      "id": "task-03-eval-harness-strategy",
+      "title": "Eval Harness Strategy",
+      "file": "tasks/task-03-eval-harness-strategy.md",
+      "wave": 1,
+      "status": "complete",
+      "dependsOn": [],
+      "blocks": [
+        "task-05-codex-native-hooks"
+      ],
+      "files": {
+        "create": [
+          "docs/eval-harness-strategy.md"
+        ],
+        "modify": []
+      },
+      "verificationCommands": [
+        "git diff --check -- docs/eval-harness-strategy.md",
+        "npm test"
+      ]
+    },
+    {
+      "id": "task-04-action-language-cleanup",
+      "title": "Action-Language Cleanup",
+      "file": "tasks/task-04-action-language-cleanup.md",
+      "wave": 2,
+      "status": "complete",
+      "dependsOn": [
+        "task-01-reviewer-safety-scoped-ranges"
+      ],
+      "blocks": [],
+      "files": {
+        "create": [],
+        "modify": [
+          "skills/using-s-kit/SKILL.md",
+          "skills/using-s-kit/references/codex-tools.md",
+          "skills/using-s-kit/references/gemini-tools.md",
+          "skills/using-s-kit/references/copilot-tools.md",
+          "skills/build-feature/SKILL.md",
+          "skills/dispatching-parallel-agents/SKILL.md",
+          "skills/requesting-code-review/SKILL.md",
+          "scripts/verify-skill-names.ps1"
+        ]
+      },
+      "verificationCommands": [
+        "npm run verify:naming",
+        "npm test"
+      ]
+    },
+    {
+      "id": "task-05-codex-native-hooks",
+      "title": "Codex Native Hook Compatibility",
+      "file": "tasks/task-05-codex-native-hooks.md",
+      "wave": 3,
+      "status": "complete",
+      "dependsOn": [
+        "task-02-harness-porting-playbook",
+        "task-03-eval-harness-strategy"
+      ],
+      "blocks": [],
+      "files": {
+        "create": [
+          "tests/codex-plugin-sync/test-codex-hooks.sh"
+        ],
+        "modify": [
+          ".codex-plugin/plugin.json",
+          "hooks/hooks.json",
+          "scripts/doctor.ps1"
+        ]
+      },
+      "verificationCommands": [
+        "npm run doctor",
+        "npm test",
+        "bash tests/codex-plugin-sync/test-codex-hooks.sh"
+      ]
+    }
+  ]
+}

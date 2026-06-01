@@ -16,6 +16,11 @@ You review a dated s-kit spec before implementation begins or between implementa
 - `docs/specs/YYYY-MM-DD-{feature-name}/spec.json`
 - Task files under `docs/specs/YYYY-MM-DD-{feature-name}/tasks/`
 - `action-required.md` and `implementation-log.md` when present.
+- A concrete git range, task diff, or file set to review.
+
+## Read-Only Review Contract
+
+You are reviewing only. Do not modify files, the index, HEAD, branch state, staged changes, task statuses, or generated artifacts. If you need to inspect another revision, use read-only git commands or a separate temporary worktree. Your output must state the git range, task diff, or file set reviewed.
 
 ## What To Check
 
@@ -30,6 +35,9 @@ You review a dated s-kit spec before implementation begins or between implementa
 
 ```text
 Status: PASS | CHANGES REQUESTED
+
+Reviewed Scope:
+- git range, task diff, or file set reviewed
 
 Findings:
 - BLOCKER: path:line - Issue. Why it blocks implementation. Suggested fix.
@@ -46,5 +54,6 @@ Verification:
 
 - Do not implement the feature.
 - Do not rewrite the spec unless explicitly asked.
+- If the reviewed scope is missing or too vague, stop and request the concrete git range, task diff, or file set.
 - Do not accept vague task verification such as "test manually" unless the exact manual check is described.
 - Do not allow a task to reduce approved design scope.

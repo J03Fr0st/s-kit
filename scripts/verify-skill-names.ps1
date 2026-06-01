@@ -134,12 +134,16 @@ Require-Contains 'skills/plan-feature/SKILL.md' 'Record design approval before s
 Require-Contains 'skills/plan-feature/SKILL.md' 'Do not write a "Spec Created" entry before approval evidence.'
 Require-Contains 'skills/brainstorming/references/design-template.md' '## Configuration and Inputs'
 Require-Contains 'skills/brainstorming/references/design-template.md' 'Distinguish stored configuration, command arguments, defaults, and per-command overrides.'
+Require-Contains 'skills/using-s-kit/SKILL.md' 'Shared skill prose should describe actions'
+Require-Contains 'skills/using-s-kit/SKILL.md' 'Keep runtime-specific tool names in this section or in the mapping files under `references/`.'
+Require-Contains 'skills/dispatching-parallel-agents/SKILL.md' 'Use the runtime-specific subagent dispatch mechanism'
+Require-Contains 'skills/requesting-code-review/SKILL.md' 'Use the runtime-specific subagent dispatch mechanism'
 
 $legacyPattern = "$oldPlanName|$oldBuildName|$oldWritingPlansName|$oldExecutingPlansName|$oldSubagentDrivenName|$oldAliasTerm|$oldAliasTermLower|$retiredNameTerm|Workflow redirects|Workflow Redirect"
-# The docs/*-research/comparison notes legitimately reference the retired names
-# (e.g. "verify create-spec is absent"). They are exempt; the scan still covers
+# Research/comparison notes and dated design/spec artifacts legitimately
+# reference retired names as guardrails. They are exempt; the scan still covers
 # every shipped product surface.
-$legacyMatches = & rg -n $legacyPattern -g '!scripts/verify-skill-names.ps1' -g '!docs/future-development-research.md' -g '!docs/comparable-project-enhancements.md' $root
+$legacyMatches = & rg -n $legacyPattern -g '!scripts/verify-skill-names.ps1' -g '!docs/future-development-research.md' -g '!docs/comparable-project-enhancements.md' -g '!docs/design/**' -g '!docs/specs/**' $root
 if ($LASTEXITCODE -eq 0) {
   Add-Failure "Legacy naming remains in active repo surface:`n$legacyMatches"
 } elseif ($LASTEXITCODE -gt 1) {

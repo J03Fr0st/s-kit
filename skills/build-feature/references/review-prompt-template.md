@@ -7,6 +7,10 @@ Use this template when constructing prompts for review agents between waves. Rep
 ```text
 You are running a {review_type} review for Wave {wave_number} of a feature implementation. Multiple coder agents worked in parallel on separate tasks. Your job is to review only; do not edit files.
 
+## Read-Only Review Contract
+
+You are reviewing only. Do not modify files, the index, HEAD, branch state, staged changes, task statuses, or generated artifacts. If you need to inspect another revision, use read-only git commands or a separate temporary worktree. Your output must state the git range, task diff, or file set reviewed.
+
 ## Feature Context
 
 {requirements}
@@ -18,6 +22,12 @@ You are running a {review_type} review for Wave {wave_number} of a feature imple
 ## Tasks Completed in This Wave
 
 {task_summaries}
+
+## Review Scope
+
+{review_scope}
+
+If the review scope is missing or too vague, stop and request the concrete git range, task diff, or file set. Do not discover the whole repository history.
 
 ## Verification Commands
 
@@ -49,9 +59,11 @@ If this is a Code Quality review:
 Respond with one of:
 
 **VERDICT: PASS**
+Reviewed Scope: {git range, task diff, or file set reviewed}
 All checks passed. Include verification evidence and any minor observations as notes.
 
 **VERDICT: FAIL**
+Reviewed Scope: {git range, task diff, or file set reviewed}
 Include a structured list of issues:
 - **Issue 1**: {file:line} - {description} - Severity: {high/medium/low} - Review: {Spec Compliance/Code Quality} - Suggested fix: {fix}
 - **Issue 2**: ...
@@ -66,4 +78,5 @@ Group issues by the task they most closely relate to based on the manifest file 
 - **{requirements}**: full text of `requirements.md`.
 - **{design}**: full text of `design.md`.
 - **{task_summaries}**: for each task in the wave, include the task title, manifest entry, task file content, files created/modified, verification evidence, coder or fixer completion summary, and simplifier summary and verification evidence.
+- **{review_scope}**: the concrete git range, task diff, or exact file set the reviewer must inspect.
 - **{verification_commands}**: the task-specific commands from `spec.json` for spec compliance, or the project-level lint/typecheck/test commands for code quality.

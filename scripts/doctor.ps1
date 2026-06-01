@@ -112,6 +112,7 @@ $requiredFiles = @(
   '.opencode/plugins/s-kit.js',
   'hooks/hooks.json',
   'hooks/hooks-cursor.json',
+  'tests/codex-plugin-sync/test-codex-hooks.sh',
   'assets/s-kit-small.svg',
   'assets/app-icon.png',
   'scripts/bump-version.sh'
@@ -160,8 +161,35 @@ $codex = Read-JsonFile '.codex-plugin/plugin.json'
 if ($null -ne $codex) {
   if ($codex.name -ne 's-kit') { Add-Failure '.codex-plugin/plugin.json name must be s-kit.' }
   if ($codex.skills -ne './skills/') { Add-Failure '.codex-plugin/plugin.json must expose skills as ./skills/.' }
+  if ($codex.hooks -ne './hooks/hooks.json') { Add-Failure '.codex-plugin/plugin.json must expose hooks as ./hooks/hooks.json.' }
   if ($codex.interface.composerIcon -ne './assets/s-kit-small.svg') { Add-Failure '.codex-plugin/plugin.json composerIcon must point to ./assets/s-kit-small.svg.' }
   if ($codex.interface.logo -ne './assets/app-icon.png') { Add-Failure '.codex-plugin/plugin.json logo must point to ./assets/app-icon.png.' }
+}
+
+$codexHooks = Read-JsonFile 'hooks/hooks.json'
+if ($null -ne $codexHooks) {
+  $sessionStart = $codexHooks.hooks.SessionStart
+  if ($null -eq $sessionStart -or $sessionStart.Count -lt 1) {
+    Add-Failure 'hooks/hooks.json must define a SessionStart hook.'
+  } else {
+    $commandHooks = @($sessionStart | ForEach-Object { $_.hooks } | Where-Object { $_.type -eq 'command' })
+    $sessionCommand = [string] @($commandHooks | Select-Object -First 1).command
+    if (-not ($sessionCommand.Contains('run-hook.cmd') -and $sessionCommand.Contains('session-start'))) {
+      Add-Failure 'hooks/hooks.json SessionStart must call hooks/run-hook.cmd session-start.'
+    }
+    if (-not $sessionCommand.Contains('${PLUGIN_ROOT}/hooks/run-hook.cmd')) {
+      Add-Failure 'hooks/hooks.json SessionStart must use ${PLUGIN_ROOT}/hooks/run-hook.cmd for Codex plugin compatibility.'
+    }
+    if ($sessionCommand.Contains('${CLAUDE_PLUGIN_ROOT}')) {
+      Add-Failure 'hooks/hooks.json SessionStart must not use ${CLAUDE_PLUGIN_ROOT}; Codex plugin hooks should use ${PLUGIN_ROOT}.'
+    }
+  }
+}
+
+foreach ($unsupportedHookPath in @('hooks/hooks-codex.json', 'hooks/session-start-codex')) {
+  if (Test-Path (Join-RepoPath $unsupportedHookPath)) {
+    Add-Failure "Unsupported Codex-specific hook path must not exist: $unsupportedHookPath"
+  }
 }
 
 $cursor = Read-JsonFile '.cursor-plugin/plugin.json'

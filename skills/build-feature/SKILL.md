@@ -12,7 +12,7 @@ description: >
 
 # Build Feature
 
-Orchestrate the parallel implementation of a feature specification by dispatching coder agents wave by wave. This skill reads a spec folder created by `plan-feature`, uses `spec.json` as the machine-readable contract, spawns coder agents for each ready task, runs a behavior-preserving simplification pass, runs spec-compliance review before code-quality review, and appends execution evidence to `implementation-log.md`.
+Orchestrate the parallel implementation of a feature specification by dispatching coder agents wave by wave. This skill reads a spec folder created by `plan-feature`, uses `spec.json` as the machine-readable contract, dispatches coder agents for each ready task, runs a behavior-preserving simplification pass, runs spec-compliance review before code-quality review, and appends execution evidence to `implementation-log.md`.
 
 The orchestrator never writes code itself when subagents are available. Its job is to:
 
@@ -132,7 +132,7 @@ Before dispatching, choose the host adapter:
 | Codex with multi-agent enabled | `spawn_agent` for each coder prompt, then wait for all spawned agents | `spawn_agent` once with the simplifier prompt | `spawn_agent` once with the review prompt |
 | No subagent tool | Report the limitation and ask whether to execute the wave sequentially in the current session | Run the simplification pass sequentially only if the user chose current-session execution | Report the limitation and ask whether to execute the wave sequentially in the current session |
 
-For each incomplete task in the wave, spawn one coder agent using the selected host adapter. Spawn all coder agents for the wave in a single message when the host supports parallel dispatch.
+For each incomplete task in the wave, dispatch one coder agent using the selected host adapter. Dispatch all coder agents for the wave in a single message when the host supports parallel execution.
 
 Read `references/coder-prompt-template.md` and construct each agent's prompt by filling in:
 
@@ -162,7 +162,7 @@ If any agent fails, returns an error, or reports missing context, set that task 
 After coder or fix agents complete and before review, run one behavior-preserving simplification pass for the current wave.
 
 1. Build the changed-file scope from the latest coder or fix completion reports and the current wave's `spec.json.tasks[].files.create` and `spec.json.tasks[].files.modify` entries. Restrict the simplifier to this set. If an agent reports no changed files, use that task's manifest file ownership as the fallback scope.
-2. Spawn one simplifier agent using the selected host adapter. Prefer the named `s-kit-code-simplifier` agent when the host supports bundled agents. Otherwise, read `references/simplifier-prompt-template.md` and construct the prompt by filling in:
+2. Dispatch one simplifier agent using the selected host adapter. Prefer the named `s-kit-code-simplifier` agent when the host supports bundled agents. Otherwise, read `references/simplifier-prompt-template.md` and construct the prompt by filling in:
    - **{wave_number}**: current wave number
    - **{requirements}**: full text of `requirements.md`
    - **{design}**: full text of the matching `docs/design/YYYY-MM-DD-{feature-name}/design.md`
@@ -176,7 +176,11 @@ After coder or fix agents complete and before review, run one behavior-preservin
 
 ### Step 6A: Spec Compliance Review
 
-Spawn a single review agent using the selected host adapter.
+Before dispatching any review agent, build a concrete review scope from the latest coder or fixer completion reports, the simplifier result, the current wave's changed-file scope, and the current wave's `spec.json.tasks[].files.create` and `spec.json.tasks[].files.modify` entries. Prefer a git range or task diff when one is already known; otherwise pass the exact file set reviewed. If no concrete git range, task diff, or file set can be identified, stop and request that scope instead of asking the reviewer to discover the whole repository.
+
+Review agents are read-only. Do not ask them to modify files, the index, HEAD, branch state, staged changes, task statuses, or generated artifacts. Historical comparison is allowed only through read-only git commands or a separate temporary worktree.
+
+Dispatch a single review agent using the selected host adapter.
 
 Read `references/review-prompt-template.md` and construct the prompt with **{review_type}** set to `Spec Compliance`. Fill in:
 
@@ -184,6 +188,7 @@ Read `references/review-prompt-template.md` and construct the prompt with **{rev
 - **{requirements}**: full text of `requirements.md`
 - **{design}**: full text of the matching `docs/design/YYYY-MM-DD-{feature-name}/design.md`
 - **{task_summaries}**: for each task in this wave, the task title, manifest entry, task file content, coder or fixer completion summary, simplifier summary, and simplifier verification evidence
+- **{review_scope}**: the concrete git range, task diff, or exact file set the reviewer must inspect
 - **{verification_commands}**: the targeted commands from `spec.json.tasks[].verificationCommands`
 
 The review agent should verify:
@@ -195,7 +200,7 @@ The review agent should verify:
 5. The manifest, task file status, and README checkbox updates are consistent.
 6. The simplification pass stayed within the changed-file scope and did not alter approved behavior.
 
-Return a structured verdict: **PASS** or **FAIL** with specific issues grouped by task.
+Return a structured verdict: **PASS** or **FAIL** with the git range, task diff, or file set reviewed and specific issues grouped by task.
 
 If this review fails, do not run code-quality review yet. Set affected tasks to `review-failed`, append the verdict to `implementation-log.md`, and go to Step 7.
 
@@ -203,7 +208,9 @@ If this review fails, do not run code-quality review yet. Set affected tasks to 
 
 Run this only after simplification and spec-compliance review pass.
 
-Spawn a single review agent using the selected host adapter and the same `references/review-prompt-template.md`, with **{review_type}** set to `Code Quality`.
+Dispatch a single review agent using the selected host adapter and the same `references/review-prompt-template.md`, with **{review_type}** set to `Code Quality`.
+
+Use the same concrete **{review_scope}** unless code-quality review needs a narrower task diff or file set; if it does, state that narrowed scope explicitly in the prompt.
 
 The review agent should:
 
@@ -222,7 +229,7 @@ If Step 5A fails or either review returns **FAIL**:
 
 1. Parse the issues from the simplifier result or review: source, file paths, descriptions, severity, and suggested fixes.
 2. Group issues by the task they most closely relate to, using `spec.json.tasks[].files.create` and `spec.json.tasks[].files.modify`.
-3. For each group, spawn a coder agent with a fix prompt. Read `references/fix-prompt-template.md` and fill in:
+3. For each group, dispatch a coder agent with a fix prompt. Read `references/fix-prompt-template.md` and fill in:
    - **{issues}**: the specific issues for this task group, including whether they came from simplification, spec-compliance review, or code-quality review
    - **{task_content}**: the original task file for context
 4. After fix agents complete, append the fix result to `implementation-log.md`.
@@ -271,8 +278,8 @@ After both reviews pass, or the user explicitly chooses to proceed:
 After all waves are complete:
 
 1. Run project-level verification one final time.
-2. Spawn a spec-compliance review agent for the full feature scope.
-3. Spawn a code-quality review agent for the full feature scope only if spec compliance passes.
+2. Build a concrete final review scope from the accepted task diffs, git range, or exact feature file set, then dispatch a spec-compliance review agent for that full feature scope.
+3. Dispatch a code-quality review agent for the full feature scope only if spec compliance passes.
 4. Append final verification commands, review verdicts, and any residual concerns to `implementation-log.md`.
 5. Report the final status:
 

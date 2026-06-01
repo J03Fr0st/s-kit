@@ -1,6 +1,6 @@
 # Copilot CLI Tool Mapping
 
-Skills use Claude Code tool names. When you encounter these in a skill, use your platform equivalent:
+This reference is intentionally host-specific. Shared skill prose should use action-language, but when a skill or template names a Claude Code tool directly, use the Copilot CLI equivalent:
 
 | Skill references | Copilot CLI equivalent |
 |-----------------|----------------------|

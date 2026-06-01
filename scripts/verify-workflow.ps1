@@ -6,7 +6,15 @@ $designRoot = Join-Path $root 'docs/design'
 $buildFeatureSkillPath = Join-Path $root 'skills/build-feature/SKILL.md'
 $reviewPromptTemplatePath = Join-Path $root 'skills/build-feature/references/review-prompt-template.md'
 $simplifierPromptTemplatePath = Join-Path $root 'skills/build-feature/references/simplifier-prompt-template.md'
+$specReviewerAgentPath = Join-Path $root 'agents/s-kit-spec-reviewer.md'
+$codeReviewerAgentPath = Join-Path $root 'agents/s-kit-code-reviewer.md'
 $failures = [System.Collections.Generic.List[string]]::new()
+$readOnlyReviewContractText = @(
+  '## Read-Only Review Contract',
+  'Do not modify files, the index, HEAD, branch state, staged changes, task statuses, or generated artifacts.',
+  'read-only git commands or a separate temporary worktree',
+  'Your output must state the git range, task diff, or file set reviewed.'
+)
 $allowedStatuses = @(
   'pending',
   'in-progress',
@@ -135,7 +143,11 @@ if (Test-Path $buildFeatureSkillPath) {
     'If Step 5A fails or either review returns **FAIL**',
     'Check maintainability, simplicity, security',
     'The simplification pass stayed within the changed-file scope and did not alter approved behavior',
-    'coder or fixer completion summary, simplifier summary, and simplifier verification evidence'
+    'coder or fixer completion summary, simplifier summary, and simplifier verification evidence',
+    'build a concrete review scope',
+    'git range, task diff, or file set',
+    'Do not ask them to modify files, the index, HEAD, branch state, staged changes, task statuses, or generated artifacts',
+    'read-only git commands or a separate temporary worktree'
   )) {
     if (-not $buildFeatureSkill.Contains($requiredText)) {
       Add-Failure "build-feature workflow must include simplifier orchestration text: $requiredText"
@@ -150,14 +162,34 @@ if (Test-Path $reviewPromptTemplatePath) {
   foreach ($requiredText in @(
     'Verify the simplification pass stayed within the changed-file scope and did not alter approved behavior.',
     'Check maintainability, simplicity, security, performance, error handling, and project conventions.',
-    'simplifier summary and verification evidence'
-  )) {
+    'simplifier summary and verification evidence',
+    '{review_scope}'
+  ) + $readOnlyReviewContractText) {
     if (-not $reviewPromptTemplate.Contains($requiredText)) {
       Add-Failure "review prompt must include simplifier review text: $requiredText"
     }
   }
 } else {
   Add-Failure 'Missing build-feature review prompt template: skills/build-feature/references/review-prompt-template.md'
+}
+
+foreach ($reviewerAgent in @(
+  @{ Path = $specReviewerAgentPath; Label = 's-kit spec reviewer agent' },
+  @{ Path = $codeReviewerAgentPath; Label = 's-kit code reviewer agent' }
+)) {
+  if (Test-Path $reviewerAgent.Path) {
+    $reviewerAgentText = Get-Content $reviewerAgent.Path -Raw
+    foreach ($requiredText in $readOnlyReviewContractText + @(
+      'Reviewed Scope:',
+      'If the reviewed scope is missing or too vague, stop and request the concrete git range, task diff, or file set.'
+    )) {
+      if (-not $reviewerAgentText.Contains($requiredText)) {
+        Add-Failure "$($reviewerAgent.Label) must include read-only review safety text: $requiredText"
+      }
+    }
+  } else {
+    Add-Failure "Missing $($reviewerAgent.Label): $(Get-RelativePath $reviewerAgent.Path)"
+  }
 }
 
 if ((Test-Path $specRoot) -and (Test-Path $designRoot)) {

@@ -25,6 +25,7 @@
     "workflow"
   ],
   "skills": "./skills/",
+  "hooks": "./hooks/hooks.json",
   "interface": {
     "displayName": "s-kit",
     "shortDescription": "Brainstorming, domain docs, dated specs, implementation waves, and review workflows",
