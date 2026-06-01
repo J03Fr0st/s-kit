@@ -78,6 +78,7 @@ $requiredFiles = @(
   'skills/plan-feature/references/action-required-template.md',
   'skills/plan-feature/references/task-template.md',
   'skills/plan-feature/references/spec-json-template.json',
+  'skills/grill-me/SKILL.md',
   'skills/grill-with-docs/SKILL.md',
   'skills/grill-with-docs/CONTEXT-FORMAT.md',
   'skills/grill-with-docs/ADR-FORMAT.md',
@@ -93,6 +94,7 @@ foreach ($file in $requiredFiles) {
 
 Require-Contains 'skills/plan-feature/SKILL.md' 'name: plan-feature'
 Require-Contains 'skills/build-feature/SKILL.md' 'name: build-feature'
+Require-Contains 'skills/grill-me/SKILL.md' 'name: grill-me'
 Require-Contains 'skills/grill-with-docs/SKILL.md' 'name: grill-with-docs'
 Require-MissingPath "skills/$oldPlanName"
 Require-MissingPath "skills/$oldBuildName"
@@ -121,10 +123,19 @@ foreach ($file in $canonicalFiles) {
 Require-Contains 'README.md' 'brainstorming -> plan-feature -> build-feature -> verification/review -> ship'
 Require-Contains 'skills/using-s-kit/SKILL.md' 'brainstorming -> plan-feature -> build-feature -> verification/review -> ship'
 Require-Contains 'README.md' 'grill-with-docs'
+Require-Contains 'README.md' 'grill-me'
+Require-Contains '.codex-plugin/plugin.json' 'grill-me'
+Require-Contains 'skills/grill-me/SKILL.md' 'Ask the questions one at a time.'
 Require-Contains 'skills/using-s-kit/SKILL.md' 'grill-with-docs'
+Require-Contains 'skills/brainstorming/SKILL.md' 'Write `design.md` as the review artifact before final approval, then stop.'
+Require-Contains 'skills/plan-feature/SKILL.md' 'Do not treat a drafted `design.md` as approved until the user approves it after reviewing the file.'
+Require-Contains 'skills/brainstorming/SKILL.md' 'Offer `grill-me` as an optional review step after writing the design file.'
 
 $legacyPattern = "$oldPlanName|$oldBuildName|$oldWritingPlansName|$oldExecutingPlansName|$oldSubagentDrivenName|$oldAliasTerm|$oldAliasTermLower|$retiredNameTerm|Workflow redirects|Workflow Redirect"
-$legacyMatches = & rg -n $legacyPattern -g '!scripts/verify-skill-names.ps1' $root
+# The docs/*-research/comparison notes legitimately reference the retired names
+# (e.g. "verify create-spec is absent"). They are exempt; the scan still covers
+# every shipped product surface.
+$legacyMatches = & rg -n $legacyPattern -g '!scripts/verify-skill-names.ps1' -g '!docs/future-development-research.md' -g '!docs/comparable-project-enhancements.md' $root
 if ($LASTEXITCODE -eq 0) {
   Add-Failure "Legacy naming remains in active repo surface:`n$legacyMatches"
 } elseif ($LASTEXITCODE -gt 1) {

@@ -19,6 +19,8 @@ The key insight: implementation plans that live in a single file are either too 
 - When the user provides an existing approved design file that can be placed under `docs/design/YYYY-MM-DD-{feature-name}/design.md`
 - When the user wants to turn an approved design into task waves for implementation
 
+Do not use this skill automatically from the same assistant turn that wrote a new `design.md`. `brainstorming` must stop after writing the design file and wait for the user to approve the written design and separately request spec creation.
+
 ## Instructions
 
 ### Step 1: Verify Approved Design
@@ -28,7 +30,7 @@ The key insight: implementation plans that live in a single file are either too 
 Before writing requirements or tasks:
 
 1. Find the approved `design.md` in `docs/design/YYYY-MM-DD-{feature-name}/design.md`, or use the explicit design path supplied by the user after placing it in that structure.
-2. Confirm the design is approved. Approval can be explicit in the current conversation, stated in the design document, or inherited from the immediately preceding `brainstorming` handoff.
+2. Confirm the design is approved and that the user has separately requested spec creation after the design was written. Approval can be explicit in the current conversation after the user reviewed the file, stated in the design document, or inherited from an earlier `brainstorming` handoff that has already stopped and returned control to the user. Do not treat a drafted `design.md` as approved until the user approves it after reviewing the file.
 3. If no approved design exists, stop and invoke `brainstorming` first. Do not ask standalone requirements-interview questions from `plan-feature`.
 4. Read `design.md` and use it as the source of truth. Review the current conversation only to preserve approved details that are missing from the file.
 5. Derive the spec folder name from the design folder name. For example, `docs/design/2026-05-27-add-user-auth/design.md` becomes `docs/specs/2026-05-27-add-user-auth/`.

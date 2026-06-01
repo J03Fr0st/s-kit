@@ -8,7 +8,7 @@ The core workflow is:
 brainstorming -> plan-feature -> build-feature -> verification/review -> ship
 ```
 
-`brainstorming` is the front door. It clarifies the idea, explores options, gets design approval before any implementation starts, and writes that approved solution to `docs/design/YYYY-MM-DD-{feature-name}/design.md`. `plan-feature` expands the approved design into a matching dated spec folder under `docs/specs/YYYY-MM-DD-{feature-name}/`, including a manifest and execution log. `build-feature` reads the spec and matching design, works through task waves, runs a behavior-preserving simplification pass before spec-compliance and code-quality review gates, and tracks progress in the spec files.
+`brainstorming` is the front door. It clarifies the idea, explores options, writes the proposed solution to `docs/design/YYYY-MM-DD-{feature-name}/design.md` for review, offers `grill-me` as an optional stress-test of the written design, and then stops. `plan-feature` runs only after the user approves that written design and separately asks to continue, expanding the approved design into a matching dated spec folder under `docs/specs/YYYY-MM-DD-{feature-name}/`, including a manifest and execution log. `build-feature` reads the spec and matching design, works through task waves, runs a behavior-preserving simplification pass before spec-compliance and code-quality review gates, and tracks progress in the spec files.
 
 For domain-heavy work, `grill-with-docs` can run before or during `brainstorming` to challenge project language and ADR-worthy decisions against `CONTEXT.md`, `docs/adr/`, and existing code. It supports the workflow without replacing the dated design/spec artifacts.
 
@@ -27,7 +27,7 @@ The repo keeps packaging surfaces for:
 
 1. Use `brainstorming` for any creative or behavior-changing work.
    - If the idea depends on project-specific language, bounded contexts, or durable architecture decisions, use `grill-with-docs` to sharpen those terms and trade-offs before final design approval.
-2. After the design is approved and written to `docs/design/YYYY-MM-DD-{feature-name}/design.md`, use `plan-feature`.
+2. After the proposed design is written to `docs/design/YYYY-MM-DD-{feature-name}/design.md`, offer optional `grill-me`, then stop for user review and approval. Use `plan-feature` only after the user approves the written design and separately asks to create the spec.
 3. Designs and specs are created as:
 
    ```text
@@ -58,6 +58,7 @@ Primary workflow:
 
 Supporting workflow:
 
+- `grill-me` - optionally stress-tests a written design or plan by questioning each decision branch
 - `grill-with-docs` - stress-tests plans against project language, `CONTEXT.md`, ADRs, and code before design/spec work locks in terminology
 - `test-driven-development` - test-first implementation discipline
 - `systematic-debugging` - root-cause debugging process

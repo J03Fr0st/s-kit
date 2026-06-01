@@ -6,6 +6,6 @@ The broader workflow kit is adapted from MIT-licensed material in `obra/superpow
 
 The `plan-feature` and `build-feature` skills are adapted from original MIT-licensed feature planning and implementation orchestration skills in `leonvanzyl/get-images-app`.
 
-The `grill-with-docs` skill is adapted from MIT-licensed material in `mattpocock/skills`, copyright (c) 2026 Matt Pocock.
+The `grill-me` and `grill-with-docs` skills are adapted from MIT-licensed material in `mattpocock/skills`, copyright (c) 2026 Matt Pocock.
 
 Upstream copyright notices and license terms are preserved here for attribution.
