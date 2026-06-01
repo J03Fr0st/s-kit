@@ -121,7 +121,19 @@ Create `spec.json` as the source of truth for orchestration. It must match the R
 
 The manifest owns folder naming, task IDs, waves, status values, file ownership, and verification commands. README checkboxes and task file metadata must mirror the manifest, not diverge from it.
 
-Create `implementation-log.md` with an initial entry that records when the spec was created, which design it came from, and the initial task/wave count. Future implementation runs append wave starts, task results, review outcomes, verification evidence, blockers, and final integration notes here.
+Create `implementation-log.md` with approval evidence first. Record design approval before spec creation in `implementation-log.md`. Do not write a "Spec Created" entry before approval evidence.
+
+The initial log must contain entries in this order:
+
+1. `## YYYY-MM-DD - Design Approved`
+   - Approved design path.
+   - How approval was confirmed, such as current-conversation approval after design review, explicit document status, or an earlier `brainstorming` handoff that stopped and returned control to the user.
+   - Any optional `grill-me` outcome if used, or that it was declined or skipped.
+2. `## YYYY-MM-DD - Spec Created`
+   - Which approved design it came from.
+   - Initial task and wave count.
+
+Future implementation runs append wave starts, task results, review outcomes, verification evidence, blockers, and final integration notes here.
 
 ### Step 8: Extract Manual Actions
 

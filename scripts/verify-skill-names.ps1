@@ -130,6 +130,10 @@ Require-Contains 'skills/using-s-kit/SKILL.md' 'grill-with-docs'
 Require-Contains 'skills/brainstorming/SKILL.md' 'Write `design.md` as the review artifact before final approval, then stop.'
 Require-Contains 'skills/plan-feature/SKILL.md' 'Do not treat a drafted `design.md` as approved until the user approves it after reviewing the file.'
 Require-Contains 'skills/brainstorming/SKILL.md' 'Offer `grill-me` as an optional review step after writing the design file.'
+Require-Contains 'skills/plan-feature/SKILL.md' 'Record design approval before spec creation in `implementation-log.md`.'
+Require-Contains 'skills/plan-feature/SKILL.md' 'Do not write a "Spec Created" entry before approval evidence.'
+Require-Contains 'skills/brainstorming/references/design-template.md' '## Configuration and Inputs'
+Require-Contains 'skills/brainstorming/references/design-template.md' 'Distinguish stored configuration, command arguments, defaults, and per-command overrides.'
 
 $legacyPattern = "$oldPlanName|$oldBuildName|$oldWritingPlansName|$oldExecutingPlansName|$oldSubagentDrivenName|$oldAliasTerm|$oldAliasTermLower|$retiredNameTerm|Workflow redirects|Workflow Redirect"
 # The docs/*-research/comparison notes legitimately reference the retired names
