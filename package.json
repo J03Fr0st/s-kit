@@ -9,6 +9,7 @@
     "verify:agents": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/verify-agents.ps1",
     "verify:naming": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/verify-skill-names.ps1",
     "verify:workflow": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/verify-workflow.ps1",
+    "doctor": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/doctor.ps1",
     "test": "node --check .opencode/plugins/s-kit.js && npm run verify:branding && npm run verify:assets && npm run verify:agents && npm run verify:naming && npm run verify:workflow"
   }
 }
