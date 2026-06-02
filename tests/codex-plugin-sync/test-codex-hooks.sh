@@ -36,16 +36,28 @@ if (!Array.isArray(sessionStart) || sessionStart.length === 0) {
   fail('hooks/hooks.json must define a SessionStart hook');
 }
 
-const commandHooks = sessionStart.flatMap((group) => group.hooks ?? []);
-const command = commandHooks.find((hook) => hook.type === 'command')?.command;
-if (!command || !command.includes('run-hook.cmd') || !command.includes('session-start')) {
-  fail('SessionStart must call hooks/run-hook.cmd session-start');
+const expectedMatchers = ['startup', 'resume', 'clear', 'compact'];
+const actualMatchers = sessionStart.map((group) => group.matcher);
+if (JSON.stringify(actualMatchers) !== JSON.stringify(expectedMatchers)) {
+  fail(`SessionStart must expose one hook group per start source: ${expectedMatchers.join(', ')}`);
 }
-if (!command.includes('${PLUGIN_ROOT}/hooks/run-hook.cmd')) {
-  fail('SessionStart must use ${PLUGIN_ROOT}/hooks/run-hook.cmd');
-}
-if (command.includes('${CLAUDE_PLUGIN_ROOT}')) {
-  fail('SessionStart must not use ${CLAUDE_PLUGIN_ROOT}');
+
+for (const group of sessionStart) {
+  const commandHooks = (group.hooks ?? []).filter((hook) => hook.type === 'command');
+  if (commandHooks.length !== 1) {
+    fail(`SessionStart ${group.matcher} must define exactly one command hook`);
+  }
+
+  const command = commandHooks[0].command;
+  if (!command || !command.includes('run-hook.cmd') || !command.includes('session-start')) {
+    fail(`SessionStart ${group.matcher} must call hooks/run-hook.cmd session-start`);
+  }
+  if (!command.includes('${PLUGIN_ROOT}/hooks/run-hook.cmd')) {
+    fail(`SessionStart ${group.matcher} must use ${PLUGIN_ROOT}/hooks/run-hook.cmd`);
+  }
+  if (command.includes('${CLAUDE_PLUGIN_ROOT}')) {
+    fail(`SessionStart ${group.matcher} must not use ${CLAUDE_PLUGIN_ROOT}`);
+  }
 }
 NODE
 

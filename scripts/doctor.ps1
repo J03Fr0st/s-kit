@@ -168,20 +168,33 @@ if ($null -ne $codex) {
 
 $codexHooks = Read-JsonFile 'hooks/hooks.json'
 if ($null -ne $codexHooks) {
-  $sessionStart = $codexHooks.hooks.SessionStart
-  if ($null -eq $sessionStart -or $sessionStart.Count -lt 1) {
+  $sessionStart = @($codexHooks.hooks.SessionStart)
+  if ($null -eq $codexHooks.hooks.SessionStart -or $sessionStart.Count -lt 1) {
     Add-Failure 'hooks/hooks.json must define a SessionStart hook.'
   } else {
-    $commandHooks = @($sessionStart | ForEach-Object { $_.hooks } | Where-Object { $_.type -eq 'command' })
-    $sessionCommand = [string] @($commandHooks | Select-Object -First 1).command
-    if (-not ($sessionCommand.Contains('run-hook.cmd') -and $sessionCommand.Contains('session-start'))) {
-      Add-Failure 'hooks/hooks.json SessionStart must call hooks/run-hook.cmd session-start.'
+    $expectedMatchers = @('startup', 'resume', 'clear', 'compact')
+    $actualMatchers = @($sessionStart | ForEach-Object { [string] $_.matcher })
+    if (($actualMatchers -join '|') -ne ($expectedMatchers -join '|')) {
+      Add-Failure "hooks/hooks.json SessionStart must expose one hook group per start source: $($expectedMatchers -join ', ')."
     }
-    if (-not $sessionCommand.Contains('${PLUGIN_ROOT}/hooks/run-hook.cmd')) {
-      Add-Failure 'hooks/hooks.json SessionStart must use ${PLUGIN_ROOT}/hooks/run-hook.cmd for Codex plugin compatibility.'
-    }
-    if ($sessionCommand.Contains('${CLAUDE_PLUGIN_ROOT}')) {
-      Add-Failure 'hooks/hooks.json SessionStart must not use ${CLAUDE_PLUGIN_ROOT}; Codex plugin hooks should use ${PLUGIN_ROOT}.'
+
+    foreach ($group in $sessionStart) {
+      $commandHooks = @($group.hooks | Where-Object { $_.type -eq 'command' })
+      if ($commandHooks.Count -ne 1) {
+        Add-Failure "hooks/hooks.json SessionStart '$($group.matcher)' must define exactly one command hook."
+        continue
+      }
+
+      $sessionCommand = [string] $commandHooks[0].command
+      if (-not ($sessionCommand.Contains('run-hook.cmd') -and $sessionCommand.Contains('session-start'))) {
+        Add-Failure "hooks/hooks.json SessionStart '$($group.matcher)' must call hooks/run-hook.cmd session-start."
+      }
+      if (-not $sessionCommand.Contains('${PLUGIN_ROOT}/hooks/run-hook.cmd')) {
+        Add-Failure "hooks/hooks.json SessionStart '$($group.matcher)' must use ${PLUGIN_ROOT}/hooks/run-hook.cmd for Codex plugin compatibility."
+      }
+      if ($sessionCommand.Contains('${CLAUDE_PLUGIN_ROOT}')) {
+        Add-Failure "hooks/hooks.json SessionStart '$($group.matcher)' must not use ${CLAUDE_PLUGIN_ROOT}; Codex plugin hooks should use ${PLUGIN_ROOT}."
+      }
     }
   }
 }
