@@ -105,8 +105,8 @@
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\scripts\\verify-workflow.ps1": {
-    "mtime": 1780335615.759211,
-    "ast_hash": "d8eea878f65947efa546b005ef9bacf0",
+    "mtime": 1781001738.0002306,
+    "ast_hash": "211e4b5a09b2602d75cf7c00e5432d92",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\skills\\brainstorming\\scripts\\helper.js": {
@@ -550,28 +550,28 @@
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\skills\\build-feature\\SKILL.md": {
-    "mtime": 1780336424.0777712,
-    "ast_hash": "36616ca775bf1f0a214d51834c527032",
+    "mtime": 1781001755.718952,
+    "ast_hash": "3e0a586933d162613a56d898c072833a",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\skills\\build-feature\\references\\coder-prompt-template.md": {
-    "mtime": 1780177896.3661873,
-    "ast_hash": "c6b401efdba1595e7733dc6cb3667572",
+    "mtime": 1781001627.0953991,
+    "ast_hash": "be502e82b8040ae4ecb83bdeee2fcd13",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\skills\\build-feature\\references\\fix-prompt-template.md": {
-    "mtime": 1780244039.7274067,
-    "ast_hash": "1c93bf68cccdaca7a4dd1367a0faf908",
+    "mtime": 1781001688.4078562,
+    "ast_hash": "f112cecc0abaa53c2eb08490b427c150",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\skills\\build-feature\\references\\review-prompt-template.md": {
-    "mtime": 1780335382.8528502,
-    "ast_hash": "1245be1130a03f57d528c7f44a8a88ce",
+    "mtime": 1781001688.4068534,
+    "ast_hash": "d788f153431a19d9a32e0207a2bfddcc",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\skills\\build-feature\\references\\simplifier-prompt-template.md": {
-    "mtime": 1780243941.4205232,
-    "ast_hash": "a79dcbf2344d1b6343c34f8b8fb1ab8f",
+    "mtime": 1781001688.4078562,
+    "ast_hash": "ab63b5540471fd044f85b1cd2fa036e3",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\skills\\dispatching-parallel-agents\\SKILL.md": {
@@ -882,6 +882,51 @@
   "D:\\Source\\s-kit\\graphify-out\\memory\\query_20260602_162824_why_does_writing_skills_connect_so_many_communitie.md": {
     "mtime": 1780417704.9180067,
     "ast_hash": "42eeea92735b3c3e7bbf2967ed7b1f51",
+    "semantic_hash": ""
+  },
+  "D:\\Source\\s-kit\\docs\\specs\\2026-06-09-build-feature-risk-preflight\\spec.json": {
+    "mtime": 1781001719.2439032,
+    "ast_hash": "0e7a1d57e161fce858654334d722dffd",
+    "semantic_hash": ""
+  },
+  "D:\\Source\\s-kit\\docs\\design\\2026-06-09-build-feature-risk-preflight\\design.md": {
+    "mtime": 1781000334.7980998,
+    "ast_hash": "f0c870a7b5ed17fd2c4665ae19a5bc04",
+    "semantic_hash": ""
+  },
+  "D:\\Source\\s-kit\\docs\\specs\\2026-06-09-build-feature-risk-preflight\\README.md": {
+    "mtime": 1781001719.2459035,
+    "ast_hash": "26839a1d5e47a931e74a8127f9c508b7",
+    "semantic_hash": ""
+  },
+  "D:\\Source\\s-kit\\docs\\specs\\2026-06-09-build-feature-risk-preflight\\action-required.md": {
+    "mtime": 1781001166.4990847,
+    "ast_hash": "611cf9344876776730951b00c22a39ea",
+    "semantic_hash": ""
+  },
+  "D:\\Source\\s-kit\\docs\\specs\\2026-06-09-build-feature-risk-preflight\\implementation-log.md": {
+    "mtime": 1781001719.2459035,
+    "ast_hash": "353eecd8e4f8ee382f3fe3bf46352cfb",
+    "semantic_hash": ""
+  },
+  "D:\\Source\\s-kit\\docs\\specs\\2026-06-09-build-feature-risk-preflight\\requirements.md": {
+    "mtime": 1781001166.4980855,
+    "ast_hash": "e10c3e0cd257d986cb085622649a48fa",
+    "semantic_hash": ""
+  },
+  "D:\\Source\\s-kit\\docs\\specs\\2026-06-09-build-feature-risk-preflight\\tasks\\task-01-wave-risk-preflight.md": {
+    "mtime": 1781001656.3667145,
+    "ast_hash": "95dce8bdc934b205541647d7cf9e2d39",
+    "semantic_hash": ""
+  },
+  "D:\\Source\\s-kit\\docs\\specs\\2026-06-09-build-feature-risk-preflight\\tasks\\task-02-complete-punch-list-mode.md": {
+    "mtime": 1781001719.2439032,
+    "ast_hash": "e168487fc18569e97397fcd6d0c2feb7",
+    "semantic_hash": ""
+  },
+  "D:\\Source\\s-kit\\docs\\specs\\2026-06-09-build-feature-risk-preflight\\tasks\\task-03-verification-guardrails.md": {
+    "mtime": 1781001719.2449038,
+    "ast_hash": "80ab525ddb269c7782accc5e189117e5",
     "semantic_hash": ""
   }
 }

@@ -19,6 +19,10 @@ You are reviewing only. Do not modify files, the index, HEAD, branch state, stag
 
 {design}
 
+## Wave Risk Preflight
+
+{wave_risk_preflight}
+
 ## Tasks Completed in This Wave
 
 {task_summaries}
@@ -37,6 +41,8 @@ If the review scope is missing or too vague, stop and request the concrete git r
 
 {review_type}
 
+If the orchestrator asks for complete punch-list mode, inspect the concrete boundary scope as a whole before returning. Group every blocking issue you can find in that boundary in one verdict. Do not stop after the first issue. Keep the review read-only.
+
 If this is a Spec Compliance review:
 
 1. Verify each task matches the approved design.
@@ -45,6 +51,7 @@ If this is a Spec Compliance review:
 4. Verify status updates are consistent across spec.json, task files, and README checkboxes.
 5. Verify manual assumptions match action-required.md.
 6. Verify the simplification pass stayed within the changed-file scope and did not alter approved behavior.
+7. Verify the implementation accounts for the Wave Risk Preflight contracts without widening scope.
 
 If this is a Code Quality review:
 
@@ -53,6 +60,7 @@ If this is a Code Quality review:
 3. Check maintainability, simplicity, security, performance, error handling, and project conventions.
 4. Check for cleanup or workflow invariant regressions when the repository has those checks.
 5. Flag test gaps or skipped checks that should block completion.
+6. Check the Wave Risk Preflight contracts for missed boundary issues.
 
 ## Verdict
 
@@ -77,6 +85,7 @@ Group issues by the task they most closely relate to based on the manifest file 
 - **{wave_number}**: the current wave number, such as `2`, or `final` for the full-feature review.
 - **{requirements}**: full text of `requirements.md`.
 - **{design}**: full text of `design.md`.
+- **{wave_risk_preflight}**: the Wave Risk Preflight for the current wave. Reviewers must use this as required boundary context, not optional background.
 - **{task_summaries}**: for each task in the wave, include the task title, manifest entry, task file content, files created/modified, verification evidence, coder or fixer completion summary, and simplifier summary and verification evidence.
 - **{review_scope}**: the concrete git range, task diff, or exact file set the reviewer must inspect.
 - **{verification_commands}**: the task-specific commands from `spec.json` for spec compliance, or the project-level lint/typecheck/test commands for code quality.

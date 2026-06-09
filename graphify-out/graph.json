@@ -787,6 +787,96 @@
       "norm_label": "tasks"
     },
     {
+      "label": "spec.json",
+      "file_type": "code",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/spec.json",
+      "source_location": "L1",
+      "id": "2026_06_09_build_feature_risk_preflight_spec",
+      "community": 168,
+      "norm_label": "spec.json"
+    },
+    {
+      "label": "feature",
+      "file_type": "code",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/spec.json",
+      "source_location": "L2",
+      "id": "2026_06_09_build_feature_risk_preflight_spec_feature",
+      "community": 168,
+      "norm_label": "feature"
+    },
+    {
+      "label": "created",
+      "file_type": "code",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/spec.json",
+      "source_location": "L3",
+      "id": "2026_06_09_build_feature_risk_preflight_spec_created",
+      "community": 168,
+      "norm_label": "created"
+    },
+    {
+      "label": "designPath",
+      "file_type": "code",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/spec.json",
+      "source_location": "L4",
+      "id": "2026_06_09_build_feature_risk_preflight_spec_designpath",
+      "community": 168,
+      "norm_label": "designpath"
+    },
+    {
+      "label": "specPath",
+      "file_type": "code",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/spec.json",
+      "source_location": "L5",
+      "id": "2026_06_09_build_feature_risk_preflight_spec_specpath",
+      "community": 168,
+      "norm_label": "specpath"
+    },
+    {
+      "label": "requirementsPath",
+      "file_type": "code",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/spec.json",
+      "source_location": "L6",
+      "id": "2026_06_09_build_feature_risk_preflight_spec_requirementspath",
+      "community": 168,
+      "norm_label": "requirementspath"
+    },
+    {
+      "label": "actionRequiredPath",
+      "file_type": "code",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/spec.json",
+      "source_location": "L7",
+      "id": "2026_06_09_build_feature_risk_preflight_spec_actionrequiredpath",
+      "community": 168,
+      "norm_label": "actionrequiredpath"
+    },
+    {
+      "label": "implementationLogPath",
+      "file_type": "code",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/spec.json",
+      "source_location": "L8",
+      "id": "2026_06_09_build_feature_risk_preflight_spec_implementationlogpath",
+      "community": 168,
+      "norm_label": "implementationlogpath"
+    },
+    {
+      "label": "allowedTaskStatuses",
+      "file_type": "code",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/spec.json",
+      "source_location": "L9",
+      "id": "2026_06_09_build_feature_risk_preflight_spec_allowedtaskstatuses",
+      "community": 168,
+      "norm_label": "allowedtaskstatuses"
+    },
+    {
+      "label": "tasks",
+      "file_type": "code",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/spec.json",
+      "source_location": "L18",
+      "id": "2026_06_09_build_feature_risk_preflight_spec_tasks",
+      "community": 168,
+      "norm_label": "tasks"
+    },
+    {
       "label": "gemini-extension.json",
       "file_type": "code",
       "source_file": "gemini-extension.json",
@@ -5618,6 +5708,96 @@
       "norm_label": "verification strategy"
     },
     {
+      "label": "design.md",
+      "file_type": "document",
+      "source_file": "docs/design/2026-06-09-build-feature-risk-preflight/design.md",
+      "source_location": "L1",
+      "id": "2026_06_09_build_feature_risk_preflight_design",
+      "community": 166,
+      "norm_label": "design.md"
+    },
+    {
+      "label": "Design: Build Feature Risk Preflight",
+      "file_type": "document",
+      "source_file": "docs/design/2026-06-09-build-feature-risk-preflight/design.md",
+      "source_location": "L1",
+      "id": "2026_06_09_build_feature_risk_preflight_design_design_build_feature_risk_preflight",
+      "community": 166,
+      "norm_label": "design: build feature risk preflight"
+    },
+    {
+      "label": "Context",
+      "file_type": "document",
+      "source_file": "docs/design/2026-06-09-build-feature-risk-preflight/design.md",
+      "source_location": "L3",
+      "id": "2026_06_09_build_feature_risk_preflight_design_context",
+      "community": 166,
+      "norm_label": "context"
+    },
+    {
+      "label": "Approved Approach",
+      "file_type": "document",
+      "source_file": "docs/design/2026-06-09-build-feature-risk-preflight/design.md",
+      "source_location": "L11",
+      "id": "2026_06_09_build_feature_risk_preflight_design_approved_approach",
+      "community": 166,
+      "norm_label": "approved approach"
+    },
+    {
+      "label": "Alternatives Considered",
+      "file_type": "document",
+      "source_file": "docs/design/2026-06-09-build-feature-risk-preflight/design.md",
+      "source_location": "L21",
+      "id": "2026_06_09_build_feature_risk_preflight_design_alternatives_considered",
+      "community": 166,
+      "norm_label": "alternatives considered"
+    },
+    {
+      "label": "Architecture",
+      "file_type": "document",
+      "source_file": "docs/design/2026-06-09-build-feature-risk-preflight/design.md",
+      "source_location": "L27",
+      "id": "2026_06_09_build_feature_risk_preflight_design_architecture",
+      "community": 166,
+      "norm_label": "architecture"
+    },
+    {
+      "label": "Configuration and Inputs",
+      "file_type": "document",
+      "source_file": "docs/design/2026-06-09-build-feature-risk-preflight/design.md",
+      "source_location": "L65",
+      "id": "2026_06_09_build_feature_risk_preflight_design_configuration_and_inputs",
+      "community": 166,
+      "norm_label": "configuration and inputs"
+    },
+    {
+      "label": "Decisions",
+      "file_type": "document",
+      "source_file": "docs/design/2026-06-09-build-feature-risk-preflight/design.md",
+      "source_location": "L81",
+      "id": "2026_06_09_build_feature_risk_preflight_design_decisions",
+      "community": 166,
+      "norm_label": "decisions"
+    },
+    {
+      "label": "Risks and Constraints",
+      "file_type": "document",
+      "source_file": "docs/design/2026-06-09-build-feature-risk-preflight/design.md",
+      "source_location": "L91",
+      "id": "2026_06_09_build_feature_risk_preflight_design_risks_and_constraints",
+      "community": 166,
+      "norm_label": "risks and constraints"
+    },
+    {
+      "label": "Verification Strategy",
+      "file_type": "document",
+      "source_file": "docs/design/2026-06-09-build-feature-risk-preflight/design.md",
+      "source_location": "L99",
+      "id": "2026_06_09_build_feature_risk_preflight_design_verification_strategy",
+      "community": 166,
+      "norm_label": "verification strategy"
+    },
+    {
       "label": "eval-harness-strategy.md",
       "file_type": "document",
       "source_file": "docs/eval-harness-strategy.md",
@@ -7238,6 +7418,780 @@
       "norm_label": "notes"
     },
     {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/README.md",
+      "source_location": "L1",
+      "id": "2026_06_09_build_feature_risk_preflight_readme",
+      "community": 167,
+      "norm_label": "readme.md"
+    },
+    {
+      "label": "Build Feature Risk Preflight",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/README.md",
+      "source_location": "L1",
+      "id": "2026_06_09_build_feature_risk_preflight_readme_build_feature_risk_preflight",
+      "community": 167,
+      "norm_label": "build feature risk preflight"
+    },
+    {
+      "label": "Overview",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/README.md",
+      "source_location": "L3",
+      "id": "2026_06_09_build_feature_risk_preflight_readme_overview",
+      "community": 167,
+      "norm_label": "overview"
+    },
+    {
+      "label": "Quick Links",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/README.md",
+      "source_location": "L7",
+      "id": "2026_06_09_build_feature_risk_preflight_readme_quick_links",
+      "community": 167,
+      "norm_label": "quick links"
+    },
+    {
+      "label": "Dependency Graph",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/README.md",
+      "source_location": "L15",
+      "id": "2026_06_09_build_feature_risk_preflight_readme_dependency_graph",
+      "community": 167,
+      "norm_label": "dependency graph"
+    },
+    {
+      "label": "Waves",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/README.md",
+      "source_location": "L26",
+      "id": "2026_06_09_build_feature_risk_preflight_readme_waves",
+      "community": 167,
+      "norm_label": "waves"
+    },
+    {
+      "label": "Task Status",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/README.md",
+      "source_location": "L34",
+      "id": "2026_06_09_build_feature_risk_preflight_readme_task_status",
+      "community": 167,
+      "norm_label": "task status"
+    },
+    {
+      "label": "Wave 1",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/README.md",
+      "source_location": "L36",
+      "id": "2026_06_09_build_feature_risk_preflight_readme_wave_1",
+      "community": 167,
+      "norm_label": "wave 1"
+    },
+    {
+      "label": "Wave 2",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/README.md",
+      "source_location": "L40",
+      "id": "2026_06_09_build_feature_risk_preflight_readme_wave_2",
+      "community": 167,
+      "norm_label": "wave 2"
+    },
+    {
+      "label": "Wave 3",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/README.md",
+      "source_location": "L44",
+      "id": "2026_06_09_build_feature_risk_preflight_readme_wave_3",
+      "community": 167,
+      "norm_label": "wave 3"
+    },
+    {
+      "label": "action-required.md",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/action-required.md",
+      "source_location": "L1",
+      "id": "2026_06_09_build_feature_risk_preflight_action_required",
+      "community": 172,
+      "norm_label": "action-required.md"
+    },
+    {
+      "label": "Action Required: Build Feature Risk Preflight",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/action-required.md",
+      "source_location": "L1",
+      "id": "2026_06_09_build_feature_risk_preflight_action_required_action_required_build_feature_risk_preflight",
+      "community": 172,
+      "norm_label": "action required: build feature risk preflight"
+    },
+    {
+      "label": "implementation-log.md",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/implementation-log.md",
+      "source_location": "L1",
+      "id": "2026_06_09_build_feature_risk_preflight_implementation_log",
+      "community": 169,
+      "norm_label": "implementation-log.md"
+    },
+    {
+      "label": "Implementation Log: Build Feature Risk Preflight",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/implementation-log.md",
+      "source_location": "L1",
+      "id": "2026_06_09_build_feature_risk_preflight_implementation_log_implementation_log_build_feature_risk_preflight",
+      "community": 169,
+      "norm_label": "implementation log: build feature risk preflight"
+    },
+    {
+      "label": "2026-06-09 - Design Approved",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/implementation-log.md",
+      "source_location": "L3",
+      "id": "2026_06_09_build_feature_risk_preflight_implementation_log_2026_06_09_design_approved",
+      "community": 169,
+      "norm_label": "2026-06-09 - design approved"
+    },
+    {
+      "label": "2026-06-09 - Spec Created",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/implementation-log.md",
+      "source_location": "L9",
+      "id": "2026_06_09_build_feature_risk_preflight_implementation_log_2026_06_09_spec_created",
+      "community": 169,
+      "norm_label": "2026-06-09 - spec created"
+    },
+    {
+      "label": "2026-06-09 - Wave 1 Started",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/implementation-log.md",
+      "source_location": "L15",
+      "id": "2026_06_09_build_feature_risk_preflight_implementation_log_2026_06_09_wave_1_started",
+      "community": 169,
+      "norm_label": "2026-06-09 - wave 1 started"
+    },
+    {
+      "label": "2026-06-09 - Wave 1 Result",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/implementation-log.md",
+      "source_location": "L24",
+      "id": "2026_06_09_build_feature_risk_preflight_implementation_log_2026_06_09_wave_1_result",
+      "community": 169,
+      "norm_label": "2026-06-09 - wave 1 result"
+    },
+    {
+      "label": "2026-06-09 - Wave 2 Started",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/implementation-log.md",
+      "source_location": "L41",
+      "id": "2026_06_09_build_feature_risk_preflight_implementation_log_2026_06_09_wave_2_started",
+      "community": 169,
+      "norm_label": "2026-06-09 - wave 2 started"
+    },
+    {
+      "label": "2026-06-09 - Wave 2 Result",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/implementation-log.md",
+      "source_location": "L51",
+      "id": "2026_06_09_build_feature_risk_preflight_implementation_log_2026_06_09_wave_2_result",
+      "community": 169,
+      "norm_label": "2026-06-09 - wave 2 result"
+    },
+    {
+      "label": "2026-06-09 - Wave 3 Started",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/implementation-log.md",
+      "source_location": "L69",
+      "id": "2026_06_09_build_feature_risk_preflight_implementation_log_2026_06_09_wave_3_started",
+      "community": 169,
+      "norm_label": "2026-06-09 - wave 3 started"
+    },
+    {
+      "label": "requirements.md",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/requirements.md",
+      "source_location": "L1",
+      "id": "2026_06_09_build_feature_risk_preflight_requirements",
+      "community": 170,
+      "norm_label": "requirements.md"
+    },
+    {
+      "label": "Requirements: Build Feature Risk Preflight",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/requirements.md",
+      "source_location": "L1",
+      "id": "2026_06_09_build_feature_risk_preflight_requirements_requirements_build_feature_risk_preflight",
+      "community": 170,
+      "norm_label": "requirements: build feature risk preflight"
+    },
+    {
+      "label": "Summary",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/requirements.md",
+      "source_location": "L3",
+      "id": "2026_06_09_build_feature_risk_preflight_requirements_summary",
+      "community": 170,
+      "norm_label": "summary"
+    },
+    {
+      "label": "Goals",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/requirements.md",
+      "source_location": "L11",
+      "id": "2026_06_09_build_feature_risk_preflight_requirements_goals",
+      "community": 170,
+      "norm_label": "goals"
+    },
+    {
+      "label": "Non-Goals",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/requirements.md",
+      "source_location": "L19",
+      "id": "2026_06_09_build_feature_risk_preflight_requirements_non_goals",
+      "community": 170,
+      "norm_label": "non-goals"
+    },
+    {
+      "label": "Acceptance Criteria",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/requirements.md",
+      "source_location": "L28",
+      "id": "2026_06_09_build_feature_risk_preflight_requirements_acceptance_criteria",
+      "community": 170,
+      "norm_label": "acceptance criteria"
+    },
+    {
+      "label": "Assumptions",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/requirements.md",
+      "source_location": "L38",
+      "id": "2026_06_09_build_feature_risk_preflight_requirements_assumptions",
+      "community": 170,
+      "norm_label": "assumptions"
+    },
+    {
+      "label": "Technical Constraints",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/requirements.md",
+      "source_location": "L45",
+      "id": "2026_06_09_build_feature_risk_preflight_requirements_technical_constraints",
+      "community": 170,
+      "norm_label": "technical constraints"
+    },
+    {
+      "label": "task-01-wave-risk-preflight.md",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-01-wave-risk-preflight.md",
+      "source_location": "L1",
+      "id": "tasks_task_01_wave_risk_preflight",
+      "community": 163,
+      "norm_label": "task-01-wave-risk-preflight.md"
+    },
+    {
+      "label": "Task 01: Wave Risk Preflight",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-01-wave-risk-preflight.md",
+      "source_location": "L1",
+      "id": "tasks_task_01_wave_risk_preflight_task_01_wave_risk_preflight",
+      "community": 163,
+      "norm_label": "task 01: wave risk preflight"
+    },
+    {
+      "label": "Status",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-01-wave-risk-preflight.md",
+      "source_location": "L3",
+      "id": "tasks_task_01_wave_risk_preflight_status",
+      "community": 163,
+      "norm_label": "status"
+    },
+    {
+      "label": "Wave",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-01-wave-risk-preflight.md",
+      "source_location": "L7",
+      "id": "tasks_task_01_wave_risk_preflight_wave",
+      "community": 163,
+      "norm_label": "wave"
+    },
+    {
+      "label": "Description",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-01-wave-risk-preflight.md",
+      "source_location": "L11",
+      "id": "tasks_task_01_wave_risk_preflight_description",
+      "community": 163,
+      "norm_label": "description"
+    },
+    {
+      "label": "Dependencies",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-01-wave-risk-preflight.md",
+      "source_location": "L15",
+      "id": "tasks_task_01_wave_risk_preflight_dependencies",
+      "community": 163,
+      "norm_label": "dependencies"
+    },
+    {
+      "label": "Files to Create",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-01-wave-risk-preflight.md",
+      "source_location": "L22",
+      "id": "tasks_task_01_wave_risk_preflight_files_to_create",
+      "community": 163,
+      "norm_label": "files to create"
+    },
+    {
+      "label": "Files to Modify",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-01-wave-risk-preflight.md",
+      "source_location": "L26",
+      "id": "tasks_task_01_wave_risk_preflight_files_to_modify",
+      "community": 163,
+      "norm_label": "files to modify"
+    },
+    {
+      "label": "Technical Details",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-01-wave-risk-preflight.md",
+      "source_location": "L33",
+      "id": "tasks_task_01_wave_risk_preflight_technical_details",
+      "community": 163,
+      "norm_label": "technical details"
+    },
+    {
+      "label": "Implementation Steps",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-01-wave-risk-preflight.md",
+      "source_location": "L35",
+      "id": "tasks_task_01_wave_risk_preflight_implementation_steps",
+      "community": 163,
+      "norm_label": "implementation steps"
+    },
+    {
+      "label": "Code Snippets",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-01-wave-risk-preflight.md",
+      "source_location": "L51",
+      "id": "tasks_task_01_wave_risk_preflight_code_snippets",
+      "community": 163,
+      "norm_label": "code snippets"
+    },
+    {
+      "label": "Environment Variables",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-01-wave-risk-preflight.md",
+      "source_location": "L67",
+      "id": "tasks_task_01_wave_risk_preflight_environment_variables",
+      "community": 163,
+      "norm_label": "environment variables"
+    },
+    {
+      "label": "API Endpoints",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-01-wave-risk-preflight.md",
+      "source_location": "L71",
+      "id": "tasks_task_01_wave_risk_preflight_api_endpoints",
+      "community": 163,
+      "norm_label": "api endpoints"
+    },
+    {
+      "label": "Verification Plan",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-01-wave-risk-preflight.md",
+      "source_location": "L75",
+      "id": "tasks_task_01_wave_risk_preflight_verification_plan",
+      "community": 163,
+      "norm_label": "verification plan"
+    },
+    {
+      "label": "RED",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-01-wave-risk-preflight.md",
+      "source_location": "L77",
+      "id": "tasks_task_01_wave_risk_preflight_red",
+      "community": 163,
+      "norm_label": "red"
+    },
+    {
+      "label": "GREEN",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-01-wave-risk-preflight.md",
+      "source_location": "L82",
+      "id": "tasks_task_01_wave_risk_preflight_green",
+      "community": 163,
+      "norm_label": "green"
+    },
+    {
+      "label": "Final Verification",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-01-wave-risk-preflight.md",
+      "source_location": "L87",
+      "id": "tasks_task_01_wave_risk_preflight_final_verification",
+      "community": 163,
+      "norm_label": "final verification"
+    },
+    {
+      "label": "Acceptance Criteria",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-01-wave-risk-preflight.md",
+      "source_location": "L92",
+      "id": "tasks_task_01_wave_risk_preflight_acceptance_criteria",
+      "community": 163,
+      "norm_label": "acceptance criteria"
+    },
+    {
+      "label": "Notes",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-01-wave-risk-preflight.md",
+      "source_location": "L101",
+      "id": "tasks_task_01_wave_risk_preflight_notes",
+      "community": 163,
+      "norm_label": "notes"
+    },
+    {
+      "label": "task-02-complete-punch-list-mode.md",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-02-complete-punch-list-mode.md",
+      "source_location": "L1",
+      "id": "tasks_task_02_complete_punch_list_mode",
+      "community": 164,
+      "norm_label": "task-02-complete-punch-list-mode.md"
+    },
+    {
+      "label": "Task 02: Complete Punch-List Mode",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-02-complete-punch-list-mode.md",
+      "source_location": "L1",
+      "id": "tasks_task_02_complete_punch_list_mode_task_02_complete_punch_list_mode",
+      "community": 164,
+      "norm_label": "task 02: complete punch-list mode"
+    },
+    {
+      "label": "Status",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-02-complete-punch-list-mode.md",
+      "source_location": "L3",
+      "id": "tasks_task_02_complete_punch_list_mode_status",
+      "community": 164,
+      "norm_label": "status"
+    },
+    {
+      "label": "Wave",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-02-complete-punch-list-mode.md",
+      "source_location": "L7",
+      "id": "tasks_task_02_complete_punch_list_mode_wave",
+      "community": 164,
+      "norm_label": "wave"
+    },
+    {
+      "label": "Description",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-02-complete-punch-list-mode.md",
+      "source_location": "L11",
+      "id": "tasks_task_02_complete_punch_list_mode_description",
+      "community": 164,
+      "norm_label": "description"
+    },
+    {
+      "label": "Dependencies",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-02-complete-punch-list-mode.md",
+      "source_location": "L15",
+      "id": "tasks_task_02_complete_punch_list_mode_dependencies",
+      "community": 164,
+      "norm_label": "dependencies"
+    },
+    {
+      "label": "Files to Create",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-02-complete-punch-list-mode.md",
+      "source_location": "L22",
+      "id": "tasks_task_02_complete_punch_list_mode_files_to_create",
+      "community": 164,
+      "norm_label": "files to create"
+    },
+    {
+      "label": "Files to Modify",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-02-complete-punch-list-mode.md",
+      "source_location": "L26",
+      "id": "tasks_task_02_complete_punch_list_mode_files_to_modify",
+      "community": 164,
+      "norm_label": "files to modify"
+    },
+    {
+      "label": "Technical Details",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-02-complete-punch-list-mode.md",
+      "source_location": "L33",
+      "id": "tasks_task_02_complete_punch_list_mode_technical_details",
+      "community": 164,
+      "norm_label": "technical details"
+    },
+    {
+      "label": "Implementation Steps",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-02-complete-punch-list-mode.md",
+      "source_location": "L35",
+      "id": "tasks_task_02_complete_punch_list_mode_implementation_steps",
+      "community": 164,
+      "norm_label": "implementation steps"
+    },
+    {
+      "label": "Code Snippets",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-02-complete-punch-list-mode.md",
+      "source_location": "L47",
+      "id": "tasks_task_02_complete_punch_list_mode_code_snippets",
+      "community": 164,
+      "norm_label": "code snippets"
+    },
+    {
+      "label": "Environment Variables",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-02-complete-punch-list-mode.md",
+      "source_location": "L61",
+      "id": "tasks_task_02_complete_punch_list_mode_environment_variables",
+      "community": 164,
+      "norm_label": "environment variables"
+    },
+    {
+      "label": "API Endpoints",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-02-complete-punch-list-mode.md",
+      "source_location": "L65",
+      "id": "tasks_task_02_complete_punch_list_mode_api_endpoints",
+      "community": 164,
+      "norm_label": "api endpoints"
+    },
+    {
+      "label": "Verification Plan",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-02-complete-punch-list-mode.md",
+      "source_location": "L69",
+      "id": "tasks_task_02_complete_punch_list_mode_verification_plan",
+      "community": 164,
+      "norm_label": "verification plan"
+    },
+    {
+      "label": "RED",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-02-complete-punch-list-mode.md",
+      "source_location": "L71",
+      "id": "tasks_task_02_complete_punch_list_mode_red",
+      "community": 164,
+      "norm_label": "red"
+    },
+    {
+      "label": "GREEN",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-02-complete-punch-list-mode.md",
+      "source_location": "L76",
+      "id": "tasks_task_02_complete_punch_list_mode_green",
+      "community": 164,
+      "norm_label": "green"
+    },
+    {
+      "label": "Final Verification",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-02-complete-punch-list-mode.md",
+      "source_location": "L81",
+      "id": "tasks_task_02_complete_punch_list_mode_final_verification",
+      "community": 164,
+      "norm_label": "final verification"
+    },
+    {
+      "label": "Acceptance Criteria",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-02-complete-punch-list-mode.md",
+      "source_location": "L86",
+      "id": "tasks_task_02_complete_punch_list_mode_acceptance_criteria",
+      "community": 164,
+      "norm_label": "acceptance criteria"
+    },
+    {
+      "label": "Notes",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-02-complete-punch-list-mode.md",
+      "source_location": "L95",
+      "id": "tasks_task_02_complete_punch_list_mode_notes",
+      "community": 164,
+      "norm_label": "notes"
+    },
+    {
+      "label": "task-03-verification-guardrails.md",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-03-verification-guardrails.md",
+      "source_location": "L1",
+      "id": "tasks_task_03_verification_guardrails",
+      "community": 165,
+      "norm_label": "task-03-verification-guardrails.md"
+    },
+    {
+      "label": "Task 03: Verification Guardrails",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-03-verification-guardrails.md",
+      "source_location": "L1",
+      "id": "tasks_task_03_verification_guardrails_task_03_verification_guardrails",
+      "community": 165,
+      "norm_label": "task 03: verification guardrails"
+    },
+    {
+      "label": "Status",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-03-verification-guardrails.md",
+      "source_location": "L3",
+      "id": "tasks_task_03_verification_guardrails_status",
+      "community": 165,
+      "norm_label": "status"
+    },
+    {
+      "label": "Wave",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-03-verification-guardrails.md",
+      "source_location": "L7",
+      "id": "tasks_task_03_verification_guardrails_wave",
+      "community": 165,
+      "norm_label": "wave"
+    },
+    {
+      "label": "Description",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-03-verification-guardrails.md",
+      "source_location": "L11",
+      "id": "tasks_task_03_verification_guardrails_description",
+      "community": 165,
+      "norm_label": "description"
+    },
+    {
+      "label": "Dependencies",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-03-verification-guardrails.md",
+      "source_location": "L15",
+      "id": "tasks_task_03_verification_guardrails_dependencies",
+      "community": 165,
+      "norm_label": "dependencies"
+    },
+    {
+      "label": "Files to Create",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-03-verification-guardrails.md",
+      "source_location": "L22",
+      "id": "tasks_task_03_verification_guardrails_files_to_create",
+      "community": 165,
+      "norm_label": "files to create"
+    },
+    {
+      "label": "Files to Modify",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-03-verification-guardrails.md",
+      "source_location": "L26",
+      "id": "tasks_task_03_verification_guardrails_files_to_modify",
+      "community": 165,
+      "norm_label": "files to modify"
+    },
+    {
+      "label": "Technical Details",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-03-verification-guardrails.md",
+      "source_location": "L30",
+      "id": "tasks_task_03_verification_guardrails_technical_details",
+      "community": 165,
+      "norm_label": "technical details"
+    },
+    {
+      "label": "Implementation Steps",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-03-verification-guardrails.md",
+      "source_location": "L32",
+      "id": "tasks_task_03_verification_guardrails_implementation_steps",
+      "community": 165,
+      "norm_label": "implementation steps"
+    },
+    {
+      "label": "Code Snippets",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-03-verification-guardrails.md",
+      "source_location": "L46",
+      "id": "tasks_task_03_verification_guardrails_code_snippets",
+      "community": 165,
+      "norm_label": "code snippets"
+    },
+    {
+      "label": "Environment Variables",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-03-verification-guardrails.md",
+      "source_location": "L63",
+      "id": "tasks_task_03_verification_guardrails_environment_variables",
+      "community": 165,
+      "norm_label": "environment variables"
+    },
+    {
+      "label": "API Endpoints",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-03-verification-guardrails.md",
+      "source_location": "L67",
+      "id": "tasks_task_03_verification_guardrails_api_endpoints",
+      "community": 165,
+      "norm_label": "api endpoints"
+    },
+    {
+      "label": "Verification Plan",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-03-verification-guardrails.md",
+      "source_location": "L71",
+      "id": "tasks_task_03_verification_guardrails_verification_plan",
+      "community": 165,
+      "norm_label": "verification plan"
+    },
+    {
+      "label": "RED",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-03-verification-guardrails.md",
+      "source_location": "L73",
+      "id": "tasks_task_03_verification_guardrails_red",
+      "community": 165,
+      "norm_label": "red"
+    },
+    {
+      "label": "GREEN",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-03-verification-guardrails.md",
+      "source_location": "L78",
+      "id": "tasks_task_03_verification_guardrails_green",
+      "community": 165,
+      "norm_label": "green"
+    },
+    {
+      "label": "Final Verification",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-03-verification-guardrails.md",
+      "source_location": "L83",
+      "id": "tasks_task_03_verification_guardrails_final_verification",
+      "community": 165,
+      "norm_label": "final verification"
+    },
+    {
+      "label": "Acceptance Criteria",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-03-verification-guardrails.md",
+      "source_location": "L88",
+      "id": "tasks_task_03_verification_guardrails_acceptance_criteria",
+      "community": 165,
+      "norm_label": "acceptance criteria"
+    },
+    {
+      "label": "Notes",
+      "file_type": "document",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-03-verification-guardrails.md",
+      "source_location": "L97",
+      "id": "tasks_task_03_verification_guardrails_notes",
+      "community": 165,
+      "norm_label": "notes"
+    },
+    {
       "label": "query_20260602_162824_why_does_writing_skills_connect_so_many_communitie.md",
       "file_type": "document",
       "source_file": "graphify-out/memory/query_20260602_162824_why_does_writing_skills_connect_so_many_communitie.md",
@@ -7625,10 +8579,19 @@
       "norm_label": "step 3: prepare wave tasks"
     },
     {
-      "label": "Step 4: Dispatch Coder Agents",
+      "label": "Step 3A: Wave Risk Preflight",
       "file_type": "document",
       "source_file": "skills/build-feature/SKILL.md",
       "source_location": "L122",
+      "id": "build_feature_skill_step_3a_wave_risk_preflight",
+      "community": 10,
+      "norm_label": "step 3a: wave risk preflight"
+    },
+    {
+      "label": "Step 4: Dispatch Coder Agents",
+      "file_type": "document",
+      "source_file": "skills/build-feature/SKILL.md",
+      "source_location": "L140",
       "id": "build_feature_skill_step_4_dispatch_coder_agents",
       "community": 10,
       "norm_label": "step 4: dispatch coder agents"
@@ -7637,7 +8600,7 @@
       "label": "Host Adapter",
       "file_type": "document",
       "source_file": "skills/build-feature/SKILL.md",
-      "source_location": "L124",
+      "source_location": "L142",
       "id": "build_feature_skill_host_adapter",
       "community": 10,
       "norm_label": "host adapter"
@@ -7646,7 +8609,7 @@
       "label": "Step 5: Collect Results",
       "file_type": "document",
       "source_file": "skills/build-feature/SKILL.md",
-      "source_location": "L147",
+      "source_location": "L166",
       "id": "build_feature_skill_step_5_collect_results",
       "community": 10,
       "norm_label": "step 5: collect results"
@@ -7655,7 +8618,7 @@
       "label": "Step 5A: Simplification Pass",
       "file_type": "document",
       "source_file": "skills/build-feature/SKILL.md",
-      "source_location": "L160",
+      "source_location": "L179",
       "id": "build_feature_skill_step_5a_simplification_pass",
       "community": 10,
       "norm_label": "step 5a: simplification pass"
@@ -7664,7 +8627,7 @@
       "label": "Step 6A: Spec Compliance Review",
       "file_type": "document",
       "source_file": "skills/build-feature/SKILL.md",
-      "source_location": "L177",
+      "source_location": "L197",
       "id": "build_feature_skill_step_6a_spec_compliance_review",
       "community": 10,
       "norm_label": "step 6a: spec compliance review"
@@ -7673,7 +8636,7 @@
       "label": "Step 6B: Code Quality Review",
       "file_type": "document",
       "source_file": "skills/build-feature/SKILL.md",
-      "source_location": "L207",
+      "source_location": "L228",
       "id": "build_feature_skill_step_6b_code_quality_review",
       "community": 10,
       "norm_label": "step 6b: code quality review"
@@ -7682,7 +8645,7 @@
       "label": "Step 7: Fix Loop",
       "file_type": "document",
       "source_file": "skills/build-feature/SKILL.md",
-      "source_location": "L226",
+      "source_location": "L247",
       "id": "build_feature_skill_step_7_fix_loop",
       "community": 10,
       "norm_label": "step 7: fix loop"
@@ -7691,7 +8654,7 @@
       "label": "Step 8: Complete the Wave",
       "file_type": "document",
       "source_file": "skills/build-feature/SKILL.md",
-      "source_location": "L250",
+      "source_location": "L275",
       "id": "build_feature_skill_step_8_complete_the_wave",
       "community": 10,
       "norm_label": "step 8: complete the wave"
@@ -7700,7 +8663,7 @@
       "label": "Step 9: Final Integration Review",
       "file_type": "document",
       "source_file": "skills/build-feature/SKILL.md",
-      "source_location": "L276",
+      "source_location": "L301",
       "id": "build_feature_skill_step_9_final_integration_review",
       "community": 10,
       "norm_label": "step 9: final integration review"
@@ -7709,7 +8672,7 @@
       "label": "Error Handling",
       "file_type": "document",
       "source_file": "skills/build-feature/SKILL.md",
-      "source_location": "L302",
+      "source_location": "L327",
       "id": "build_feature_skill_error_handling",
       "community": 10,
       "norm_label": "error handling"
@@ -7718,7 +8681,7 @@
       "label": "Key Principles",
       "file_type": "document",
       "source_file": "skills/build-feature/SKILL.md",
-      "source_location": "L312",
+      "source_location": "L337",
       "id": "build_feature_skill_key_principles",
       "community": 10,
       "norm_label": "key principles"
@@ -7754,7 +8717,7 @@
       "label": "Placeholder Details",
       "file_type": "document",
       "source_file": "skills/build-feature/references/coder-prompt-template.md",
-      "source_location": "L46",
+      "source_location": "L51",
       "id": "references_coder_prompt_template_placeholder_details",
       "community": 103,
       "norm_label": "placeholder details"
@@ -7790,7 +8753,7 @@
       "label": "Placeholder Details",
       "file_type": "document",
       "source_file": "skills/build-feature/references/fix-prompt-template.md",
-      "source_location": "L32",
+      "source_location": "L42",
       "id": "references_fix_prompt_template_placeholder_details",
       "community": 106,
       "norm_label": "placeholder details"
@@ -7826,7 +8789,7 @@
       "label": "Placeholder Details",
       "file_type": "document",
       "source_file": "skills/build-feature/references/review-prompt-template.md",
-      "source_location": "L74",
+      "source_location": "L82",
       "id": "references_review_prompt_template_placeholder_details",
       "community": 109,
       "norm_label": "placeholder details"
@@ -7862,7 +8825,7 @@
       "label": "Placeholder Details",
       "file_type": "document",
       "source_file": "skills/build-feature/references/simplifier-prompt-template.md",
-      "source_location": "L47",
+      "source_location": "L53",
       "id": "references_simplifier_prompt_template_placeholder_details",
       "community": 110,
       "norm_label": "placeholder details"
@@ -11356,7 +12319,7 @@
       "source_file": "skills/writing-skills/anthropic-best-practices.md",
       "source_location": "L721",
       "id": "writing_skills_anthropic_best_practices_evaluation_and_iteration",
-      "community": 41,
+      "community": 171,
       "norm_label": "evaluation and iteration"
     },
     {
@@ -11365,7 +12328,7 @@
       "source_file": "skills/writing-skills/anthropic-best-practices.md",
       "source_location": "L723",
       "id": "writing_skills_anthropic_best_practices_build_evaluations_first",
-      "community": 41,
+      "community": 171,
       "norm_label": "build evaluations first"
     },
     {
@@ -11374,7 +12337,7 @@
       "source_file": "skills/writing-skills/anthropic-best-practices.md",
       "source_location": "L756",
       "id": "writing_skills_anthropic_best_practices_develop_skills_iteratively_with_claude",
-      "community": 41,
+      "community": 171,
       "norm_label": "develop skills iteratively with claude"
     },
     {
@@ -11383,7 +12346,7 @@
       "source_file": "skills/writing-skills/anthropic-best-practices.md",
       "source_location": "L812",
       "id": "writing_skills_anthropic_best_practices_observe_how_claude_navigates_skills",
-      "community": 41,
+      "community": 171,
       "norm_label": "observe how claude navigates skills"
     },
     {
@@ -11392,7 +12355,7 @@
       "source_file": "skills/writing-skills/anthropic-best-practices.md",
       "source_location": "L823",
       "id": "writing_skills_anthropic_best_practices_anti_patterns_to_avoid",
-      "community": 163,
+      "community": 41,
       "norm_label": "anti-patterns to avoid"
     },
     {
@@ -11401,7 +12364,7 @@
       "source_file": "skills/writing-skills/anthropic-best-practices.md",
       "source_location": "L825",
       "id": "writing_skills_anthropic_best_practices_avoid_windows_style_paths",
-      "community": 163,
+      "community": 41,
       "norm_label": "avoid windows-style paths"
     },
     {
@@ -11410,7 +12373,7 @@
       "source_file": "skills/writing-skills/anthropic-best-practices.md",
       "source_location": "L834",
       "id": "writing_skills_anthropic_best_practices_avoid_offering_too_many_options",
-      "community": 163,
+      "community": 41,
       "norm_label": "avoid offering too many options"
     },
     {
@@ -13591,6 +14554,96 @@
       "confidence_score": 1.0,
       "source": "2026_06_01_superpowers_dev_port_spec",
       "target": "2026_06_01_superpowers_dev_port_spec_tasks"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/spec.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "2026_06_09_build_feature_risk_preflight_spec",
+      "target": "2026_06_09_build_feature_risk_preflight_spec_actionrequiredpath",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/spec.json",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "2026_06_09_build_feature_risk_preflight_spec",
+      "target": "2026_06_09_build_feature_risk_preflight_spec_allowedtaskstatuses",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/spec.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "2026_06_09_build_feature_risk_preflight_spec",
+      "target": "2026_06_09_build_feature_risk_preflight_spec_created",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/spec.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "2026_06_09_build_feature_risk_preflight_spec",
+      "target": "2026_06_09_build_feature_risk_preflight_spec_designpath",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/spec.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "2026_06_09_build_feature_risk_preflight_spec",
+      "target": "2026_06_09_build_feature_risk_preflight_spec_feature",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/spec.json",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "2026_06_09_build_feature_risk_preflight_spec",
+      "target": "2026_06_09_build_feature_risk_preflight_spec_implementationlogpath",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/spec.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "2026_06_09_build_feature_risk_preflight_spec",
+      "target": "2026_06_09_build_feature_risk_preflight_spec_requirementspath",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/spec.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "2026_06_09_build_feature_risk_preflight_spec",
+      "target": "2026_06_09_build_feature_risk_preflight_spec_specpath",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/spec.json",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "2026_06_09_build_feature_risk_preflight_spec",
+      "target": "2026_06_09_build_feature_risk_preflight_spec_tasks",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -18613,6 +19666,96 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "docs/design/2026-06-09-build-feature-risk-preflight/design.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "2026_06_09_build_feature_risk_preflight_design",
+      "target": "2026_06_09_build_feature_risk_preflight_design_design_build_feature_risk_preflight",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/design/2026-06-09-build-feature-risk-preflight/design.md",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "2026_06_09_build_feature_risk_preflight_design_design_build_feature_risk_preflight",
+      "target": "2026_06_09_build_feature_risk_preflight_design_alternatives_considered",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/design/2026-06-09-build-feature-risk-preflight/design.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "2026_06_09_build_feature_risk_preflight_design_design_build_feature_risk_preflight",
+      "target": "2026_06_09_build_feature_risk_preflight_design_approved_approach",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/design/2026-06-09-build-feature-risk-preflight/design.md",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "2026_06_09_build_feature_risk_preflight_design_design_build_feature_risk_preflight",
+      "target": "2026_06_09_build_feature_risk_preflight_design_architecture",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/design/2026-06-09-build-feature-risk-preflight/design.md",
+      "source_location": "L65",
+      "weight": 1.0,
+      "source": "2026_06_09_build_feature_risk_preflight_design_design_build_feature_risk_preflight",
+      "target": "2026_06_09_build_feature_risk_preflight_design_configuration_and_inputs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/design/2026-06-09-build-feature-risk-preflight/design.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "2026_06_09_build_feature_risk_preflight_design_design_build_feature_risk_preflight",
+      "target": "2026_06_09_build_feature_risk_preflight_design_context",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/design/2026-06-09-build-feature-risk-preflight/design.md",
+      "source_location": "L81",
+      "weight": 1.0,
+      "source": "2026_06_09_build_feature_risk_preflight_design_design_build_feature_risk_preflight",
+      "target": "2026_06_09_build_feature_risk_preflight_design_decisions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/design/2026-06-09-build-feature-risk-preflight/design.md",
+      "source_location": "L91",
+      "weight": 1.0,
+      "source": "2026_06_09_build_feature_risk_preflight_design_design_build_feature_risk_preflight",
+      "target": "2026_06_09_build_feature_risk_preflight_design_risks_and_constraints",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/design/2026-06-09-build-feature-risk-preflight/design.md",
+      "source_location": "L99",
+      "weight": 1.0,
+      "source": "2026_06_09_build_feature_risk_preflight_design_design_build_feature_risk_preflight",
+      "target": "2026_06_09_build_feature_risk_preflight_design_verification_strategy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "docs/eval-harness-strategy.md",
       "source_location": "L1",
       "weight": 1.0,
@@ -20293,12 +21436,802 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "2026_06_09_build_feature_risk_preflight_readme",
+      "target": "2026_06_09_build_feature_risk_preflight_readme_build_feature_risk_preflight",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/README.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "2026_06_09_build_feature_risk_preflight_readme_build_feature_risk_preflight",
+      "target": "2026_06_09_build_feature_risk_preflight_readme_dependency_graph",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/README.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "2026_06_09_build_feature_risk_preflight_readme_build_feature_risk_preflight",
+      "target": "2026_06_09_build_feature_risk_preflight_readme_overview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/README.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "2026_06_09_build_feature_risk_preflight_readme_build_feature_risk_preflight",
+      "target": "2026_06_09_build_feature_risk_preflight_readme_quick_links",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/README.md",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "2026_06_09_build_feature_risk_preflight_readme_build_feature_risk_preflight",
+      "target": "2026_06_09_build_feature_risk_preflight_readme_task_status",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/README.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "2026_06_09_build_feature_risk_preflight_readme_build_feature_risk_preflight",
+      "target": "2026_06_09_build_feature_risk_preflight_readme_waves",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/README.md",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "2026_06_09_build_feature_risk_preflight_readme_task_status",
+      "target": "2026_06_09_build_feature_risk_preflight_readme_wave_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/README.md",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "2026_06_09_build_feature_risk_preflight_readme_task_status",
+      "target": "2026_06_09_build_feature_risk_preflight_readme_wave_2",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/README.md",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "2026_06_09_build_feature_risk_preflight_readme_task_status",
+      "target": "2026_06_09_build_feature_risk_preflight_readme_wave_3",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/action-required.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "2026_06_09_build_feature_risk_preflight_action_required",
+      "target": "2026_06_09_build_feature_risk_preflight_action_required_action_required_build_feature_risk_preflight",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/implementation-log.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "2026_06_09_build_feature_risk_preflight_implementation_log",
+      "target": "2026_06_09_build_feature_risk_preflight_implementation_log_implementation_log_build_feature_risk_preflight",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/implementation-log.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "2026_06_09_build_feature_risk_preflight_implementation_log_implementation_log_build_feature_risk_preflight",
+      "target": "2026_06_09_build_feature_risk_preflight_implementation_log_2026_06_09_design_approved",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/implementation-log.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "2026_06_09_build_feature_risk_preflight_implementation_log_implementation_log_build_feature_risk_preflight",
+      "target": "2026_06_09_build_feature_risk_preflight_implementation_log_2026_06_09_spec_created",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/implementation-log.md",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "2026_06_09_build_feature_risk_preflight_implementation_log_implementation_log_build_feature_risk_preflight",
+      "target": "2026_06_09_build_feature_risk_preflight_implementation_log_2026_06_09_wave_1_result",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/implementation-log.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "2026_06_09_build_feature_risk_preflight_implementation_log_implementation_log_build_feature_risk_preflight",
+      "target": "2026_06_09_build_feature_risk_preflight_implementation_log_2026_06_09_wave_1_started",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/implementation-log.md",
+      "source_location": "L51",
+      "weight": 1.0,
+      "source": "2026_06_09_build_feature_risk_preflight_implementation_log_implementation_log_build_feature_risk_preflight",
+      "target": "2026_06_09_build_feature_risk_preflight_implementation_log_2026_06_09_wave_2_result",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/implementation-log.md",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "2026_06_09_build_feature_risk_preflight_implementation_log_implementation_log_build_feature_risk_preflight",
+      "target": "2026_06_09_build_feature_risk_preflight_implementation_log_2026_06_09_wave_2_started",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/implementation-log.md",
+      "source_location": "L69",
+      "weight": 1.0,
+      "source": "2026_06_09_build_feature_risk_preflight_implementation_log_implementation_log_build_feature_risk_preflight",
+      "target": "2026_06_09_build_feature_risk_preflight_implementation_log_2026_06_09_wave_3_started",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/requirements.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "2026_06_09_build_feature_risk_preflight_requirements",
+      "target": "2026_06_09_build_feature_risk_preflight_requirements_requirements_build_feature_risk_preflight",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/requirements.md",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "2026_06_09_build_feature_risk_preflight_requirements_requirements_build_feature_risk_preflight",
+      "target": "2026_06_09_build_feature_risk_preflight_requirements_acceptance_criteria",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/requirements.md",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "2026_06_09_build_feature_risk_preflight_requirements_requirements_build_feature_risk_preflight",
+      "target": "2026_06_09_build_feature_risk_preflight_requirements_assumptions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/requirements.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "2026_06_09_build_feature_risk_preflight_requirements_requirements_build_feature_risk_preflight",
+      "target": "2026_06_09_build_feature_risk_preflight_requirements_goals",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/requirements.md",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "2026_06_09_build_feature_risk_preflight_requirements_requirements_build_feature_risk_preflight",
+      "target": "2026_06_09_build_feature_risk_preflight_requirements_non_goals",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/requirements.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "2026_06_09_build_feature_risk_preflight_requirements_requirements_build_feature_risk_preflight",
+      "target": "2026_06_09_build_feature_risk_preflight_requirements_summary",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/requirements.md",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "2026_06_09_build_feature_risk_preflight_requirements_requirements_build_feature_risk_preflight",
+      "target": "2026_06_09_build_feature_risk_preflight_requirements_technical_constraints",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-01-wave-risk-preflight.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "tasks_task_01_wave_risk_preflight",
+      "target": "tasks_task_01_wave_risk_preflight_task_01_wave_risk_preflight",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-01-wave-risk-preflight.md",
+      "source_location": "L92",
+      "weight": 1.0,
+      "source": "tasks_task_01_wave_risk_preflight_task_01_wave_risk_preflight",
+      "target": "tasks_task_01_wave_risk_preflight_acceptance_criteria",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-01-wave-risk-preflight.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "tasks_task_01_wave_risk_preflight_task_01_wave_risk_preflight",
+      "target": "tasks_task_01_wave_risk_preflight_dependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-01-wave-risk-preflight.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "tasks_task_01_wave_risk_preflight_task_01_wave_risk_preflight",
+      "target": "tasks_task_01_wave_risk_preflight_description",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-01-wave-risk-preflight.md",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "tasks_task_01_wave_risk_preflight_task_01_wave_risk_preflight",
+      "target": "tasks_task_01_wave_risk_preflight_files_to_create",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-01-wave-risk-preflight.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "tasks_task_01_wave_risk_preflight_task_01_wave_risk_preflight",
+      "target": "tasks_task_01_wave_risk_preflight_files_to_modify",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-01-wave-risk-preflight.md",
+      "source_location": "L101",
+      "weight": 1.0,
+      "source": "tasks_task_01_wave_risk_preflight_task_01_wave_risk_preflight",
+      "target": "tasks_task_01_wave_risk_preflight_notes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-01-wave-risk-preflight.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "tasks_task_01_wave_risk_preflight_task_01_wave_risk_preflight",
+      "target": "tasks_task_01_wave_risk_preflight_status",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-01-wave-risk-preflight.md",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "tasks_task_01_wave_risk_preflight_task_01_wave_risk_preflight",
+      "target": "tasks_task_01_wave_risk_preflight_technical_details",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-01-wave-risk-preflight.md",
+      "source_location": "L75",
+      "weight": 1.0,
+      "source": "tasks_task_01_wave_risk_preflight_task_01_wave_risk_preflight",
+      "target": "tasks_task_01_wave_risk_preflight_verification_plan",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-01-wave-risk-preflight.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "tasks_task_01_wave_risk_preflight_task_01_wave_risk_preflight",
+      "target": "tasks_task_01_wave_risk_preflight_wave",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-01-wave-risk-preflight.md",
+      "source_location": "L71",
+      "weight": 1.0,
+      "source": "tasks_task_01_wave_risk_preflight_technical_details",
+      "target": "tasks_task_01_wave_risk_preflight_api_endpoints",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-01-wave-risk-preflight.md",
+      "source_location": "L51",
+      "weight": 1.0,
+      "source": "tasks_task_01_wave_risk_preflight_technical_details",
+      "target": "tasks_task_01_wave_risk_preflight_code_snippets",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-01-wave-risk-preflight.md",
+      "source_location": "L67",
+      "weight": 1.0,
+      "source": "tasks_task_01_wave_risk_preflight_technical_details",
+      "target": "tasks_task_01_wave_risk_preflight_environment_variables",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-01-wave-risk-preflight.md",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "tasks_task_01_wave_risk_preflight_technical_details",
+      "target": "tasks_task_01_wave_risk_preflight_implementation_steps",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-01-wave-risk-preflight.md",
+      "source_location": "L87",
+      "weight": 1.0,
+      "source": "tasks_task_01_wave_risk_preflight_verification_plan",
+      "target": "tasks_task_01_wave_risk_preflight_final_verification",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-01-wave-risk-preflight.md",
+      "source_location": "L82",
+      "weight": 1.0,
+      "source": "tasks_task_01_wave_risk_preflight_verification_plan",
+      "target": "tasks_task_01_wave_risk_preflight_green",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-01-wave-risk-preflight.md",
+      "source_location": "L77",
+      "weight": 1.0,
+      "source": "tasks_task_01_wave_risk_preflight_verification_plan",
+      "target": "tasks_task_01_wave_risk_preflight_red",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-02-complete-punch-list-mode.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "tasks_task_02_complete_punch_list_mode",
+      "target": "tasks_task_02_complete_punch_list_mode_task_02_complete_punch_list_mode",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-02-complete-punch-list-mode.md",
+      "source_location": "L86",
+      "weight": 1.0,
+      "source": "tasks_task_02_complete_punch_list_mode_task_02_complete_punch_list_mode",
+      "target": "tasks_task_02_complete_punch_list_mode_acceptance_criteria",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-02-complete-punch-list-mode.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "tasks_task_02_complete_punch_list_mode_task_02_complete_punch_list_mode",
+      "target": "tasks_task_02_complete_punch_list_mode_dependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-02-complete-punch-list-mode.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "tasks_task_02_complete_punch_list_mode_task_02_complete_punch_list_mode",
+      "target": "tasks_task_02_complete_punch_list_mode_description",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-02-complete-punch-list-mode.md",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "tasks_task_02_complete_punch_list_mode_task_02_complete_punch_list_mode",
+      "target": "tasks_task_02_complete_punch_list_mode_files_to_create",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-02-complete-punch-list-mode.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "tasks_task_02_complete_punch_list_mode_task_02_complete_punch_list_mode",
+      "target": "tasks_task_02_complete_punch_list_mode_files_to_modify",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-02-complete-punch-list-mode.md",
+      "source_location": "L95",
+      "weight": 1.0,
+      "source": "tasks_task_02_complete_punch_list_mode_task_02_complete_punch_list_mode",
+      "target": "tasks_task_02_complete_punch_list_mode_notes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-02-complete-punch-list-mode.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "tasks_task_02_complete_punch_list_mode_task_02_complete_punch_list_mode",
+      "target": "tasks_task_02_complete_punch_list_mode_status",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-02-complete-punch-list-mode.md",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "tasks_task_02_complete_punch_list_mode_task_02_complete_punch_list_mode",
+      "target": "tasks_task_02_complete_punch_list_mode_technical_details",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-02-complete-punch-list-mode.md",
+      "source_location": "L69",
+      "weight": 1.0,
+      "source": "tasks_task_02_complete_punch_list_mode_task_02_complete_punch_list_mode",
+      "target": "tasks_task_02_complete_punch_list_mode_verification_plan",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-02-complete-punch-list-mode.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "tasks_task_02_complete_punch_list_mode_task_02_complete_punch_list_mode",
+      "target": "tasks_task_02_complete_punch_list_mode_wave",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-02-complete-punch-list-mode.md",
+      "source_location": "L65",
+      "weight": 1.0,
+      "source": "tasks_task_02_complete_punch_list_mode_technical_details",
+      "target": "tasks_task_02_complete_punch_list_mode_api_endpoints",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-02-complete-punch-list-mode.md",
+      "source_location": "L47",
+      "weight": 1.0,
+      "source": "tasks_task_02_complete_punch_list_mode_technical_details",
+      "target": "tasks_task_02_complete_punch_list_mode_code_snippets",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-02-complete-punch-list-mode.md",
+      "source_location": "L61",
+      "weight": 1.0,
+      "source": "tasks_task_02_complete_punch_list_mode_technical_details",
+      "target": "tasks_task_02_complete_punch_list_mode_environment_variables",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-02-complete-punch-list-mode.md",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "tasks_task_02_complete_punch_list_mode_technical_details",
+      "target": "tasks_task_02_complete_punch_list_mode_implementation_steps",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-02-complete-punch-list-mode.md",
+      "source_location": "L81",
+      "weight": 1.0,
+      "source": "tasks_task_02_complete_punch_list_mode_verification_plan",
+      "target": "tasks_task_02_complete_punch_list_mode_final_verification",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-02-complete-punch-list-mode.md",
+      "source_location": "L76",
+      "weight": 1.0,
+      "source": "tasks_task_02_complete_punch_list_mode_verification_plan",
+      "target": "tasks_task_02_complete_punch_list_mode_green",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-02-complete-punch-list-mode.md",
+      "source_location": "L71",
+      "weight": 1.0,
+      "source": "tasks_task_02_complete_punch_list_mode_verification_plan",
+      "target": "tasks_task_02_complete_punch_list_mode_red",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-03-verification-guardrails.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "tasks_task_03_verification_guardrails",
+      "target": "tasks_task_03_verification_guardrails_task_03_verification_guardrails",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-03-verification-guardrails.md",
+      "source_location": "L88",
+      "weight": 1.0,
+      "source": "tasks_task_03_verification_guardrails_task_03_verification_guardrails",
+      "target": "tasks_task_03_verification_guardrails_acceptance_criteria",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-03-verification-guardrails.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "tasks_task_03_verification_guardrails_task_03_verification_guardrails",
+      "target": "tasks_task_03_verification_guardrails_dependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-03-verification-guardrails.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "tasks_task_03_verification_guardrails_task_03_verification_guardrails",
+      "target": "tasks_task_03_verification_guardrails_description",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-03-verification-guardrails.md",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "tasks_task_03_verification_guardrails_task_03_verification_guardrails",
+      "target": "tasks_task_03_verification_guardrails_files_to_create",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-03-verification-guardrails.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "tasks_task_03_verification_guardrails_task_03_verification_guardrails",
+      "target": "tasks_task_03_verification_guardrails_files_to_modify",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-03-verification-guardrails.md",
+      "source_location": "L97",
+      "weight": 1.0,
+      "source": "tasks_task_03_verification_guardrails_task_03_verification_guardrails",
+      "target": "tasks_task_03_verification_guardrails_notes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-03-verification-guardrails.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "tasks_task_03_verification_guardrails_task_03_verification_guardrails",
+      "target": "tasks_task_03_verification_guardrails_status",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-03-verification-guardrails.md",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "tasks_task_03_verification_guardrails_task_03_verification_guardrails",
+      "target": "tasks_task_03_verification_guardrails_technical_details",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-03-verification-guardrails.md",
+      "source_location": "L71",
+      "weight": 1.0,
+      "source": "tasks_task_03_verification_guardrails_task_03_verification_guardrails",
+      "target": "tasks_task_03_verification_guardrails_verification_plan",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-03-verification-guardrails.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "tasks_task_03_verification_guardrails_task_03_verification_guardrails",
+      "target": "tasks_task_03_verification_guardrails_wave",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-03-verification-guardrails.md",
+      "source_location": "L67",
+      "weight": 1.0,
+      "source": "tasks_task_03_verification_guardrails_technical_details",
+      "target": "tasks_task_03_verification_guardrails_api_endpoints",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-03-verification-guardrails.md",
+      "source_location": "L46",
+      "weight": 1.0,
+      "source": "tasks_task_03_verification_guardrails_technical_details",
+      "target": "tasks_task_03_verification_guardrails_code_snippets",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-03-verification-guardrails.md",
+      "source_location": "L63",
+      "weight": 1.0,
+      "source": "tasks_task_03_verification_guardrails_technical_details",
+      "target": "tasks_task_03_verification_guardrails_environment_variables",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-03-verification-guardrails.md",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "tasks_task_03_verification_guardrails_technical_details",
+      "target": "tasks_task_03_verification_guardrails_implementation_steps",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-03-verification-guardrails.md",
+      "source_location": "L83",
+      "weight": 1.0,
+      "source": "tasks_task_03_verification_guardrails_verification_plan",
+      "target": "tasks_task_03_verification_guardrails_final_verification",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-03-verification-guardrails.md",
+      "source_location": "L78",
+      "weight": 1.0,
+      "source": "tasks_task_03_verification_guardrails_verification_plan",
+      "target": "tasks_task_03_verification_guardrails_green",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-03-verification-guardrails.md",
+      "source_location": "L73",
+      "weight": 1.0,
+      "source": "tasks_task_03_verification_guardrails_verification_plan",
+      "target": "tasks_task_03_verification_guardrails_red",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "graphify-out/memory/query_20260602_162824_why_does_writing_skills_connect_so_many_communitie.md",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "memory_query_20260602_162824_why_does_writing_skills_connect_so_many_communitie",
-      "target": "memory_query_20260602_162824_why_does_writing_skills_connect_so_many_communitie_q_why_does_writing_skills_connect_so_many_communities",
-      "confidence_score": 1.0
+      "target": "memory_query_20260602_162824_why_does_writing_skills_connect_so_many_communitie_q_why_does_writing_skills_connect_so_many_communities"
     },
     {
       "relation": "contains",
@@ -20306,9 +22239,9 @@
       "source_file": "graphify-out/memory/query_20260602_162824_why_does_writing_skills_connect_so_many_communitie.md",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "memory_query_20260602_162824_why_does_writing_skills_connect_so_many_communitie_q_why_does_writing_skills_connect_so_many_communities",
-      "target": "memory_query_20260602_162824_why_does_writing_skills_connect_so_many_communitie_answer",
-      "confidence_score": 1.0
+      "target": "memory_query_20260602_162824_why_does_writing_skills_connect_so_many_communitie_answer"
     },
     {
       "relation": "contains",
@@ -20316,9 +22249,9 @@
       "source_file": "graphify-out/memory/query_20260602_162824_why_does_writing_skills_connect_so_many_communitie.md",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "memory_query_20260602_162824_why_does_writing_skills_connect_so_many_communitie_q_why_does_writing_skills_connect_so_many_communities",
-      "target": "memory_query_20260602_162824_why_does_writing_skills_connect_so_many_communitie_source_nodes",
-      "confidence_score": 1.0
+      "target": "memory_query_20260602_162824_why_does_writing_skills_connect_so_many_communitie_source_nodes"
     },
     {
       "relation": "contains",
@@ -20679,6 +22612,16 @@
       "confidence_score": 1.0,
       "source": "build_feature_skill_orchestration",
       "target": "build_feature_skill_step_3_prepare_wave_tasks"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills/build-feature/SKILL.md",
+      "source_location": "L122",
+      "weight": 1.0,
+      "source": "build_feature_skill_orchestration",
+      "target": "build_feature_skill_step_3a_wave_risk_preflight",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -25962,5 +27905,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "cb2a084bb9e2c6ba33c29bfa5d892ae1ff624ecf"
+  "built_at_commit": "4498168450909ec884958d93e7256cfddd1c2073"
 }

@@ -119,6 +119,24 @@ Before starting a wave, append a dated entry to `implementation-log.md` with the
    Wait for the user's decision before proceeding.
 4. Update each dispatched task to `in-progress` in `spec.json`, its task file, and README checkbox state. Append the assignment to `implementation-log.md`.
 
+### Step 3A: Wave Risk Preflight
+
+Before dispatching coder agents, create a short, read-only Wave Risk Preflight for the current wave.
+
+1. Derive the preflight from the approved design, `requirements.md`, current wave task files, `spec.json` file ownership, completed task summaries, and current wave verification commands.
+2. Identify likely shared contracts and integration risks for this wave. Keep the list tied to the wave's actual files and tasks. Useful categories include:
+   - Public exports and compatibility entrypoints.
+   - Browser/Node or platform-specific substitutions.
+   - Runtime side effects at module import time.
+   - Timers, handles, cleanup, and process lifetime behavior.
+   - Generated artifacts and package metadata.
+   - Cross-task shared types, constructors, schemas, or configuration.
+   - Auth, filesystem, shell, network, privacy, or security-sensitive boundaries.
+   - Verification commands that should be grouped because one command only proves part of the boundary.
+3. The preflight is not a review verdict. It is a short list of contracts and risks that coder, simplifier, and review agents must account for during this wave.
+4. Append the preflight summary to `implementation-log.md` before coder dispatch.
+5. Pass the same Wave Risk Preflight text into coder, simplifier, spec-compliance review, and code-quality review prompts.
+
 ### Step 4: Dispatch Coder Agents
 
 #### Host Adapter
@@ -138,6 +156,7 @@ Read `references/coder-prompt-template.md` and construct each agent's prompt by 
 
 - **{requirements}**: full text of `requirements.md`
 - **{design}**: full text of the matching `docs/design/YYYY-MM-DD-{feature-name}/design.md`
+- **{wave_risk_preflight}**: the Wave Risk Preflight for the current wave
 - **{spec_manifest}**: the relevant `spec.json` task entry and global paths/status rules
 - **{completed_tasks_summary}**: for each previously completed task, a one-paragraph summary of what was implemented and what files were created/modified
 - **{task_content}**: full text of the task file being assigned
@@ -166,10 +185,11 @@ After coder or fix agents complete and before review, run one behavior-preservin
    - **{wave_number}**: current wave number
    - **{requirements}**: full text of `requirements.md`
    - **{design}**: full text of the matching `docs/design/YYYY-MM-DD-{feature-name}/design.md`
+   - **{wave_risk_preflight}**: the Wave Risk Preflight for the current wave
    - **{task_summaries}**: for each task in this wave, the task title, manifest entry, task file content, files created/modified, verification evidence, and coder or fixer completion summary
    - **{changed_files}**: the exact changed-file scope for this wave
    - **{verification_commands}**: the targeted commands from `spec.json.tasks[].verificationCommands` plus any affected project-level lint, typecheck, or test commands
-3. The simplifier may edit only files in the changed-file scope and may return `no-op` when the implementation is already clear. It must preserve behavior, avoid unrelated fixes, and rerun relevant verification after edits.
+3. The simplifier may edit only files in the changed-file scope and may return `no-op` when the implementation is already clear. It must preserve behavior, avoid unrelated fixes, respect the Wave Risk Preflight contracts, and rerun relevant verification after edits.
 4. Collect the simplifier result and append its status, files modified, simplifications, verification evidence, and concerns to `implementation-log.md`.
 5. Include the coder or fixer completion summary, simplifier summary, and simplifier verification evidence in the task summaries passed to later review agents.
 6. If the simplifier reports `blocked`, fails verification, changes behavior, or edits outside the changed-file scope, set the affected tasks to `review-failed`, append the details to `implementation-log.md`, and go to Step 7.
@@ -187,6 +207,7 @@ Read `references/review-prompt-template.md` and construct the prompt with **{rev
 - **{wave_number}**: current wave number
 - **{requirements}**: full text of `requirements.md`
 - **{design}**: full text of the matching `docs/design/YYYY-MM-DD-{feature-name}/design.md`
+- **{wave_risk_preflight}**: the Wave Risk Preflight for the current wave
 - **{task_summaries}**: for each task in this wave, the task title, manifest entry, task file content, coder or fixer completion summary, simplifier summary, and simplifier verification evidence
 - **{review_scope}**: the concrete git range, task diff, or exact file set the reviewer must inspect
 - **{verification_commands}**: the targeted commands from `spec.json.tasks[].verificationCommands`
@@ -228,12 +249,16 @@ If this review fails, set affected tasks to `review-failed`, append the verdict 
 If Step 5A fails or either review returns **FAIL**:
 
 1. Parse the issues from the simplifier result or review: source, file paths, descriptions, severity, and suggested fixes.
-2. Group issues by the task they most closely relate to, using `spec.json.tasks[].files.create` and `spec.json.tasks[].files.modify`.
-3. For each group, dispatch a coder agent with a fix prompt. Read `references/fix-prompt-template.md` and fill in:
+2. Check whether this wave has failed review more than once in the same boundary after at least one fix attempt. Treat failures as the same boundary when they share the same files, public contract, runtime behavior, package/config mapping, generated artifact, or cross-task integration point.
+3. If repeated same-boundary failure is detected, request a complete punch-list review for that boundary before dispatching another narrow fix. The punch-list review is read-only, uses the concrete boundary scope plus the Wave Risk Preflight, and must return all blocking issues it can find in that boundary. Append the complete punch-list verdict to `implementation-log.md`.
+4. Group issues by the task they most closely relate to, using `spec.json.tasks[].files.create` and `spec.json.tasks[].files.modify`. When complete punch-list mode was used, group every issue from the punch list before dispatching fix agents.
+5. For each group, dispatch a coder agent with a fix prompt. Read `references/fix-prompt-template.md` and fill in:
    - **{issues}**: the specific issues for this task group, including whether they came from simplification, spec-compliance review, or code-quality review
+   - **{wave_risk_preflight}**: the Wave Risk Preflight for the current wave
+   - **{boundary_context}**: the Boundary Context for the same-boundary or complete punch-list review, or "None" for a normal first-pass fix
    - **{task_content}**: the original task file for context
-4. After fix agents complete, append the fix result to `implementation-log.md`.
-5. Re-run Step 5A, then Step 6A. Only run Step 6B after Step 5A and Step 6A pass.
+6. After fix agents complete, append the fix result to `implementation-log.md`.
+7. Re-run Step 5A, then Step 6A. Only run Step 6B after Step 5A and Step 6A pass.
 
 Cap at 3 simplification/review cycles per wave. If the third cycle still fails, stop and report to the user:
 

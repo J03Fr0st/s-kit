@@ -144,6 +144,11 @@ if (Test-Path $buildFeatureSkillPath) {
     'Check maintainability, simplicity, security',
     'The simplification pass stayed within the changed-file scope and did not alter approved behavior',
     'coder or fixer completion summary, simplifier summary, and simplifier verification evidence',
+    '### Step 3A: Wave Risk Preflight',
+    '{wave_risk_preflight}',
+    'complete punch-list review',
+    'repeated same-boundary failure',
+    'Boundary Context',
     'build a concrete review scope',
     'git range, task diff, or file set',
     'Do not ask them to modify files, the index, HEAD, branch state, staged changes, task statuses, or generated artifacts',
@@ -163,6 +168,9 @@ if (Test-Path $reviewPromptTemplatePath) {
     'Verify the simplification pass stayed within the changed-file scope and did not alter approved behavior.',
     'Check maintainability, simplicity, security, performance, error handling, and project conventions.',
     'simplifier summary and verification evidence',
+    '## Wave Risk Preflight',
+    '{wave_risk_preflight}',
+    'complete punch-list mode',
     '{review_scope}'
   ) + $readOnlyReviewContractText) {
     if (-not $reviewPromptTemplate.Contains($requiredText)) {
@@ -171,6 +179,54 @@ if (Test-Path $reviewPromptTemplatePath) {
   }
 } else {
   Add-Failure 'Missing build-feature review prompt template: skills/build-feature/references/review-prompt-template.md'
+}
+
+$coderPromptTemplatePath = Join-Path $root 'skills/build-feature/references/coder-prompt-template.md'
+$fixPromptTemplatePath = Join-Path $root 'skills/build-feature/references/fix-prompt-template.md'
+
+if (Test-Path $coderPromptTemplatePath) {
+  $coderPromptTemplate = Get-Content $coderPromptTemplatePath -Raw
+  foreach ($requiredText in @(
+    '## Wave Risk Preflight',
+    '{wave_risk_preflight}',
+    'Account for the Wave Risk Preflight contracts'
+  )) {
+    if (-not $coderPromptTemplate.Contains($requiredText)) {
+      Add-Failure "coder prompt must include risk preflight text: $requiredText"
+    }
+  }
+} else {
+  Add-Failure 'Missing build-feature coder prompt template: skills/build-feature/references/coder-prompt-template.md'
+}
+
+if (Test-Path $simplifierPromptTemplatePath) {
+  $simplifierPromptTemplate = Get-Content $simplifierPromptTemplatePath -Raw
+  foreach ($requiredText in @(
+    '## Wave Risk Preflight',
+    '{wave_risk_preflight}',
+    'After a trivial targeted fix, you may return `no-op`'
+  )) {
+    if (-not $simplifierPromptTemplate.Contains($requiredText)) {
+      Add-Failure "simplifier prompt must include risk preflight/no-op text: $requiredText"
+    }
+  }
+}
+
+if (Test-Path $fixPromptTemplatePath) {
+  $fixPromptTemplate = Get-Content $fixPromptTemplatePath -Raw
+  foreach ($requiredText in @(
+    '## Wave Risk Preflight',
+    '{wave_risk_preflight}',
+    '## Boundary Context',
+    '{boundary_context}',
+    'complete punch-list mode'
+  )) {
+    if (-not $fixPromptTemplate.Contains($requiredText)) {
+      Add-Failure "fix prompt must include punch-list context text: $requiredText"
+    }
+  }
+} else {
+  Add-Failure 'Missing build-feature fix prompt template: skills/build-feature/references/fix-prompt-template.md'
 }
 
 foreach ($reviewerAgent in @(

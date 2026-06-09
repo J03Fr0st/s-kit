@@ -1,16 +1,16 @@
-# Graph Report - s-kit  (2026-06-03)
+# Graph Report - s-kit  (2026-06-09)
 
 ## Corpus Check
-- 151 files · ~101,244 words
+- 160 files · ~105,801 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1356 nodes · 1307 edges · 164 communities (125 shown, 39 thin omitted)
+- 1463 nodes · 1405 edges · 173 communities (133 shown, 40 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `cb2a084b`
+- Built from commit: `44981684`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -172,6 +172,15 @@
 - [[_COMMUNITY_Community 159|Community 159]]
 - [[_COMMUNITY_Community 160|Community 160]]
 - [[_COMMUNITY_Community 163|Community 163]]
+- [[_COMMUNITY_Community 164|Community 164]]
+- [[_COMMUNITY_Community 165|Community 165]]
+- [[_COMMUNITY_Community 166|Community 166]]
+- [[_COMMUNITY_Community 167|Community 167]]
+- [[_COMMUNITY_Community 168|Community 168]]
+- [[_COMMUNITY_Community 169|Community 169]]
+- [[_COMMUNITY_Community 170|Community 170]]
+- [[_COMMUNITY_Community 171|Community 171]]
+- [[_COMMUNITY_Community 172|Community 172]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `Writing Skills` - 22 edges
@@ -180,10 +189,10 @@
 4. `interface` - 15 edges
 5. `Code Review Reception` - 15 edges
 6. `Test-Driven Development (TDD)` - 15 edges
-7. `Testing Anti-Patterns` - 13 edges
-8. `Tasks` - 13 edges
-9. `sync-to-codex-plugin.sh script` - 12 edges
-10. `Comparable-Project Enhancement Opportunities` - 12 edges
+7. `Orchestration` - 13 edges
+8. `Testing Anti-Patterns` - 13 edges
+9. `Tasks` - 13 edges
+10. `sync-to-codex-plugin.sh script` - 12 edges
 
 ## Surprising Connections (you probably didn't know these)
 - None detected - all connections are within the same source files.
@@ -191,7 +200,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (164 total, 39 thin omitted)
+## Communities (173 total, 40 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.06
@@ -234,8 +243,8 @@ Cohesion: 0.10
 Nodes (19): Bulletproofing Elements, Creation Log: Systematic Debugging Skill, Enhancement 1: TDD Reference, Extraction Decisions, Final Outcome, Initial Version, Iterations, Key Insight (+11 more)
 
 ### Community 10 - "Community 10"
-Cohesion: 0.11
-Nodes (18): Build Feature, Error Handling, Host Adapter, Key Principles, Orchestration, Prerequisites, Status Values, Step 1: Load the Spec (+10 more)
+Cohesion: 0.10
+Nodes (19): Build Feature, Error Handling, Host Adapter, Key Principles, Orchestration, Prerequisites, Status Values, Step 1: Load the Spec (+11 more)
 
 ### Community 11 - "Community 11"
 Cohesion: 0.21
@@ -358,8 +367,8 @@ Cohesion: 0.17
 Nodes (11): Common Failures, Key Patterns, Overview, Rationalization Prevention, Red Flags - STOP, The Bottom Line, The Gate Function, The Iron Law (+3 more)
 
 ### Community 41 - "Community 41"
-Cohesion: 0.15
-Nodes (13): Advanced: Skills with executable code, [Analysis Title], Build evaluations first, Conditional workflow pattern, Develop Skills iteratively with Claude, Evaluation and iteration, Examples pattern, Executive summary (+5 more)
+Cohesion: 0.17
+Nodes (12): Advanced: Skills with executable code, [Analysis Title], Anti-patterns to avoid, Avoid offering too many options, Avoid Windows-style paths, Conditional workflow pattern, Examples pattern, Executive summary (+4 more)
 
 ### Community 42 - "Community 42"
 Cohesion: 0.18
@@ -662,25 +671,57 @@ Cohesion: 0.50
 Nodes (4): Pattern, Reference, Skill Types, Technique
 
 ### Community 163 - "Community 163"
-Cohesion: 0.67
-Nodes (3): Anti-patterns to avoid, Avoid offering too many options, Avoid Windows-style paths
+Cohesion: 0.11
+Nodes (18): Acceptance Criteria, API Endpoints, Code Snippets, Dependencies, Description, Environment Variables, Files to Create, Files to Modify (+10 more)
+
+### Community 164 - "Community 164"
+Cohesion: 0.11
+Nodes (18): Acceptance Criteria, API Endpoints, Code Snippets, Dependencies, Description, Environment Variables, Files to Create, Files to Modify (+10 more)
+
+### Community 165 - "Community 165"
+Cohesion: 0.11
+Nodes (18): Acceptance Criteria, API Endpoints, Code Snippets, Dependencies, Description, Environment Variables, Files to Create, Files to Modify (+10 more)
+
+### Community 166 - "Community 166"
+Cohesion: 0.20
+Nodes (9): Alternatives Considered, Approved Approach, Architecture, Configuration and Inputs, Context, Decisions, Design: Build Feature Risk Preflight, Risks and Constraints (+1 more)
+
+### Community 167 - "Community 167"
+Cohesion: 0.20
+Nodes (9): Build Feature Risk Preflight, Dependency Graph, Overview, Quick Links, Task Status, Wave 1, Wave 2, Wave 3 (+1 more)
+
+### Community 168 - "Community 168"
+Cohesion: 0.20
+Nodes (9): actionRequiredPath, allowedTaskStatuses, created, designPath, feature, implementationLogPath, requirementsPath, specPath (+1 more)
+
+### Community 169 - "Community 169"
+Cohesion: 0.22
+Nodes (8): 2026-06-09 - Design Approved, 2026-06-09 - Spec Created, 2026-06-09 - Wave 1 Result, 2026-06-09 - Wave 1 Started, 2026-06-09 - Wave 2 Result, 2026-06-09 - Wave 2 Started, 2026-06-09 - Wave 3 Started, Implementation Log: Build Feature Risk Preflight
+
+### Community 170 - "Community 170"
+Cohesion: 0.25
+Nodes (7): Acceptance Criteria, Assumptions, Goals, Non-Goals, Requirements: Build Feature Risk Preflight, Summary, Technical Constraints
+
+### Community 171 - "Community 171"
+Cohesion: 0.50
+Nodes (4): Build evaluations first, Develop Skills iteratively with Claude, Evaluation and iteration, Observe how Claude navigates Skills
 
 ## Knowledge Gaps
-- **891 isolated node(s):** `name`, `description`, `name`, `email`, `plugins` (+886 more)
+- **975 isolated node(s):** `name`, `description`, `name`, `email`, `plugins` (+970 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **39 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **40 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
+- **Why does `[Analysis Title]` connect `Community 41` to `Community 171`, `Community 95`?**
+  _High betweenness centrality (0.002) - this node is a cross-community bridge._
 - **Why does `Writing Skills` connect `Community 28` to `Community 96`, `Community 97`, `Community 84`, `Community 117`, `Community 85`, `Community 118`, `Community 119`?**
-  _High betweenness centrality (0.001) - this node is a cross-community bridge._
-- **Why does `Returns: "OK" or lists conflicts` connect `Community 45` to `Community 114`, `Community 95`?**
   _High betweenness centrality (0.001) - this node is a cross-community bridge._
 - **Why does `Skill authoring best practices` connect `Community 57` to `Community 115`, `Community 52`, `Community 95`?**
   _High betweenness centrality (0.001) - this node is a cross-community bridge._
 - **What connects `name`, `description`, `name` to the rest of the system?**
-  _891 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _975 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.05555555555555555 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**
