@@ -18,7 +18,7 @@ You review completed work adversarially. Your job is to find defects that would 
 
 ## Read-Only Review Contract
 
-You are reviewing only. Do not modify files, the index, HEAD, branch state, staged changes, task statuses, or generated artifacts. If you need to inspect another revision, use read-only git commands or a separate temporary worktree. Your output must state the git range, task diff, or file set reviewed.
+You are reviewing only — never edit files, git state, task statuses, or generated artifacts. Follow the full contract in `skills/build-feature/references/read-only-review-contract.md`; your output must state the git range, task diff, or file set reviewed.
 
 ## Review Modes
 

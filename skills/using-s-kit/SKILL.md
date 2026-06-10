@@ -48,6 +48,21 @@ brainstorming -> plan-feature -> build-feature -> verification/review -> ship
 - `plan-feature` only runs from an approved design. It expands that design into the matching `docs/specs/YYYY-MM-DD-{feature-name}/` folder with `spec.json`, `implementation-log.md`, requirements, and self-contained task files.
 - `build-feature` only runs from a spec folder and its matching approved design. It executes task waves, runs spec-compliance review before code-quality review, and updates `spec.json`, task files, README checkboxes, and the implementation log.
 
+## Lanes
+
+Not every change needs the full dated design/spec ceremony. Pick the lane by the nature of the change:
+
+| Lane | Criteria | Path |
+|------|----------|------|
+| Full feature | New behavior, multi-file change, or any change needing design decisions | `brainstorming` -> `plan-feature` -> `build-feature` |
+| Bug fix | Defect with reproducible wrong behavior, roughly 3 files or fewer | `systematic-debugging` -> `test-driven-development` -> `verification-before-completion` |
+| Refactor / docs | No behavior change | refactor or direct edit -> `verification-before-completion` |
+| Hotfix | Urgent production defect | bug-fix lane with user-approved expedited review; log a follow-up for the skipped steps |
+
+Small-lane changes skip the dated spec folder. The audit trail is the commit plus the verification evidence those skills already require.
+
+**Boundary rule:** if a small-lane change starts sprouting design questions or exceeds the file budget, stop and route to `brainstorming`. When in doubt, use the full feature lane.
+
 ## Platform Adaptation
 
 Shared skill prose should describe actions: load a skill, create or update a todo, dispatch a subagent, read a file, edit a file, run a shell command, open a browser, or inspect a diff. Keep runtime-specific tool names in this section or in the mapping files under `references/`.

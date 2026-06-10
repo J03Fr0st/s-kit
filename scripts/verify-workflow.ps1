@@ -8,9 +8,10 @@ $reviewPromptTemplatePath = Join-Path $root 'skills/build-feature/references/rev
 $simplifierPromptTemplatePath = Join-Path $root 'skills/build-feature/references/simplifier-prompt-template.md'
 $specReviewerAgentPath = Join-Path $root 'agents/s-kit-spec-reviewer.md'
 $codeReviewerAgentPath = Join-Path $root 'agents/s-kit-code-reviewer.md'
+$readOnlyContractPath = Join-Path $root 'skills/build-feature/references/read-only-review-contract.md'
 $failures = [System.Collections.Generic.List[string]]::new()
 $readOnlyReviewContractText = @(
-  '## Read-Only Review Contract',
+  '# Read-Only Review Contract',
   'Do not modify files, the index, HEAD, branch state, staged changes, task statuses, or generated artifacts.',
   'read-only git commands or a separate temporary worktree',
   'Your output must state the git range, task diff, or file set reviewed.'
@@ -162,6 +163,17 @@ if (Test-Path $buildFeatureSkillPath) {
   Add-Failure 'Missing build-feature skill: skills/build-feature/SKILL.md'
 }
 
+if (Test-Path $readOnlyContractPath) {
+  $readOnlyContract = Get-Content $readOnlyContractPath -Raw
+  foreach ($requiredText in $readOnlyReviewContractText) {
+    if (-not $readOnlyContract.Contains($requiredText)) {
+      Add-Failure "read-only review contract must include contract text: $requiredText"
+    }
+  }
+} else {
+  Add-Failure 'Missing read-only review contract: skills/build-feature/references/read-only-review-contract.md'
+}
+
 if (Test-Path $reviewPromptTemplatePath) {
   $reviewPromptTemplate = Get-Content $reviewPromptTemplatePath -Raw
   foreach ($requiredText in @(
@@ -171,8 +183,10 @@ if (Test-Path $reviewPromptTemplatePath) {
     '## Wave Risk Preflight',
     '{wave_risk_preflight}',
     'complete punch-list mode',
-    '{review_scope}'
-  ) + $readOnlyReviewContractText) {
+    '{review_scope}',
+    '{read_only_contract}',
+    'read-only-review-contract.md'
+  )) {
     if (-not $reviewPromptTemplate.Contains($requiredText)) {
       Add-Failure "review prompt must include simplifier review text: $requiredText"
     }
@@ -235,7 +249,9 @@ foreach ($reviewerAgent in @(
 )) {
   if (Test-Path $reviewerAgent.Path) {
     $reviewerAgentText = Get-Content $reviewerAgent.Path -Raw
-    foreach ($requiredText in $readOnlyReviewContractText + @(
+    foreach ($requiredText in @(
+      'read-only-review-contract.md',
+      'You are reviewing only',
       'Reviewed Scope:',
       'If the reviewed scope is missing or too vague, stop and request the concrete git range, task diff, or file set.'
     )) {

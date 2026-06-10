@@ -9,7 +9,7 @@ You are running a {review_type} review for Wave {wave_number} of a feature imple
 
 ## Read-Only Review Contract
 
-You are reviewing only. Do not modify files, the index, HEAD, branch state, staged changes, task statuses, or generated artifacts. If you need to inspect another revision, use read-only git commands or a separate temporary worktree. Your output must state the git range, task diff, or file set reviewed.
+{read_only_contract}
 
 ## Feature Context
 
@@ -82,6 +82,7 @@ Group issues by the task they most closely relate to based on the manifest file 
 ## Placeholder Details
 
 - **{review_type}**: `Spec Compliance` or `Code Quality`.
+- **{read_only_contract}**: paste the Contract section of `references/read-only-review-contract.md` verbatim.
 - **{wave_number}**: the current wave number, such as `2`, or `final` for the full-feature review.
 - **{requirements}**: full text of `requirements.md`.
 - **{design}**: full text of `design.md`.
