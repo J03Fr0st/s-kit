@@ -45,7 +45,7 @@ graph TD
 - [x] [task-05-read-only-contract-dedupe](./tasks/task-05-read-only-contract-dedupe.md) — Single-source the read-only review contract
 
 ### Wave 2
-- [ ] [task-06-prompt-token-diet](./tasks/task-06-prompt-token-diet.md) — Design digest for coders, preflight removal, reviewer task excerpts
+- [x] [task-06-prompt-token-diet](./tasks/task-06-prompt-token-diet.md) — Design digest for coders, preflight removal, reviewer task excerpts
 
 ### Wave 3
 - [ ] [task-07-build-feature-orchestration-rework](./tasks/task-07-build-feature-orchestration-rework.md) — Baseline check, digest dispatch, security-auditor trigger, no-op semantics, slim final review, reopen cascade

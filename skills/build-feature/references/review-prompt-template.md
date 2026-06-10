@@ -87,6 +87,6 @@ Group issues by the task they most closely relate to based on the manifest file 
 - **{requirements}**: full text of `requirements.md`.
 - **{design}**: full text of `design.md`.
 - **{wave_risk_preflight}**: the Wave Risk Preflight for the current wave. Reviewers must use this as required boundary context, not optional background.
-- **{task_summaries}**: for each task in the wave, include the task title, manifest entry, task file content, files created/modified, verification evidence, coder or fixer completion summary, and simplifier summary and verification evidence.
+- **{task_summaries}**: for each task in the wave, include the task title, manifest entry, the task file's Acceptance Criteria and Verification Plan sections (not the full task file), files created/modified, verification evidence, coder or fixer completion summary, and simplifier summary and verification evidence. Completed tasks from earlier waves: one line each.
 - **{review_scope}**: the concrete git range, task diff, or exact file set the reviewer must inspect.
 - **{verification_commands}**: the task-specific commands from `spec.json` for spec compliance, or the project-level lint/typecheck/test commands for code quality.

@@ -72,3 +72,40 @@ Append-only record of approvals, wave starts, task results, review outcomes, ver
 
 - Final statuses: task-01..task-05 -> complete (spec.json, task files, README checkboxes updated consistently).
 - Verification evidence: verify:workflow PASS, verify:hooks PASS, bash -n PASS, verify:agents PASS, verify:naming PASS, node --check PASS. npm test end-to-end remains red solely on the pre-existing baseline verify:branding failure (tracked graphify-out/ committed at HEAD before this feature) — resolution is a user decision.
+
+## 2026-06-10 - Wave 2 Started
+
+- Tasks: task-06-prompt-token-diet (`pending` -> `in-progress`). Dependency task-05 is `complete`.
+- Planned verification: `npm run verify:workflow`, `npm test` (baseline branding failure attributed).
+- Wave 1 committed as a2e67a41.
+
+### Wave 2 Risk Preflight
+
+- Single task; no parallel-agent risk this wave.
+- Atomicity boundary: `verify-workflow.ps1` literal-text invariants vs the three templates must agree at task end — edit all four files, then verify.
+- Preserve task-05 outcomes in `review-prompt-template.md`: the `{read_only_contract}` placeholder, the `read-only-review-contract.md` reference, and the script's reference-based checks. Do not reintroduce inline contract text.
+- The literal string `simplifier summary and verification evidence` must remain in the review template (script invariant).
+- Negative check subtlety: forbidding `{design}` in the coder template must not false-positive on `{design_digest}` — match the exact token (regex `\{design\}`).
+- `skills/build-feature/SKILL.md` is owned by Wave 3; its required-text block in the script must be left untouched this wave. SKILL.md will temporarily describe the old placeholder flow — acceptable, reconciled in Wave 3.
+- Wave 3 reminder carried forward: add `{read_only_contract}` to SKILL.md Step 6A's fill-in list (code-quality review note from Wave 1).
+
+### Wave 2 Coder Result
+
+- task-06: complete (recommended). Coder template: Design Digest section + placeholder spec replaces full requirements/design/preflight; one-line completed-task summaries. Simplifier template: preflight removed, no-op requires Final Verification evidence, current-wave-only full task content. Review template: task summaries slimmed to Acceptance Criteria + Verification Plan excerpts; retains full design/requirements, preflight, {read_only_contract}, required literal strings. verify-workflow.ps1: new positive invariants + negative checks (regex \{design\} avoids digest false-positive). verify:workflow PASS; all gates green individually; npm test baseline failure only.
+
+### Wave 2 Simplification Pass
+
+- Status: simplified. verify-workflow.ps1 only: simplifier-template missing-file check consolidated into the standard if/else pattern; two path declarations moved to the top with the others. Behavior-preserving (same failure strings, same conditions). Templates left untouched deliberately (invariant-bound wording).
+- Verification: verify:workflow PASS, verify:hooks PASS; npm test baseline failure only.
+
+### Wave 2 Spec Compliance Review
+
+- VERDICT: PASS. Scope: a2e67a41..working tree, four owned files. All task-06 acceptance criteria walked and met; preflight audience preserved (fix + review templates retain {wave_risk_preflight}); task-05 outcomes intact; negative checks empirically mutation-tested in a temp worktree (reintroduced placeholders fail the script as designed). Bookkeeping consistent.
+
+### Wave 2 Code Quality Review
+
+- VERDICT: PASS. No blockers/warnings. Placeholder Details match template bodies (4/4, 6/6, 9/9); no dead checks in verify-workflow.ps1; consolidated else-branch behavior-identical; fix/SKILL.md blocks byte-identical to a2e67a41. Notes for Wave 3 awareness: negative checks forbid placeholders not headings; coder template hyphen-vs-em-dash cosmetic. Verification: verify:workflow, verify:hooks, verify:agents, verify:naming, verify:assets, node --check all PASS; npm test baseline branding failure only.
+
+### Wave 2 Complete
+
+- task-06 -> complete (spec.json, task file, README checkbox updated).

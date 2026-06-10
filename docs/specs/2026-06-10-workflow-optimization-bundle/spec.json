@@ -126,7 +126,7 @@
       "title": "Prompt Token Diet for Build-Feature Templates",
       "file": "tasks/task-06-prompt-token-diet.md",
       "wave": 2,
-      "status": "pending",
+      "status": "complete",
       "dependsOn": [
         "task-05-read-only-contract-dedupe"
       ],
