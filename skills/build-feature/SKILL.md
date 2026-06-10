@@ -89,9 +89,10 @@ Only `complete` maps to a checked README checkbox. Every other status maps to an
    - Task file IDs must be unique.
    - Tasks in the same wave must not overlap in `spec.json.tasks[].files.create` or `spec.json.tasks[].files.modify`.
    - If any check fails, stop and report the exact files to fix before dispatching agents.
-5. Parse `spec.json.tasks[]` as the source of truth for task IDs, waves, statuses, dependencies, file ownership, and verification commands.
-6. Determine the current wave: the first wave that has any task whose status is not `complete`.
-7. If all tasks in all waves are complete, report "All tasks complete!" and stop.
+5. Run a baseline verification before dispatching any wave: execute the project-level verification commands referenced by the spec (the project-level entries in `spec.json.tasks[].verificationCommands`, or the repository's standard test command). If the baseline fails, report the failing commands and ask the user whether to proceed (failures will be attributed to the pre-existing baseline in `implementation-log.md`) or stop. Record the baseline result in `implementation-log.md` either way.
+6. Parse `spec.json.tasks[]` as the source of truth for task IDs, waves, statuses, dependencies, file ownership, and verification commands.
+7. Determine the current wave: the first wave that has any task whose status is not `complete`.
+8. If all tasks in all waves are complete, report "All tasks complete!" and stop.
 
 This makes the skill resumable. If invoked on a partially completed spec, it picks up exactly where the manifest says it left off.
 
@@ -133,9 +134,10 @@ Before dispatching coder agents, create a short, read-only Wave Risk Preflight f
    - Cross-task shared types, constructors, schemas, or configuration.
    - Auth, filesystem, shell, network, privacy, or security-sensitive boundaries.
    - Verification commands that should be grouped because one command only proves part of the boundary.
-3. The preflight is not a review verdict. It is a short list of contracts and risks that coder, simplifier, and review agents must account for during this wave.
-4. Append the preflight summary to `implementation-log.md` before coder dispatch.
-5. Pass the same Wave Risk Preflight text into coder, simplifier, spec-compliance review, and code-quality review prompts.
+3. Flag the wave as security-sensitive when its owned files touch secrets or credentials, shell command construction, package installs, filesystem writes or deletes, auth or permissions, network calls, or user-controlled input. Record the flag in the preflight summary.
+4. The preflight is not a review verdict. It is a short list of contracts and risks that review and fix agents must account for during this wave.
+5. Append the preflight summary to `implementation-log.md` before coder dispatch.
+6. Pass the same Wave Risk Preflight text into spec-compliance review, code-quality review, and fix prompts. Coder and simplifier prompts do not receive the preflight. Quote any preflight line that directly affects a task inside that wave's Design Digest (coder) or that task's entry in **{task_summaries}** (simplifier); the simplifier also holds the full design.
 
 ### Step 4: Dispatch Coder Agents
 
@@ -154,11 +156,9 @@ For each incomplete task in the wave, dispatch one coder agent using the selecte
 
 Read `references/coder-prompt-template.md` and construct each agent's prompt by filling in:
 
-- **{requirements}**: full text of `requirements.md`
-- **{design}**: full text of the matching `docs/design/YYYY-MM-DD-{feature-name}/design.md`
-- **{wave_risk_preflight}**: the Wave Risk Preflight for the current wave
+- **{design_digest}**: a 10-20 line digest of the approved design and requirements scoped to this wave: shared contracts (public exports, types, schemas), naming and error-handling conventions, and any Wave Risk Preflight lines that directly affect the task. Reviewers hold the full design; the digest is working context, not the contract of record.
 - **{spec_manifest}**: the relevant `spec.json` task entry and global paths/status rules
-- **{completed_tasks_summary}**: for each previously completed task, a one-paragraph summary of what was implemented and what files were created/modified
+- **{completed_tasks_summary}**: one line per completed task stating what was built and what files were created/modified
 - **{task_content}**: full text of the task file being assigned
 
 The coder agents should not commit their changes.
@@ -185,14 +185,14 @@ After coder or fix agents complete and before review, run one behavior-preservin
    - **{wave_number}**: current wave number
    - **{requirements}**: full text of `requirements.md`
    - **{design}**: full text of the matching `docs/design/YYYY-MM-DD-{feature-name}/design.md`
-   - **{wave_risk_preflight}**: the Wave Risk Preflight for the current wave
-   - **{task_summaries}**: for each task in this wave, the task title, manifest entry, task file content, files created/modified, verification evidence, and coder or fixer completion summary
+   - **{task_summaries}**: for each task in this wave, the task title, manifest entry, task file content, files created/modified, verification evidence, and coder or fixer completion summary; completed-task context from earlier waves is one line per task
    - **{changed_files}**: the exact changed-file scope for this wave
    - **{verification_commands}**: the targeted commands from `spec.json.tasks[].verificationCommands` plus any affected project-level lint, typecheck, or test commands
-3. The simplifier may edit only files in the changed-file scope and may return `no-op` when the implementation is already clear. It must preserve behavior, avoid unrelated fixes, respect the Wave Risk Preflight contracts, and rerun relevant verification after edits.
-4. Collect the simplifier result and append its status, files modified, simplifications, verification evidence, and concerns to `implementation-log.md`.
-5. Include the coder or fixer completion summary, simplifier summary, and simplifier verification evidence in the task summaries passed to later review agents.
-6. If the simplifier reports `blocked`, fails verification, changes behavior, or edits outside the changed-file scope, set the affected tasks to `review-failed`, append the details to `implementation-log.md`, and go to Step 7.
+3. The simplifier may edit only files in the changed-file scope and may return `no-op` when the implementation is already clear. It must preserve behavior, avoid unrelated fixes, respect the contracts in the approved design and task summaries, and rerun relevant verification after edits.
+4. A `no-op` result must include Final Verification command output for each task in scope. A `no-op` without verification evidence sets the affected tasks to `done-with-concerns` instead of allowing `complete`.
+5. Collect the simplifier result and append its status, files modified, simplifications, verification evidence, and concerns to `implementation-log.md`.
+6. Include the coder or fixer completion summary, simplifier summary, and simplifier verification evidence in the task summaries passed to later review agents.
+7. If the simplifier reports `blocked`, fails verification, changes behavior, or edits outside the changed-file scope, set the affected tasks to `review-failed`, append the details to `implementation-log.md`, and go to Step 7.
 
 ### Step 6A: Spec Compliance Review
 
@@ -204,11 +204,12 @@ Dispatch a single review agent using the selected host adapter.
 
 Read `references/review-prompt-template.md` and construct the prompt with **{review_type}** set to `Spec Compliance`. Fill in:
 
+- **{read_only_contract}**: the Contract section of `references/read-only-review-contract.md`, pasted verbatim
 - **{wave_number}**: current wave number
 - **{requirements}**: full text of `requirements.md`
 - **{design}**: full text of the matching `docs/design/YYYY-MM-DD-{feature-name}/design.md`
 - **{wave_risk_preflight}**: the Wave Risk Preflight for the current wave
-- **{task_summaries}**: for each task in this wave, the task title, manifest entry, task file content, coder or fixer completion summary, simplifier summary, and simplifier verification evidence
+- **{task_summaries}**: for each task in this wave, the task title, manifest entry, the task file's Acceptance Criteria and Verification Plan sections (not the full task file), files created/modified, verification evidence, coder or fixer completion summary, and simplifier summary and verification evidence; completed tasks from earlier waves are one line each
 - **{review_scope}**: the concrete git range, task diff, or exact file set the reviewer must inspect
 - **{verification_commands}**: the targeted commands from `spec.json.tasks[].verificationCommands`
 
@@ -229,9 +230,11 @@ If this review fails, do not run code-quality review yet. Set affected tasks to 
 
 Run this only after simplification and spec-compliance review pass.
 
-Dispatch a single review agent using the selected host adapter and the same `references/review-prompt-template.md`, with **{review_type}** set to `Code Quality`.
+Dispatch a single review agent using the selected host adapter and the same `references/review-prompt-template.md`, with **{review_type}** set to `Code Quality`. Fill in the same placeholders as Step 6A, including the pasted **{read_only_contract}**.
 
 Use the same concrete **{review_scope}** unless code-quality review needs a narrower task diff or file set; if it does, state that narrowed scope explicitly in the prompt.
+
+If the wave was flagged security-sensitive in the Wave Risk Preflight, also dispatch the `s-kit-security-auditor` agent (read-only) in parallel with the code-quality review, scoped to the same concrete review scope. Treat a `CHANGES REQUESTED` audit verdict exactly like a code-quality review **FAIL**: set affected tasks to `review-failed`, append the findings to `implementation-log.md`, and go to Step 7.
 
 The review agent should:
 
@@ -303,8 +306,8 @@ After both reviews pass, or the user explicitly chooses to proceed:
 After all waves are complete:
 
 1. Run project-level verification one final time.
-2. Build a concrete final review scope from the accepted task diffs, git range, or exact feature file set, then dispatch a spec-compliance review agent for that full feature scope.
-3. Dispatch a code-quality review agent for the full feature scope only if spec compliance passes.
+2. Build the full feature scope as a git range or exact file set from the accepted task diffs.
+3. Dispatch one code-quality review agent for that scope. Do not dispatch a full-feature spec-compliance review: the per-wave spec-compliance verdicts recorded in `implementation-log.md` are the compliance record. Do not re-inject all task summaries; the review receives the scope, the design, the requirements, and the verification commands. Use `references/review-prompt-template.md` with **{review_type}** = `Code Quality` and **{wave_number}** = `final`, pasting **{read_only_contract}** as in Step 6A. Fill **{task_summaries}** with a one-line-per-task roll-up of all completed tasks, and set **{wave_risk_preflight}** to `None — final integration review` (per-wave preflights are already in the log).
 4. Append final verification commands, review verdicts, and any residual concerns to `implementation-log.md`.
 5. Report the final status:
 
@@ -316,7 +319,7 @@ Total tasks: {T}
 
 Verification:
 - Project verification: {PASS/FAIL}
-- Full spec compliance review: {PASS/FAIL with notes}
+- Per-wave spec compliance verdicts: {all PASS / list exceptions}
 - Full code quality review: {PASS/FAIL with notes}
 
 Next steps:
@@ -333,12 +336,14 @@ Next steps:
 - **Missing spec folder**: ask the user to provide the feature name or suggest creating a spec with `plan-feature`.
 - **Ambiguous undated spec name**: list all matching dated spec folders and ask the user to choose one.
 - **Preflight failure**: report the failing invariant and stop before dispatching agents.
+- **Reopened completed task**: if a `complete` task is reopened (set back to `in-progress`, `needs-context`, or `review-failed`), revert every transitive dependent task to `blocked`, update `spec.json`, task files, and README checkboxes consistently, and append a dated entry to `implementation-log.md` stating the reason before any re-dispatch.
 
 ## Key Principles
 
 - **The orchestrator does not write code when subagents are available.** Its job is dispatch, review, and progress tracking. If the current environment has no subagent tool, report that limitation and execute tasks sequentially in the current session only when the user explicitly asks to continue.
 - **`spec.json` is the orchestration contract.** README checkboxes and task file status fields mirror it.
 - **Each coder agent gets exactly one task.** This keeps each agent's context focused and manageable.
-- **Completed task summaries are brief.** One paragraph per task, not the full file contents. This keeps coder agent prompts from growing unbounded as waves progress.
+- **Completed task summaries are brief.** One line per task, not the full file contents. This keeps coder agent prompts from growing unbounded as waves progress.
+- **Coders build from self-contained task files plus a design digest; reviewers hold the full design.** Review is the contract of record.
 - **Review is two-stage.** Spec compliance catches "built the wrong thing" before code-quality review spends time on implementation quality.
 - **Progress is append-only in `implementation-log.md`.** The log records what happened, what was verified, what failed, and what was accepted.

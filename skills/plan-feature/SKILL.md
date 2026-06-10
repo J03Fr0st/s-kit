@@ -33,11 +33,17 @@ Before writing requirements or tasks:
 4. Read `design.md` and use it as the source of truth. Review the current conversation only to preserve approved details that are missing from the file.
 5. Derive the spec folder name from the design folder name. For example, `docs/design/2026-05-27-add-user-auth/design.md` becomes `docs/specs/2026-05-27-add-user-auth/`.
 
+Before writing any spec file, verify the design file exists at the derived path (`docs/design/YYYY-MM-DD-{feature-name}/design.md`). If it does not, report the exact expected path and stop. Do not create the spec folder, and do not guess an alternative location.
+
 ### Step 2: Derive the Spec Folder
 
 Do not choose a new feature name in `plan-feature`. Reuse the exact dated folder name already chosen by `brainstorming` under `docs/design/`.
 
 Example: `docs/design/2026-05-27-add-user-auth/design.md` expands to `docs/specs/2026-05-27-add-user-auth/`.
+
+### Optional: Map Existing Patterns First
+
+Before decomposing into tasks, offer to dispatch the `s-kit-pattern-mapper` agent with the approved design as input. Its report (recommended patterns with file:line evidence, implementation guidance, watchouts) feeds directly into each task file's Technical Details so coder agents follow the repo's real conventions instead of inventing a style. Skip this for repos the conversation already knows well.
 
 ### Step 3: Decompose into Tasks
 
@@ -95,6 +101,8 @@ Use these task statuses exactly:
 - `done-with-concerns` — implementation is complete but review concerns remain
 - `review-failed` — a spec or code review failed and fixes are required
 - `complete` — accepted after required review and verification
+
+`done-with-concerns` and `review-failed` are execution-only statuses assigned by `build-feature` during implementation and review. `plan-feature` always creates tasks as `pending`; the full list stays in `spec.json.allowedTaskStatuses` because `build-feature`'s preflight requires exactly these seven values.
 
 ### Step 6: Write Self-Contained Task Files
 

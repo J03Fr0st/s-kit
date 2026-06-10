@@ -9,7 +9,7 @@ You are running a {review_type} review for Wave {wave_number} of a feature imple
 
 ## Read-Only Review Contract
 
-You are reviewing only. Do not modify files, the index, HEAD, branch state, staged changes, task statuses, or generated artifacts. If you need to inspect another revision, use read-only git commands or a separate temporary worktree. Your output must state the git range, task diff, or file set reviewed.
+{read_only_contract}
 
 ## Feature Context
 
@@ -82,10 +82,11 @@ Group issues by the task they most closely relate to based on the manifest file 
 ## Placeholder Details
 
 - **{review_type}**: `Spec Compliance` or `Code Quality`.
+- **{read_only_contract}**: paste the Contract section of `references/read-only-review-contract.md` verbatim.
 - **{wave_number}**: the current wave number, such as `2`, or `final` for the full-feature review.
 - **{requirements}**: full text of `requirements.md`.
 - **{design}**: full text of `design.md`.
 - **{wave_risk_preflight}**: the Wave Risk Preflight for the current wave. Reviewers must use this as required boundary context, not optional background.
-- **{task_summaries}**: for each task in the wave, include the task title, manifest entry, task file content, files created/modified, verification evidence, coder or fixer completion summary, and simplifier summary and verification evidence.
+- **{task_summaries}**: for each task in the wave, include the task title, manifest entry, the task file's Acceptance Criteria and Verification Plan sections (not the full task file), files created/modified, verification evidence, coder or fixer completion summary, and simplifier summary and verification evidence. Completed tasks from earlier waves: one line each.
 - **{review_scope}**: the concrete git range, task diff, or exact file set the reviewer must inspect.
 - **{verification_commands}**: the task-specific commands from `spec.json` for spec compliance, or the project-level lint/typecheck/test commands for code quality.

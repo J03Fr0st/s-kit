@@ -29,6 +29,10 @@ Complete these in order:
 
 Start with the current project state. If the request is too broad for one spec, decompose it and brainstorm the first independently shippable piece.
 
+If the request matches a small lane in `using-s-kit` (bug fix, refactor/docs, or hotfix), say so and route to that lane instead of starting a design. Brainstorming is for work that needs design decisions.
+
+For an unfamiliar or large repository, offer to dispatch the `s-kit-codebase-mapper` agent first. It returns an evidence-backed map (architecture, conventions, relevant files, risks) that grounds the clarifying questions and design. This is optional; skip it when the project is already well understood.
+
 Ask one question per message. Prefer multiple choice when it makes the decision easier. Focus on purpose, constraints, success criteria, dependencies, and what should be explicitly out of scope.
 
 When you understand the work, propose approaches. Lead with the recommended approach and explain why. Keep the trade-offs practical: implementation effort, risk, future flexibility, and how well the approach fits the repo.

@@ -1,23 +1,15 @@
 # Coder Agent Prompt Template
 
-Use this template when constructing prompts for coder subagents. Replace the placeholders (`{requirements}`, `{design}`, `{spec_manifest}`, `{completed_tasks_summary}`, `{task_content}`) with actual content from the spec files.
+Use this template when constructing prompts for coder subagents. Replace the placeholders (`{design_digest}`, `{spec_manifest}`, `{completed_tasks_summary}`, `{task_content}`) with actual content from the spec files.
 
 ## Template
 
 ```
 You are implementing a single task from a feature specification. Your job is to write the code described below — nothing more, nothing less.
 
-## Feature Context
+## Design Digest
 
-{requirements}
-
-## Approved Design
-
-{design}
-
-## Wave Risk Preflight
-
-{wave_risk_preflight}
+{design_digest}
 
 ## Spec Manifest Entry
 
@@ -35,7 +27,7 @@ You are implementing a single task from a feature specification. Your job is to 
 
 1. Read the relevant parts of the codebase to understand existing patterns, imports, and conventions
 2. Implement everything described in the task's Technical Details and Implementation Steps
-3. Account for the Wave Risk Preflight contracts while staying within this task's scope
+3. Account for the contracts and conventions in the Design Digest while staying within this task's scope
 4. Follow the project's existing code patterns and conventions
 5. Run the RED, GREEN, and Final Verification commands from the task's Verification Plan and manifest entry where they apply. Fix any errors before finishing.
 6. Do NOT commit your changes
@@ -50,11 +42,7 @@ You are implementing a single task from a feature specification. Your job is to 
 
 ## Placeholder Details
 
-- **{requirements}**: paste the full text of `requirements.md`. This gives the agent overall feature context — the "what" and "why" — so it can make good judgment calls during implementation.
-
-- **{design}**: paste the full text of `design.md`. This gives the agent the approved solution shape and architectural decisions.
-
-- **{wave_risk_preflight}**: paste the Wave Risk Preflight for the current wave. This is a short list of shared contracts and integration risks the agent must account for without widening scope.
+- **{design_digest}**: a 10-20 line digest the orchestrator writes per wave from the approved design and requirements. It must cover: the design decisions and shared contracts relevant to this wave's tasks (public exports, types, schemas, naming, error-handling conventions), and quote any Wave Risk Preflight line that directly affects this task. It is not the full design - reviewers hold the full design and will catch deviations.
 
 - **{spec_manifest}**: paste the relevant task entry from `spec.json` plus the global path and status rules. This keeps task ID, wave, file ownership, and verification commands explicit.
 
@@ -63,6 +51,6 @@ You are implementing a single task from a feature specification. Your job is to 
   - task-01-setup-database: Created PostgreSQL schema with users and sessions tables. Files: src/db/schema.ts, src/db/migrations/001_initial.sql
   - task-02-auth-config: Set up Better Auth with email/password provider. Files: src/lib/auth.ts, src/lib/auth-client.ts
   ```
-  Keep each entry to 1-2 lines. The purpose is to give the agent awareness of what exists, not full implementation details.
+  Keep each entry to one line per task. The purpose is to give the agent awareness of what exists, not full implementation details.
 
 - **{task_content}**: paste the full text of the task file (task-{nn}-{name}.md). This is the agent's primary instruction set — it contains the description, technical details, files to create/modify, and acceptance criteria.

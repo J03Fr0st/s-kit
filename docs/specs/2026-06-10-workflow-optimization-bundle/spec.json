@@ -1,0 +1,173 @@
+{
+  "feature": "Workflow Optimization Bundle",
+  "created": "2026-06-10",
+  "designPath": "docs/design/2026-06-10-workflow-optimization-bundle/design.md",
+  "specPath": "docs/specs/2026-06-10-workflow-optimization-bundle",
+  "requirementsPath": "docs/specs/2026-06-10-workflow-optimization-bundle/requirements.md",
+  "actionRequiredPath": "docs/specs/2026-06-10-workflow-optimization-bundle/action-required.md",
+  "implementationLogPath": "docs/specs/2026-06-10-workflow-optimization-bundle/implementation-log.md",
+  "allowedTaskStatuses": [
+    "pending",
+    "in-progress",
+    "blocked",
+    "needs-context",
+    "done-with-concerns",
+    "review-failed",
+    "complete"
+  ],
+  "tasks": [
+    {
+      "id": "task-01-routing-lanes-and-mapper-offer",
+      "title": "Routing Lanes and Codebase-Mapper Offer",
+      "file": "tasks/task-01-routing-lanes-and-mapper-offer.md",
+      "wave": 1,
+      "status": "complete",
+      "dependsOn": [],
+      "blocks": [],
+      "files": {
+        "create": [],
+        "modify": [
+          "skills/using-s-kit/SKILL.md",
+          "skills/brainstorming/SKILL.md"
+        ]
+      },
+      "verificationCommands": [
+        "powershell -NoProfile -Command \"(Select-String -Path 'skills/using-s-kit/SKILL.md' -Pattern '## Lanes' -Quiet) -and (Select-String -Path 'skills/brainstorming/SKILL.md' -Pattern 's-kit-codebase-mapper' -Quiet)\"",
+        "npm test"
+      ]
+    },
+    {
+      "id": "task-02-plan-feature-hardening",
+      "title": "Plan-Feature Hardening",
+      "file": "tasks/task-02-plan-feature-hardening.md",
+      "wave": 1,
+      "status": "complete",
+      "dependsOn": [],
+      "blocks": [],
+      "files": {
+        "create": [],
+        "modify": [
+          "skills/plan-feature/SKILL.md"
+        ]
+      },
+      "verificationCommands": [
+        "powershell -NoProfile -Command \"(Select-String -Path 'skills/plan-feature/SKILL.md' -Pattern 's-kit-pattern-mapper' -Quiet) -and (Select-String -Path 'skills/plan-feature/SKILL.md' -Pattern 'execution-only statuses' -Quiet)\"",
+        "npm test"
+      ]
+    },
+    {
+      "id": "task-03-session-start-slimming",
+      "title": "Session-Start Hook Slimming",
+      "file": "tasks/task-03-session-start-slimming.md",
+      "wave": 1,
+      "status": "complete",
+      "dependsOn": [],
+      "blocks": [],
+      "files": {
+        "create": [],
+        "modify": [
+          "hooks/session-start"
+        ]
+      },
+      "verificationCommands": [
+        "bash -n hooks/session-start",
+        "npm test"
+      ]
+    },
+    {
+      "id": "task-04-verify-hooks-script",
+      "title": "Hooks and Packaging Sync Verification Script",
+      "file": "tasks/task-04-verify-hooks-script.md",
+      "wave": 1,
+      "status": "complete",
+      "dependsOn": [],
+      "blocks": [],
+      "files": {
+        "create": [
+          "scripts/verify-hooks.ps1"
+        ],
+        "modify": [
+          "package.json"
+        ]
+      },
+      "verificationCommands": [
+        "npm run verify:hooks",
+        "npm test"
+      ]
+    },
+    {
+      "id": "task-05-read-only-contract-dedupe",
+      "title": "Read-Only Review Contract Dedupe",
+      "file": "tasks/task-05-read-only-contract-dedupe.md",
+      "wave": 1,
+      "status": "complete",
+      "dependsOn": [],
+      "blocks": [
+        "task-06-prompt-token-diet"
+      ],
+      "files": {
+        "create": [
+          "skills/build-feature/references/read-only-review-contract.md"
+        ],
+        "modify": [
+          "agents/s-kit-code-reviewer.md",
+          "agents/s-kit-spec-reviewer.md",
+          "skills/build-feature/references/review-prompt-template.md",
+          "scripts/verify-workflow.ps1"
+        ]
+      },
+      "verificationCommands": [
+        "npm run verify:workflow",
+        "npm test"
+      ]
+    },
+    {
+      "id": "task-06-prompt-token-diet",
+      "title": "Prompt Token Diet for Build-Feature Templates",
+      "file": "tasks/task-06-prompt-token-diet.md",
+      "wave": 2,
+      "status": "complete",
+      "dependsOn": [
+        "task-05-read-only-contract-dedupe"
+      ],
+      "blocks": [
+        "task-07-build-feature-orchestration-rework"
+      ],
+      "files": {
+        "create": [],
+        "modify": [
+          "skills/build-feature/references/coder-prompt-template.md",
+          "skills/build-feature/references/simplifier-prompt-template.md",
+          "skills/build-feature/references/review-prompt-template.md",
+          "scripts/verify-workflow.ps1"
+        ]
+      },
+      "verificationCommands": [
+        "npm run verify:workflow",
+        "npm test"
+      ]
+    },
+    {
+      "id": "task-07-build-feature-orchestration-rework",
+      "title": "Build-Feature Orchestration Rework",
+      "file": "tasks/task-07-build-feature-orchestration-rework.md",
+      "wave": 3,
+      "status": "complete",
+      "dependsOn": [
+        "task-06-prompt-token-diet"
+      ],
+      "blocks": [],
+      "files": {
+        "create": [],
+        "modify": [
+          "skills/build-feature/SKILL.md",
+          "scripts/verify-workflow.ps1"
+        ]
+      },
+      "verificationCommands": [
+        "npm run verify:workflow",
+        "npm test"
+      ]
+    }
+  ]
+}

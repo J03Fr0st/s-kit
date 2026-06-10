@@ -6,11 +6,14 @@ $designRoot = Join-Path $root 'docs/design'
 $buildFeatureSkillPath = Join-Path $root 'skills/build-feature/SKILL.md'
 $reviewPromptTemplatePath = Join-Path $root 'skills/build-feature/references/review-prompt-template.md'
 $simplifierPromptTemplatePath = Join-Path $root 'skills/build-feature/references/simplifier-prompt-template.md'
+$coderPromptTemplatePath = Join-Path $root 'skills/build-feature/references/coder-prompt-template.md'
+$fixPromptTemplatePath = Join-Path $root 'skills/build-feature/references/fix-prompt-template.md'
 $specReviewerAgentPath = Join-Path $root 'agents/s-kit-spec-reviewer.md'
 $codeReviewerAgentPath = Join-Path $root 'agents/s-kit-code-reviewer.md'
+$readOnlyContractPath = Join-Path $root 'skills/build-feature/references/read-only-review-contract.md'
 $failures = [System.Collections.Generic.List[string]]::new()
 $readOnlyReviewContractText = @(
-  '## Read-Only Review Contract',
+  '# Read-Only Review Contract',
   'Do not modify files, the index, HEAD, branch state, staged changes, task statuses, or generated artifacts.',
   'read-only git commands or a separate temporary worktree',
   'Your output must state the git range, task diff, or file set reviewed.'
@@ -129,10 +132,6 @@ if (Test-Path $designRoot) {
   }
 }
 
-if (-not (Test-Path $simplifierPromptTemplatePath)) {
-  Add-Failure 'Missing build-feature simplifier prompt template: skills/build-feature/references/simplifier-prompt-template.md'
-}
-
 if (Test-Path $buildFeatureSkillPath) {
   $buildFeatureSkill = Get-Content $buildFeatureSkillPath -Raw
   foreach ($requiredText in @(
@@ -146,6 +145,11 @@ if (Test-Path $buildFeatureSkillPath) {
     'coder or fixer completion summary, simplifier summary, and simplifier verification evidence',
     '### Step 3A: Wave Risk Preflight',
     '{wave_risk_preflight}',
+    '{design_digest}',
+    'baseline verification',
+    's-kit-security-auditor',
+    'Reopened completed task',
+    'A `no-op` result must include Final Verification command output',
     'complete punch-list review',
     'repeated same-boundary failure',
     'Boundary Context',
@@ -155,11 +159,22 @@ if (Test-Path $buildFeatureSkillPath) {
     'read-only git commands or a separate temporary worktree'
   )) {
     if (-not $buildFeatureSkill.Contains($requiredText)) {
-      Add-Failure "build-feature workflow must include simplifier orchestration text: $requiredText"
+      Add-Failure "build-feature workflow must include required orchestration text: $requiredText"
     }
   }
 } else {
   Add-Failure 'Missing build-feature skill: skills/build-feature/SKILL.md'
+}
+
+if (Test-Path $readOnlyContractPath) {
+  $readOnlyContract = Get-Content $readOnlyContractPath -Raw
+  foreach ($requiredText in $readOnlyReviewContractText) {
+    if (-not $readOnlyContract.Contains($requiredText)) {
+      Add-Failure "read-only review contract must include contract text: $requiredText"
+    }
+  }
+} else {
+  Add-Failure 'Missing read-only review contract: skills/build-feature/references/read-only-review-contract.md'
 }
 
 if (Test-Path $reviewPromptTemplatePath) {
@@ -168,11 +183,14 @@ if (Test-Path $reviewPromptTemplatePath) {
     'Verify the simplification pass stayed within the changed-file scope and did not alter approved behavior.',
     'Check maintainability, simplicity, security, performance, error handling, and project conventions.',
     'simplifier summary and verification evidence',
+    'Acceptance Criteria and Verification Plan sections',
     '## Wave Risk Preflight',
     '{wave_risk_preflight}',
     'complete punch-list mode',
-    '{review_scope}'
-  ) + $readOnlyReviewContractText) {
+    '{review_scope}',
+    '{read_only_contract}',
+    'read-only-review-contract.md'
+  )) {
     if (-not $reviewPromptTemplate.Contains($requiredText)) {
       Add-Failure "review prompt must include simplifier review text: $requiredText"
     }
@@ -181,19 +199,24 @@ if (Test-Path $reviewPromptTemplatePath) {
   Add-Failure 'Missing build-feature review prompt template: skills/build-feature/references/review-prompt-template.md'
 }
 
-$coderPromptTemplatePath = Join-Path $root 'skills/build-feature/references/coder-prompt-template.md'
-$fixPromptTemplatePath = Join-Path $root 'skills/build-feature/references/fix-prompt-template.md'
-
 if (Test-Path $coderPromptTemplatePath) {
   $coderPromptTemplate = Get-Content $coderPromptTemplatePath -Raw
   foreach ($requiredText in @(
-    '## Wave Risk Preflight',
-    '{wave_risk_preflight}',
-    'Account for the Wave Risk Preflight contracts'
+    '## Design Digest',
+    '{design_digest}',
+    'Account for the contracts and conventions in the Design Digest'
   )) {
     if (-not $coderPromptTemplate.Contains($requiredText)) {
-      Add-Failure "coder prompt must include risk preflight text: $requiredText"
+      Add-Failure "coder prompt must include design digest text: $requiredText"
     }
+  }
+  foreach ($forbiddenText in @('{wave_risk_preflight}', '{requirements}')) {
+    if ($coderPromptTemplate.Contains($forbiddenText)) {
+      Add-Failure "coder prompt must not include full-context placeholder: $forbiddenText"
+    }
+  }
+  if ($coderPromptTemplate -match '\{design\}') {
+    Add-Failure 'coder prompt must not include full-context placeholder: {design}'
   }
 } else {
   Add-Failure 'Missing build-feature coder prompt template: skills/build-feature/references/coder-prompt-template.md'
@@ -202,14 +225,18 @@ if (Test-Path $coderPromptTemplatePath) {
 if (Test-Path $simplifierPromptTemplatePath) {
   $simplifierPromptTemplate = Get-Content $simplifierPromptTemplatePath -Raw
   foreach ($requiredText in @(
-    '## Wave Risk Preflight',
-    '{wave_risk_preflight}',
-    'After a trivial targeted fix, you may return `no-op`'
+    'After a trivial targeted fix, you may return `no-op`',
+    'you must still run each task''s Final Verification command'
   )) {
     if (-not $simplifierPromptTemplate.Contains($requiredText)) {
-      Add-Failure "simplifier prompt must include risk preflight/no-op text: $requiredText"
+      Add-Failure "simplifier prompt must include no-op verification text: $requiredText"
     }
   }
+  if ($simplifierPromptTemplate.Contains('{wave_risk_preflight}')) {
+    Add-Failure 'simplifier prompt must not include full-context placeholder: {wave_risk_preflight}'
+  }
+} else {
+  Add-Failure 'Missing build-feature simplifier prompt template: skills/build-feature/references/simplifier-prompt-template.md'
 }
 
 if (Test-Path $fixPromptTemplatePath) {
@@ -235,7 +262,9 @@ foreach ($reviewerAgent in @(
 )) {
   if (Test-Path $reviewerAgent.Path) {
     $reviewerAgentText = Get-Content $reviewerAgent.Path -Raw
-    foreach ($requiredText in $readOnlyReviewContractText + @(
+    foreach ($requiredText in @(
+      'read-only-review-contract.md',
+      'You are reviewing only',
       'Reviewed Scope:',
       'If the reviewed scope is missing or too vague, stop and request the concrete git range, task diff, or file set.'
     )) {
