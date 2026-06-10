@@ -145,6 +145,11 @@ if (Test-Path $buildFeatureSkillPath) {
     'coder or fixer completion summary, simplifier summary, and simplifier verification evidence',
     '### Step 3A: Wave Risk Preflight',
     '{wave_risk_preflight}',
+    '{design_digest}',
+    'baseline verification',
+    's-kit-security-auditor',
+    'Reopened completed task',
+    'A `no-op` result must include Final Verification command output',
     'complete punch-list review',
     'repeated same-boundary failure',
     'Boundary Context',
@@ -154,7 +159,7 @@ if (Test-Path $buildFeatureSkillPath) {
     'read-only git commands or a separate temporary worktree'
   )) {
     if (-not $buildFeatureSkill.Contains($requiredText)) {
-      Add-Failure "build-feature workflow must include simplifier orchestration text: $requiredText"
+      Add-Failure "build-feature workflow must include required orchestration text: $requiredText"
     }
   }
 } else {

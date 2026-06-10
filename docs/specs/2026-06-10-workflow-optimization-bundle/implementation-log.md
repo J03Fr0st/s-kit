@@ -109,3 +109,43 @@ Append-only record of approvals, wave starts, task results, review outcomes, ver
 ### Wave 2 Complete
 
 - task-06 -> complete (spec.json, task file, README checkbox updated).
+
+## 2026-06-10 - Wave 3 Started
+
+- Tasks: task-07-build-feature-orchestration-rework (`pending` -> `in-progress`). Dependency task-06 is `complete`.
+- Planned verification: `npm run verify:workflow`, `npm test` (baseline branding failure attributed).
+- Wave 2 committed as d3c94501.
+
+### Wave 3 Risk Preflight
+
+- Single task; owns skills/build-feature/SKILL.md and scripts/verify-workflow.ps1. Atomicity: the script's SKILL.md required-text block and the reworked SKILL.md must agree at task end.
+- Must preserve existing required strings in SKILL.md unless this task updates both sides: '### Step 3A: Wave Risk Preflight', '{wave_risk_preflight}' (still present for review/fix contexts), punch-list strings, 'build a concrete review scope', read-only scope strings, simplifier orchestration strings.
+- Must NOT touch the three prompt templates or their check blocks (Wave 2 ownership, now invariant: digest required in coder, preflight forbidden in coder/simplifier).
+- Carried-forward review notes to address in the rework: add {read_only_contract} to Step 6A's fill-in list (Wave 1 code-quality note); be aware negative checks forbid placeholders not headings (Wave 2 note).
+- Two-stage review gate (6A before 6B) must remain intact — design constraint.
+- KNOWN BASELINE: npm test fails only at verify:branding on tracked graphify-out/ (pre-existing).
+
+### Wave 3 Coder Result
+
+- task-07: complete (recommended). SKILL.md reworked: baseline verification in Step 1; preflight audience narrowed + security-sensitive flag in Step 3A; {design_digest} placeholder list in Step 4; no-op semantics + dieted task_summaries in Step 5A; {read_only_contract} fill-in + excerpts in 6A/6B; security-auditor parallel dispatch on flagged waves in 6B; slimmed Step 9 (verification + one diff-scoped code-quality review); reopened-task cascade in Error Handling; Key Principles updated. verify-workflow.ps1 gained five new SKILL.md required strings; all prior invariants preserved unchanged. verify:workflow PASS; all gates green individually; npm test baseline failure only.
+
+### Wave 3 Simplification Pass
+
+- Status: simplified. verify-workflow.ps1 only: stale failure-message label "simplifier orchestration text" renamed to "required orchestration text" (the block now enforces 22 strings beyond Step 5A). SKILL.md inspected against all three templates and invariants — fully consistent, no edits needed.
+- Verification: verify:workflow PASS, verify:hooks PASS.
+
+### Wave 3 Spec Compliance Review
+
+- VERDICT: PASS. Scope: d3c94501..working tree, two owned files. All 10 implementation steps verbatim-conformant; both carried-forward notes addressed; no stale phrasing; cross-file placeholder consistency confirmed against all three templates; two-stage gate intact; templates byte-identical to d3c94501; bookkeeping consistent.
+
+### Wave 3 Code Quality Review
+
+- VERDICT: PASS with two warnings: (1) Step 9 lacked fill instructions for the review template's mandatory slots in the final review; (2) Step 3A.6's preflight routing clause was unfollowable for the simplifier (no digest in simplifier prompts). Non-blocking notes: baseline-attribution caveat on resume, no explicit "not security-sensitive" log marker, auditor findings labeled as code-quality in the fix loop. Verification: all gates PASS individually; npm test baseline branding failure only.
+
+### Wave 3 Fix
+
+- Fixer addressed both warnings in skills/build-feature/SKILL.md: Step 9 item 3 now specifies template usage ({review_type}=Code Quality, {wave_number}=final, {read_only_contract} pasted, {task_summaries}=one-line roll-up, {wave_risk_preflight}="None — final integration review"); Step 3A.6 routes preflight lines to the Design Digest (coder) or the task's {task_summaries} entry (simplifier). verify:workflow re-run PASS; all invariants intact. Full 5A/6A re-cycle skipped: minimal rewordings implementing the reviewer's own suggested fixes verbatim, re-verified.
+
+### Wave 3 Complete
+
+- task-07 -> complete (spec.json, task file, README checkbox updated).

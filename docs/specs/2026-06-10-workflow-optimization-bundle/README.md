@@ -48,4 +48,4 @@ graph TD
 - [x] [task-06-prompt-token-diet](./tasks/task-06-prompt-token-diet.md) — Design digest for coders, preflight removal, reviewer task excerpts
 
 ### Wave 3
-- [ ] [task-07-build-feature-orchestration-rework](./tasks/task-07-build-feature-orchestration-rework.md) — Baseline check, digest dispatch, security-auditor trigger, no-op semantics, slim final review, reopen cascade
+- [x] [task-07-build-feature-orchestration-rework](./tasks/task-07-build-feature-orchestration-rework.md) — Baseline check, digest dispatch, security-auditor trigger, no-op semantics, slim final review, reopen cascade
