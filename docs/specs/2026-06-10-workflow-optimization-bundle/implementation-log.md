@@ -149,3 +149,13 @@ Append-only record of approvals, wave starts, task results, review outcomes, ver
 ### Wave 3 Complete
 
 - task-07 -> complete (spec.json, task file, README checkbox updated).
+
+## 2026-06-10 - Final Integration Review
+
+- Project verification: all gates PASS individually (verify:workflow, verify:hooks, verify:agents, verify:naming, verify:assets, node --check, bash -n). `npm test` end-to-end remains red solely at the pre-existing baseline verify:branding failure on tracked `graphify-out/` (committed at 4f9b99d2, pre-feature).
+- Final full-feature Code Quality review (scope 4f9b99d2..HEAD, commits a2e67a41 / d3c94501 / a3541726): VERDICT PASS. Per-wave spec-compliance verdicts (Waves 1-3, all PASS) are the compliance record, per the approved slimmed Step 9 design.
+- All 11 requirements.md acceptance criteria walked: met (criterion 11 "npm test passes after every task" met modulo the documented baseline failure). Cross-wave integration coherent; every changed file maps to declared ownership.
+- Residual risks recorded:
+  1. The baseline branding failure short-circuits `npm test` before verify:workflow/verify:hooks, so the new gates are dormant in the headline command until `graphify-out/` is cleaned up or exempted (user decision).
+  2. Reviewer agents reference the shared contract by repo-relative path, which may not resolve in installed-plugin contexts; mitigated by the pasted {read_only_contract} and the inline one-line summary. Follow-up note only.
+  3. Runtime behaviors (baseline-check flow, auditor trigger, digest quality, reopen cascade) are prose contracts; a manual smoke test on a future 2-task spec remains the end-to-end validation.
