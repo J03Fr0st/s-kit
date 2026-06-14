@@ -5,7 +5,7 @@
 The core workflow is:
 
 ```text
-brainstorming -> plan-feature -> build-feature -> verification/review -> ship
+brainstorming -> plan-feature -> build-feature -> verification/review -> ship-it
 ```
 
 `brainstorming` is the front door. It clarifies the idea, explores options, presents the proposed design for approval, offers `grill-me` as an optional stress-test, and writes the approved solution to `docs/design/YYYY-MM-DD-{feature-name}/design.md`. `plan-feature` expands the approved design into a matching dated spec folder under `docs/specs/YYYY-MM-DD-{feature-name}/`, including a manifest and execution log. `build-feature` reads the spec and matching design, works through task waves, runs a behavior-preserving simplification pass before spec-compliance and code-quality review gates, and tracks progress in the spec files.
@@ -65,6 +65,9 @@ Supporting workflow:
 - `verification-before-completion` - proof before completion claims
 - `requesting-code-review` - review gate for completed work
 - `receiving-code-review` - handles review feedback rigorously
+- `ship-it` - platform-aware delivery that pushes committed work and creates or updates GitHub or Azure DevOps pull requests
+- `gh-cli` - low-level GitHub CLI reference for explicit GitHub work outside full delivery
+- `azure-devops-cli` - low-level Azure DevOps CLI reference for explicit Azure DevOps work outside full delivery
 - `using-git-worktrees` - isolated workspace setup when needed
 - `finishing-a-development-branch` - delivery and cleanup decisions
 - `dispatching-parallel-agents` - general parallel-agent coordination

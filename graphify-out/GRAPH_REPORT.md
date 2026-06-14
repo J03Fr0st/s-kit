@@ -1,16 +1,16 @@
-# Graph Report - s-kit  (2026-06-09)
+# Graph Report - s-kit  (2026-06-14)
 
 ## Corpus Check
-- 160 files · ~105,801 words
+- 189 files · ~126,721 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1463 nodes · 1405 edges · 173 communities (133 shown, 40 thin omitted)
+- 1856 nodes · 1772 edges · 203 communities (160 shown, 43 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `44981684`
+- Built from commit: `0562aac0`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -181,18 +181,48 @@
 - [[_COMMUNITY_Community 170|Community 170]]
 - [[_COMMUNITY_Community 171|Community 171]]
 - [[_COMMUNITY_Community 172|Community 172]]
+- [[_COMMUNITY_Community 173|Community 173]]
+- [[_COMMUNITY_Community 174|Community 174]]
+- [[_COMMUNITY_Community 175|Community 175]]
+- [[_COMMUNITY_Community 176|Community 176]]
+- [[_COMMUNITY_Community 177|Community 177]]
+- [[_COMMUNITY_Community 178|Community 178]]
+- [[_COMMUNITY_Community 179|Community 179]]
+- [[_COMMUNITY_Community 180|Community 180]]
+- [[_COMMUNITY_Community 181|Community 181]]
+- [[_COMMUNITY_Community 182|Community 182]]
+- [[_COMMUNITY_Community 183|Community 183]]
+- [[_COMMUNITY_Community 184|Community 184]]
+- [[_COMMUNITY_Community 185|Community 185]]
+- [[_COMMUNITY_Community 186|Community 186]]
+- [[_COMMUNITY_Community 187|Community 187]]
+- [[_COMMUNITY_Community 188|Community 188]]
+- [[_COMMUNITY_Community 189|Community 189]]
+- [[_COMMUNITY_Community 190|Community 190]]
+- [[_COMMUNITY_Community 191|Community 191]]
+- [[_COMMUNITY_Community 192|Community 192]]
+- [[_COMMUNITY_Community 193|Community 193]]
+- [[_COMMUNITY_Community 194|Community 194]]
+- [[_COMMUNITY_Community 195|Community 195]]
+- [[_COMMUNITY_Community 196|Community 196]]
+- [[_COMMUNITY_Community 197|Community 197]]
+- [[_COMMUNITY_Community 198|Community 198]]
+- [[_COMMUNITY_Community 199|Community 199]]
+- [[_COMMUNITY_Community 200|Community 200]]
+- [[_COMMUNITY_Community 201|Community 201]]
+- [[_COMMUNITY_Community 202|Community 202]]
 
 ## God Nodes (most connected - your core abstractions)
-1. `Writing Skills` - 22 edges
-2. `main()` - 21 edges
-3. `Testing Skills With Subagents` - 16 edges
-4. `interface` - 15 edges
-5. `Code Review Reception` - 15 edges
-6. `Test-Driven Development (TDD)` - 15 edges
-7. `Orchestration` - 13 edges
-8. `Testing Anti-Patterns` - 13 edges
-9. `Tasks` - 13 edges
-10. `sync-to-codex-plugin.sh script` - 12 edges
+1. `Implementation Log: Ship It Delivery Skill` - 22 edges
+2. `Writing Skills` - 22 edges
+3. `main()` - 21 edges
+4. `Testing Skills With Subagents` - 16 edges
+5. `interface` - 15 edges
+6. `Code Review Reception` - 15 edges
+7. `Workflow` - 15 edges
+8. `Test-Driven Development (TDD)` - 15 edges
+9. `Orchestration` - 13 edges
+10. `Testing Anti-Patterns` - 13 edges
 
 ## Surprising Connections (you probably didn't know these)
 - None detected - all connections are within the same source files.
@@ -200,7 +230,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (173 total, 40 thin omitted)
+## Communities (203 total, 43 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.06
@@ -327,8 +357,8 @@ Cohesion: 0.14
 Nodes (13): Context, Go Fractals CLI - Implementation Plan, Task 10: README, Task 1: Project Setup, Task 2: CLI Framework with Help, Task 3: Sierpinski Algorithm, Task 4: Sierpinski CLI Integration, Task 5: Mandelbrot Algorithm (+5 more)
 
 ### Community 31 - "Community 31"
-Cohesion: 0.14
-Nodes (13): Critical Rules, Instructions, Plan Feature, Step 1: Verify Approved Design, Step 2: Derive the Spec Folder, Step 3: Decompose into Tasks, Step 4: Build the Dependency Graph, Step 5: Create the Spec Folder (+5 more)
+Cohesion: 0.13
+Nodes (14): Critical Rules, Instructions, Optional: Map Existing Patterns First, Plan Feature, Step 1: Verify Approved Design, Step 2: Derive the Spec Folder, Step 3: Decompose into Tasks, Step 4: Build the Dependency Graph (+6 more)
 
 ### Community 32 - "Community 32"
 Cohesion: 0.15
@@ -343,8 +373,8 @@ Cohesion: 0.15
 Nodes (12): Getting Help, Installation, Installing s-kit for OpenCode, Migrating from the old symlink-based install, Plugin not loading, Prerequisites, Skills not found, Tool mapping (+4 more)
 
 ### Community 35 - "Community 35"
-Cohesion: 0.15
-Nodes (12): main, name, scripts, doctor, test, verify:agents, verify:assets, verify:branding (+4 more)
+Cohesion: 0.14
+Nodes (13): main, name, scripts, doctor, test, verify:agents, verify:assets, verify:branding (+5 more)
 
 ### Community 36 - "Community 36"
 Cohesion: 0.15
@@ -379,8 +409,8 @@ Cohesion: 0.18
 Nodes (5): afterFirst, afterSecond, firstOutput, result, secondOutput
 
 ### Community 44 - "Community 44"
-Cohesion: 0.18
-Nodes (10): Canonical Workflow, How to Access Skills, Instruction Priority, Platform Adaptation, Red Flags, Skill Priority, Skill Types, The Rule (+2 more)
+Cohesion: 0.17
+Nodes (11): Canonical Workflow, How to Access Skills, Instruction Priority, Lanes, Platform Adaptation, Red Flags, Skill Priority, Skill Types (+3 more)
 
 ### Community 45 - "Community 45"
 Cohesion: 0.18
@@ -695,8 +725,8 @@ Cohesion: 0.20
 Nodes (9): actionRequiredPath, allowedTaskStatuses, created, designPath, feature, implementationLogPath, requirementsPath, specPath (+1 more)
 
 ### Community 169 - "Community 169"
-Cohesion: 0.22
-Nodes (8): 2026-06-09 - Design Approved, 2026-06-09 - Spec Created, 2026-06-09 - Wave 1 Result, 2026-06-09 - Wave 1 Started, 2026-06-09 - Wave 2 Result, 2026-06-09 - Wave 2 Started, 2026-06-09 - Wave 3 Started, Implementation Log: Build Feature Risk Preflight
+Cohesion: 0.18
+Nodes (10): 2026-06-09 - Design Approved, 2026-06-09 - Final Integration Status, 2026-06-09 - Spec Created, 2026-06-09 - Wave 1 Result, 2026-06-09 - Wave 1 Started, 2026-06-09 - Wave 2 Result, 2026-06-09 - Wave 2 Started, 2026-06-09 - Wave 3 Result (+2 more)
 
 ### Community 170 - "Community 170"
 Cohesion: 0.25
@@ -706,25 +736,133 @@ Nodes (7): Acceptance Criteria, Assumptions, Goals, Non-Goals, Requirements: Bui
 Cohesion: 0.50
 Nodes (4): Build evaluations first, Develop Skills iteratively with Claude, Evaluation and iteration, Observe how Claude navigates Skills
 
+### Community 173 - "Community 173"
+Cohesion: 0.07
+Nodes (29): 2026-06-10 - Design Approved, 2026-06-10 - Final Integration Review, 2026-06-10 - Spec Created, 2026-06-10 - Wave 1 Started, 2026-06-10 - Wave 2 Started, 2026-06-10 - Wave 3 Started, Baseline Failure Attribution, Implementation Log: Workflow Optimization Bundle (+21 more)
+
+### Community 174 - "Community 174"
+Cohesion: 0.12
+Nodes (16): Acceptance Criteria, Code Snippets, Dependencies, Description, Files to Create, Files to Modify, Final Verification, GREEN (+8 more)
+
+### Community 175 - "Community 175"
+Cohesion: 0.12
+Nodes (15): Acceptance Criteria, Dependencies, Description, Files to Create, Files to Modify, Final Verification, GREEN, Implementation Steps (+7 more)
+
+### Community 176 - "Community 176"
+Cohesion: 0.12
+Nodes (15): Acceptance Criteria, Dependencies, Description, Files to Create, Files to Modify, Final Verification, GREEN, Implementation Steps (+7 more)
+
+### Community 177 - "Community 177"
+Cohesion: 0.12
+Nodes (15): Acceptance Criteria, Dependencies, Description, Files to Create, Files to Modify, Final Verification, GREEN, Implementation Steps (+7 more)
+
+### Community 178 - "Community 178"
+Cohesion: 0.12
+Nodes (15): Acceptance Criteria, Dependencies, Description, Files to Create, Files to Modify, Final Verification, GREEN, Implementation Steps (+7 more)
+
+### Community 179 - "Community 179"
+Cohesion: 0.12
+Nodes (15): Acceptance Criteria, Dependencies, Description, Files to Create, Files to Modify, Final Verification, GREEN, Implementation Steps (+7 more)
+
+### Community 180 - "Community 180"
+Cohesion: 0.14
+Nodes (13): Alternatives Considered, Approved Approach, Architecture, Configuration and Inputs, Context, Decisions, Design: Workflow Optimization Bundle, Risks and Constraints (+5 more)
+
+### Community 181 - "Community 181"
+Cohesion: 0.11
+Nodes (18): 1. Check Prerequisites, 1. Gate on a Clean Worktree, 2. Detect the Platform, 2. Inspect Git State, 3. Detect the Target Branch, 3. Find Commits to Ship, 4. Ensure a Feature Branch, 4. Inspect Commits and Diff (+10 more)
+
+### Community 182 - "Community 182"
+Cohesion: 0.20
+Nodes (9): Dependency Graph, Overview, Quick Links, Task Status, Wave 1, Wave 2, Wave 3, Waves (+1 more)
+
+### Community 183 - "Community 183"
+Cohesion: 0.20
+Nodes (9): actionRequiredPath, allowedTaskStatuses, created, designPath, feature, implementationLogPath, requirementsPath, specPath (+1 more)
+
+### Community 184 - "Community 184"
+Cohesion: 0.25
+Nodes (7): Acceptance Criteria, Assumptions, Goals, Non-Goals, Requirements: Workflow Optimization Bundle, Summary, Technical Constraints
+
+### Community 185 - "Community 185"
+Cohesion: 0.25
+Nodes (7): Analyze Changes, Categorize Changes, Choose Format, Create or Update the PR, PR Description, Quality Bar, Title
+
+### Community 186 - "Community 186"
+Cohesion: 0.39
+Nodes (6): Add-Failure(), Get-ClaudeInvocations(), Get-CursorInvocations(), Get-NormalizedHookCommand(), Join-RepoPath(), Read-JsonFile()
+
+### Community 189 - "Community 189"
+Cohesion: 0.18
+Nodes (10): API and Structured Output, GitHub Actions, GitHub CLI Reference, Issues, Projects, Secrets, and Variables, Releases, Repositories, Authentication (+2 more)
+
+### Community 190 - "Community 190"
+Cohesion: 0.17
+Nodes (11): Azure DevOps CLI Reference, Builds, Extension Setup, Output and Queries, Pipelines, Repositories and Policies, Variables and Variable Groups, Work Items (+3 more)
+
+### Community 191 - "Community 191"
+Cohesion: 0.29
+Nodes (6): Azure DevOps CLI, Common Workflows, Detection, Output Rules, Prerequisites, Safety
+
+### Community 192 - "Community 192"
+Cohesion: 0.33
+Nodes (5): Common Workflows, GitHub CLI, Output Rules, Prerequisites, Safety
+
+### Community 193 - "Community 193"
+Cohesion: 0.11
+Nodes (18): Acceptance Criteria, API Endpoints, Code Snippets, Dependencies, Description, Environment Variables, Files to Create, Files to Modify (+10 more)
+
+### Community 194 - "Community 194"
+Cohesion: 0.11
+Nodes (18): Acceptance Criteria, API Endpoints, Code Snippets, Dependencies, Description, Environment Variables, Files to Create, Files to Modify (+10 more)
+
+### Community 195 - "Community 195"
+Cohesion: 0.11
+Nodes (18): Acceptance Criteria, API Endpoints, Code Snippets, Dependencies, Description, Environment Variables, Files to Create, Files to Modify (+10 more)
+
+### Community 196 - "Community 196"
+Cohesion: 0.11
+Nodes (18): Acceptance Criteria, API Endpoints, Code Snippets, Dependencies, Description, Environment Variables, Files to Create, Files to Modify (+10 more)
+
+### Community 197 - "Community 197"
+Cohesion: 0.15
+Nodes (12): Alternatives Considered, Approved Approach, Architecture, Configuration and Inputs, Context, Decisions, Design: Ship It Delivery Skill, File Changes (+4 more)
+
+### Community 198 - "Community 198"
+Cohesion: 0.20
+Nodes (9): Dependency Graph, Overview, Quick Links, Ship It Delivery Skill, Task Status, Wave 1, Wave 2, Wave 3 (+1 more)
+
+### Community 199 - "Community 199"
+Cohesion: 0.20
+Nodes (9): actionRequiredPath, allowedTaskStatuses, created, designPath, feature, implementationLogPath, requirementsPath, specPath (+1 more)
+
+### Community 200 - "Community 200"
+Cohesion: 0.25
+Nodes (7): Acceptance Criteria, Assumptions, Goals, Non-Goals, Requirements: Ship It Delivery Skill, Summary, Technical Constraints
+
+### Community 201 - "Community 201"
+Cohesion: 0.09
+Nodes (22): 2026-06-14 - Design Approved, 2026-06-14 - Spec Created, 2026-06-14 - Wave 1 Code Quality Review, 2026-06-14 - Wave 1 Fix Cycle 1, 2026-06-14 - Wave 1 Post-Fix Code Quality Review, 2026-06-14 - Wave 1 Post-Fix Simplification, 2026-06-14 - Wave 1 Post-Fix Spec Compliance Review, 2026-06-14 - Wave 1 Simplification (+14 more)
+
 ## Knowledge Gaps
-- **975 isolated node(s):** `name`, `description`, `name`, `email`, `plugins` (+970 more)
+- **1277 isolated node(s):** `name`, `description`, `name`, `email`, `plugins` (+1272 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **40 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **43 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `[Analysis Title]` connect `Community 41` to `Community 171`, `Community 95`?**
-  _High betweenness centrality (0.002) - this node is a cross-community bridge._
-- **Why does `Writing Skills` connect `Community 28` to `Community 96`, `Community 97`, `Community 84`, `Community 117`, `Community 85`, `Community 118`, `Community 119`?**
-  _High betweenness centrality (0.001) - this node is a cross-community bridge._
 - **Why does `Skill authoring best practices` connect `Community 57` to `Community 115`, `Community 52`, `Community 95`?**
   _High betweenness centrality (0.001) - this node is a cross-community bridge._
+- **Why does `Core principles` connect `Community 115` to `Community 57`?**
+  _High betweenness centrality (0.001) - this node is a cross-community bridge._
 - **What connects `name`, `description`, `name` to the rest of the system?**
-  _975 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _1277 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.05555555555555555 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**
   _Cohesion score 0.14204545454545456 - nodes in this community are weakly interconnected._
 - **Should `Community 2` be split into smaller, more focused modules?**
   _Cohesion score 0.06666666666666667 - nodes in this community are weakly interconnected._
+- **Should `Community 3` be split into smaller, more focused modules?**
+  _Cohesion score 0.07142857142857142 - nodes in this community are weakly interconnected._

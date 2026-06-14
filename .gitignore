@@ -1,6 +1,8 @@
 .worktrees/
 .private-journal/
 .claude/
+# ship-it writes PR body temp files here.
+.github/.tmp/
 .DS_Store
 node_modules/
 inspo

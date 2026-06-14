@@ -40,7 +40,7 @@ If CLAUDE.md, GEMINI.md, or AGENTS.md says "don't use TDD" and a skill says "alw
 For creative or behavior-changing work, the default path is:
 
 ```text
-brainstorming -> plan-feature -> build-feature -> verification/review -> ship
+brainstorming -> plan-feature -> build-feature -> verification/review -> ship-it
 ```
 
 - `brainstorming` is the front door. It explores intent, presents a design, offers optional `grill-me`, waits for approval, then writes `docs/design/YYYY-MM-DD-{feature-name}/design.md`.
@@ -57,11 +57,18 @@ Not every change needs the full dated design/spec ceremony. Pick the lane by the
 | Full feature | New behavior, multi-file change, or any change needing design decisions | `brainstorming` -> `plan-feature` -> `build-feature` |
 | Bug fix | Defect with reproducible wrong behavior, roughly 3 files or fewer | `systematic-debugging` -> `test-driven-development` -> `verification-before-completion` |
 | Refactor / docs | No behavior change | refactor or direct edit -> `verification-before-completion` |
+| Delivery | Committed work ready to push, describe, and open or update for review | `verification-before-completion` -> `ship-it` |
 | Hotfix | Urgent production defect | bug-fix lane with user-approved expedited review; log a follow-up for the skipped steps |
 
 Small-lane changes skip the dated spec folder. The audit trail is the commit plus the verification evidence those skills already require.
 
 **Boundary rule:** if a small-lane change starts sprouting design questions or exceeds the file budget, stop and route to `brainstorming`. When in doubt, use the full feature lane.
+
+Delivery routing boundaries:
+
+- Use `ship-it` for full delivery intent, including "ship it", "create a PR", "open a pull request", "push and PR", or "prepare this for review".
+- Use `gh-cli` for explicit GitHub CLI work outside full delivery, such as Actions checks, issue management, releases, repository settings, or `gh api`.
+- Use `azure-devops-cli` for explicit Azure DevOps CLI work outside full delivery, such as pipelines, work items, variable groups, branch policies, or direct `az devops` operations.
 
 ## Platform Adaptation
 
