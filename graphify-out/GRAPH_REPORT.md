@@ -1,16 +1,16 @@
 # Graph Report - s-kit  (2026-06-14)
 
 ## Corpus Check
-- 189 files · ~126,721 words
+- 196 files · ~135,103 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1856 nodes · 1772 edges · 203 communities (160 shown, 43 thin omitted)
+- 2098 nodes · 2045 edges · 219 communities (177 shown, 42 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `0562aac0`
+- Built from commit: `798c7e75`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -140,6 +140,7 @@
 - [[_COMMUNITY_Community 124|Community 124]]
 - [[_COMMUNITY_Community 125|Community 125]]
 - [[_COMMUNITY_Community 126|Community 126]]
+- [[_COMMUNITY_Community 127|Community 127]]
 - [[_COMMUNITY_Community 130|Community 130]]
 - [[_COMMUNITY_Community 131|Community 131]]
 - [[_COMMUNITY_Community 132|Community 132]]
@@ -211,10 +212,26 @@
 - [[_COMMUNITY_Community 200|Community 200]]
 - [[_COMMUNITY_Community 201|Community 201]]
 - [[_COMMUNITY_Community 202|Community 202]]
+- [[_COMMUNITY_Community 203|Community 203]]
+- [[_COMMUNITY_Community 204|Community 204]]
+- [[_COMMUNITY_Community 205|Community 205]]
+- [[_COMMUNITY_Community 206|Community 206]]
+- [[_COMMUNITY_Community 207|Community 207]]
+- [[_COMMUNITY_Community 208|Community 208]]
+- [[_COMMUNITY_Community 209|Community 209]]
+- [[_COMMUNITY_Community 210|Community 210]]
+- [[_COMMUNITY_Community 211|Community 211]]
+- [[_COMMUNITY_Community 212|Community 212]]
+- [[_COMMUNITY_Community 213|Community 213]]
+- [[_COMMUNITY_Community 214|Community 214]]
+- [[_COMMUNITY_Community 215|Community 215]]
+- [[_COMMUNITY_Community 216|Community 216]]
+- [[_COMMUNITY_Community 217|Community 217]]
+- [[_COMMUNITY_Community 218|Community 218]]
 
 ## God Nodes (most connected - your core abstractions)
-1. `Implementation Log: Ship It Delivery Skill` - 22 edges
-2. `Writing Skills` - 22 edges
+1. `Writing Skills` - 22 edges
+2. `Implementation Log: Ship It Delivery Skill` - 22 edges
 3. `main()` - 21 edges
 4. `Testing Skills With Subagents` - 16 edges
 5. `interface` - 15 edges
@@ -230,7 +247,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (203 total, 43 thin omitted)
+## Communities (219 total, 42 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.06
@@ -373,8 +390,8 @@ Cohesion: 0.15
 Nodes (12): Getting Help, Installation, Installing s-kit for OpenCode, Migrating from the old symlink-based install, Plugin not loading, Prerequisites, Skills not found, Tool mapping (+4 more)
 
 ### Community 35 - "Community 35"
-Cohesion: 0.14
-Nodes (13): main, name, scripts, doctor, test, verify:agents, verify:assets, verify:branding (+5 more)
+Cohesion: 0.13
+Nodes (14): main, name, scripts, doctor, test, test:brainstorm-server, verify:agents, verify:assets (+6 more)
 
 ### Community 36 - "Community 36"
 Cohesion: 0.15
@@ -501,8 +518,8 @@ Cohesion: 0.29
 Nodes (6): Inputs, Output, Read-Only Review Contract, Rules, s-kit Spec Reviewer, What To Check
 
 ### Community 69 - "Community 69"
-Cohesion: 0.29
-Nodes (6): dependencies, ws, name, scripts, test, version
+Cohesion: 0.22
+Nodes (8): dependencies, ws, name, scripts, test, test:node, test:shell, version
 
 ### Community 70 - "Community 70"
 Cohesion: 0.29
@@ -700,6 +717,18 @@ Nodes (4): File Organization, Self-Contained Skill, Skill with Heavy Reference, 
 Cohesion: 0.50
 Nodes (4): Pattern, Reference, Skill Types, Technique
 
+### Community 127 - "Community 127"
+Cohesion: 0.26
+Nodes (11): clearReconnectTimer(), connect(), handleDisconnect(), nextReconnectDelay(), recoverFromTombstone(), scheduleReconnect(), sessionKey(), setStatus() (+3 more)
+
+### Community 136 - "Community 136"
+Cohesion: 0.60
+Nodes (3): start-server.sh script, is_windows_like(), json_error()
+
+### Community 158 - "Community 158"
+Cohesion: 0.46
+Nodes (6): stop-server.sh script, cleanup_alive_metadata(), is_valid_server_id(), owns_pid(), stale_pid(), write_stopped()
+
 ### Community 163 - "Community 163"
 Cohesion: 0.11
 Nodes (18): Acceptance Criteria, API Endpoints, Code Snippets, Dependencies, Description, Environment Variables, Files to Create, Files to Modify (+10 more)
@@ -833,8 +862,8 @@ Cohesion: 0.20
 Nodes (9): Dependency Graph, Overview, Quick Links, Ship It Delivery Skill, Task Status, Wave 1, Wave 2, Wave 3 (+1 more)
 
 ### Community 199 - "Community 199"
-Cohesion: 0.20
-Nodes (9): actionRequiredPath, allowedTaskStatuses, created, designPath, feature, implementationLogPath, requirementsPath, specPath (+1 more)
+Cohesion: 0.08
+Nodes (13): assert, fs, http, net, os, OTHER_TOKEN, path, SERVER_PATH (+5 more)
 
 ### Community 200 - "Community 200"
 Cohesion: 0.25
@@ -844,20 +873,80 @@ Nodes (7): Acceptance Criteria, Assumptions, Goals, Non-Goals, Requirements: Shi
 Cohesion: 0.09
 Nodes (22): 2026-06-14 - Design Approved, 2026-06-14 - Spec Created, 2026-06-14 - Wave 1 Code Quality Review, 2026-06-14 - Wave 1 Fix Cycle 1, 2026-06-14 - Wave 1 Post-Fix Code Quality Review, 2026-06-14 - Wave 1 Post-Fix Simplification, 2026-06-14 - Wave 1 Post-Fix Spec Compliance Review, 2026-06-14 - Wave 1 Simplification (+14 more)
 
+### Community 203 - "Community 203"
+Cohesion: 0.13
+Nodes (15): assert, cleanup(), CONTENT_DIR, fs, http, path, runTests(), SECURITY_HEADERS (+7 more)
+
+### Community 204 - "Community 204"
+Cohesion: 0.11
+Nodes (18): Acceptance Criteria, API Endpoints, Code Snippets, Dependencies, Description, Environment Variables, Files to Create, Files to Modify (+10 more)
+
+### Community 205 - "Community 205"
+Cohesion: 0.11
+Nodes (18): Acceptance Criteria, API Endpoints, Code Snippets, Dependencies, Description, Environment Variables, Files to Create, Files to Modify (+10 more)
+
+### Community 206 - "Community 206"
+Cohesion: 0.11
+Nodes (17): Acceptance Criteria, Code Snippets, Dependencies, Description, Environment Variables, Files to Create, Files to Modify, Final Verification (+9 more)
+
+### Community 207 - "Community 207"
+Cohesion: 0.11
+Nodes (17): Acceptance Criteria, Code Snippets, Dependencies, Description, Environment Variables, Files to Create, Files to Modify, Final Verification (+9 more)
+
+### Community 208 - "Community 208"
+Cohesion: 0.12
+Nodes (16): Acceptance Criteria, Code Snippets, Dependencies, Description, Files to Create, Files to Modify, Final Verification, GREEN (+8 more)
+
+### Community 209 - "Community 209"
+Cohesion: 0.30
+Nodes (9): assert_alive(), assert_dead(), assert_eq(), fail(), pass(), start_impostor(), wait_for_info(), write_state() (+1 more)
+
+### Community 210 - "Community 210"
+Cohesion: 0.15
+Nodes (12): 2026-06-14 - Design Approved, 2026-06-14 - Spec Created, 2026-06-14 - Wave 1 Assignment, 2026-06-14 - Wave 1 Completed, 2026-06-14 - Wave 1 Started, 2026-06-14 - Wave 2 Completed, 2026-06-14 - Wave 2 Started, 2026-06-14 - Wave 3 Completed (+4 more)
+
+### Community 211 - "Community 211"
+Cohesion: 0.18
+Nodes (8): assert, createElement(), fs, HELPER_PATH, loadBrowser(), path, source, vm
+
+### Community 212 - "Community 212"
+Cohesion: 0.18
+Nodes (10): Brainstorm Companion Hardening, Dependency Graph, Overview, Quick Links, Task Status, Wave 1, Wave 2, Wave 3 (+2 more)
+
+### Community 213 - "Community 213"
+Cohesion: 0.20
+Nodes (9): Alternatives Considered, Approved Approach, Architecture, Configuration and Inputs, Context, Decisions, Design: Brainstorm Companion Hardening, Risks and Constraints (+1 more)
+
+### Community 214 - "Community 214"
+Cohesion: 0.20
+Nodes (9): actionRequiredPath, allowedTaskStatuses, created, designPath, feature, implementationLogPath, requirementsPath, specPath (+1 more)
+
+### Community 215 - "Community 215"
+Cohesion: 0.25
+Nodes (7): Acceptance Criteria, Assumptions, Goals, Non-Goals, Requirements: Brainstorm Companion Hardening, Summary, Technical Constraints
+
+### Community 216 - "Community 216"
+Cohesion: 0.67
+Nodes (5): assert_eq(), assert_match(), fail(), pass(), start-server.test.sh script
+
+### Community 217 - "Community 217"
+Cohesion: 0.33
+Nodes (4): assert, { browserLauncherForPlatform }, path, SERVER_PATH
+
 ## Knowledge Gaps
-- **1277 isolated node(s):** `name`, `description`, `name`, `email`, `plugins` (+1272 more)
+- **1414 isolated node(s):** `name`, `description`, `name`, `email`, `plugins` (+1409 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **43 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **42 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Skill authoring best practices` connect `Community 57` to `Community 115`, `Community 52`, `Community 95`?**
+- **Why does `Writing Skills` connect `Community 28` to `Community 96`, `Community 97`, `Community 84`, `Community 117`, `Community 85`, `Community 118`, `Community 119`?**
   _High betweenness centrality (0.001) - this node is a cross-community bridge._
-- **Why does `Core principles` connect `Community 115` to `Community 57`?**
+- **Why does `File Organization` connect `Community 118` to `Community 28`?**
   _High betweenness centrality (0.001) - this node is a cross-community bridge._
 - **What connects `name`, `description`, `name` to the rest of the system?**
-  _1277 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _1414 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.05555555555555555 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**
