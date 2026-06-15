@@ -2,7 +2,9 @@
   "name": "brainstorm-server-tests",
   "version": "1.0.0",
   "scripts": {
-    "test": "node server.test.js"
+    "test": "npm run test:node && npm run test:shell",
+    "test:node": "node ws-protocol.test.js && node helper.test.js && node browser-launcher.test.js && node auth.test.js && node server.test.js && node lifecycle.test.js",
+    "test:shell": "node -e \"const { existsSync } = require('fs'); const { spawnSync } = require('child_process'); const winBash = 'C:\\\\Program Files\\\\Git\\\\bin\\\\bash.exe'; const bash = process.platform === 'win32' && existsSync(winBash) ? winBash : 'bash'; for (const script of ['start-server.test.sh', 'stop-server.test.sh']) { const result = spawnSync(bash, [script], { stdio: 'inherit' }); if (result.error) { console.error(result.error.message); process.exit(1); } if (result.status !== 0) process.exit(result.status ?? 1); }\""
   },
   "dependencies": {
     "ws": "^8.19.0"

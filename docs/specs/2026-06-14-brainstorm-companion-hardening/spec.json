@@ -1,0 +1,156 @@
+{
+  "feature": "Brainstorm Companion Hardening",
+  "created": "2026-06-14",
+  "designPath": "docs/design/2026-06-14-brainstorm-companion-hardening/design.md",
+  "specPath": "docs/specs/2026-06-14-brainstorm-companion-hardening",
+  "requirementsPath": "docs/specs/2026-06-14-brainstorm-companion-hardening/requirements.md",
+  "actionRequiredPath": "docs/specs/2026-06-14-brainstorm-companion-hardening/action-required.md",
+  "implementationLogPath": "docs/specs/2026-06-14-brainstorm-companion-hardening/implementation-log.md",
+  "allowedTaskStatuses": [
+    "pending",
+    "in-progress",
+    "blocked",
+    "needs-context",
+    "done-with-concerns",
+    "review-failed",
+    "complete"
+  ],
+  "tasks": [
+    {
+      "id": "task-01-server-auth-websocket-gate",
+      "title": "Server Auth and WebSocket Protocol Gate",
+      "file": "tasks/task-01-server-auth-websocket-gate.md",
+      "wave": 1,
+      "status": "complete",
+      "dependsOn": [],
+      "blocks": [
+        "task-02-server-lifecycle-persistence-browser",
+        "task-03-helper-key-reconnect"
+      ],
+      "files": {
+        "create": [
+          "tests/brainstorm-server/auth.test.js"
+        ],
+        "modify": [
+          "skills/brainstorming/scripts/server.cjs",
+          "tests/brainstorm-server/server.test.js",
+          "tests/brainstorm-server/ws-protocol.test.js"
+        ]
+      },
+      "verificationCommands": [
+        "cd tests/brainstorm-server && node auth.test.js",
+        "cd tests/brainstorm-server && node ws-protocol.test.js",
+        "cd tests/brainstorm-server && node server.test.js"
+      ]
+    },
+    {
+      "id": "task-02-server-lifecycle-persistence-browser",
+      "title": "Server Lifecycle, Persistence, and Browser Launch",
+      "file": "tasks/task-02-server-lifecycle-persistence-browser.md",
+      "wave": 2,
+      "status": "complete",
+      "dependsOn": [
+        "task-01-server-auth-websocket-gate"
+      ],
+      "blocks": [
+        "task-04-start-stop-ownership-flags",
+        "task-05-docs-test-wiring"
+      ],
+      "files": {
+        "create": [
+          "tests/brainstorm-server/browser-launcher.test.js",
+          "tests/brainstorm-server/lifecycle.test.js"
+        ],
+        "modify": [
+          "skills/brainstorming/scripts/server.cjs"
+        ]
+      },
+      "verificationCommands": [
+        "cd tests/brainstorm-server && node browser-launcher.test.js",
+        "cd tests/brainstorm-server && node lifecycle.test.js"
+      ]
+    },
+    {
+      "id": "task-03-helper-key-reconnect",
+      "title": "Helper Key and Reconnect Behavior",
+      "file": "tasks/task-03-helper-key-reconnect.md",
+      "wave": 2,
+      "status": "complete",
+      "dependsOn": [
+        "task-01-server-auth-websocket-gate"
+      ],
+      "blocks": [
+        "task-05-docs-test-wiring"
+      ],
+      "files": {
+        "create": [
+          "tests/brainstorm-server/helper.test.js"
+        ],
+        "modify": [
+          "skills/brainstorming/scripts/helper.js"
+        ]
+      },
+      "verificationCommands": [
+        "cd tests/brainstorm-server && node helper.test.js"
+      ]
+    },
+    {
+      "id": "task-04-start-stop-ownership-flags",
+      "title": "Start/Stop Ownership and Runtime Flags",
+      "file": "tasks/task-04-start-stop-ownership-flags.md",
+      "wave": 3,
+      "status": "complete",
+      "dependsOn": [
+        "task-02-server-lifecycle-persistence-browser"
+      ],
+      "blocks": [
+        "task-05-docs-test-wiring"
+      ],
+      "files": {
+        "create": [
+          "tests/brainstorm-server/start-server.test.sh",
+          "tests/brainstorm-server/stop-server.test.sh"
+        ],
+        "modify": [
+          "skills/brainstorming/scripts/start-server.sh",
+          "skills/brainstorming/scripts/stop-server.sh",
+          "tests/brainstorm-server/windows-lifecycle.test.sh"
+        ]
+      },
+      "verificationCommands": [
+        "cd tests/brainstorm-server && bash start-server.test.sh",
+        "cd tests/brainstorm-server && bash stop-server.test.sh",
+        "cd tests/brainstorm-server && bash windows-lifecycle.test.sh"
+      ]
+    },
+    {
+      "id": "task-05-docs-test-wiring",
+      "title": "Docs and Test Package Wiring",
+      "file": "tasks/task-05-docs-test-wiring.md",
+      "wave": 4,
+      "status": "complete",
+      "dependsOn": [
+        "task-02-server-lifecycle-persistence-browser",
+        "task-03-helper-key-reconnect",
+        "task-04-start-stop-ownership-flags"
+      ],
+      "blocks": [],
+      "files": {
+        "create": [],
+        "modify": [
+          "package.json",
+          "tests/brainstorm-server/package.json",
+          "skills/brainstorming/visual-companion.md"
+        ]
+      },
+      "verificationCommands": [
+        "npm run test:brainstorm-server",
+        "npm run verify:naming",
+        "npm run verify:assets",
+        "npm run verify:agents",
+        "npm run verify:workflow",
+        "npm run verify:hooks"
+      ]
+    }
+  ]
+}

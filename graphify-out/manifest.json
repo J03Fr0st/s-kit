@@ -65,8 +65,8 @@
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\package.json": {
-    "mtime": 1781091306.974515,
-    "ast_hash": "4a9087aaaeefcd7415c40baf93b04e7f",
+    "mtime": 1781468998.6398385,
+    "ast_hash": "fad04f7a22ee7cb20ad58c7266d24498",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\scripts\\bump-version.sh": {
@@ -110,18 +110,18 @@
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\skills\\brainstorming\\scripts\\helper.js": {
-    "mtime": 1779870244.310732,
-    "ast_hash": "cef288b6b4543910ffc7826c3a036a55",
+    "mtime": 1781466042.1102898,
+    "ast_hash": "aa7c7da5a17bbeb905e657471c597ccf",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\skills\\brainstorming\\scripts\\start-server.sh": {
-    "mtime": 1779870384.7130718,
-    "ast_hash": "874cff650002b6d9c513740a60b2d065",
+    "mtime": 1781468246.3688354,
+    "ast_hash": "d3bd09fab9865de7bdaca7a0bf9f1de9",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\skills\\brainstorming\\scripts\\stop-server.sh": {
-    "mtime": 1779870384.714072,
-    "ast_hash": "2595ef67f7a6b739566d23579ebffe75",
+    "mtime": 1781467884.2491567,
+    "ast_hash": "af1f87eb250a3b7b486fd03cefcc2060",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\skills\\plan-feature\\references\\spec-json-template.json": {
@@ -145,23 +145,23 @@
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\tests\\brainstorm-server\\package.json": {
-    "mtime": 1779870244.3297727,
-    "ast_hash": "990bfaf78785cb7096bf3351e837c608",
+    "mtime": 1781469368.2085924,
+    "ast_hash": "0e79c5fbc7dddcad3947cde1c6becf13",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\tests\\brainstorm-server\\server.test.js": {
-    "mtime": 1779870244.3297727,
-    "ast_hash": "59e979f7612e09ce9ffc0c5bddbf6089",
+    "mtime": 1781465528.1818378,
+    "ast_hash": "0b1ff8959c82a6f8872605bd5a19e467",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\tests\\brainstorm-server\\windows-lifecycle.test.sh": {
-    "mtime": 1779870384.7460997,
-    "ast_hash": "4547b0ab3b226bf25dc5b330acf89395",
+    "mtime": 1781467970.291438,
+    "ast_hash": "1098e1e1dd7072ea5006f95a5e97c722",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\tests\\brainstorm-server\\ws-protocol.test.js": {
-    "mtime": 1779870244.33077,
-    "ast_hash": "1eeaae5f80f68147e8cd88bcd84247eb",
+    "mtime": 1781465230.763532,
+    "ast_hash": "c1821754fc016944ccad61d735540dc6",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\tests\\build-feature\\go-fractals\\scaffold.sh": {
@@ -545,8 +545,8 @@
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\skills\\brainstorming\\visual-companion.md": {
-    "mtime": 1779870384.7090707,
-    "ast_hash": "c8472c7de4a1393a4cf22ecb7c278860",
+    "mtime": 1781468998.641847,
+    "ast_hash": "5237af072e5b045cff69c02b47fac5f2",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\skills\\build-feature\\SKILL.md": {
@@ -1024,54 +1024,89 @@
     "ast_hash": "da6eee59a470c90436d47126745c50bc",
     "semantic_hash": ""
   },
-  "D:\\Source\\s-kit\\docs\\specs\\2026-06-14-ship-it-delivery-skill\\spec.json": {
-    "mtime": 1781451166.5904672,
-    "ast_hash": "09ec295f8233f993626c3e3c405f17ab",
+  "D:\\Source\\s-kit\\docs\\specs\\2026-06-14-brainstorm-companion-hardening\\spec.json": {
+    "mtime": 1781469735.3735015,
+    "ast_hash": "f0e438fb6861cc41151368f8d81f2b7f",
     "semantic_hash": ""
   },
-  "D:\\Source\\s-kit\\docs\\design\\2026-06-14-ship-it-delivery-skill\\design.md": {
-    "mtime": 1781448336.3847022,
-    "ast_hash": "9c75e864ae65e0e32763784f2a15251a",
+  "D:\\Source\\s-kit\\tests\\brainstorm-server\\auth.test.js": {
+    "mtime": 1781465230.762532,
+    "ast_hash": "c83c3365bc4c8b0ad8687a65db3fef69",
     "semantic_hash": ""
   },
-  "D:\\Source\\s-kit\\docs\\specs\\2026-06-14-ship-it-delivery-skill\\README.md": {
-    "mtime": 1781451155.4560943,
-    "ast_hash": "35f95d62a8be1c48fb58c1ffc3af1afd",
+  "D:\\Source\\s-kit\\tests\\brainstorm-server\\browser-launcher.test.js": {
+    "mtime": 1781466009.1719804,
+    "ast_hash": "cc7ce036a2aaf1695c4a2ec27762c5af",
     "semantic_hash": ""
   },
-  "D:\\Source\\s-kit\\docs\\specs\\2026-06-14-ship-it-delivery-skill\\action-required.md": {
-    "mtime": 1781448700.4938822,
-    "ast_hash": "d7de15adbfa6b6c56550718dfd2ffcb1",
+  "D:\\Source\\s-kit\\tests\\brainstorm-server\\helper.test.js": {
+    "mtime": 1781465957.6940014,
+    "ast_hash": "19459f51f3703a6ba53b523a32dd36a4",
     "semantic_hash": ""
   },
-  "D:\\Source\\s-kit\\docs\\specs\\2026-06-14-ship-it-delivery-skill\\implementation-log.md": {
-    "mtime": 1781451166.591468,
-    "ast_hash": "aff47f3da224d258e9d7f5ce1f53790e",
+  "D:\\Source\\s-kit\\tests\\brainstorm-server\\lifecycle.test.js": {
+    "mtime": 1781466794.1298437,
+    "ast_hash": "a59f04b7dac7e98552187e23d648b12d",
     "semantic_hash": ""
   },
-  "D:\\Source\\s-kit\\docs\\specs\\2026-06-14-ship-it-delivery-skill\\requirements.md": {
-    "mtime": 1781448700.4938822,
-    "ast_hash": "b56c55c1968fd4b312a3db32e63b22fc",
+  "D:\\Source\\s-kit\\tests\\brainstorm-server\\start-server.test.sh": {
+    "mtime": 1781468246.3703535,
+    "ast_hash": "415d44acfbf5342fc3e67f4253462210",
     "semantic_hash": ""
   },
-  "D:\\Source\\s-kit\\docs\\specs\\2026-06-14-ship-it-delivery-skill\\tasks\\task-01-merge-delivery-workflow.md": {
-    "mtime": 1781450170.3322732,
-    "ast_hash": "ce55ba1426cc89bae9ff23269f797d6b",
+  "D:\\Source\\s-kit\\tests\\brainstorm-server\\stop-server.test.sh": {
+    "mtime": 1781467799.5709176,
+    "ast_hash": "981d3c12a8b0c9c6516c6bb8e2b801fe",
     "semantic_hash": ""
   },
-  "D:\\Source\\s-kit\\docs\\specs\\2026-06-14-ship-it-delivery-skill\\tasks\\task-02-align-cli-reference-safety.md": {
-    "mtime": 1781450170.3322732,
-    "ast_hash": "f05b75a3a9161e3932dd4a7f8fe4d08e",
+  "D:\\Source\\s-kit\\docs\\design\\2026-06-14-brainstorm-companion-hardening\\design.md": {
+    "mtime": 1781464307.9495394,
+    "ast_hash": "2dd15a2c8ac042791d6e20f79c21486b",
     "semantic_hash": ""
   },
-  "D:\\Source\\s-kit\\docs\\specs\\2026-06-14-ship-it-delivery-skill\\tasks\\task-03-update-routing-and-catalog.md": {
-    "mtime": 1781451155.4560943,
-    "ast_hash": "4308e344e6d1f5cad89b73a6ecf01768",
+  "D:\\Source\\s-kit\\docs\\specs\\2026-06-14-brainstorm-companion-hardening\\README.md": {
+    "mtime": 1781469735.3744998,
+    "ast_hash": "a2db6b1af1cdd41ca486ecc1ccfd7e0b",
     "semantic_hash": ""
   },
-  "D:\\Source\\s-kit\\docs\\specs\\2026-06-14-ship-it-delivery-skill\\tasks\\task-04-refresh-graph-and-verify.md": {
-    "mtime": 1781451166.591468,
-    "ast_hash": "92ca9843f24a36db20422b9f33f2f657",
+  "D:\\Source\\s-kit\\docs\\specs\\2026-06-14-brainstorm-companion-hardening\\action-required.md": {
+    "mtime": 1781464838.2818594,
+    "ast_hash": "92b2816f2ebab7a3e7a9993a76f72253",
+    "semantic_hash": ""
+  },
+  "D:\\Source\\s-kit\\docs\\specs\\2026-06-14-brainstorm-companion-hardening\\implementation-log.md": {
+    "mtime": 1781469735.3755014,
+    "ast_hash": "832fb76ee035f0c92811756a7b69f631",
+    "semantic_hash": ""
+  },
+  "D:\\Source\\s-kit\\docs\\specs\\2026-06-14-brainstorm-companion-hardening\\requirements.md": {
+    "mtime": 1781464838.280316,
+    "ast_hash": "c496c2e3760c947f8eaaf40f766dce6a",
+    "semantic_hash": ""
+  },
+  "D:\\Source\\s-kit\\docs\\specs\\2026-06-14-brainstorm-companion-hardening\\tasks\\task-01-server-auth-websocket-gate.md": {
+    "mtime": 1781465835.9116857,
+    "ast_hash": "edcf44d7b5aa967a4da45a7aecf61897",
+    "semantic_hash": ""
+  },
+  "D:\\Source\\s-kit\\docs\\specs\\2026-06-14-brainstorm-companion-hardening\\tasks\\task-02-server-lifecycle-persistence-browser.md": {
+    "mtime": 1781467446.831099,
+    "ast_hash": "763a83edecb54c3a76f1a457d95e6465",
+    "semantic_hash": ""
+  },
+  "D:\\Source\\s-kit\\docs\\specs\\2026-06-14-brainstorm-companion-hardening\\tasks\\task-03-helper-key-reconnect.md": {
+    "mtime": 1781467446.832107,
+    "ast_hash": "0d5c6843aca579257cca6173eefdaa01",
+    "semantic_hash": ""
+  },
+  "D:\\Source\\s-kit\\docs\\specs\\2026-06-14-brainstorm-companion-hardening\\tasks\\task-04-start-stop-ownership-flags.md": {
+    "mtime": 1781468894.7337687,
+    "ast_hash": "a260a9db2a5eb32621a82c1b3176ae29",
+    "semantic_hash": ""
+  },
+  "D:\\Source\\s-kit\\docs\\specs\\2026-06-14-brainstorm-companion-hardening\\tasks\\task-05-docs-test-wiring.md": {
+    "mtime": 1781469735.3744998,
+    "ast_hash": "63c3b8fe7b59821cb0a50d59c950ac75",
     "semantic_hash": ""
   }
 }

@@ -36,16 +36,30 @@ The server watches a directory for HTML files and serves the newest one to the b
 # Start server with persistence (mockups saved to project)
 scripts/start-server.sh --project-dir /path/to/project
 
-# Returns: {"type":"server-started","port":52341,"url":"http://localhost:52341",
+# Returns: {"type":"server-started","port":52341,"url":"http://localhost:52341/?key=<token>",
 #           "screen_dir":"/path/to/project/.s-kit/brainstorm/12345-1706000000/content",
 #           "state_dir":"/path/to/project/.s-kit/brainstorm/12345-1706000000/state"}
 ```
 
-Save `screen_dir` and `state_dir` from the response. Tell user to open the URL.
+Save `screen_dir` and `state_dir` from the response. Tell user to open the full key-bearing URL.
 
-**Finding connection info:** The server writes its startup JSON to `$STATE_DIR/server-info`. If you launched the server in the background and didn't capture stdout, read that file to get the URL and port. When using `--project-dir`, check `<project>/.s-kit/brainstorm/` for the session directory.
+**Sensitive session info:** The URL contains the session key in its query string. Treat the URL as sensitive local session state and do not paste it into shared logs or public docs.
+
+**Finding connection info:** The server writes its startup JSON to `$STATE_DIR/server-info`. If you launched the server in the background and didn't capture stdout, read that file to get the URL and port. This file may include the key-bearing URL, so treat it as sensitive local session state. When using `--project-dir`, check `<project>/.s-kit/brainstorm/` for the session directory.
 
 **Note:** Pass the project root as `--project-dir` so mockups persist in `.s-kit/brainstorm/` and survive server restarts. Without it, files go to `/tmp` and get cleaned up. Remind the user to add `.s-kit/` to `.gitignore` if it's not already there.
+
+**Open the browser automatically:** Browser opening is opt-in. Add `--open` when you want the launcher to open the key-bearing URL for you.
+
+```bash
+scripts/start-server.sh --project-dir /path/to/project --open
+```
+
+**Idle timeout:** By default, the server auto-exits after 4 hours of inactivity. Override it when you need a shorter or longer session.
+
+```bash
+scripts/start-server.sh --project-dir /path/to/project --idle-timeout-minutes 30
+```
 
 **Launching the server by platform:**
 
@@ -90,11 +104,12 @@ scripts/start-server.sh \
 ```
 
 Use `--url-host` to control what hostname is printed in the returned URL JSON.
+Open the full key-bearing URL printed by the server; binding to `0.0.0.0` only changes where the server listens.
 
 ## The Loop
 
 1. **Check server is alive**, then **write HTML** to a new file in `screen_dir`:
-   - Before each write, check that `$STATE_DIR/server-info` exists. If it doesn't (or `$STATE_DIR/server-stopped` exists), the server has shut down — restart it with `start-server.sh` before continuing. The server auto-exits after 30 minutes of inactivity.
+   - Before each write, check that `$STATE_DIR/server-info` exists. If it doesn't (or `$STATE_DIR/server-stopped` exists), the server has shut down — restart it with `start-server.sh` before continuing. The server auto-exits after 4 hours of inactivity unless overridden with `--idle-timeout-minutes`.
    - Use semantic filenames: `platform.html`, `visual-style.html`, `layout.html`
    - **Never reuse filenames** — each screen gets a fresh file
    - Use Write tool — **never use cat/heredoc** (dumps noise into terminal)

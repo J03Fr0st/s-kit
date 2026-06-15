@@ -8,6 +8,7 @@
  *   - computeAcceptKey(clientKey) -> string
  *   - encodeFrame(opcode, payload) -> Buffer
  *   - decodeFrame(buffer) -> { opcode, payload, bytesConsumed } | null
+ *   - MAX_FRAME_PAYLOAD_BYTES: maximum accepted client frame payload
  *   - OPCODES: { TEXT, CLOSE, PING, PONG }
  */
 
@@ -297,6 +298,10 @@ function runTests() {
   // ========== Frame Encoding Boundary at 65535/65536 ==========
   console.log('\n--- Frame Size Boundaries ---');
 
+  test('exports maximum frame payload cap', () => {
+    assert.strictEqual(ws.MAX_FRAME_PAYLOAD_BYTES, 10 * 1024 * 1024);
+  });
+
   test('encodes frame at exactly 65535 bytes (max 16-bit)', () => {
     const payload = Buffer.alloc(65535, 0x45);
     const frame = ws.encodeFrame(ws.OPCODES.TEXT, payload);
@@ -327,6 +332,19 @@ function runTests() {
     const result = ws.decodeFrame(frame);
     assert(result);
     assert.strictEqual(result.payload.length, 65536);
+  });
+
+  test('rejects oversized advertised 64-bit payload before allocation', () => {
+    const frame = Buffer.alloc(14);
+    frame[0] = 0x81;
+    frame[1] = 0x80 | 127;
+    frame.writeBigUInt64BE(BigInt(ws.MAX_FRAME_PAYLOAD_BYTES + 1), 2);
+    crypto.randomBytes(4).copy(frame, 10);
+
+    assert.throws(
+      () => ws.decodeFrame(frame),
+      /exceeds maximum allowed size/i
+    );
   });
 
   // ========== Close Frame with Status Code ==========
