@@ -189,11 +189,11 @@ if ($null -ne $codexHooks) {
       if (-not ($sessionCommand.Contains('run-hook.cmd') -and $sessionCommand.Contains('session-start'))) {
         Add-Failure "hooks/hooks.json SessionStart '$($group.matcher)' must call hooks/run-hook.cmd session-start."
       }
-      if (-not $sessionCommand.Contains('${PLUGIN_ROOT}/hooks/run-hook.cmd')) {
-        Add-Failure "hooks/hooks.json SessionStart '$($group.matcher)' must use ${PLUGIN_ROOT}/hooks/run-hook.cmd for Codex plugin compatibility."
+      if (-not $sessionCommand.Contains('${CLAUDE_PLUGIN_ROOT:-${PLUGIN_ROOT}}/hooks/run-hook.cmd')) {
+        Add-Failure "hooks/hooks.json SessionStart '$($group.matcher)' must use Claude plugin root with PLUGIN_ROOT fallback."
       }
-      if ($sessionCommand.Contains('${CLAUDE_PLUGIN_ROOT}')) {
-        Add-Failure "hooks/hooks.json SessionStart '$($group.matcher)' must not use ${CLAUDE_PLUGIN_ROOT}; Codex plugin hooks should use ${PLUGIN_ROOT}."
+      if ($sessionCommand.Contains('${PLUGIN_ROOT}/hooks/run-hook.cmd')) {
+        Add-Failure "hooks/hooks.json SessionStart '$($group.matcher)' must not use bare PLUGIN_ROOT."
       }
     }
   }

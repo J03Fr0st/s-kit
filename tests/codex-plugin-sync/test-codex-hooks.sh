@@ -52,11 +52,11 @@ for (const group of sessionStart) {
   if (!command || !command.includes('run-hook.cmd') || !command.includes('session-start')) {
     fail(`SessionStart ${group.matcher} must call hooks/run-hook.cmd session-start`);
   }
-  if (!command.includes('${PLUGIN_ROOT}/hooks/run-hook.cmd')) {
-    fail(`SessionStart ${group.matcher} must use ${PLUGIN_ROOT}/hooks/run-hook.cmd`);
+  if (!command.includes('${CLAUDE_PLUGIN_ROOT:-${PLUGIN_ROOT}}/hooks/run-hook.cmd')) {
+    fail(`SessionStart ${group.matcher} must use Claude plugin root with PLUGIN_ROOT fallback`);
   }
-  if (command.includes('${CLAUDE_PLUGIN_ROOT}')) {
-    fail(`SessionStart ${group.matcher} must not use ${CLAUDE_PLUGIN_ROOT}`);
+  if (command.includes('${PLUGIN_ROOT}/hooks/run-hook.cmd')) {
+    fail(`SessionStart ${group.matcher} must not use bare PLUGIN_ROOT`);
   }
 }
 NODE
@@ -66,6 +66,21 @@ SESSION_OUTPUT="$session_output" node <<'NODE'
 const payload = JSON.parse(process.env.SESSION_OUTPUT);
 if (!payload.additionalContext || !payload.additionalContext.includes('You have s-kit.')) {
   console.error('test-codex-hooks: declared hook command must emit SDK-standard additionalContext');
+  process.exit(1);
+}
+NODE
+
+declared_command="$(node <<'NODE'
+const fs = require('fs');
+const hookConfig = JSON.parse(fs.readFileSync('hooks/hooks.json', 'utf8'));
+console.log(hookConfig.hooks.SessionStart[0].hooks[0].command);
+NODE
+)"
+claude_session_output="$(CLAUDE_PLUGIN_ROOT="$ROOT" bash -lc "$declared_command")"
+SESSION_OUTPUT="$claude_session_output" node <<'NODE'
+const payload = JSON.parse(process.env.SESSION_OUTPUT);
+if (!payload.hookSpecificOutput?.additionalContext?.includes('You have s-kit.')) {
+  console.error('test-codex-hooks: declared hook command must resolve CLAUDE_PLUGIN_ROOT');
   process.exit(1);
 }
 NODE

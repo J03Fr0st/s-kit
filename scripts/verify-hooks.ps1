@@ -8,9 +8,9 @@
 #     clear, compact); Cursor has no matcher concept. Matchers are ignored.
 #   - Event-name casing: hooks.json uses PascalCase (SessionStart); Cursor uses
 #     camelCase (sessionStart). Event names are compared case-insensitively.
-#   - Path prefix style: hooks.json commands are quoted and use
-#     ${PLUGIN_ROOT}/; Cursor commands use a relative ./ prefix. Commands are
-#     normalized to their hook-script identity (e.g.
+#   - Path prefix style: hooks.json commands are quoted and use a Claude root
+#     with PLUGIN_ROOT fallback; Cursor commands use a relative ./ prefix.
+#     Commands are normalized to their hook-script identity (e.g.
 #     "hooks/run-hook.cmd session-start") before comparison.
 #
 # The version-consistency section intentionally duplicates the check in
@@ -93,6 +93,7 @@ function Get-JsonField {
 function Get-NormalizedHookCommand {
   param([string] $Command)
   $value = $Command.Trim().Trim('"')
+  $value = $value -replace '^\$\{CLAUDE_PLUGIN_ROOT:-\$\{PLUGIN_ROOT\}\}/', ''
   $value = $value -replace '^\$\{PLUGIN_ROOT\}/', ''
   $value = $value -replace '^\./', ''
   $value = $value -replace '"', ''
