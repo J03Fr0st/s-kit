@@ -1,16 +1,16 @@
-# Graph Report - s-kit  (2026-06-14)
+# Graph Report - s-kit  (2026-06-15)
 
 ## Corpus Check
-- 196 files · ~135,103 words
+- 196 files · ~135,315 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 2098 nodes · 2045 edges · 219 communities (177 shown, 42 thin omitted)
+- 2100 nodes · 2047 edges · 219 communities (177 shown, 42 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `798c7e75`
+- Built from commit: `6e3df92b`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -238,8 +238,8 @@
 6. `Code Review Reception` - 15 edges
 7. `Workflow` - 15 edges
 8. `Test-Driven Development (TDD)` - 15 edges
-9. `Orchestration` - 13 edges
-10. `Testing Anti-Patterns` - 13 edges
+9. `Implementation Log: Brainstorm Companion Hardening` - 14 edges
+10. `Orchestration` - 13 edges
 
 ## Surprising Connections (you probably didn't know these)
 - None detected - all connections are within the same source files.
@@ -902,8 +902,8 @@ Cohesion: 0.30
 Nodes (9): assert_alive(), assert_dead(), assert_eq(), fail(), pass(), start_impostor(), wait_for_info(), write_state() (+1 more)
 
 ### Community 210 - "Community 210"
-Cohesion: 0.15
-Nodes (12): 2026-06-14 - Design Approved, 2026-06-14 - Spec Created, 2026-06-14 - Wave 1 Assignment, 2026-06-14 - Wave 1 Completed, 2026-06-14 - Wave 1 Started, 2026-06-14 - Wave 2 Completed, 2026-06-14 - Wave 2 Started, 2026-06-14 - Wave 3 Completed (+4 more)
+Cohesion: 0.13
+Nodes (14): 2026-06-14 - Design Approved, 2026-06-14 - Final Reviews, 2026-06-14 - Final Verification, 2026-06-14 - Spec Created, 2026-06-14 - Wave 1 Assignment, 2026-06-14 - Wave 1 Completed, 2026-06-14 - Wave 1 Started, 2026-06-14 - Wave 2 Completed (+6 more)
 
 ### Community 211 - "Community 211"
 Cohesion: 0.18
@@ -934,7 +934,7 @@ Cohesion: 0.33
 Nodes (4): assert, { browserLauncherForPlatform }, path, SERVER_PATH
 
 ## Knowledge Gaps
-- **1414 isolated node(s):** `name`, `description`, `name`, `email`, `plugins` (+1409 more)
+- **1416 isolated node(s):** `name`, `description`, `name`, `email`, `plugins` (+1411 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **42 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -944,9 +944,9 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `Writing Skills` connect `Community 28` to `Community 96`, `Community 97`, `Community 84`, `Community 117`, `Community 85`, `Community 118`, `Community 119`?**
   _High betweenness centrality (0.001) - this node is a cross-community bridge._
 - **Why does `File Organization` connect `Community 118` to `Community 28`?**
-  _High betweenness centrality (0.001) - this node is a cross-community bridge._
+  _High betweenness centrality (0.000) - this node is a cross-community bridge._
 - **What connects `name`, `description`, `name` to the rest of the system?**
-  _1414 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _1416 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.05555555555555555 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**

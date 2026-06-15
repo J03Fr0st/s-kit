@@ -55,8 +55,8 @@
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\hooks\\hooks.json": {
-    "mtime": 1780394360.655479,
-    "ast_hash": "21d6f22ce694a4a9969927d92fa28186",
+    "mtime": 1781511842.4053712,
+    "ast_hash": "3d7837271398ac11a6f347167199bad8",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\hooks\\session-start": {
@@ -75,8 +75,8 @@
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\scripts\\doctor.ps1": {
-    "mtime": 1780394336.4484086,
-    "ast_hash": "60817ba0ff7c13d59a635c5cf74056c8",
+    "mtime": 1781511842.4073696,
+    "ast_hash": "d78d2068684ca77854b791c2de26a214",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\scripts\\sync-to-codex-plugin.sh": {
@@ -215,8 +215,8 @@
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\tests\\codex-plugin-sync\\test-codex-hooks.sh": {
-    "mtime": 1780394336.4473994,
-    "ast_hash": "0c35282b31cb147e0c0e481bb4d439ad",
+    "mtime": 1781511870.6664968,
+    "ast_hash": "590aba934837d148ef79497ab5901985",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\tests\\codex-plugin-sync\\test-sync-to-codex-plugin.sh": {
@@ -935,8 +935,8 @@
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\scripts\\verify-hooks.ps1": {
-    "mtime": 1781091306.9750285,
-    "ast_hash": "f8a487b14989fcb1984fdde48af183a5",
+    "mtime": 1781511842.4063697,
+    "ast_hash": "8be066f41fd91cf7382b957b95ceb8c7",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\design\\2026-06-10-workflow-optimization-bundle\\design.md": {
@@ -1075,8 +1075,8 @@
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\specs\\2026-06-14-brainstorm-companion-hardening\\implementation-log.md": {
-    "mtime": 1781469735.3755014,
-    "ast_hash": "832fb76ee035f0c92811756a7b69f631",
+    "mtime": 1781504669.087683,
+    "ast_hash": "5acdbda5f650fd7e242fbb3ccade75bb",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\specs\\2026-06-14-brainstorm-companion-hardening\\requirements.md": {
