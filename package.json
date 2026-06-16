@@ -12,6 +12,7 @@
     "verify:hooks": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/verify-hooks.ps1",
     "doctor": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/doctor.ps1",
     "test:brainstorm-server": "npm --prefix tests/brainstorm-server test",
+    "smoke": "npm test",
     "test": "node --check .opencode/plugins/s-kit.js && npm run verify:branding && npm run verify:assets && npm run verify:agents && npm run verify:naming && npm run verify:workflow && npm run verify:hooks"
   }
 }

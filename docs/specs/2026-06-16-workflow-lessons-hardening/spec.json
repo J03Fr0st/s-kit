@@ -1,0 +1,98 @@
+{
+  "feature": "Workflow Lessons Hardening",
+  "created": "2026-06-16",
+  "designPath": "docs/design/2026-06-16-workflow-lessons-hardening/design.md",
+  "specPath": "docs/specs/2026-06-16-workflow-lessons-hardening",
+  "requirementsPath": "docs/specs/2026-06-16-workflow-lessons-hardening/requirements.md",
+  "actionRequiredPath": "docs/specs/2026-06-16-workflow-lessons-hardening/action-required.md",
+  "implementationLogPath": "docs/specs/2026-06-16-workflow-lessons-hardening/implementation-log.md",
+  "runState": {
+    "status": "complete",
+    "lastCompletedWave": 4,
+    "currentWave": 4,
+    "resumeNotes": [
+      "Earlier verification blockers were resolved by excluding generated graphify-out artifacts from branding scans and removing empty local orphan design/spec directories for 2026-06-14-ship-it-delivery-skill."
+    ]
+  },
+  "allowedTaskStatuses": [
+    "pending",
+    "in-progress",
+    "blocked",
+    "needs-context",
+    "done-with-concerns",
+    "review-failed",
+    "complete"
+  ],
+  "tasks": [
+    {
+      "id": "task-01-doctor-packaging-contracts",
+      "title": "Doctor Packaging Contracts",
+      "file": "tasks/task-01-doctor-packaging-contracts.md",
+      "wave": 1,
+      "status": "complete",
+      "dependsOn": [],
+      "blocks": ["task-04-smoke-checks-as-contracts"],
+      "files": {
+        "create": [],
+        "modify": ["scripts/doctor.ps1"]
+      },
+      "verificationCommands": ["npm run doctor"]
+    },
+    {
+      "id": "task-02-semantic-spec-review-gate",
+      "title": "Semantic Spec Review Gate",
+      "file": "tasks/task-02-semantic-spec-review-gate.md",
+      "wave": 1,
+      "status": "complete",
+      "dependsOn": [],
+      "blocks": ["task-03-run-state-semantics"],
+      "files": {
+        "create": [],
+        "modify": ["skills/plan-feature/SKILL.md", "agents/s-kit-spec-reviewer.md"]
+      },
+      "verificationCommands": ["npm run verify:workflow", "npm run verify:agents"]
+    },
+    {
+      "id": "task-03-run-state-semantics",
+      "title": "Run-State Semantics",
+      "file": "tasks/task-03-run-state-semantics.md",
+      "wave": 2,
+      "status": "complete",
+      "dependsOn": ["task-02-semantic-spec-review-gate"],
+      "blocks": ["task-04-smoke-checks-as-contracts"],
+      "files": {
+        "create": [],
+        "modify": ["skills/plan-feature/references/spec-json-template.json", "skills/plan-feature/references/readme-template.md", "skills/plan-feature/SKILL.md", "skills/build-feature/SKILL.md"]
+      },
+      "verificationCommands": ["npm run verify:workflow"]
+    },
+    {
+      "id": "task-04-smoke-checks-as-contracts",
+      "title": "Smoke Checks as Contracts",
+      "file": "tasks/task-04-smoke-checks-as-contracts.md",
+      "wave": 3,
+      "status": "complete",
+      "dependsOn": ["task-01-doctor-packaging-contracts", "task-03-run-state-semantics"],
+      "blocks": ["task-05-writing-quality-guardrails"],
+      "files": {
+        "create": ["docs/playbooks/smoke-checks.md"],
+        "modify": ["README.md", "package.json"]
+      },
+      "verificationCommands": ["npm run doctor", "npm test"]
+    },
+    {
+      "id": "task-05-writing-quality-guardrails",
+      "title": "Writing Quality Guardrails",
+      "file": "tasks/task-05-writing-quality-guardrails.md",
+      "wave": 4,
+      "status": "complete",
+      "dependsOn": ["task-04-smoke-checks-as-contracts"],
+      "blocks": [],
+      "files": {
+        "create": ["docs/playbooks/agent-doc-writing-quality.md"],
+        "modify": ["skills/writing-skills/SKILL.md", "docs/playbooks/smoke-checks.md"]
+      },
+      "verificationCommands": ["npm run verify:workflow", "npm test"]
+    }
+  ]
+}

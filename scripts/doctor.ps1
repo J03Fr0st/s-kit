@@ -93,6 +93,28 @@ function Write-Check {
   Write-Host "[doctor] $Message"
 }
 
+$surfaceContracts = @(
+  @{ Name = 'Codex plugin'; Manifest = '.codex-plugin/plugin.json'; Smoke = 'hooks/hooks.json path and node plugin syntax checks' },
+  @{ Name = 'Claude plugin'; Manifest = '.claude-plugin/plugin.json'; Smoke = 'marketplace and manifest path checks' },
+  @{ Name = 'Cursor plugin'; Manifest = '.cursor-plugin/plugin.json'; Smoke = 'hooks/hooks-cursor.json path checks' },
+  @{ Name = 'OpenCode plugin'; Manifest = '.opencode/plugins/s-kit.js'; Smoke = 'node --check .opencode/plugins/s-kit.js' },
+  @{ Name = 'Gemini extension'; Manifest = 'gemini-extension.json'; Smoke = 'contextFileName and required file checks' },
+  @{ Name = 'Repository hooks'; Manifest = 'hooks/hooks.json'; Smoke = 'SessionStart command contract checks' },
+  @{ Name = 'Shared assets'; Manifest = 'assets/s-kit-small.svg'; Smoke = 'required asset path checks' }
+)
+
+function Test-PackageScript {
+  param(
+    [object] $PackageJson,
+    [string] $ScriptName
+  )
+
+  $script = $PackageJson.scripts.PSObject.Properties[$ScriptName]
+  if ($null -eq $script -or [string]::IsNullOrWhiteSpace([string] $script.Value)) {
+    Add-Failure "package.json must define script: $ScriptName"
+  }
+}
+
 Write-Check 'Checking required repository surfaces...'
 
 $requiredFiles = @(
@@ -124,6 +146,34 @@ foreach ($file in $requiredFiles) {
 
 foreach ($dir in @('skills', 'agents', 'tests', 'hooks', 'assets', '.github', '.codex-plugin', '.claude-plugin', '.cursor-plugin', '.opencode')) {
   Test-RequiredPath $dir 'Directory'
+}
+
+Write-Check 'Checking smoke contract scripts...'
+
+$packageJson = Read-JsonFile 'package.json'
+if ($null -ne $packageJson) {
+  foreach ($scriptName in @(
+    'doctor',
+    'test',
+    'smoke',
+    'verify:workflow',
+    'verify:agents',
+    'verify:assets',
+    'verify:naming',
+    'verify:hooks',
+    'verify:branding'
+  )) {
+    Test-PackageScript -PackageJson $packageJson -ScriptName $scriptName
+  }
+}
+
+Write-Check 'Checking packaging surface contracts...'
+
+foreach ($contract in $surfaceContracts) {
+  Test-RequiredPath $contract.Manifest
+  if ([string]::IsNullOrWhiteSpace([string] $contract.Smoke)) {
+    Add-Failure "Packaging surface contract must name a smoke check: $($contract.Name)"
+  }
 }
 
 Write-Check 'Checking version consistency...'

@@ -37,6 +37,14 @@ graph TD
 | 1 | task-01, task-02 | {Brief description of what this wave accomplishes} |
 | 2 | task-03 | {Brief description} |
 
+## Run State
+
+Current run state is tracked in three places:
+
+- `spec.json.runState` records the overall run status, current wave, last completed wave, and resume notes.
+- Task statuses in `spec.json`, task files, and README checkboxes record individual task state.
+- `implementation-log.md` records baseline verification, pauses, failures, resumes, review verdicts, and accepted risks.
+
 ## Task Status
 
 ### Wave 1
@@ -54,6 +62,7 @@ graph TD
 - The **Task Status** section uses markdown checkboxes that the `build-feature` skill updates as tasks complete. The orchestrator parses these to determine which wave to resume from.
 - The **Manifest** link points to `spec.json`, which owns task IDs, waves, statuses, file ownership, dependencies, and verification commands.
 - The **Implementation Log** link points to `implementation-log.md`, which records wave starts, task results, review verdicts, verification evidence, blockers, and final integration notes.
+- The **Run State** section explains how interrupted or resumed work is represented without relying on chat history.
 - Use the exact dated design/spec folder name for `{feature-folder-name}`.
 - Links to task files use relative paths pointing into the `tasks/` subfolder.
 - Tasks without dependencies have no incoming arrows in the graph — these form Wave 1.
