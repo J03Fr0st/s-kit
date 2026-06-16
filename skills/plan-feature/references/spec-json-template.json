@@ -6,6 +6,12 @@
   "requirementsPath": "docs/specs/YYYY-MM-DD-{feature-name}/requirements.md",
   "actionRequiredPath": "docs/specs/YYYY-MM-DD-{feature-name}/action-required.md",
   "implementationLogPath": "docs/specs/YYYY-MM-DD-{feature-name}/implementation-log.md",
+  "runState": {
+    "status": "not-started",
+    "lastCompletedWave": 0,
+    "currentWave": 1,
+    "resumeNotes": []
+  },
   "allowedTaskStatuses": [
     "pending",
     "in-progress",

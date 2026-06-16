@@ -121,11 +121,11 @@ Review each task file with fresh eyes: could an agent who has never seen the pla
 
 Create `spec.json` as the source of truth for orchestration. It must match the README and task files:
 
-- `feature`, `created`, `designPath`, `specPath`, `requirementsPath`, `actionRequiredPath`, and `implementationLogPath`
+- `feature`, `created`, `designPath`, `specPath`, `requirementsPath`, `actionRequiredPath`, `implementationLogPath`, and optional `runState`
 - `allowedTaskStatuses` with the exact statuses from Step 5
 - `tasks[]` entries with `id`, `title`, `file`, `wave`, `status`, `dependsOn`, `blocks`, `files.create`, `files.modify`, and `verificationCommands`
 
-The manifest owns folder naming, task IDs, waves, status values, file ownership, and verification commands. README checkboxes and task file metadata must mirror the manifest, not diverge from it.
+The manifest owns folder naming, task IDs, waves, status values, run-state metadata, file ownership, and verification commands. README checkboxes and task file metadata must mirror the manifest, not diverge from it. `runState` describes the overall run (`not-started`, `running`, `paused`, `blocked`, `review-failed`, or `complete`); individual task status remains in each task entry.
 
 Create `implementation-log.md` with approval evidence first. Record design approval before spec creation in `implementation-log.md`. Do not write a "Spec Created" entry before approval evidence.
 
@@ -144,6 +144,14 @@ Future implementation runs append wave starts, task results, review outcomes, ve
 ### Step 8: Extract Manual Actions
 
 Identify any steps that require human action (account creation, API key setup, DNS configuration, environment variables, third-party service registration, etc.). Write these to `action-required.md` grouped by timing (Before/During/After implementation). If none exist, note "No manual steps required."
+
+### Step 8A: Semantic Spec Review Gate
+
+After the spec files are written, run the structural workflow verifier first, then use `s-kit-spec-reviewer` as a read-only semantic pre-implementation gate. The reviewer checks design coverage, unresolved ambiguity, task independence, verification quality, wave safety, and manifest consistency. It must not edit files.
+
+If semantic review returns changes requested, update the spec before implementation and re-run the review. Do not hand off to `build-feature` until the semantic review passes or the user explicitly accepts the recorded risk.
+
+Record the semantic review outcome in `implementation-log.md` with the reviewed scope, verdict, and any accepted residual risks.
 
 ### Step 9: Report to User
 
@@ -168,7 +176,8 @@ Wave breakdown:
 Next steps:
 1. Review action-required.md for tasks you need to complete manually
 2. Review the approved design, requirements, and task files
-3. Use /build-feature to start implementation
+3. Run or review the `s-kit-spec-reviewer` semantic gate result
+4. Use /build-feature to start implementation after the semantic gate passes
 ```
 
 ## Critical Rules

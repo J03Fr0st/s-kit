@@ -627,6 +627,7 @@ Deploying untested skills = deploying untested code. It's a violation of quality
 - [ ] Common mistakes section
 - [ ] No narrative storytelling
 - [ ] Supporting files only for tools or heavy reference
+- [ ] Agent-facing prose passes `docs/playbooks/agent-doc-writing-quality.md`
 
 **Deployment:**
 - [ ] Commit skill to git and push to your fork (if configured)

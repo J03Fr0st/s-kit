@@ -91,6 +91,8 @@ The repo also includes a compact first-class agent catalog for runtimes that sup
 
 Run `npm test` before publishing changes. It checks the OpenCode plugin syntax, branding/path cleanup, agent catalog integrity, and workflow invariants such as matching `docs/design/` and `docs/specs/` folders, required manifests/logs, task verification plans, task statuses, and same-wave file ownership.
 
+Run `npm run doctor` when packaging or harness surfaces change. It validates cross-harness manifests, package scripts, required assets, hook wiring, retired paths, and packaging hygiene. The named smoke-check catalog lives in [docs/playbooks/smoke-checks.md](docs/playbooks/smoke-checks.md).
+
 ## Attribution
 
 See [NOTICE.md](NOTICE.md) for upstream attribution.

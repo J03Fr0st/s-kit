@@ -91,8 +91,9 @@ Only `complete` maps to a checked README checkbox. Every other status maps to an
    - If any check fails, stop and report the exact files to fix before dispatching agents.
 5. Run a baseline verification before dispatching any wave: execute the project-level verification commands referenced by the spec (the project-level entries in `spec.json.tasks[].verificationCommands`, or the repository's standard test command). If the baseline fails, report the failing commands and ask the user whether to proceed (failures will be attributed to the pre-existing baseline in `implementation-log.md`) or stop. Record the baseline result in `implementation-log.md` either way.
 6. Parse `spec.json.tasks[]` as the source of truth for task IDs, waves, statuses, dependencies, file ownership, and verification commands.
-7. Determine the current wave: the first wave that has any task whose status is not `complete`.
-8. If all tasks in all waves are complete, report "All tasks complete!" and stop.
+7. Read optional `spec.json.runState` when present. Treat it as a summary for humans and resumed sessions, not a replacement for task status. If `runState.resumeNotes` contains relevant blockers or accepted risks, include them in the baseline entry appended to `implementation-log.md`.
+8. Determine the current wave: the first wave that has any task whose status is not `complete`.
+9. If all tasks in all waves are complete, report "All tasks complete!" and stop.
 
 This makes the skill resumable. If invoked on a partially completed spec, it picks up exactly where the manifest says it left off.
 
@@ -101,6 +102,8 @@ This makes the skill resumable. If invoked on a partially completed spec, it pic
 For each wave starting from the current one, execute Steps 3 through 9 below, then advance to the next wave.
 
 Before starting a wave, append a dated entry to `implementation-log.md` with the wave number, task IDs, starting statuses, and planned verification commands.
+
+If the run is resumed after a pause, blocker, failed review, or interrupted session, also append the prior `runState.status`, `currentWave`, `lastCompletedWave`, and `resumeNotes` before dispatching more work. Chat history is not the run record; `spec.json`, README checkboxes, task files, and `implementation-log.md` are.
 
 ### Step 3: Prepare Wave Tasks
 
@@ -281,10 +284,11 @@ After both reviews pass, or the user explicitly chooses to proceed:
 
 1. Update task files: for each accepted task, change the Status field to `complete`; if proceeding with concerns, use `done-with-concerns`.
 2. Update `spec.json.tasks[].status` to match each task file.
-3. Update `README.md` checkboxes: `[x]` only for `complete`; `[ ]` for all other statuses.
-4. Append the simplification result, spec-compliance verdict, code-quality verdict, verification evidence, and final task statuses to `implementation-log.md`.
-5. Commit policy: do not commit if the user asked not to commit. Otherwise, follow the repository's delivery instructions for commits.
-6. Report wave completion:
+3. Update optional `spec.json.runState`: set `lastCompletedWave` to the wave number when all tasks in the wave are `complete`, set `currentWave` to the next incomplete wave, and set `status` to `running`, `review-failed`, `blocked`, or `complete` as appropriate.
+4. Update `README.md` checkboxes: `[x]` only for `complete`; `[ ]` for all other statuses.
+5. Append the simplification result, spec-compliance verdict, code-quality verdict, verification evidence, and final task statuses to `implementation-log.md`.
+6. Commit policy: do not commit if the user asked not to commit. Otherwise, follow the repository's delivery instructions for commits.
+7. Report wave completion:
 
    ```text
    Wave {N} of {total} complete.
