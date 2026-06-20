@@ -1,0 +1,1 @@
+We keep saying "workspace", "project", and "package" interchangeably in this repo. Help me pin down the canonical domain terms and record any ADR-worthy decision if the code disagrees.

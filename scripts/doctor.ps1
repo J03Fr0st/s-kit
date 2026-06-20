@@ -238,6 +238,7 @@ Write-Check 'Checking required skills and agents...'
 $requiredSkills = @(
   'using-s-kit',
   'brainstorming',
+  'quick-change',
   'plan-feature',
   'build-feature',
   'grill-me',

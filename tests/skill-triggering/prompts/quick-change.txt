@@ -1,0 +1,1 @@
+Please make a small one-file wording tweak in the README. The desired text is clear, no design discussion is needed, and I just want the smallest verified change.

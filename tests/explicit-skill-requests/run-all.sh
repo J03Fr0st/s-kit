@@ -69,6 +69,50 @@ else
 fi
 echo ""
 
+# Test: use quick-change
+echo ">>> Test 6: use-quick-change"
+if "$SCRIPT_DIR/run-test.sh" "quick-change" "$PROMPTS_DIR/use-quick-change.txt"; then
+    PASSED=$((PASSED + 1))
+    RESULTS="$RESULTS\nPASS: use-quick-change"
+else
+    FAILED=$((FAILED + 1))
+    RESULTS="$RESULTS\nFAIL: use-quick-change"
+fi
+echo ""
+
+# Test: use domain-modeling
+echo ">>> Test 7: use-domain-modeling"
+if "$SCRIPT_DIR/run-test.sh" "domain-modeling" "$PROMPTS_DIR/use-domain-modeling.txt"; then
+    PASSED=$((PASSED + 1))
+    RESULTS="$RESULTS\nPASS: use-domain-modeling"
+else
+    FAILED=$((FAILED + 1))
+    RESULTS="$RESULTS\nFAIL: use-domain-modeling"
+fi
+echo ""
+
+# Test: use codebase-design
+echo ">>> Test 8: use-codebase-design"
+if "$SCRIPT_DIR/run-test.sh" "codebase-design" "$PROMPTS_DIR/use-codebase-design.txt"; then
+    PASSED=$((PASSED + 1))
+    RESULTS="$RESULTS\nPASS: use-codebase-design"
+else
+    FAILED=$((FAILED + 1))
+    RESULTS="$RESULTS\nFAIL: use-codebase-design"
+fi
+echo ""
+
+# Test: use prototype
+echo ">>> Test 9: use-prototype"
+if "$SCRIPT_DIR/run-test.sh" "prototype" "$PROMPTS_DIR/use-prototype.txt"; then
+    PASSED=$((PASSED + 1))
+    RESULTS="$RESULTS\nPASS: use-prototype"
+else
+    FAILED=$((FAILED + 1))
+    RESULTS="$RESULTS\nFAIL: use-prototype"
+fi
+echo ""
+
 echo "=== Summary ==="
 echo -e "$RESULTS"
 echo ""

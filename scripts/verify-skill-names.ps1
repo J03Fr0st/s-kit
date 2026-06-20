@@ -72,6 +72,7 @@ function Require-NotContains {
 }
 
 $requiredFiles = @(
+  'skills/quick-change/SKILL.md',
   'skills/plan-feature/SKILL.md',
   'skills/plan-feature/references/readme-template.md',
   'skills/plan-feature/references/requirements-template.md',
@@ -92,6 +93,7 @@ foreach ($file in $requiredFiles) {
   Require-File $file
 }
 
+Require-Contains 'skills/quick-change/SKILL.md' 'name: quick-change'
 Require-Contains 'skills/plan-feature/SKILL.md' 'name: plan-feature'
 Require-Contains 'skills/build-feature/SKILL.md' 'name: build-feature'
 Require-Contains 'skills/grill-me/SKILL.md' 'name: grill-me'
@@ -122,6 +124,8 @@ foreach ($file in $canonicalFiles) {
 
 Require-Contains 'README.md' 'brainstorming -> plan-feature -> build-feature -> verification/review -> ship'
 Require-Contains 'skills/using-s-kit/SKILL.md' 'brainstorming -> plan-feature -> build-feature -> verification/review -> ship'
+Require-Contains 'README.md' 'quick-change'
+Require-Contains 'skills/using-s-kit/SKILL.md' 'quick-change'
 Require-Contains 'README.md' 'grill-with-docs'
 Require-Contains 'README.md' 'grill-me'
 Require-Contains '.codex-plugin/plugin.json' 'grill-me'

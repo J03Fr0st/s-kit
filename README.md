@@ -10,7 +10,11 @@ brainstorming -> plan-feature -> build-feature -> verification/review -> ship-it
 
 `brainstorming` is the front door. It clarifies the idea, explores options, presents the proposed design for approval, offers `grill-me` as an optional stress-test, and writes the approved solution to `docs/design/YYYY-MM-DD-{feature-name}/design.md`. `plan-feature` expands the approved design into a matching dated spec folder under `docs/specs/YYYY-MM-DD-{feature-name}/`, including a manifest and execution log. `build-feature` reads the spec and matching design, works through task waves, runs a behavior-preserving simplification pass before spec-compliance and code-quality review gates, and tracks progress in the spec files.
 
+For smaller work, `s-kit` has scale-aware lanes. `quick-change` handles clear, low-risk edits with direct verification and normally skips dated design/spec folders. Bug fixes use `systematic-debugging -> test-driven-development -> verification-before-completion` and also skip dated specs unless the investigation grows into design or architecture work.
+
 For domain-heavy work, `grill-with-docs` can run before or during `brainstorming` to challenge project language and ADR-worthy decisions against `CONTEXT.md`, `docs/adr/`, and existing code. It supports the workflow without replacing the dated design/spec artifacts.
+
+When a design question cannot be settled in conversation, `prototype` can create throwaway runnable evidence before the approved design is written. When the question is about terminology or architecture shape, use `domain-modeling` and `codebase-design` as supporting skills rather than replacing the dated workflow.
 
 ## Install Targets
 
@@ -25,10 +29,13 @@ The repo keeps packaging surfaces for:
 
 ## Workflow
 
-1. Use `brainstorming` for any creative or behavior-changing work.
+1. Use `quick-change` for clear, low-risk edits of roughly 1-3 files when direct verification is available and no design decision is needed.
+2. Use `systematic-debugging` for defects, failed commands, failing tests, regressions, or production issues. Pair it with `test-driven-development` and `verification-before-completion`.
+3. Use `brainstorming` for any creative, ambiguous, architectural, or broader behavior-changing work.
    - If the idea depends on project-specific language, bounded contexts, or durable architecture decisions, use `grill-with-docs` to sharpen those terms and trade-offs before final design approval.
-2. After the design is approved, write it to `docs/design/YYYY-MM-DD-{feature-name}/design.md` and use `plan-feature` to create the spec. Offer optional `grill-me` before writing the approved design when the plan needs extra pressure.
-3. Designs and specs are created as:
+   - If the idea depends on a runnable answer, use `prototype` to test the question and capture the verdict in the design.
+4. After the design is approved, write it to `docs/design/YYYY-MM-DD-{feature-name}/design.md` and use `plan-feature` to create the spec. Offer optional `grill-me` before writing the approved design when the plan needs extra pressure.
+5. Designs and specs are created as:
 
    ```text
    docs/design/YYYY-MM-DD-{feature-name}/
@@ -45,8 +52,8 @@ The repo keeps packaging surfaces for:
        └── task-02-{name}.md
    ```
 
-4. Use `build-feature` to execute a spec wave by wave.
-5. Use the supporting skills for TDD, debugging, review, verification, worktrees, branch finishing, and skill authoring when they apply.
+6. Use `build-feature` to execute a spec wave by wave.
+7. Use the supporting skills for TDD, debugging, review, verification, worktrees, branch finishing, and skill authoring when they apply.
 
 ## Skills
 
@@ -58,6 +65,10 @@ Primary workflow:
 
 Supporting workflow:
 
+- `quick-change` - small scoped changes with direct verification and no dated spec ceremony
+- `domain-modeling` - clarifies project terminology, glossary entries, context boundaries, and ADR-worthy domain decisions
+- `codebase-design` - shared vocabulary for deep module interfaces, seams, adapters, leverage, and locality
+- `prototype` - throwaway runnable experiments for state logic, business rules, interaction flow, or UI direction before implementation
 - `grill-me` - optionally stress-tests a design or plan by questioning each decision branch
 - `grill-with-docs` - stress-tests plans against project language, `CONTEXT.md`, ADRs, and code before design/spec work locks in terminology
 - `test-driven-development` - test-first implementation discipline

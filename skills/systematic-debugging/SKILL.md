@@ -21,6 +21,29 @@ NO FIXES WITHOUT ROOT CAUSE INVESTIGATION FIRST
 
 If you haven't completed Phase 1, you cannot propose fixes.
 
+Phase 1 must produce a tight feedback loop whenever possible: one command, script, test, trace replay, or harness that is red-capable for the user's exact symptom. A loop that merely "runs without crashing" is not enough.
+
+## s-kit Bug Lane Contract
+
+Use this skill as the first step in the bug-fix lane:
+
+```text
+systematic-debugging -> test-driven-development -> verification-before-completion
+```
+
+- `systematic-debugging` establishes root cause and a reproducible feedback loop.
+- `test-driven-development` turns the minimized repro into a failing regression check when a correct test seam exists.
+- `verification-before-completion` reruns the original symptom and the regression check before any completion claim.
+- `requesting-code-review` is required for complex bugs, workflow-sensitive areas, security-sensitive areas, or any fix with broad impact.
+
+For nontrivial or long-running bugs, keep an optional local note:
+
+```text
+.s-kit/debug/YYYY-MM-DD-{slug}.md
+```
+
+Record symptoms, repro command, evidence, hypotheses, current focus, root cause, fix summary, regression check, and remaining risk. If the bug grows beyond roughly 3 files or needs architecture decisions, stop and route to `brainstorming` or an architecture-focused skill after preserving the evidence.
+
 ## When to Use
 
 Use for ANY technical issue:
@@ -62,6 +85,7 @@ You MUST complete each phase before proceeding to the next.
    - What are the exact steps?
    - Does it happen every time?
    - If not reproducible → gather more data, don't guess
+   - Name the command or harness that can go red on this exact symptom
 
 3. **Check Recent Changes**
    - What changed that could cause this?

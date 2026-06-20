@@ -1,0 +1,118 @@
+{
+  "feature": "Quick and Bug Workflows",
+  "created": "2026-06-17",
+  "designPath": "docs/design/2026-06-17-quick-and-bug-workflows/design.md",
+  "specPath": "docs/specs/2026-06-17-quick-and-bug-workflows",
+  "requirementsPath": "docs/specs/2026-06-17-quick-and-bug-workflows/requirements.md",
+  "actionRequiredPath": "docs/specs/2026-06-17-quick-and-bug-workflows/action-required.md",
+  "implementationLogPath": "docs/specs/2026-06-17-quick-and-bug-workflows/implementation-log.md",
+  "allowedTaskStatuses": [
+    "pending",
+    "in-progress",
+    "blocked",
+    "needs-context",
+    "done-with-concerns",
+    "review-failed",
+    "complete"
+  ],
+  "tasks": [
+    {
+      "id": "task-01-quick-change-skill",
+      "title": "Quick Change Skill",
+      "file": "tasks/task-01-quick-change-skill.md",
+      "wave": 1,
+      "status": "complete",
+      "dependsOn": [],
+      "blocks": [
+        "task-04-verification-and-trigger-tests"
+      ],
+      "files": {
+        "create": [
+          "skills/quick-change/SKILL.md"
+        ],
+        "modify": []
+      },
+      "verificationCommands": [
+        "powershell -NoProfile -Command \"Test-Path skills/quick-change/SKILL.md\"",
+        "powershell -NoProfile -Command \"Select-String -Path skills/quick-change/SKILL.md -Pattern 'quick-change','verification-before-completion','requesting-code-review'\""
+      ]
+    },
+    {
+      "id": "task-02-routing-and-docs",
+      "title": "Routing and Docs",
+      "file": "tasks/task-02-routing-and-docs.md",
+      "wave": 1,
+      "status": "complete",
+      "dependsOn": [],
+      "blocks": [
+        "task-04-verification-and-trigger-tests"
+      ],
+      "files": {
+        "create": [],
+        "modify": [
+          "skills/using-s-kit/SKILL.md",
+          "README.md"
+        ]
+      },
+      "verificationCommands": [
+        "powershell -NoProfile -Command \"Select-String -Path skills/using-s-kit/SKILL.md -Pattern 'quick-change','systematic-debugging','test-driven-development','verification-before-completion'\"",
+        "powershell -NoProfile -Command \"Select-String -Path README.md -Pattern 'quick-change','systematic-debugging'\""
+      ]
+    },
+    {
+      "id": "task-03-bug-lane-contract",
+      "title": "Bug Lane Contract",
+      "file": "tasks/task-03-bug-lane-contract.md",
+      "wave": 1,
+      "status": "complete",
+      "dependsOn": [],
+      "blocks": [
+        "task-04-verification-and-trigger-tests"
+      ],
+      "files": {
+        "create": [],
+        "modify": [
+          "skills/systematic-debugging/SKILL.md"
+        ]
+      },
+      "verificationCommands": [
+        "powershell -NoProfile -Command \"Select-String -Path skills/systematic-debugging/SKILL.md -Pattern 's-kit Bug Lane Contract','test-driven-development','verification-before-completion','.s-kit/debug'\""
+      ]
+    },
+    {
+      "id": "task-04-verification-and-trigger-tests",
+      "title": "Verification and Trigger Tests",
+      "file": "tasks/task-04-verification-and-trigger-tests.md",
+      "wave": 2,
+      "status": "complete",
+      "dependsOn": [
+        "task-01-quick-change-skill",
+        "task-02-routing-and-docs",
+        "task-03-bug-lane-contract"
+      ],
+      "blocks": [],
+      "files": {
+        "create": [
+          "tests/skill-triggering/prompts/quick-change.txt",
+          "tests/explicit-skill-requests/prompts/use-quick-change.txt"
+        ],
+        "modify": [
+          "scripts/verify-branding.ps1",
+          "scripts/doctor.ps1",
+          "scripts/verify-skill-names.ps1",
+          "scripts/verify-workflow.ps1",
+          "tests/skill-triggering/run-all.sh",
+          "tests/explicit-skill-requests/run-all.sh"
+        ]
+      },
+      "verificationCommands": [
+        "npm run verify:branding",
+        "npm run verify:naming",
+        "npm run verify:workflow",
+        "bash tests/skill-triggering/run-all.sh",
+        "bash tests/explicit-skill-requests/run-all.sh",
+        "npm test"
+      ]
+    }
+  ]
+}

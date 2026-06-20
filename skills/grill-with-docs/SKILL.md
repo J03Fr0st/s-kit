@@ -7,6 +7,8 @@ description: Use when a plan needs to be stress-tested against project language,
 
 Use this to challenge a proposed plan against the project's durable language and decisions. The goal is not to produce an implementation plan. The goal is to make unclear terms, boundaries, and architectural trade-offs precise before they become feature design or spec material.
 
+Use `domain-modeling` for the active glossary and ADR mechanics in this session: canonical terms, rejected synonyms, context docs, and ADR thresholds. `grill-with-docs` owns the interview pressure; `domain-modeling` owns the durable language rules.
+
 ## When to Use
 
 - The user asks to grill, challenge, stress-test, or sharpen a plan against docs.
@@ -37,8 +39,8 @@ Create files lazily. If no `CONTEXT.md` exists, create one only after a term is 
 3. Ask one focused question at a time.
 4. Include your recommended answer with each question.
 5. Use concrete scenarios to expose edge cases and boundary confusion.
-6. When a term is resolved, update the relevant `CONTEXT.md` immediately.
-7. When a decision meets the ADR threshold, offer an ADR and write it if accepted.
+6. When a term is resolved, update the relevant `CONTEXT.md` immediately using `domain-modeling` rules.
+7. When a decision meets the ADR threshold, offer an ADR and write it if accepted using `domain-modeling` rules.
 8. If this is part of `brainstorming`, carry resolved terms and decisions into the final design.
 
 ## Language Rules
@@ -51,7 +53,7 @@ Create files lazily. If no `CONTEXT.md` exists, create one only after a term is 
 - Pick one canonical term and list rejected synonyms under `_Avoid_`.
 - Call out mismatches immediately: if docs say "Customer" and the user says "Account" for the same thing, ask which term is canonical.
 
-Use `CONTEXT-FORMAT.md` for the file shape.
+Use `skills/domain-modeling/CONTEXT-FORMAT.md` for the file shape.
 
 ## ADR Threshold
 
@@ -61,7 +63,7 @@ Create or offer an ADR only when all three are true:
 2. The choice would surprise a future reader without context.
 3. There was a real trade-off between plausible alternatives.
 
-If any condition is missing, skip the ADR. Use `ADR-FORMAT.md` when an ADR is warranted.
+If any condition is missing, skip the ADR. Use `skills/domain-modeling/ADR-FORMAT.md` when an ADR is warranted.
 
 ## Handoff
 

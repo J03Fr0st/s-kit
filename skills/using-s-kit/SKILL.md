@@ -45,6 +45,7 @@ brainstorming -> plan-feature -> build-feature -> verification/review -> ship-it
 
 - `brainstorming` is the front door. It explores intent, presents a design, offers optional `grill-me`, waits for approval, then writes `docs/design/YYYY-MM-DD-{feature-name}/design.md`.
 - `grill-with-docs` is optional before or during `brainstorming` when a plan needs project-language, `CONTEXT.md`, ADR, bounded-context, or code-backed terminology pressure. It supports design approval; it does not replace the dated design/spec workflow.
+- `domain-modeling` handles active glossary and ADR maintenance when terminology itself needs to change. `codebase-design` supplies architecture vocabulary for module interfaces and seams. `prototype` is a throwaway design detour when a runnable answer is needed before approval.
 - `plan-feature` only runs from an approved design. It expands that design into the matching `docs/specs/YYYY-MM-DD-{feature-name}/` folder with `spec.json`, `implementation-log.md`, requirements, and self-contained task files.
 - `build-feature` only runs from a spec folder and its matching approved design. It executes task waves, runs spec-compliance review before code-quality review, and updates `spec.json`, task files, README checkboxes, and the implementation log.
 
@@ -54,15 +55,24 @@ Not every change needs the full dated design/spec ceremony. Pick the lane by the
 
 | Lane | Criteria | Path |
 |------|----------|------|
+| Quick change | Clear requested outcome, low blast radius, roughly 1-3 files, no design decision, direct verification available | `quick-change` -> `verification-before-completion` |
 | Full feature | New behavior, multi-file change, or any change needing design decisions | `brainstorming` -> `plan-feature` -> `build-feature` |
-| Bug fix | Defect with reproducible wrong behavior, roughly 3 files or fewer | `systematic-debugging` -> `test-driven-development` -> `verification-before-completion` |
+| Bug fix | Defect with reproducible wrong behavior, failed command, failing test, regression, or production issue | `systematic-debugging` -> `test-driven-development` -> `verification-before-completion` |
 | Refactor / docs | No behavior change | refactor or direct edit -> `verification-before-completion` |
 | Delivery | Committed work ready to push, describe, and open or update for review | `verification-before-completion` -> `ship-it` |
 | Hotfix | Urgent production defect | bug-fix lane with user-approved expedited review; log a follow-up for the skipped steps |
 
 Small-lane changes skip the dated spec folder. The audit trail is the commit plus the verification evidence those skills already require.
 
-**Boundary rule:** if a small-lane change starts sprouting design questions or exceeds the file budget, stop and route to `brainstorming`. When in doubt, use the full feature lane.
+Boundary rules:
+
+- If a quick change reveals design questions, unclear ownership, or wider blast radius, stop and route to `brainstorming`.
+- If a quick change is actually broken behavior, route to `systematic-debugging` even when the expected code diff is small.
+- If a bug fix grows beyond roughly 3 files or requires architecture decisions, stop and route to `brainstorming` or an architecture-focused skill after documenting the debugging evidence.
+- If a design depends on glossary changes or context boundaries, use `domain-modeling` or `grill-with-docs` before locking the design.
+- If a design depends on module seams, test surfaces, or deepening shallow interfaces, use `codebase-design`.
+- If a design question needs runnable evidence, use `prototype` and capture the verdict before `plan-feature`.
+- When in doubt, use the full feature lane.
 
 Delivery routing boundaries:
 

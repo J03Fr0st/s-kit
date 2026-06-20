@@ -19,11 +19,12 @@ Complete these in order:
 2. Offer the visual companion if upcoming questions would be easier with mockups or diagrams.
 3. Ask clarifying questions one at a time.
 4. Propose 2-3 approaches with trade-offs and a recommendation.
-5. Present the design in sections and get user approval.
-6. Offer `grill-me` as an optional stress-test before writing the approved design. This is optional; do not block normal approval if the user declines.
-7. Choose the dated feature folder name and write the approved design to `docs/design/YYYY-MM-DD-{feature-name}/design.md` using the structure in `references/design-template.md`.
-8. Hand off to `plan-feature` with that exact design path so it can expand the design into requirements, manifest, execution log, orchestration, and task files under the matching `docs/specs/YYYY-MM-DD-{feature-name}/` folder.
-9. Ask the user to review the written spec before implementation with `build-feature`.
+5. If conversation cannot settle a design question, use `prototype` to answer it with throwaway runnable evidence, then carry the verdict back into the design.
+6. Present the design in sections and get user approval.
+7. Offer `grill-me` as an optional stress-test before writing the approved design. This is optional; do not block normal approval if the user declines.
+8. Choose the dated feature folder name and write the approved design to `docs/design/YYYY-MM-DD-{feature-name}/design.md` using the structure in `references/design-template.md`.
+9. Hand off to `plan-feature` with that exact design path so it can expand the design into requirements, manifest, execution log, orchestration, and task files under the matching `docs/specs/YYYY-MM-DD-{feature-name}/` folder.
+10. Ask the user to review the written spec before implementation with `build-feature`.
 
 ## Process
 
@@ -32,6 +33,8 @@ Start with the current project state. If the request is too broad for one spec, 
 If the request matches a small lane in `using-s-kit` (bug fix, refactor/docs, or hotfix), say so and route to that lane instead of starting a design. Brainstorming is for work that needs design decisions.
 
 For an unfamiliar or large repository, offer to dispatch the `s-kit-codebase-mapper` agent first. It returns an evidence-backed map (architecture, conventions, relevant files, risks) that grounds the clarifying questions and design. This is optional; skip it when the project is already well understood.
+
+If a question needs runnable evidence, route through `prototype` before approval. Use it for state machines, business rules, interaction flow, or UI direction where talking through the design would leave uncertainty. Prototype output is not production code; capture only the verdict and decision in `design.md`.
 
 Ask one question per message. Prefer multiple choice when it makes the decision easier. Focus on purpose, constraints, success criteria, dependencies, and what should be explicitly out of scope.
 

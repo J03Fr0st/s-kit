@@ -1,0 +1,1 @@
+I need to redesign this module interface. It feels shallow: callers know too much about ordering, setup, and error details. Help me decide where the seam should go.

@@ -8,8 +8,12 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROMPTS_DIR="$SCRIPT_DIR/prompts"
 
 SKILLS=(
+    "quick-change"
     "systematic-debugging"
     "test-driven-development"
+    "domain-modeling"
+    "codebase-design"
+    "prototype"
     "grill-me"
     "grill-with-docs"
     "plan-feature"

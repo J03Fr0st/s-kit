@@ -3,16 +3,24 @@ $ErrorActionPreference = 'Stop'
 $bannedBranding = 'Superpowers|superpowers|using-superpowers|\bobra\b|Jesse Vincent|fsck\.com|Prime Radiant|primeradiant'
 $bannedSpecPaths = 'docs/s-kit|docs/superpowers|specs/\{feature\}|`specs/| specs/|docs/specs/[^/\s]+\.md|docs/design/[^/\s]+\.md'
 
-# NOTICE.md, research/comparison notes, and dated design/spec artifacts
-# legitimately name upstream projects, so they are exempt from the branding ban.
-# The ban still applies to all shipped product surfaces.
-$researchNotes = @(
-  '!docs/future-development-research.md',
-  '!docs/comparable-project-enhancements.md',
-  '!docs/design/**',
-  '!docs/specs/**'
+# NOTICE.md, research/comparison notes, dated design/spec artifacts, generated
+# graph output, and intentional negative test assertions can legitimately name
+# upstream projects. The ban still applies to all shipped product surfaces.
+$commonExclusions = @(
+  '-g', '!scripts/verify-branding.ps1',
+  '-g', '!NOTICE.md',
+  '-g', '!docs/future-development-research.md',
+  '-g', '!docs/comparable-project-enhancements.md',
+  '-g', '!docs/design/**',
+  '-g', '!docs/specs/**',
+  '-g', '!graphify-out/**'
 )
-$brandingMatches = & rg -n $bannedBranding -g '!scripts/verify-branding.ps1' -g '!NOTICE.md' -g $researchNotes[0] -g $researchNotes[1] -g $researchNotes[2] -g $researchNotes[3]
+
+$brandingExclusions = $commonExclusions + @(
+  '-g', '!tests/brainstorm-server/start-server.test.sh'
+)
+
+$brandingMatches = & rg -n $bannedBranding @brandingExclusions
 if ($LASTEXITCODE -eq 0) {
   Write-Error "Banned branding references remain:`n$brandingMatches"
 }
@@ -20,7 +28,7 @@ if ($LASTEXITCODE -gt 1) {
   exit $LASTEXITCODE
 }
 
-$specPathMatches = & rg -n $bannedSpecPaths -g '!scripts/verify-branding.ps1' -g $researchNotes[0] -g $researchNotes[1] -g $researchNotes[2] -g $researchNotes[3]
+$specPathMatches = & rg -n $bannedSpecPaths @commonExclusions
 if ($LASTEXITCODE -eq 0) {
   Write-Error "Old spec path references remain:`n$specPathMatches"
 }

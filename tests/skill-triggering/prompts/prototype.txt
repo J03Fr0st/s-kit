@@ -1,0 +1,1 @@
+Before we commit to the real implementation, build a throwaway prototype to test whether this state model feels right with a few interactive scenarios.

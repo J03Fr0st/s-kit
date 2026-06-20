@@ -8,6 +8,8 @@ $reviewPromptTemplatePath = Join-Path $root 'skills/build-feature/references/rev
 $simplifierPromptTemplatePath = Join-Path $root 'skills/build-feature/references/simplifier-prompt-template.md'
 $coderPromptTemplatePath = Join-Path $root 'skills/build-feature/references/coder-prompt-template.md'
 $fixPromptTemplatePath = Join-Path $root 'skills/build-feature/references/fix-prompt-template.md'
+$usingSKitSkillPath = Join-Path $root 'skills/using-s-kit/SKILL.md'
+$systematicDebuggingSkillPath = Join-Path $root 'skills/systematic-debugging/SKILL.md'
 $specReviewerAgentPath = Join-Path $root 'agents/s-kit-spec-reviewer.md'
 $codeReviewerAgentPath = Join-Path $root 'agents/s-kit-code-reviewer.md'
 $readOnlyContractPath = Join-Path $root 'skills/build-feature/references/read-only-review-contract.md'
@@ -254,6 +256,38 @@ if (Test-Path $fixPromptTemplatePath) {
   }
 } else {
   Add-Failure 'Missing build-feature fix prompt template: skills/build-feature/references/fix-prompt-template.md'
+}
+
+if (Test-Path $usingSKitSkillPath) {
+  $usingSKitSkill = Get-Content $usingSKitSkillPath -Raw
+  foreach ($requiredText in @(
+    'quick-change` -> `verification-before-completion',
+    'systematic-debugging` -> `test-driven-development` -> `verification-before-completion',
+    'If a quick change is actually broken behavior',
+    'If a bug fix grows beyond roughly 3 files'
+  )) {
+    if (-not $usingSKitSkill.Contains($requiredText)) {
+      Add-Failure "using-s-kit routing must include quick/bug lane contract text: $requiredText"
+    }
+  }
+} else {
+  Add-Failure 'Missing using-s-kit skill: skills/using-s-kit/SKILL.md'
+}
+
+if (Test-Path $systematicDebuggingSkillPath) {
+  $systematicDebuggingSkill = Get-Content $systematicDebuggingSkillPath -Raw
+  foreach ($requiredText in @(
+    '## s-kit Bug Lane Contract',
+    'systematic-debugging -> test-driven-development -> verification-before-completion',
+    '.s-kit/debug/YYYY-MM-DD-{slug}.md',
+    'requesting-code-review` is required for complex bugs'
+  )) {
+    if (-not $systematicDebuggingSkill.Contains($requiredText)) {
+      Add-Failure "systematic-debugging must include bug lane contract text: $requiredText"
+    }
+  }
+} else {
+  Add-Failure 'Missing systematic-debugging skill: skills/systematic-debugging/SKILL.md'
 }
 
 foreach ($reviewerAgent in @(

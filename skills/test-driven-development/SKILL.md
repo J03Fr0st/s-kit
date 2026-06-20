@@ -11,6 +11,8 @@ Write the test first. Watch it fail. Write minimal code to pass.
 
 **Core principle:** If you didn't watch the test fail, you don't know if it tests the right thing.
 
+Good tests verify behavior through the public interface callers use. They should survive internal refactors. Avoid tests that mock internal collaborators, assert private helper calls, or mirror implementation structure.
+
 **Violating the letter of the rules is violating the spirit of the rules.**
 
 ## When to Use
@@ -109,6 +111,7 @@ Vague name, tests mock not code
 - One behavior
 - Clear name
 - Real code (no mocks unless unavoidable)
+- Highest practical public interface for the behavior
 
 ### Verify RED - Watch It Fail
 
