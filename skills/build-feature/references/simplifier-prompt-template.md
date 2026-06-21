@@ -1,11 +1,11 @@
 # Simplifier Agent Prompt Template
 
-Use this template when constructing prompts for the `s-kit-code-simplifier` agent between implementation and review. Replace the placeholders with actual content from the current wave.
+Use this template when constructing prompts for the `s-kit-code-simplifier` agent between implementation and review. Replace the placeholders with actual content from the current Phase.
 
 ## Template
 
 ```text
-You are running a behavior-preserving simplification pass for Wave {wave_number} of a feature implementation. Use the s-kit-code-simplifier role: refine recently changed code for clarity and maintainability without changing behavior or widening scope.
+You are running a behavior-preserving simplification pass for Phase {phase_number} of a feature implementation. Use the s-kit-code-simplifier role: refine recently changed code for clarity and maintainability without changing behavior or widening scope.
 
 ## Feature Context
 
@@ -31,7 +31,7 @@ You are running a behavior-preserving simplification pass for Wave {wave_number}
 
 1. Only inspect and edit files listed in Changed File Scope unless the orchestrator explicitly widens scope.
 2. Preserve all public behavior, data shape, outputs, side effects, and error handling.
-3. Preserve contracts called out in the approved design and task summaries.
+3. Preserve contracts, glossary terms, and ADR constraints called out in the approved design and task summaries.
 4. Prefer explicit readable code over clever compact code.
 5. Remove redundant branching, unnecessary indirection, duplicated logic, stale comments, and confusing names only when the result is clearer.
 6. Keep helpful abstractions that separate concerns or make behavior easier to test.
@@ -48,9 +48,9 @@ You are running a behavior-preserving simplification pass for Wave {wave_number}
 
 ## Placeholder Details
 
-- **{wave_number}**: the current wave number.
+- **{phase_number}**: the current Phase number.
 - **{requirements}**: full text of `requirements.md`.
-- **{design}**: full text of `design.md`.
-- **{task_summaries}**: for each task in the wave, include the task title, manifest entry, task file content for this wave's tasks, files created/modified, verification evidence, and coder or fixer completion summary. Completed-task context from earlier waves is one line per task.
+- **{design}**: full text of `design.md`; include relevant context docs or ADR excerpts when they are not already captured in requirements.
+- **{task_summaries}**: for each task in the Phase, include the task title, manifest entry, task file content for this Phase's tasks, files created/modified, verification evidence, and coder or fixer completion summary. Completed-task context from earlier Phases is one line per task.
 - **{changed_files}**: the exact file list reported by coder or fixer agents, reconciled with `spec.json.tasks[].files.create` and `spec.json.tasks[].files.modify`.
 - **{verification_commands}**: the targeted task commands from `spec.json` plus any project-level lint, typecheck, or test commands affected by the changed files.

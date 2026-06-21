@@ -4,7 +4,7 @@
 
 complete
 
-## Wave
+## Phase
 
 1
 
@@ -14,7 +14,7 @@ Add test prompts for the three new skills before implementing their bodies. This
 
 ## Dependencies
 
-**Depends on:** None (Wave 1)
+**Depends on:** None (Phase 1)
 **Blocks:** task-02-new-engineering-skills.md
 
 **Context from dependencies:** None.

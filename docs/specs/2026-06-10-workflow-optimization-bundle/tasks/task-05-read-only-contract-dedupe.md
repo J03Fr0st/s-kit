@@ -4,7 +4,7 @@
 
 complete
 
-## Wave
+## Phase
 
 1
 
@@ -14,7 +14,7 @@ The read-only review contract ("You are reviewing only. Do not modify files, the
 
 ## Dependencies
 
-**Depends on:** None (Wave 1)
+**Depends on:** None (Phase 1)
 **Blocks:** task-06-prompt-token-diet.md
 
 **Context from dependencies:** None. Reference facts you need:

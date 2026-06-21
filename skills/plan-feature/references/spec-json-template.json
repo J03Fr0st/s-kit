@@ -20,7 +20,7 @@
       "id": "task-01-{name}",
       "title": "{Task Title}",
       "file": "tasks/task-01-{name}.md",
-      "wave": 1,
+      "phase": 1,
       "status": "pending",
       "dependsOn": [],
       "blocks": ["task-02-{name}"],

@@ -2,15 +2,15 @@
 
 ## Summary
 
-`build-feature` currently runs coder agents, simplification, spec-compliance review, code-quality review, and targeted fix loops per wave. That is the right default for multi-task feature work, but it can become slow when a wave has one integration boundary whose risks are discovered one issue at a time.
+`build-feature` currently runs coder agents, simplification, spec-compliance review, code-quality review, and targeted fix loops per Phase. That is the right default for multi-task feature work, but it can become slow when a Phase has one integration boundary whose risks are discovered one issue at a time.
 
-This feature adds a read-only wave risk preflight before coder dispatch. The preflight records likely shared contracts for the current wave and threads that context into coder, simplifier, and reviewer prompts. It also adds complete punch-list behavior when repeated review failures clearly cluster around the same boundary.
+This feature adds a read-only Phase risk preflight before coder dispatch. The preflight records likely shared contracts for the current Phase and threads that context into coder, simplifier, and reviewer prompts. It also adds complete punch-list behavior when repeated review failures clearly cluster around the same boundary.
 
-The expected outcome is fewer serial review/fix loops for integration-heavy waves without removing independent review, changing task statuses, or adding new agents.
+The expected outcome is fewer serial review/fix loops for integration-heavy Phases without removing independent review, changing task statuses, or adding new agents.
 
 ## Goals
 
-- Add a Wave Risk Preflight step to `build-feature` before coder dispatch.
+- Add a Phase Risk Preflight step to `build-feature` before coder dispatch.
 - Include preflight context in coder, simplifier, review, and fix-loop guidance where relevant.
 - Add complete punch-list mode for repeated same-boundary review failures.
 - Allow trivial targeted fixes to produce an explicit no-op simplification result instead of encouraging unnecessary cleanup.
@@ -27,7 +27,7 @@ The expected outcome is fewer serial review/fix loops for integration-heavy wave
 
 ## Acceptance Criteria
 
-- [ ] `build-feature` documents when and how Wave Risk Preflight runs.
+- [ ] `build-feature` documents when and how Phase Risk Preflight runs.
 - [ ] Coder prompts receive preflight context as explicit implementation risk context.
 - [ ] Review prompts require reviewers to use preflight context as part of the review scope.
 - [ ] Fix-loop instructions define when repeated same-boundary failures trigger complete punch-list review.
@@ -48,5 +48,5 @@ The expected outcome is fewer serial review/fix loops for integration-heavy wave
 - Keep all edits ASCII.
 - Do not introduce new task status values.
 - Preserve read-only review safety language.
-- Keep the preflight tied to the current wave's files, tasks, design, completed task summaries, and verification commands.
+- Keep the preflight tied to the current Phase's files, tasks, design, completed task summaries, and verification commands.
 - Use existing `npm test`, `verify:workflow`, and `verify:naming` checks for validation.

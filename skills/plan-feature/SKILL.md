@@ -2,9 +2,9 @@
 name: plan-feature
 description: >
   Create a structured feature specification with design context and self-contained task files organized into
-  parallel execution waves. Use this skill after brainstorming has produced an approved docs/design/YYYY-MM-DD-{feature-name}/design.md,
+  parallel execution Phases. Use this skill after brainstorming has produced an approved docs/design/YYYY-MM-DD-{feature-name}/design.md,
   or when the user provides an existing approved design.md and asks to turn it into actionable task
-  waves. This skill produces local spec files under docs/specs/YYYY-MM-DD-{feature-name}/ using the same dated folder name as the design — no GitHub integration.
+  Phases. This skill produces local spec files under docs/specs/YYYY-MM-DD-{feature-name}/ using the same dated folder name as the design — no GitHub integration.
 ---
 
 # Plan Feature
@@ -17,7 +17,7 @@ The key insight: implementation plans that live in a single file are either too 
 
 - After `brainstorming` has produced an approved `docs/design/YYYY-MM-DD-{feature-name}/design.md`
 - When the user provides an existing approved design file that can be placed under `docs/design/YYYY-MM-DD-{feature-name}/design.md`
-- When the user wants to turn an approved design into task waves for implementation
+- When the user wants to turn an approved design into task Phases for implementation
 
 ## Instructions
 
@@ -32,6 +32,7 @@ Before writing requirements or tasks:
 3. If no approved design exists, stop and invoke `brainstorming` first. Do not ask standalone requirements-interview questions from `plan-feature`.
 4. Read `design.md` and use it as the source of truth. Review the current conversation only to preserve approved details that are missing from the file.
 5. Derive the spec folder name from the design folder name. For example, `docs/design/2026-05-27-add-user-auth/design.md` becomes `docs/specs/2026-05-27-add-user-auth/`.
+6. Read `CONTEXT-MAP.md`, relevant `CONTEXT.md` files, and ADRs in `docs/adr/` when present. Treat glossary terms and ADR constraints as part of the planning input, not optional background.
 
 Before writing any spec file, verify the design file exists at the derived path (`docs/design/YYYY-MM-DD-{feature-name}/design.md`). If it does not, report the exact expected path and stop. Do not create the spec folder, and do not guess an alternative location.
 
@@ -51,7 +52,7 @@ Break the implementation into atomic tasks. Each task should:
 - Be completable in a single coding session by one agent
 - Have a clear, specific scope (one concern per task)
 - Produce working, testable code when complete
-- Not overlap in files modified with other tasks in the same wave
+- Not overlap in files modified with other tasks in the same Phase
 
 Think carefully about granularity. Too coarse and agents can't work in parallel. Too fine and the overhead of context-switching between tasks dominates. A good task typically creates or modifies 1-5 files around a single concern.
 
@@ -63,9 +64,9 @@ For each task, identify:
 - **What it depends on**: which tasks must complete before this one can start
 - **What depends on it**: which tasks are blocked until this one finishes
 
-Tasks with no dependencies form Wave 1. Tasks whose dependencies are all in Wave 1 form Wave 2. And so on. All tasks within a wave can execute in parallel.
+Tasks with no dependencies form Phase 1. Tasks whose dependencies are all in Phase 1 form Phase 2. And so on. All tasks within a Phase can execute in parallel.
 
-When assigning waves, verify that tasks within the same wave do not modify overlapping files. If two tasks in the same wave would touch the same file, move one to a later wave — parallel agents on the same branch cannot safely modify the same file.
+When assigning Phases, verify that tasks within the same Phase do not modify overlapping files. If two tasks in the same Phase would touch the same file, move one to a later Phase — parallel agents on the same branch cannot safely modify the same file.
 
 ### Step 5: Create the Spec Folder
 
@@ -85,13 +86,13 @@ docs/specs/YYYY-MM-DD-{feature-name}/
 ```
 
 Read the templates in `references/` before writing each file:
-- `references/readme-template.md` — for the README (dependency graph, wave table, status tracking)
+- `references/readme-template.md` — for the README (dependency graph, Phase table, status tracking)
 - `references/spec-json-template.json` — for the machine-readable manifest
 - `references/task-template.md` — for each task file (self-contained with all context)
 - `references/requirements-template.md` — for the requirements document
 - `references/action-required-template.md` — for manual human steps
 
-Task files are numbered with zero-padded two-digit prefixes in topological order: Wave 1 tasks first, then Wave 2, etc. Within a wave, order is arbitrary but stable.
+Task files are numbered with zero-padded two-digit prefixes in topological order: Phase 1 tasks first, then Phase 2, etc. Within a Phase, order is arbitrary but stable.
 
 Use these task statuses exactly:
 - `pending` — not started
@@ -110,6 +111,7 @@ This is the most important step. Each task file is the **only thing** a coder ag
 
 - **Description**: what to build and why it matters in context
 - **Dependency context**: what prior tasks produce that this task needs (summarized in prose, not just filenames). The agent should not need to read other task files.
+- **Domain context**: glossary terms, avoided synonyms, context boundaries, and ADR constraints relevant to the task
 - **Technical details**: CLI commands, code snippets, schemas, file paths, env vars, API endpoints — every implementation-specific detail from the planning conversation
 - **Files to create/modify**: explicit list with purpose for each
 - **Verification plan**: RED/GREEN/final verification commands and expected results
@@ -123,9 +125,9 @@ Create `spec.json` as the source of truth for orchestration. It must match the R
 
 - `feature`, `created`, `designPath`, `specPath`, `requirementsPath`, `actionRequiredPath`, and `implementationLogPath`
 - `allowedTaskStatuses` with the exact statuses from Step 5
-- `tasks[]` entries with `id`, `title`, `file`, `wave`, `status`, `dependsOn`, `blocks`, `files.create`, `files.modify`, and `verificationCommands`
+- `tasks[]` entries with `id`, `title`, `file`, `phase`, `status`, `dependsOn`, `blocks`, `files.create`, `files.modify`, and `verificationCommands`
 
-The manifest owns folder naming, task IDs, waves, status values, file ownership, and verification commands. README checkboxes and task file metadata must mirror the manifest, not diverge from it.
+The manifest owns folder naming, task IDs, Phases, status values, file ownership, and verification commands. README checkboxes and task file metadata must mirror the manifest, not diverge from it.
 
 Create `implementation-log.md` with approval evidence first. Record design approval before spec creation in `implementation-log.md`. Do not write a "Spec Created" entry before approval evidence.
 
@@ -137,9 +139,9 @@ The initial log must contain entries in this order:
    - Any optional `grill-me` outcome if used, or that it was declined or skipped.
 2. `## YYYY-MM-DD - Spec Created`
    - Which approved design it came from.
-   - Initial task and wave count.
+   - Initial task and Phase count.
 
-Future implementation runs append wave starts, task results, review outcomes, verification evidence, blockers, and final integration notes here.
+Future implementation runs append Phase starts, task results, review outcomes, verification evidence, blockers, and final integration notes here.
 
 ### Step 8: Extract Manual Actions
 
@@ -153,16 +155,16 @@ After creating the spec, display:
 Feature specification created at docs/specs/YYYY-MM-DD-{feature-name}/
 
 Files created:
-- README.md (dependency graph, {N} waves, {T} tasks)
+- README.md (dependency graph, {N} Phases, {T} tasks)
 - spec.json (manifest for orchestration and verification)
 - requirements.md
 - action-required.md
 - implementation-log.md
 - tasks/ ({T} task files)
 
-Wave breakdown:
-- Wave 1: {count} tasks (parallel) — {brief description}
-- Wave 2: {count} tasks (parallel) — {brief description}
+Phase breakdown:
+- Phase 1: {count} tasks (parallel) — {brief description}
+- Phase 2: {count} tasks (parallel) — {brief description}
 - ...
 
 Next steps:
@@ -175,9 +177,10 @@ Next steps:
 
 - Every task file must be fully self-contained — this is the entire point of the spec structure. A coder agent reading only that file must know exactly what to do.
 - Capture ALL technical details from the planning conversation. The spec is the single source of truth — CLI commands, schemas, code snippets, file paths, env vars, API endpoints. Anything not captured here is lost.
-- `spec.json` is the machine-readable orchestration contract. Keep it consistent with README checkboxes, task file status/wave fields, file ownership, and verification commands.
+- Capture glossary and ADR constraints from `CONTEXT.md`, `CONTEXT-MAP.md`, and `docs/adr/` in requirements and task files when those docs exist. Do not invent synonyms for canonical terms.
+- `spec.json` is the machine-readable orchestration contract. Keep it consistent with README checkboxes, task file status/Phase fields, file ownership, and verification commands.
 - Every task needs a `## Verification Plan` with `### RED`, `### GREEN`, and `### Final Verification` subsections.
-- Tasks within the same wave must not modify overlapping files. Parallel agents on the same branch cannot safely touch the same files.
+- Tasks within the same Phase must not modify overlapping files. Parallel agents on the same branch cannot safely touch the same files.
 - Keep tasks atomic — one concern per task. If a task has more than 5-7 files to modify, consider splitting it.
 - Do not create standalone testing-only tasks unless the user explicitly asks for them; keep verification inside the relevant implementation task.
-- Number task files in topological order (wave 1 first, then wave 2, etc.) for easy scanning.
+- Number task files in topological order (Phase 1 first, then Phase 2, etc.) for easy scanning.

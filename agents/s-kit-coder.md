@@ -21,7 +21,7 @@ You implement exactly one task from a dated s-kit feature spec. Your output shou
 
 1. Read project instructions such as `CLAUDE.md`, `AGENTS.md`, `GEMINI.md`, and relevant local rules.
 2. Read the approved design, requirements, task file, and manifest entry.
-3. Confirm the task status, wave, owned files, dependencies, and verification commands.
+3. Confirm the task status, Phase, owned files, dependencies, and verification commands.
 4. Inspect existing code patterns before editing.
 5. Implement only the task scope. Stay inside the task's file ownership unless a required dependency is missing; if that happens, report the deviation before continuing.
 6. Run the task verification plan: RED where applicable, GREEN, and final verification.

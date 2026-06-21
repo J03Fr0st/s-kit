@@ -25,19 +25,19 @@ graph TD
     task-03-bug-lane-contract --> task-04-verification-and-trigger-tests
 ```
 
-## Waves
+## Phases
 
-| Wave | Tasks | Description |
+| Phase | Tasks | Description |
 |------|-------|-------------|
 | 1 | task-01, task-02, task-03 | Add the new quick-change skill, update user-facing routing docs, and tighten the bug lane contract in parallel |
 | 2 | task-04 | Update verifiers and trigger tests once the routed skill and lane text exist |
 
 ## Task Status
 
-### Wave 1
+### Phase 1
 - [x] [task-01-quick-change-skill](./tasks/task-01-quick-change-skill.md) - Add a first-class `quick-change` skill for small scoped edits
 - [x] [task-02-routing-and-docs](./tasks/task-02-routing-and-docs.md) - Update the router and README workflow documentation
 - [x] [task-03-bug-lane-contract](./tasks/task-03-bug-lane-contract.md) - Make the bug workflow composition explicit in `systematic-debugging`
 
-### Wave 2
+### Phase 2
 - [x] [task-04-verification-and-trigger-tests](./tasks/task-04-verification-and-trigger-tests.md) - Add canonical skill, workflow, doctor, and trigger-test coverage

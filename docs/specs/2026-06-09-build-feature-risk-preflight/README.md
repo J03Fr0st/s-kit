@@ -2,7 +2,7 @@
 
 ## Overview
 
-Add a lightweight risk preflight to `build-feature` so integration-sensitive waves expose shared contracts before coder dispatch, then broaden repeated same-boundary failures into one complete punch-list review instead of several narrow review/fix loops.
+Add a lightweight risk preflight to `build-feature` so integration-sensitive Phases expose shared contracts before coder dispatch, then broaden repeated same-boundary failures into one complete punch-list review instead of several narrow review/fix loops.
 
 ## Quick Links
 
@@ -16,31 +16,31 @@ Add a lightweight risk preflight to `build-feature` so integration-sensitive wav
 
 ```mermaid
 graph TD
-    task-01-wave-risk-preflight["01: Wave Risk Preflight"]
+    task-01-Phase-risk-preflight["01: Phase Risk Preflight"]
     task-02-complete-punch-list["02: Complete Punch-List Mode"]
     task-03-verification-guardrails["03: Verification Guardrails"]
-    task-01-wave-risk-preflight --> task-02-complete-punch-list
+    task-01-Phase-risk-preflight --> task-02-complete-punch-list
     task-02-complete-punch-list --> task-03-verification-guardrails
 ```
 
-## Waves
+## Phases
 
-| Wave | Tasks | Description |
+| Phase | Tasks | Description |
 |------|-------|-------------|
-| 1 | task-01 | Add wave risk preflight orchestration and pass its context into coder and review prompts |
+| 1 | task-01 | Add Phase risk preflight orchestration and pass its context into coder and review prompts |
 | 2 | task-02 | Add complete punch-list behavior for repeated same-boundary failures and targeted simplification guidance |
 | 3 | task-03 | Add workflow verification coverage for the new prompt and orchestration contract |
 
 ## Task Status
 
-### Wave 1
+### Phase 1
 
-- [x] [task-01-wave-risk-preflight](./tasks/task-01-wave-risk-preflight.md) - Wave risk preflight
+- [x] [task-01-Phase-risk-preflight](./tasks/task-01-Phase-risk-preflight.md) - Phase risk preflight
 
-### Wave 2
+### Phase 2
 
 - [x] [task-02-complete-punch-list-mode](./tasks/task-02-complete-punch-list-mode.md) - Complete punch-list mode
 
-### Wave 3
+### Phase 3
 
 - [ ] [task-03-verification-guardrails](./tasks/task-03-verification-guardrails.md) - Verification guardrails

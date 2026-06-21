@@ -20,7 +20,7 @@
       "id": "task-01-reviewer-safety-scoped-ranges",
       "title": "Reviewer Safety and Scoped Ranges",
       "file": "tasks/task-01-reviewer-safety-scoped-ranges.md",
-      "wave": 1,
+      "phase": 1,
       "status": "complete",
       "dependsOn": [],
       "blocks": [
@@ -45,7 +45,7 @@
       "id": "task-02-harness-porting-playbook",
       "title": "Harness Porting Playbook",
       "file": "tasks/task-02-harness-porting-playbook.md",
-      "wave": 1,
+      "phase": 1,
       "status": "complete",
       "dependsOn": [],
       "blocks": [
@@ -69,7 +69,7 @@
       "id": "task-03-eval-harness-strategy",
       "title": "Eval Harness Strategy",
       "file": "tasks/task-03-eval-harness-strategy.md",
-      "wave": 1,
+      "phase": 1,
       "status": "complete",
       "dependsOn": [],
       "blocks": [
@@ -90,7 +90,7 @@
       "id": "task-04-action-language-cleanup",
       "title": "Action-Language Cleanup",
       "file": "tasks/task-04-action-language-cleanup.md",
-      "wave": 2,
+      "phase": 2,
       "status": "complete",
       "dependsOn": [
         "task-01-reviewer-safety-scoped-ranges"
@@ -118,7 +118,7 @@
       "id": "task-05-codex-native-hooks",
       "title": "Codex Native Hook Compatibility",
       "file": "tasks/task-05-codex-native-hooks.md",
-      "wave": 3,
+      "phase": 3,
       "status": "complete",
       "dependsOn": [
         "task-02-harness-porting-playbook",

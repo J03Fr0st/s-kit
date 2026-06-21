@@ -10,7 +10,7 @@
 
 - Created from approved design: `docs/design/2026-06-20-engineering-skills-integration/design.md`.
 - Initial task count: 4.
-- Initial wave count: 4.
+- Initial Phase count: 4.
 
 ## 2026-06-20 - Implementation Completed
 

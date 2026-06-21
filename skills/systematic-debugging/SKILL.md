@@ -74,6 +74,12 @@ You MUST complete each phase before proceeding to the next.
 
 **BEFORE attempting ANY fix:**
 
+0. **Read Domain Docs When Present**
+   - If `CONTEXT-MAP.md` exists, locate the relevant context docs before naming the problem
+   - If `CONTEXT.md` exists, use glossary terms in hypotheses, repro names, test names, and fix summaries
+   - Read ADRs in the affected area before declaring a pattern wrong or proposing architecture changes
+   - If terms conflict, preserve the evidence and use `domain-modeling` or `grill-with-docs` before naming the fix
+
 1. **Read Error Messages Carefully**
    - Don't skip past errors or warnings
    - They often contain the exact solution

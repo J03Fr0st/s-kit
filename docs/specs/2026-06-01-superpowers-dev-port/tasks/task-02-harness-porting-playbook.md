@@ -4,7 +4,7 @@
 
 complete
 
-## Wave
+## Phase
 
 1
 
@@ -14,7 +14,7 @@ Add a durable operational playbook for porting `s-kit` to a new harness, based o
 
 ## Dependencies
 
-**Depends on:** None (Wave 1)
+**Depends on:** None (Phase 1)
 **Blocks:** task-05-codex-native-hooks.md
 
 **Context from dependencies:** None. This task creates the harness-porting guidance that the Codex hook task should follow.

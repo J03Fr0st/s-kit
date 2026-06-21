@@ -60,10 +60,10 @@ fi
 
 echo ""
 
-# Test 4: Verify wave selection
-echo "Test 4: Wave selection..."
+# Test 4: Verify Phase selection
+echo "Test 4: Phase selection..."
 
-output=$(run_claude "In build-feature, how does the orchestrator determine the current wave to execute?" 30)
+output=$(run_claude "In build-feature, how does the orchestrator determine the current Phase to execute?" 30)
 
 if assert_contains "$output" "spec.json\|manifest" "Uses manifest"; then
     : # pass
@@ -71,7 +71,7 @@ else
     exit 1
 fi
 
-if assert_contains "$output" "first.*wave\|status.*complete\|not.*complete" "Finds first incomplete wave"; then
+if assert_contains "$output" "first.*Phase\|status.*complete\|not.*complete" "Finds first incomplete Phase"; then
     : # pass
 else
     exit 1

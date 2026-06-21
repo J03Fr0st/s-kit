@@ -12,7 +12,7 @@ Dispatch a code reviewer subagent to catch issues before they cascade. The revie
 ## When to Request Review
 
 **Mandatory:**
-- After each accepted `build-feature` task or wave
+- After each accepted `build-feature` task or Phase
 - After completing major feature
 - Before merge to main
 

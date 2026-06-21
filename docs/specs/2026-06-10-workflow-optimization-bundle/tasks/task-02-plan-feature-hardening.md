@@ -4,7 +4,7 @@
 
 complete
 
-## Wave
+## Phase
 
 1
 
@@ -14,7 +14,7 @@ Harden `plan-feature` with three additions: a hard existence check on the design
 
 ## Dependencies
 
-**Depends on:** None (Wave 1)
+**Depends on:** None (Phase 1)
 **Blocks:** None
 
 **Context from dependencies:** None. This task edits one skill file. The `s-kit-pattern-mapper` agent already exists at `agents/s-kit-pattern-mapper.md` (read-only; returns Recommended Pattern / Supporting Patterns / Implementation Guidance / Watchouts with file:line evidence) — this task only adds invocation guidance.

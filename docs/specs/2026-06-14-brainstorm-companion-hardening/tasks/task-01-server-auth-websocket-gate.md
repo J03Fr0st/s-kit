@@ -4,7 +4,7 @@
 
 complete
 
-## Wave
+## Phase
 
 1
 
@@ -14,7 +14,7 @@ Add the core security gate to the brainstorm companion server. Today `server.cjs
 
 ## Dependencies
 
-**Depends on:** None (Wave 1)
+**Depends on:** None (Phase 1)
 **Blocks:** task-02-server-lifecycle-persistence-browser.md, task-03-helper-key-reconnect.md
 
 **Context from dependencies:** None. This task establishes the server-side auth and protocol contract consumed by later tasks.

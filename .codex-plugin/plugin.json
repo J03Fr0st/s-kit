@@ -1,7 +1,7 @@
 {
   "name": "s-kit",
   "version": "1.0.1",
-  "description": "Agent workflow kit for brainstorming, domain-doc grilling, dated specs, implementation waves, TDD, debugging, review, and delivery.",
+  "description": "Agent workflow kit for brainstorming, domain-doc grilling, dated specs, implementation Phases, TDD, debugging, review, and delivery.",
   "author": {
     "name": "J03Fr0st",
     "url": "https://github.com/J03Fr0st/s-kit"
@@ -27,8 +27,8 @@
   "hooks": "./hooks/hooks.json",
   "interface": {
     "displayName": "s-kit",
-    "shortDescription": "Brainstorming, domain docs, dated specs, implementation waves, and review workflows",
-    "longDescription": "Use s-kit to guide agent work through brainstorming, domain language and ADR stress-testing, dated feature specs, wave-based implementation, test-driven development, systematic debugging, verification, code review, and branch finishing workflows.",
+    "shortDescription": "Brainstorming, domain docs, dated specs, implementation Phases, and review workflows",
+    "longDescription": "Use s-kit to guide agent work through brainstorming, domain language and ADR stress-testing, dated feature specs, Phase-based implementation, test-driven development, systematic debugging, verification, code review, and branch finishing workflows.",
     "developerName": "J03Fr0st",
     "category": "Coding",
     "capabilities": [

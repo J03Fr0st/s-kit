@@ -2,21 +2,21 @@
 
 ## Context
 
-`build-feature` is intentionally rigorous: it dispatches task agents wave by wave, runs simplification, then runs spec-compliance and code-quality review before accepting a wave. That rigor is useful, but the current loop can become slow when one integration boundary produces several serial discoveries.
+`build-feature` is intentionally rigorous: it dispatches task agents Phase by Phase, runs simplification, then runs spec-compliance and code-quality review before accepting a Phase. That rigor is useful, but the current loop can become slow when one integration boundary produces several serial discoveries.
 
-The triggering example is `D:\Source\pubg-ts\docs\specs\2026-06-09-architecture-deepening\implementation-log.md`. Wave 2 repeatedly cycled through issues that all belonged to the same Node/browser observability boundary: compatibility entrypoints, singleton type shape, default imports, module-load timers, open handles, and browser package mappings. The workflow found those issues one at a time through normal review/fix cycles.
+The triggering example is `D:\Source\pubg-ts\docs\specs\2026-06-09-architecture-deepening\implementation-log.md`. Phase 2 repeatedly cycled through issues that all belonged to the same Node/browser observability boundary: compatibility entrypoints, singleton type shape, default imports, module-load timers, open handles, and browser package mappings. The workflow found those issues one at a time through normal review/fix cycles.
 
-This design speeds up that flow without weakening the default review model. It adds a pre-wave risk preflight and changes repeat-failure behavior so a risky boundary gets one complete punch list instead of a chain of narrow discoveries.
+This design speeds up that flow without weakening the default review model. It adds a pre-Phase risk preflight and changes repeat-failure behavior so a risky boundary gets one complete punch list instead of a chain of narrow discoveries.
 
 ## Approved Approach
 
-Add a lightweight "Wave Risk Preflight" step to `build-feature` after wave preparation and before coder dispatch.
+Add a lightweight "Phase Risk Preflight" step to `build-feature` after Phase preparation and before coder dispatch.
 
-The preflight is read-only. It derives likely integration risks from the approved design, requirements, current wave task files, `spec.json` file ownership, completed task summaries, and verification commands. It records shared contracts that coder, simplifier, and reviewer prompts must consider during that wave.
+The preflight is read-only. It derives likely integration risks from the approved design, requirements, current Phase task files, `spec.json` file ownership, completed task summaries, and verification commands. It records shared contracts that coder, simplifier, and reviewer prompts must consider during that Phase.
 
-If a wave fails review more than once in the same boundary, the workflow switches from another narrow fix cycle to a complete punch-list review for that boundary. The next reviewer is asked to inspect the whole affected boundary and return all blocking issues together. Fix agents then address that complete list before the normal review gates resume.
+If a Phase fails review more than once in the same boundary, the workflow switches from another narrow fix cycle to a complete punch-list review for that boundary. The next reviewer is asked to inspect the whole affected boundary and return all blocking issues together. Fix agents then address that complete list before the normal review gates resume.
 
-This keeps `build-feature` rigorous for feature work while reducing avoidable churn in integration-heavy waves.
+This keeps `build-feature` rigorous for feature work while reducing avoidable churn in integration-heavy Phases.
 
 ## Alternatives Considered
 
@@ -38,9 +38,9 @@ Primary surfaces:
 The preflight becomes a new build-feature orchestration concept:
 
 1. Load and validate the spec as today.
-2. Determine the current wave as today.
-3. Prepare wave tasks and check dependencies/file overlap as today.
-4. Run Wave Risk Preflight.
+2. Determine the current Phase as today.
+3. Prepare Phase tasks and check dependencies/file overlap as today.
+4. Run Phase Risk Preflight.
 5. Dispatch coder agents with the preflight included.
 6. Collect coder results as today.
 7. Run simplification as today, using the preflight as boundary context.
@@ -71,9 +71,9 @@ The preflight uses existing inputs:
 - `docs/design/YYYY-MM-DD-{feature-name}/design.md`
 - `requirements.md`
 - `spec.json`
-- Current wave task files
+- Current Phase task files
 - Completed task summaries
-- Current wave verification commands
+- Current Phase verification commands
 - Prior review/fix outcomes from `implementation-log.md` when resuming
 
 No command-line flags are required for the initial design. If later implementation needs an override, the default should be "preflight enabled" for `build-feature` because it is read-only and cheap compared with coder/review loops.
@@ -90,7 +90,7 @@ No command-line flags are required for the initial design. If later implementati
 
 ## Risks and Constraints
 
-- The preflight can become generic noise if it lists every possible risk. It must stay tied to the current wave's files, tasks, and design.
+- The preflight can become generic noise if it lists every possible risk. It must stay tied to the current Phase's files, tasks, and design.
 - A complete punch-list review can be more expensive than a narrow review. It should trigger only after repeat same-boundary failure, not after every first failure.
 - The workflow should not overfit to the `pubg-ts` observability example. The risk categories must be general enough for other integration boundaries.
 - Prompt changes may affect tests or verifier fixtures that assert workflow wording.
@@ -105,8 +105,8 @@ Expected checks:
 - Existing `npm test` still passes.
 - `scripts/verify-workflow.ps1` still passes.
 - `scripts/verify-skill-names.ps1` still passes.
-- Prompt templates contain explicit placeholders or instructions for wave risk preflight context.
+- Prompt templates contain explicit placeholders or instructions for Phase risk preflight context.
 - `build-feature` instructions define when to create the preflight, how to pass it to coder/simplifier/review prompts, and when to trigger complete punch-list mode.
 - Existing examples and status values remain compatible; no new task status is introduced.
 
-Manual review should confirm the workflow stays concise and does not turn every wave into a heavy architecture review.
+Manual review should confirm the workflow stays concise and does not turn every Phase into a heavy architecture review.

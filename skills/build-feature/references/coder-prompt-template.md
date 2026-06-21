@@ -27,7 +27,7 @@ You are implementing a single task from a feature specification. Your job is to 
 
 1. Read the relevant parts of the codebase to understand existing patterns, imports, and conventions
 2. Implement everything described in the task's Technical Details and Implementation Steps
-3. Account for the contracts and conventions in the Design Digest while staying within this task's scope
+3. Account for the contracts, glossary terms, ADR constraints, and conventions in the Design Digest while staying within this task's scope
 4. Follow the project's existing code patterns and conventions
 5. Run the RED, GREEN, and Final Verification commands from the task's Verification Plan and manifest entry where they apply. Fix any errors before finishing.
 6. Do NOT commit your changes
@@ -42,9 +42,9 @@ You are implementing a single task from a feature specification. Your job is to 
 
 ## Placeholder Details
 
-- **{design_digest}**: a 10-20 line digest the orchestrator writes per wave from the approved design and requirements. It must cover: the design decisions and shared contracts relevant to this wave's tasks (public exports, types, schemas, naming, error-handling conventions), and quote any Wave Risk Preflight line that directly affects this task. It is not the full design - reviewers hold the full design and will catch deviations.
+- **{design_digest}**: a 10-20 line digest the orchestrator writes per Phase from the approved design, requirements, and domain context. It must cover: design decisions, shared contracts relevant to this Phase's tasks (public exports, types, schemas, naming, error-handling conventions), glossary terms, ADR constraints, and any Phase Risk Preflight line that directly affects this task. It is not the full design - reviewers hold the full design and context docs and will catch deviations.
 
-- **{spec_manifest}**: paste the relevant task entry from `spec.json` plus the global path and status rules. This keeps task ID, wave, file ownership, and verification commands explicit.
+- **{spec_manifest}**: paste the relevant task entry from `spec.json` plus the global path and status rules. This keeps task ID, Phase, file ownership, and verification commands explicit.
 
 - **{completed_tasks_summary}**: for each previously completed task, include a brief summary like:
   ```

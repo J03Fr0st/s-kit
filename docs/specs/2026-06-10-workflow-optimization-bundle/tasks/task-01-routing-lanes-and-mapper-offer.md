@@ -4,17 +4,17 @@
 
 complete
 
-## Wave
+## Phase
 
 1
 
 ## Description
 
-Add an explicit small-change lane table to `using-s-kit` so bugfixes, refactors/doc changes, and hotfixes have a documented path that skips the dated spec folder, and update `brainstorming` to (a) reroute requests that match a small lane instead of starting a design, and (b) offer the `s-kit-codebase-mapper` agent as an optional preparation step for unfamiliar repos. Today every change routes through brainstorm → design → spec → waves, and the codebase-mapper agent is shipped but never invoked by any skill.
+Add an explicit small-change lane table to `using-s-kit` so bugfixes, refactors/doc changes, and hotfixes have a documented path that skips the dated spec folder, and update `brainstorming` to (a) reroute requests that match a small lane instead of starting a design, and (b) offer the `s-kit-codebase-mapper` agent as an optional preparation step for unfamiliar repos. Today every change routes through brainstorm → design → spec → Phases, and the codebase-mapper agent is shipped but never invoked by any skill.
 
 ## Dependencies
 
-**Depends on:** None (Wave 1)
+**Depends on:** None (Phase 1)
 **Blocks:** None
 
 **Context from dependencies:** None. This task is self-contained: it edits two skill markdown files. The `s-kit-codebase-mapper` agent already exists at `agents/s-kit-codebase-mapper.md` (read-only mapper producing Scope/Architecture/Conventions/Relevant Files/Risks/Recommended Next Step reports) — this task only adds the invocation guidance, it does not change the agent.

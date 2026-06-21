@@ -10,6 +10,10 @@ $coderPromptTemplatePath = Join-Path $root 'skills/build-feature/references/code
 $fixPromptTemplatePath = Join-Path $root 'skills/build-feature/references/fix-prompt-template.md'
 $usingSKitSkillPath = Join-Path $root 'skills/using-s-kit/SKILL.md'
 $systematicDebuggingSkillPath = Join-Path $root 'skills/systematic-debugging/SKILL.md'
+$planFeatureSkillPath = Join-Path $root 'skills/plan-feature/SKILL.md'
+$requirementsTemplatePath = Join-Path $root 'skills/plan-feature/references/requirements-template.md'
+$taskTemplatePath = Join-Path $root 'skills/plan-feature/references/task-template.md'
+$rootContextPath = Join-Path $root 'CONTEXT.md'
 $specReviewerAgentPath = Join-Path $root 'agents/s-kit-spec-reviewer.md'
 $codeReviewerAgentPath = Join-Path $root 'agents/s-kit-code-reviewer.md'
 $readOnlyContractPath = Join-Path $root 'skills/build-feature/references/read-only-review-contract.md'
@@ -145,8 +149,8 @@ if (Test-Path $buildFeatureSkillPath) {
     'Check maintainability, simplicity, security',
     'The simplification pass stayed within the changed-file scope and did not alter approved behavior',
     'coder or fixer completion summary, simplifier summary, and simplifier verification evidence',
-    '### Step 3A: Wave Risk Preflight',
-    '{wave_risk_preflight}',
+    '### Step 3A: Phase Risk Preflight',
+    '{phase_risk_preflight}',
     '{design_digest}',
     'baseline verification',
     's-kit-security-auditor',
@@ -157,6 +161,9 @@ if (Test-Path $buildFeatureSkillPath) {
     'Boundary Context',
     'build a concrete review scope',
     'git range, task diff, or file set',
+    'Requirements and task files must preserve relevant glossary terms and ADR constraints when context docs exist.',
+    'Glossary terms, avoided synonyms, and ADR constraints from the approved spec context are preserved.',
+    'Check that naming and abstractions do not drift away from `CONTEXT.md` glossary terms or contradict accepted ADRs.',
     'Do not ask them to modify files, the index, HEAD, branch state, staged changes, task statuses, or generated artifacts',
     'read-only git commands or a separate temporary worktree'
   )) {
@@ -186,12 +193,14 @@ if (Test-Path $reviewPromptTemplatePath) {
     'Check maintainability, simplicity, security, performance, error handling, and project conventions.',
     'simplifier summary and verification evidence',
     'Acceptance Criteria and Verification Plan sections',
-    '## Wave Risk Preflight',
-    '{wave_risk_preflight}',
+    '## Phase Risk Preflight',
+    '{phase_risk_preflight}',
     'complete punch-list mode',
     '{review_scope}',
     '{read_only_contract}',
-    'read-only-review-contract.md'
+    'read-only-review-contract.md',
+    'Verify glossary terms, avoided synonyms, and ADR constraints from the approved spec context are preserved.',
+    'Check naming and abstractions against `CONTEXT.md` glossary terms and accepted ADRs when those docs exist.'
   )) {
     if (-not $reviewPromptTemplate.Contains($requiredText)) {
       Add-Failure "review prompt must include simplifier review text: $requiredText"
@@ -206,13 +215,14 @@ if (Test-Path $coderPromptTemplatePath) {
   foreach ($requiredText in @(
     '## Design Digest',
     '{design_digest}',
-    'Account for the contracts and conventions in the Design Digest'
+    'Account for the contracts, glossary terms, ADR constraints, and conventions in the Design Digest',
+    'glossary terms, ADR constraints'
   )) {
     if (-not $coderPromptTemplate.Contains($requiredText)) {
       Add-Failure "coder prompt must include design digest text: $requiredText"
     }
   }
-  foreach ($forbiddenText in @('{wave_risk_preflight}', '{requirements}')) {
+  foreach ($forbiddenText in @('{phase_risk_preflight}', '{requirements}')) {
     if ($coderPromptTemplate.Contains($forbiddenText)) {
       Add-Failure "coder prompt must not include full-context placeholder: $forbiddenText"
     }
@@ -228,14 +238,15 @@ if (Test-Path $simplifierPromptTemplatePath) {
   $simplifierPromptTemplate = Get-Content $simplifierPromptTemplatePath -Raw
   foreach ($requiredText in @(
     'After a trivial targeted fix, you may return `no-op`',
-    'you must still run each task''s Final Verification command'
+    'you must still run each task''s Final Verification command',
+    'Preserve contracts, glossary terms, and ADR constraints'
   )) {
     if (-not $simplifierPromptTemplate.Contains($requiredText)) {
       Add-Failure "simplifier prompt must include no-op verification text: $requiredText"
     }
   }
-  if ($simplifierPromptTemplate.Contains('{wave_risk_preflight}')) {
-    Add-Failure 'simplifier prompt must not include full-context placeholder: {wave_risk_preflight}'
+  if ($simplifierPromptTemplate.Contains('{phase_risk_preflight}')) {
+    Add-Failure 'simplifier prompt must not include full-context placeholder: {phase_risk_preflight}'
   }
 } else {
   Add-Failure 'Missing build-feature simplifier prompt template: skills/build-feature/references/simplifier-prompt-template.md'
@@ -244,11 +255,12 @@ if (Test-Path $simplifierPromptTemplatePath) {
 if (Test-Path $fixPromptTemplatePath) {
   $fixPromptTemplate = Get-Content $fixPromptTemplatePath -Raw
   foreach ($requiredText in @(
-    '## Wave Risk Preflight',
-    '{wave_risk_preflight}',
+    '## Phase Risk Preflight',
+    '{phase_risk_preflight}',
     '## Boundary Context',
     '{boundary_context}',
-    'complete punch-list mode'
+    'complete punch-list mode',
+    'glossary terms, and ADR constraints'
   )) {
     if (-not $fixPromptTemplate.Contains($requiredText)) {
       Add-Failure "fix prompt must include punch-list context text: $requiredText"
@@ -264,7 +276,10 @@ if (Test-Path $usingSKitSkillPath) {
     'quick-change` -> `verification-before-completion',
     'systematic-debugging` -> `test-driven-development` -> `verification-before-completion',
     'If a quick change is actually broken behavior',
-    'If a bug fix grows beyond roughly 3 files'
+    'If a bug fix grows beyond roughly 3 files',
+    '## Domain Docs Contract',
+    'When a repo has `CONTEXT.md`, `CONTEXT-MAP.md`, or `docs/adr/`, treat those files as binding language and decision inputs.',
+    '`CONTEXT.md` is a glossary, not a spec.'
   )) {
     if (-not $usingSKitSkill.Contains($requiredText)) {
       Add-Failure "using-s-kit routing must include quick/bug lane contract text: $requiredText"
@@ -280,7 +295,9 @@ if (Test-Path $systematicDebuggingSkillPath) {
     '## s-kit Bug Lane Contract',
     'systematic-debugging -> test-driven-development -> verification-before-completion',
     '.s-kit/debug/YYYY-MM-DD-{slug}.md',
-    'requesting-code-review` is required for complex bugs'
+    'requesting-code-review` is required for complex bugs',
+    'Read Domain Docs When Present',
+    'If `CONTEXT.md` exists, use glossary terms in hypotheses, repro names, test names, and fix summaries'
   )) {
     if (-not $systematicDebuggingSkill.Contains($requiredText)) {
       Add-Failure "systematic-debugging must include bug lane contract text: $requiredText"
@@ -288,6 +305,71 @@ if (Test-Path $systematicDebuggingSkillPath) {
   }
 } else {
   Add-Failure 'Missing systematic-debugging skill: skills/systematic-debugging/SKILL.md'
+}
+
+if (Test-Path $planFeatureSkillPath) {
+  $planFeatureSkill = Get-Content $planFeatureSkillPath -Raw
+  foreach ($requiredText in @(
+    'Read `CONTEXT-MAP.md`, relevant `CONTEXT.md` files, and ADRs in `docs/adr/` when present.',
+    '**Domain context**: glossary terms, avoided synonyms, context boundaries, and ADR constraints relevant to the task',
+    '`tasks[]` entries with `id`, `title`, `file`, `phase`, `status`, `dependsOn`, `blocks`, `files.create`, `files.modify`, and `verificationCommands`',
+    'Capture glossary and ADR constraints from `CONTEXT.md`, `CONTEXT-MAP.md`, and `docs/adr/` in requirements and task files when those docs exist.'
+  )) {
+    if (-not $planFeatureSkill.Contains($requiredText)) {
+      Add-Failure "plan-feature must include domain context planning text: $requiredText"
+    }
+  }
+} else {
+  Add-Failure 'Missing plan-feature skill: skills/plan-feature/SKILL.md'
+}
+
+if (Test-Path $requirementsTemplatePath) {
+  $requirementsTemplate = Get-Content $requirementsTemplatePath -Raw
+  foreach ($requiredText in @(
+    '## Domain Context',
+    'Relevant glossary terms, context boundaries, avoided synonyms, and ADR constraints',
+    'Domain Context is for language and durable decisions, not implementation detail.'
+  )) {
+    if (-not $requirementsTemplate.Contains($requiredText)) {
+      Add-Failure "requirements template must include domain context text: $requiredText"
+    }
+  }
+} else {
+  Add-Failure 'Missing plan-feature requirements template: skills/plan-feature/references/requirements-template.md'
+}
+
+if (Test-Path $taskTemplatePath) {
+  $taskTemplate = Get-Content $taskTemplatePath -Raw
+  foreach ($requiredText in @(
+    '## Domain Context',
+    '**Glossary terms:**',
+    '**Avoided synonyms:**',
+    '**ADR constraints:**',
+    'The **Domain Context** section carries glossary and ADR constraints into the coder prompt.'
+  )) {
+    if (-not $taskTemplate.Contains($requiredText)) {
+      Add-Failure "task template must include domain context text: $requiredText"
+    }
+  }
+} else {
+  Add-Failure 'Missing plan-feature task template: skills/plan-feature/references/task-template.md'
+}
+
+if (Test-Path $rootContextPath) {
+  $rootContext = Get-Content $rootContextPath -Raw
+  foreach ($requiredText in @(
+    '# Context: s-kit',
+    '### Phase',
+    '### Phase Risk Preflight',
+    '### Context',
+    '### ADR'
+  )) {
+    if (-not $rootContext.Contains($requiredText)) {
+      Add-Failure "root CONTEXT.md must define core workflow glossary term: $requiredText"
+    }
+  }
+} else {
+  Add-Failure 'Missing root glossary: CONTEXT.md'
 }
 
 foreach ($reviewerAgent in @(
@@ -424,9 +506,9 @@ if ((Test-Path $specRoot) -and (Test-Path $designRoot)) {
           Add-Failure "spec.json task has invalid status for ${name}: $taskId"
         }
 
-        $manifestWave = 0
-        if (-not [int]::TryParse([string] $manifestTask.wave, [ref] $manifestWave) -or $manifestWave -lt 1) {
-          Add-Failure "spec.json task has invalid wave for ${name}: $taskId"
+        $manifestPhase = 0
+        if (-not [int]::TryParse([string] $manifestTask.phase, [ref] $manifestPhase) -or $manifestPhase -lt 1) {
+          Add-Failure "spec.json task has invalid Phase for ${name}: $taskId"
         }
 
         if (@($manifestTask.verificationCommands).Count -eq 0) {
@@ -439,21 +521,21 @@ if ((Test-Path $specRoot) -and (Test-Path $designRoot)) {
         }
       }
 
-      $tasksByWave = @{}
+      $tasksByPhase = @{}
       foreach ($manifestTask in @($manifest.tasks)) {
-        $wave = [int] $manifestTask.wave
-        if (-not $tasksByWave.ContainsKey($wave)) {
-          $tasksByWave[$wave] = @()
+        $Phase = [int] $manifestTask.phase
+        if (-not $tasksByPhase.ContainsKey($Phase)) {
+          $tasksByPhase[$Phase] = @()
         }
-        $tasksByWave[$wave] += $manifestTask
+        $tasksByPhase[$Phase] += $manifestTask
       }
 
-      foreach ($wave in $tasksByWave.Keys) {
+      foreach ($Phase in $tasksByPhase.Keys) {
         $owners = @{}
-        foreach ($manifestTask in $tasksByWave[$wave]) {
+        foreach ($manifestTask in $tasksByPhase[$Phase]) {
           foreach ($ownedFile in (Get-TaskOwnedFiles $manifestTask)) {
             if ($owners.ContainsKey($ownedFile)) {
-              Add-Failure "Same-wave file ownership overlap in ${name} wave ${wave}: '$ownedFile' owned by $($owners[$ownedFile]) and $($manifestTask.id)"
+              Add-Failure "Same-Phase file ownership overlap in ${name} Phase ${Phase}: '$ownedFile' owned by $($owners[$ownedFile]) and $($manifestTask.id)"
             } else {
               $owners[$ownedFile] = [string] $manifestTask.id
             }
@@ -487,15 +569,15 @@ if ((Test-Path $specRoot) -and (Test-Path $designRoot)) {
       $taskPath = $taskFileNames[$linkedTask].FullName
       $taskText = Get-Content $taskPath -Raw
       $status = Get-FirstSectionValue -Content $taskText -Heading 'Status'
-      $wave = Get-FirstSectionValue -Content $taskText -Heading 'Wave'
+      $Phase = Get-FirstSectionValue -Content $taskText -Heading 'Phase'
 
       if ($status -notin $allowedStatuses) {
         Add-Failure "Task has invalid or missing status: $(Get-RelativePath $taskPath)"
       }
 
-      $waveNumber = 0
-      if (-not [int]::TryParse($wave, [ref] $waveNumber) -or $waveNumber -lt 1) {
-        Add-Failure "Task has invalid or missing wave: $(Get-RelativePath $taskPath)"
+      $PhaseNumber = 0
+      if (-not [int]::TryParse($Phase, [ref] $PhaseNumber) -or $PhaseNumber -lt 1) {
+        Add-Failure "Task has invalid or missing Phase: $(Get-RelativePath $taskPath)"
       }
 
       foreach ($heading in @('## Verification Plan', '### RED', '### GREEN', '### Final Verification')) {
@@ -510,8 +592,8 @@ if ((Test-Path $specRoot) -and (Test-Path $designRoot)) {
         if ([string] $manifestTask.status -ne $status) {
           Add-Failure "Task status does not match spec.json for ${name}: $linkedTask"
         }
-        if ([int] $manifestTask.wave -ne $waveNumber) {
-          Add-Failure "Task wave does not match spec.json for ${name}: $linkedTask"
+        if ([int] $manifestTask.phase -ne $PhaseNumber) {
+          Add-Failure "Task Phase does not match spec.json for ${name}: $linkedTask"
         }
       }
 

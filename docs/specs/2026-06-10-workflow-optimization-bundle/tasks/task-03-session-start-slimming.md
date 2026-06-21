@@ -4,7 +4,7 @@
 
 complete
 
-## Wave
+## Phase
 
 1
 
@@ -14,7 +14,7 @@ The `hooks/session-start` bash script currently reads the entire `skills/using-s
 
 ## Dependencies
 
-**Depends on:** None (Wave 1)
+**Depends on:** None (Phase 1)
 **Blocks:** None
 
 **Context from dependencies:** None. This task edits one bash script. The platform-detection logic at the bottom of the script (Cursor `additional_context` / Claude Code `hookSpecificOutput.additionalContext` / Copilot-and-others `additionalContext`) must not change — it encodes hard-won host quirks, including a documented bash 5.3+ heredoc hang workaround using `printf`.

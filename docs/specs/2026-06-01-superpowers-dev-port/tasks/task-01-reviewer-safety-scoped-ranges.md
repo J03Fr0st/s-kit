@@ -4,7 +4,7 @@
 
 complete
 
-## Wave
+## Phase
 
 1
 
@@ -14,7 +14,7 @@ Harden `s-kit` review agents and `build-feature` review prompts so reviewers are
 
 ## Dependencies
 
-**Depends on:** None (Wave 1)
+**Depends on:** None (Phase 1)
 **Blocks:** task-04-action-language-cleanup.md
 
 **Context from dependencies:** None. This is the first safety slice and should be implemented before broader prose cleanup touches shared workflow text.
@@ -90,4 +90,4 @@ None.
 
 ## Notes
 
-Do not broaden this task into action-language cleanup. That is task 04 and runs later to avoid overlapping shared prompt files in the same wave.
+Do not broaden this task into action-language cleanup. That is task 04 and runs later to avoid overlapping shared prompt files in the same Phase.

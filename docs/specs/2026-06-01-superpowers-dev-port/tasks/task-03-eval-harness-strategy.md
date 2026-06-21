@@ -4,7 +4,7 @@
 
 complete
 
-## Wave
+## Phase
 
 1
 
@@ -14,7 +14,7 @@ Create a strategy document for whether and how `s-kit` should adopt behavior-lev
 
 ## Dependencies
 
-**Depends on:** None (Wave 1)
+**Depends on:** None (Phase 1)
 **Blocks:** task-05-codex-native-hooks.md
 
 **Context from dependencies:** None. This task creates the eval/testing strategy constraints that later harness work should respect.

@@ -4,7 +4,7 @@
 
 complete
 
-## Wave
+## Phase
 
 1
 
@@ -14,7 +14,7 @@ Create `scripts/verify-hooks.ps1` and wire it into `npm test`. s-kit ships two h
 
 ## Dependencies
 
-**Depends on:** None (Wave 1)
+**Depends on:** None (Phase 1)
 **Blocks:** None
 
 **Context from dependencies:** None. Reference facts you need:

@@ -24,6 +24,13 @@ Use this structure for the requirements.md at the root of each spec folder.
 - {Non-goal 1}
 - {Non-goal 2}
 
+## Domain Context
+
+{Relevant glossary terms, context boundaries, avoided synonyms, and ADR constraints from CONTEXT.md, CONTEXT-MAP.md, or docs/adr/. Use "No domain context constraints identified" only after checking those files.}
+
+- {Term or ADR constraint 1}
+- {Term or ADR constraint 2}
+
 ## Acceptance Criteria
 
 {High-level criteria for the entire feature. Individual task files have their own granular criteria.}
@@ -51,4 +58,5 @@ Use this structure for the requirements.md at the root of each spec folder.
 
 - The requirements doc provides **overall feature context** that each coder agent receives alongside its task file. Keep it focused on the "what" and "why" — individual task files handle the "how."
 - Non-goals are important: they prevent agents from over-building. If search functionality is out of scope, say so — otherwise a well-meaning agent might add it.
+- Domain Context is for language and durable decisions, not implementation detail. Keep behavior in Acceptance Criteria and task files.
 - Acceptance criteria here are feature-level (the whole thing works end-to-end). Task-level criteria live in each task file.

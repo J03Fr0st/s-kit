@@ -27,9 +27,9 @@ graph TD
     task-06-prompt-token-diet --> task-07-build-feature-orchestration-rework
 ```
 
-## Waves
+## Phases
 
-| Wave | Tasks | Description |
+| Phase | Tasks | Description |
 |------|-------|-------------|
 | 1 | task-01, task-02, task-03, task-04, task-05 | Independent edits: lane routing + mapper offers, plan-feature hardening, session-start slimming, verify-hooks script, read-only contract dedupe |
 | 2 | task-06 | Prompt token diet across the three build-feature templates plus matching verify-workflow invariants |
@@ -37,15 +37,15 @@ graph TD
 
 ## Task Status
 
-### Wave 1
+### Phase 1
 - [x] [task-01-routing-lanes-and-mapper-offer](./tasks/task-01-routing-lanes-and-mapper-offer.md) — Lane table in using-s-kit, reroute note and codebase-mapper offer in brainstorming
 - [x] [task-02-plan-feature-hardening](./tasks/task-02-plan-feature-hardening.md) — Design-existence hard check, execution-only status annotation, pattern-mapper offer
 - [x] [task-03-session-start-slimming](./tasks/task-03-session-start-slimming.md) — Replace full SKILL.md injection with a short pointer
 - [x] [task-04-verify-hooks-script](./tasks/task-04-verify-hooks-script.md) — verify-hooks.ps1 sync/version checks wired into npm test
 - [x] [task-05-read-only-contract-dedupe](./tasks/task-05-read-only-contract-dedupe.md) — Single-source the read-only review contract
 
-### Wave 2
+### Phase 2
 - [x] [task-06-prompt-token-diet](./tasks/task-06-prompt-token-diet.md) — Design digest for coders, preflight removal, reviewer task excerpts
 
-### Wave 3
+### Phase 3
 - [x] [task-07-build-feature-orchestration-rework](./tasks/task-07-build-feature-orchestration-rework.md) — Baseline check, digest dispatch, security-auditor trigger, no-op semantics, slim final review, reopen cascade

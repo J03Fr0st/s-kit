@@ -23,7 +23,7 @@ Repo: [github/spec-kit](https://github.com/github/spec-kit). Workflow: `/constit
 ### 1. A semantic cross-artifact check (`/analyze` equivalent)
 
 - **Pattern:** `/speckit.analyze` is a read-only pass run after tasks and before implementation. It checks the spec, plan, tasks, and constitution for inconsistencies, duplications, ambiguities, and underspecified items, and produces a findings report without editing anything. Constitution conflicts are auto-marked CRITICAL. ([analyze.md](https://github.com/github/spec-kit/blob/main/templates/commands/analyze.md))
-- **Enhancement for s-kit:** `s-kit` already has a *structural* preflight in `build-feature` Step 1 (manifest/README/task consistency, wave file-ownership, required headings via `verify-workflow.ps1`). Add a *semantic* layer: dispatch the existing `s-kit-spec-reviewer` as a gate between `plan-feature` and `build-feature` that checks the design ↔ requirements ↔ tasks for coverage gaps, duplicate scope, ambiguous acceptance criteria, and design decisions with no owning task. Read-only; emits findings, fixes nothing.
+- **Enhancement for s-kit:** `s-kit` already has a *structural* preflight in `build-feature` Step 1 (manifest/README/task consistency, Phase file-ownership, required headings via `verify-workflow.ps1`). Add a *semantic* layer: dispatch the existing `s-kit-spec-reviewer` as a gate between `plan-feature` and `build-feature` that checks the design ↔ requirements ↔ tasks for coverage gaps, duplicate scope, ambiguous acceptance criteria, and design decisions with no owning task. Read-only; emits findings, fixes nothing.
 - **Lands in:** `skills/plan-feature/SKILL.md` (new final "analyze" step or handoff), `agents/s-kit-spec-reviewer.md`.
 - **Effort / Fit:** Small–medium. Strong fit — `s-kit` already has the reviewer agent and the artifacts; this just formalizes a semantic gate the structural verifier can't cover.
 
@@ -77,7 +77,7 @@ Repo: [automazeio/ccpm](https://github.com/automazeio/ccpm) (~8.2k★). GitHub I
 ### 7. Spec-to-Issues with bidirectional traceability
 
 - **Pattern:** Each task becomes a GitHub issue; epics and PRDs link down to issues and back up, so every change traces to a spec.
-- **Enhancement for s-kit:** `spec.json` already holds task identity, waves, dependencies, file ownership, and verification commands — everything needed to mint issues. Add a dry-run export that creates one issue per task with links back to design/requirements/spec, preserving wave/deps/verification in the body and labels like `s-kit`, `wave-1`, `security-review`.
+- **Enhancement for s-kit:** `spec.json` already holds task identity, Phases, dependencies, file ownership, and verification commands — everything needed to mint issues. Add a dry-run export that creates one issue per task with links back to design/requirements/spec, preserving Phase/deps/verification in the body and labels like `s-kit`, `Phase-1`, `security-review`.
 - **Lands in:** new `scripts/spec-to-issues.ps1` (+ dry-run), `skills/plan-feature/references/spec-json-template.json`.
 - **Effort / Fit:** Medium. Excellent fit. **Rec 3.**
 
@@ -88,10 +88,10 @@ Repo: [automazeio/ccpm](https://github.com/automazeio/ccpm) (~8.2k★). GitHub I
 - **Lands in:** `skills/plan-feature/references/spec-json-template.json`, `scripts/verify-workflow.ps1` (allow but don't require the field).
 - **Effort / Fit:** Small. Excellent fit. **Rec 3.**
 
-### 9. Worktree-per-wave isolation
+### 9. Worktree-per-Phase isolation
 
 - **Pattern:** Agents work in isolated git worktrees so parallel streams don't collide.
-- **Enhancement for s-kit:** `s-kit` already prevents same-wave file collisions via manifest ownership checks and has `using-git-worktrees`. Document the explicit option to run a wave's coder agents in a shared worktree for true isolation, then merge — strengthening the existing same-branch caveat in `build-feature`.
+- **Enhancement for s-kit:** `s-kit` already prevents same-Phase file collisions via manifest ownership checks and has `using-git-worktrees`. Document the explicit option to run a Phase's coder agents in a shared worktree for true isolation, then merge — strengthening the existing same-branch caveat in `build-feature`.
 - **Lands in:** `skills/build-feature/SKILL.md` (Step 4 host-adapter notes), `skills/using-git-worktrees/SKILL.md`.
 - **Effort / Fit:** Small (doc). Good fit.
 
@@ -99,19 +99,19 @@ Repo: [automazeio/ccpm](https://github.com/automazeio/ccpm) (~8.2k★). GitHub I
 
 ## Citadel (SethGammon)
 
-Repo: [SethGammon/Citadel](https://github.com/SethGammon/Citadel). Orchestration harness: four-tier routing (`/do`), campaign persistence across sessions, parallel agents in isolated worktrees, discovery relay between waves, lifecycle hooks, circuit breaker, self-improving pattern library.
+Repo: [SethGammon/Citadel](https://github.com/SethGammon/Citadel). Orchestration harness: four-tier routing (`/do`), campaign persistence across sessions, parallel agents in isolated worktrees, discovery relay between Phases, lifecycle hooks, circuit breaker, self-improving pattern library.
 
-### 10. Discovery relay between waves
+### 10. Discovery relay between Phases
 
-- **Pattern:** Discoveries from one wave (e.g., an API-contract change) are explicitly relayed to later waves' agents.
-- **Enhancement for s-kit:** `build-feature` already passes `{completed_tasks_summary}` forward, but it's a generic summary. Add a structured "discoveries / contract changes / gotchas" block to the coder/fix completion report that is explicitly threaded into later waves' prompts — so a wave-2 agent learns wave-1 changed a shared type.
+- **Pattern:** Discoveries from one Phase (e.g., an API-contract change) are explicitly relayed to later Phases' agents.
+- **Enhancement for s-kit:** `build-feature` already passes `{completed_tasks_summary}` forward, but it's a generic summary. Add a structured "discoveries / contract changes / gotchas" block to the coder/fix completion report that is explicitly threaded into later Phases' prompts — so a Phase-2 agent learns Phase-1 changed a shared type.
 - **Lands in:** `skills/build-feature/references/coder-prompt-template.md`, `fix-prompt-template.md`, `build-feature/SKILL.md` (Step 5 collect / Step 4 dispatch).
 - **Effort / Fit:** Small–medium. Strong fit; sharpens an existing mechanism.
 
 ### 11. Campaign persistence / circuit breaker (already partly present)
 
 - **Pattern:** Sessions resume where they left off; a circuit breaker stops runaway loops.
-- **Enhancement for s-kit:** `build-feature` is *already* resumable (manifest-driven, picks up the first non-`complete` wave) and *already* has a circuit breaker (3 simplification/review cycles per wave). Citadel's "self-improving pattern library" (scoring outcomes, updating heuristics across runs) is **out of scope** — it adds persistent cross-project state `s-kit` deliberately avoids. Document that these are intentionally bounded, not missing.
+- **Enhancement for s-kit:** `build-feature` is *already* resumable (manifest-driven, picks up the first non-`complete` Phase) and *already* has a circuit breaker (3 simplification/review cycles per Phase). Citadel's "self-improving pattern library" (scoring outcomes, updating heuristics across runs) is **out of scope** — it adds persistent cross-project state `s-kit` deliberately avoids. Document that these are intentionally bounded, not missing.
 - **Lands in:** n/a (note only).
 - **Effort / Fit:** Skip the pattern library; affirm existing behavior.
 
@@ -124,7 +124,7 @@ Repo: [bmad-code-org/BMAD-METHOD](https://github.com/bmad-code-org/BMAD-METHOD).
 ### 12. Scale-adaptive ceremony
 
 - **Pattern:** Workflow rigor scales to task size; a tiny change doesn't get the full process.
-- **Enhancement for s-kit:** Let the workflow pick a lane by size — a one-file change can skip the dated spec folder and run a debug→fix→verify path (item 5), while a multi-task feature gets the full `plan-feature`/`build-feature` waves. Make the decision explicit and documented rather than implicit.
+- **Enhancement for s-kit:** Let the workflow pick a lane by size — a one-file change can skip the dated spec folder and run a debug→fix→verify path (item 5), while a multi-task feature gets the full `plan-feature`/`build-feature` Phases. Make the decision explicit and documented rather than implicit.
 - **Lands in:** `skills/using-s-kit/SKILL.md`, `skills/brainstorming/SKILL.md`.
 - **Effort / Fit:** Medium (design decision). Good fit. **Rec 7.**
 
@@ -203,7 +203,7 @@ Repo: [obra/superpowers](https://github.com/obra/superpowers). The lineage repo.
 ### 21. Map orchestration onto native Agent Teams where available
 
 - **Pattern:** Claude Code now ships **Agent Teams** (team lead + peer teammates, shared task list, mailbox) natively; Citadel layers routing/persistence on top of an existing agent rather than reimplementing it.
-- **Enhancement for s-kit:** Evaluate mapping `build-feature` waves onto native Agent Teams where present (`spec.json` is already a shared task contract), falling back to the current host-adapter dispatch elsewhere. Brainstorm before building — it touches the core orchestration contract.
+- **Enhancement for s-kit:** Evaluate mapping `build-feature` Phases onto native Agent Teams where present (`spec.json` is already a shared task contract), falling back to the current host-adapter dispatch elsewhere. Brainstorm before building — it touches the core orchestration contract.
 - **Lands in:** `skills/build-feature/SKILL.md` (Step 4 host adapter).
 - **Effort / Fit:** Large / design-first. **Rec 8.**
 
@@ -242,7 +242,7 @@ Ordered by value-to-effort, keyed to the per-project items above and the recomme
 | G | Discovery relay + independent checker evidence | 10, 14 | — | S–M | Low |
 | H | Build-feature run reports via native Monitors | 20 | 5 | M | Med |
 | I | Scale-adaptive ceremony + small-change lane | 5, 12, 16 | 7, 8 | M | Med |
-| J | Map waves onto native Agent Teams | 21 | 8 | L | Med–High (design-first) |
+| J | Map Phases onto native Agent Teams | 21 | 8 | L | Med–High (design-first) |
 
 A–D map to the research doc's "Recommended First Slice." E (semantic analyze gate) is a high-fit addition not previously called out as its own recommendation. I and J are design-first — brainstorm before building, since they touch the core workflow/orchestration contract.
 

@@ -4,7 +4,7 @@
 
 complete
 
-## Wave
+## Phase
 
 2
 
@@ -14,10 +14,10 @@ Add complete punch-list behavior to the `build-feature` fix loop. When repeated 
 
 ## Dependencies
 
-**Depends on:** task-01-wave-risk-preflight.md
+**Depends on:** task-01-Phase-risk-preflight.md
 **Blocks:** task-03-verification-guardrails.md
 
-**Context from dependencies:** task-01 adds Wave Risk Preflight as a named wave context that coder, simplifier, and review prompts receive. This task builds on that concept by using preflight and review history to decide when a repeated boundary failure needs a complete punch-list review.
+**Context from dependencies:** task-01 adds Phase Risk Preflight as a named Phase context that coder, simplifier, and review prompts receive. This task builds on that concept by using preflight and review history to decide when a repeated boundary failure needs a complete punch-list review.
 
 ## Files to Create
 
@@ -49,7 +49,7 @@ None.
 Suggested trigger language:
 
 ```text
-If a wave fails review more than once in the same boundary, request a complete punch-list review for that boundary before dispatching another narrow fix.
+If a Phase fails review more than once in the same boundary, request a complete punch-list review for that boundary before dispatching another narrow fix.
 ```
 
 Suggested simplifier language:

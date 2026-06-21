@@ -59,7 +59,7 @@ docs/specs/YYYY-MM-DD-{feature-name}/
     └── task-02-{name}.md
 ```
 
-`design.md` is the direct output of brainstorming. Follow `references/design-template.md`. It should capture the approved solution shape: context, selected approach, alternatives considered, architecture, major decisions, open risks, and verification strategy. `grill-me` can be offered before the file is written to stress-test the proposed design, but it is optional. `plan-feature` uses the approved design as the source material for `requirements.md`, `README.md`, `spec.json`, `implementation-log.md`, and task files. After the spec is reviewed, `build-feature` executes it wave by wave.
+`design.md` is the direct output of brainstorming. Follow `references/design-template.md`. It should capture the approved solution shape: context, selected approach, alternatives considered, architecture, major decisions, open risks, and verification strategy. `grill-me` can be offered before the file is written to stress-test the proposed design, but it is optional. `plan-feature` uses the approved design as the source material for `requirements.md`, `README.md`, `spec.json`, `implementation-log.md`, and task files. After the spec is reviewed, `build-feature` executes it Phase by Phase.
 
 ## Visual Companion
 

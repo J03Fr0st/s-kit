@@ -11,7 +11,7 @@ Use this structure for each task file in the `tasks/` subfolder. Each task file 
 
 pending
 
-## Wave
+## Phase
 
 {N}
 
@@ -21,10 +21,16 @@ pending
 
 ## Dependencies
 
-**Depends on:** {Comma-separated list of task filenames, or "None (Wave 1)"}
+**Depends on:** {Comma-separated list of task filenames, or "None (Phase 1)"}
 **Blocks:** {Comma-separated list of task filenames, or "None"}
 
 **Context from dependencies:** {Prose summary of what the dependency tasks produce that this task needs. For example: "task-01-setup-database.md creates the PostgreSQL schema with users and sessions tables. This task builds the API routes that query those tables." This is what makes each file self-contained — the agent does not need to read other task files to understand its inputs.}
+
+## Domain Context
+
+- **Glossary terms:** {Canonical terms from CONTEXT.md or context-specific glossary that this task must use}
+- **Avoided synonyms:** {Terms the task should not use, or "None"}
+- **ADR constraints:** {Accepted ADRs or durable decisions relevant to this task, or "None"}
 
 ## Files to Create
 
@@ -91,7 +97,8 @@ pending
 
 - The **Status** field is updated by the `build-feature` skill. Allowed values are `pending`, `in-progress`, `blocked`, `needs-context`, `done-with-concerns`, `review-failed`, and `complete`.
 - The **Dependencies** section includes prose context (not just filenames) so the agent understands its inputs without reading other files. This is the most important part of making task files self-contained.
-- **Files to Create** and **Files to Modify** make the task's scope explicit. Tasks in the same wave should not overlap on these lists.
+- The **Domain Context** section carries glossary and ADR constraints into the coder prompt. It should not contain feature requirements or implementation steps.
+- **Files to Create** and **Files to Modify** make the task's scope explicit. Tasks in the same Phase should not overlap on these lists.
 - **Technical Details** captures everything from the planning conversation — CLI commands, schemas, code snippets, file paths, env vars, API endpoints. If it was discussed during planning and is relevant to this task, it belongs here.
 - **Verification Plan** keeps testing tied to implementation. RED proves the gap, GREEN proves the task, and Final Verification proves integration.
 - **Acceptance Criteria** should be specific enough that completion can be verified objectively (by a code review agent or a human).

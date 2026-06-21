@@ -29,9 +29,9 @@ graph TD
     task-04-start-stop-ownership-flags --> task-05-docs-test-wiring
 ```
 
-## Waves
+## Phases
 
-| Wave | Tasks | Description |
+| Phase | Tasks | Description |
 |------|-------|-------------|
 | 1 | task-01 | Add the server-side auth gate and WebSocket protocol limits that all later companion behavior relies on |
 | 2 | task-02, task-03 | In parallel, finish server lifecycle/persistence/browser behavior and update the injected browser helper |
@@ -40,15 +40,15 @@ graph TD
 
 ## Task Status
 
-### Wave 1
+### Phase 1
 - [x] [task-01-server-auth-websocket-gate](./tasks/task-01-server-auth-websocket-gate.md) - Server auth, security headers, WebSocket auth/origin checks, frame cap
 
-### Wave 2
+### Phase 2
 - [x] [task-02-server-lifecycle-persistence-browser](./tasks/task-02-server-lifecycle-persistence-browser.md) - Idle shutdown, port/token persistence, safe browser launcher
 - [x] [task-03-helper-key-reconnect](./tasks/task-03-helper-key-reconnect.md) - Helper session key handling and reconnect UX
 
-### Wave 3
+### Phase 3
 - [x] [task-04-start-stop-ownership-flags](./tasks/task-04-start-stop-ownership-flags.md) - Launcher flags, `.s-kit` persistent state, server instance id, safe stop
 
-### Wave 4
+### Phase 4
 - [x] [task-05-docs-test-wiring](./tasks/task-05-docs-test-wiring.md) - Nested test script, root targeted script, visual companion docs

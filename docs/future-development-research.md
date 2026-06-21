@@ -42,7 +42,7 @@ The agent-workflow space moved fast in early 2026. The most decisive change is t
 | [SuperClaude Framework](https://github.com/SuperClaude-Org/SuperClaude_Framework) | Broad command surface, personas, MCP integration guidance, doctor command, multi-language docs, visible CI/version badges. | Borrow diagnostics and documentation polish, not the large command footprint. |
 | [VoltAgent Awesome Claude Code Subagents](https://github.com/VoltAgent/awesome-claude-code-subagents) | Large categorized subagent catalog, plugin packaging by category, installer options, discoverability. | Keep `s-kit` compact; add only workflow-critical agents and maintain catalog validation. |
 | [Maestro](https://github.com/RunMaestro/Maestro) | Agent orchestration, isolated sessions, playbooks, worktrees, CLI, usage dashboard, document graph. | Add lightweight markdown playbooks and local run reports before considering any UI; prefer native Monitors over a bespoke dashboard. |
-| [Claude Code Agent Farm](https://github.com/Dicklesworthstone/claude_code_agent_farm) | Parallel agents, lock-based coordination, preflight doctor, monitoring, progress reports, safe-operation controls. | Strengthen wave coordination, file-ownership checks, and execution reporting; evaluate native Agent Teams before custom locking. |
+| [Claude Code Agent Farm](https://github.com/Dicklesworthstone/claude_code_agent_farm) | Parallel agents, lock-based coordination, preflight doctor, monitoring, progress reports, safe-operation controls. | Strengthen Phase coordination, file-ownership checks, and execution reporting; evaluate native Agent Teams before custom locking. |
 | [Claude Hooks Multi-Agent Observability](https://github.com/disler/claude-code-hooks-multi-agent-observability) | Hook-based event capture, SQLite/WebSocket dashboard, session/event filtering, agent lifecycle tracking. | Start with optional local JSONL/Markdown run reports; route through native Monitors rather than a full dashboard. |
 | [Project CodeGuard](https://github.com/cosai-oasis/project-codeguard) | Security rules/skills applied before, during, and after generation, with agent-specific translation and validators. | Make `s-kit-security-auditor` checklist-driven and map it to the OWASP Agentic Top 10; validate risky specs earlier. |
 
@@ -85,7 +85,7 @@ Reddit (`reddit.com`) is not directly crawlable by the research tooling, so thes
 
 - [claude-code-spec-workflow](https://github.com/Pimzino/claude-code-spec-workflow) (~3.8k★) — Kiro-style spec workflow (`/spec-create` → `/spec-execute`) producing requirements/design/tasks artifacts plus steering docs and a dashboard. The closest direct comparable to `plan-feature`/`build-feature`.
 - [ccpm](https://github.com/automazeio/ccpm) (~8.2k★) — spec-driven PM that uses GitHub Issues as the source of truth and git worktrees for parallel agents; PRD → epic → task → issue with full traceability ("every line of code must trace back to a specification"). Strong reference for spec-to-issues (Rec 3) and worktrees.
-- [Citadel](https://github.com/SethGammon/Citadel) — orchestration harness with four-tier routing, campaign persistence across sessions, parallel agents in isolated worktrees, discovery relay between waves, circuit breaker, and a self-improving pattern library. Reference for wave coordination and the orchestration decision (Rec 8).
+- [Citadel](https://github.com/SethGammon/Citadel) — orchestration harness with four-tier routing, campaign persistence across sessions, parallel agents in isolated worktrees, discovery relay between Phases, circuit breaker, and a self-improving pattern library. Reference for Phase coordination and the orchestration decision (Rec 8).
 - [claude-squad](https://github.com/smtg-ai/claude-squad) — manages multiple terminal agents (Claude Code, Aider, Codex, OpenCode, Amp) working in parallel.
 - [planning-with-files](https://github.com/OthmanAdi/planning-with-files) — Manus-style persistent markdown planning skill using file-based coordination; mirrors `plan-feature`'s file-per-task ethos.
 - [claude-simone](https://github.com/Helmi/claude-simone) — a project-management framework for AI-assisted development with Claude Code.
@@ -133,8 +133,8 @@ Use `docs/specs/YYYY-MM-DD-{feature-name}/spec.json` as the machine-readable sou
 Useful behavior:
 
 - Convert each task into an issue with links back to the spec, requirements, and design.
-- Preserve wave, dependencies, verification commands, and owned files in the issue body.
-- Add labels such as `s-kit`, `wave-1`, `needs-verification`, or `security-review` when relevant.
+- Preserve Phase, dependencies, verification commands, and owned files in the issue body.
+- Add labels such as `s-kit`, `Phase-1`, `needs-verification`, or `security-review` when relevant.
 - Support dry-run output before writing to GitHub.
 - Borrow Taskmaster's pattern: add an optional `metadata` object per task in `spec.json` to round-trip external issue IDs and integration data, so re-export stays idempotent.
 
@@ -206,7 +206,7 @@ Potential override areas:
 - Security-heavy task template.
 - Domain terminology template for repos with `CONTEXT.md` and ADRs.
 
-Consider letting the workflow scale ceremony to task size (a one-file change should not need a full wave/manifest), similar to BMAD V6's scale-adaptive intelligence — without adding a large extension marketplace until the core workflow has proven extension points.
+Consider letting the workflow scale ceremony to task size (a one-file change should not need a full Phase/manifest), similar to BMAD V6's scale-adaptive intelligence — without adding a large extension marketplace until the core workflow has proven extension points.
 
 ### 8. Decide Where to Lean on Host Primitives vs. Custom Orchestration
 
@@ -214,10 +214,10 @@ This is now the highest-leverage strategic question. Claude Code ships native **
 
 Open questions to resolve before building more orchestration:
 
-- Should `build-feature` map waves onto native Agent Teams where available, falling back to the current host-adapter dispatch elsewhere? `spec.json` is already a shared task contract, which fits the Agent Teams model.
+- Should `build-feature` map Phases onto native Agent Teams where available, falling back to the current host-adapter dispatch elsewhere? `spec.json` is already a shared task contract, which fits the Agent Teams model.
 - Meanwhile, Superpowers moved the other way — replacing subagent review loops with inline self-review for speed. `s-kit` recently went heavier (added a simplification pass and two-stage review). Worth a deliberate decision on the cost/quality trade-off, perhaps gated by task size (see Recommendation 7).
 
-[Citadel](https://github.com/SethGammon/Citadel) is a useful reference here: it adds routing, campaign persistence, isolated-worktree parallelism, and cross-wave discovery relay on top of an existing agent rather than reimplementing the agent — a model `s-kit` could follow on top of native Agent Teams.
+[Citadel](https://github.com/SethGammon/Citadel) is a useful reference here: it adds routing, campaign persistence, isolated-worktree parallelism, and cross-Phase discovery relay on top of an existing agent rather than reimplementing the agent — a model `s-kit` could follow on top of native Agent Teams.
 
 Resolve this as a brainstorming/design exercise rather than jumping to implementation, since it touches the core orchestration contract.
 

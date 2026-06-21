@@ -25,9 +25,9 @@ graph TD
     task_03_integration --> task_04_verification
 ```
 
-## Waves
+## Phases
 
-| Wave | Tasks | Description |
+| Phase | Tasks | Description |
 |------|-------|-------------|
 | 1 | task-01-skill-trigger-tests | Add failing trigger/explicit-request coverage for the new skills. |
 | 2 | task-02-new-engineering-skills | Add the three new supporting skill folders and references. |
@@ -36,14 +36,14 @@ graph TD
 
 ## Task Status
 
-### Wave 1
+### Phase 1
 - [x] [task-01-skill-trigger-tests](./tasks/task-01-skill-trigger-tests.md) - Skill Trigger Tests
 
-### Wave 2
+### Phase 2
 - [x] [task-02-new-engineering-skills](./tasks/task-02-new-engineering-skills.md) - New Engineering Skills
 
-### Wave 3
+### Phase 3
 - [x] [task-03-workflow-integration](./tasks/task-03-workflow-integration.md) - Workflow Integration
 
-### Wave 4
+### Phase 4
 - [x] [task-04-verification-surfaces](./tasks/task-04-verification-surfaces.md) - Verification Surfaces

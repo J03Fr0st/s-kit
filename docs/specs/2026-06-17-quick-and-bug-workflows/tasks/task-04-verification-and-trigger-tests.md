@@ -4,7 +4,7 @@
 
 complete
 
-## Wave
+## Phase
 
 2
 
@@ -114,4 +114,4 @@ Update verification and trigger-test coverage so the new quick-change skill and 
 
 ## Notes
 
-Keep verifier changes targeted. This task should not modify the skill content created by Wave 1 except to fix a failed assertion that exposes a real Wave 1 miss.
+Keep verifier changes targeted. This task should not modify the skill content created by Phase 1 except to fix a failed assertion that exposes a real Phase 1 miss.

@@ -4,7 +4,7 @@
 
 complete
 
-## Wave
+## Phase
 
 1
 
@@ -14,7 +14,7 @@ Tighten `systematic-debugging` with an explicit `s-kit Bug Lane Contract` so bug
 
 ## Dependencies
 
-**Depends on:** None (Wave 1)
+**Depends on:** None (Phase 1)
 **Blocks:** task-04-verification-and-trigger-tests.md
 
 **Context from dependencies:** None. This task updates only the existing debugging skill.

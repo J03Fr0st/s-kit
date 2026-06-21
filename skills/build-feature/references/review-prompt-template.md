@@ -1,11 +1,11 @@
 # Review Agent Prompt Template
 
-Use this template when constructing prompts for review agents between waves. Replace the placeholders with actual content. Set `{review_type}` to either `Spec Compliance` or `Code Quality`.
+Use this template when constructing prompts for review agents between Phases. Replace the placeholders with actual content. Set `{review_type}` to either `Spec Compliance` or `Code Quality`.
 
 ## Template
 
 ```text
-You are running a {review_type} review for Wave {wave_number} of a feature implementation. Multiple coder agents worked in parallel on separate tasks. Your job is to review only; do not edit files.
+You are running a {review_type} review for Phase {phase_number} of a feature implementation. Multiple coder agents worked in parallel on separate tasks. Your job is to review only; do not edit files.
 
 ## Read-Only Review Contract
 
@@ -19,11 +19,11 @@ You are running a {review_type} review for Wave {wave_number} of a feature imple
 
 {design}
 
-## Wave Risk Preflight
+## Phase Risk Preflight
 
-{wave_risk_preflight}
+{phase_risk_preflight}
 
-## Tasks Completed in This Wave
+## Tasks Completed in This Phase
 
 {task_summaries}
 
@@ -51,7 +51,8 @@ If this is a Spec Compliance review:
 4. Verify status updates are consistent across spec.json, task files, and README checkboxes.
 5. Verify manual assumptions match action-required.md.
 6. Verify the simplification pass stayed within the changed-file scope and did not alter approved behavior.
-7. Verify the implementation accounts for the Wave Risk Preflight contracts without widening scope.
+7. Verify the implementation accounts for the Phase Risk Preflight contracts without widening scope.
+8. Verify glossary terms, avoided synonyms, and ADR constraints from the approved spec context are preserved.
 
 If this is a Code Quality review:
 
@@ -60,7 +61,8 @@ If this is a Code Quality review:
 3. Check maintainability, simplicity, security, performance, error handling, and project conventions.
 4. Check for cleanup or workflow invariant regressions when the repository has those checks.
 5. Flag test gaps or skipped checks that should block completion.
-6. Check the Wave Risk Preflight contracts for missed boundary issues.
+6. Check the Phase Risk Preflight contracts for missed boundary issues.
+7. Check naming and abstractions against `CONTEXT.md` glossary terms and accepted ADRs when those docs exist.
 
 ## Verdict
 
@@ -83,10 +85,10 @@ Group issues by the task they most closely relate to based on the manifest file 
 
 - **{review_type}**: `Spec Compliance` or `Code Quality`.
 - **{read_only_contract}**: paste the Contract section of `references/read-only-review-contract.md` verbatim.
-- **{wave_number}**: the current wave number, such as `2`, or `final` for the full-feature review.
+- **{phase_number}**: the current Phase number, such as `2`, or `final` for the full-feature review.
 - **{requirements}**: full text of `requirements.md`.
-- **{design}**: full text of `design.md`.
-- **{wave_risk_preflight}**: the Wave Risk Preflight for the current wave. Reviewers must use this as required boundary context, not optional background.
-- **{task_summaries}**: for each task in the wave, include the task title, manifest entry, the task file's Acceptance Criteria and Verification Plan sections (not the full task file), files created/modified, verification evidence, coder or fixer completion summary, and simplifier summary and verification evidence. Completed tasks from earlier waves: one line each.
+- **{design}**: full text of `design.md`; include relevant context docs or ADR excerpts when they are not already captured in requirements.
+- **{phase_risk_preflight}**: the Phase Risk Preflight for the current Phase. Reviewers must use this as required boundary context, not optional background.
+- **{task_summaries}**: for each task in the Phase, include the task title, manifest entry, the task file's Acceptance Criteria and Verification Plan sections (not the full task file), files created/modified, verification evidence, coder or fixer completion summary, and simplifier summary and verification evidence. Completed tasks from earlier Phases: one line each.
 - **{review_scope}**: the concrete git range, task diff, or exact file set the reviewer must inspect.
 - **{verification_commands}**: the task-specific commands from `spec.json` for spec compliance, or the project-level lint/typecheck/test commands for code quality.

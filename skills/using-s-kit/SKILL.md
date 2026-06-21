@@ -47,7 +47,15 @@ brainstorming -> plan-feature -> build-feature -> verification/review -> ship-it
 - `grill-with-docs` is optional before or during `brainstorming` when a plan needs project-language, `CONTEXT.md`, ADR, bounded-context, or code-backed terminology pressure. It supports design approval; it does not replace the dated design/spec workflow.
 - `domain-modeling` handles active glossary and ADR maintenance when terminology itself needs to change. `codebase-design` supplies architecture vocabulary for module interfaces and seams. `prototype` is a throwaway design detour when a runnable answer is needed before approval.
 - `plan-feature` only runs from an approved design. It expands that design into the matching `docs/specs/YYYY-MM-DD-{feature-name}/` folder with `spec.json`, `implementation-log.md`, requirements, and self-contained task files.
-- `build-feature` only runs from a spec folder and its matching approved design. It executes task waves, runs spec-compliance review before code-quality review, and updates `spec.json`, task files, README checkboxes, and the implementation log.
+- `build-feature` only runs from a spec folder and its matching approved design. It executes task Phases, runs spec-compliance review before code-quality review, and updates `spec.json`, task files, README checkboxes, and the implementation log.
+
+## Domain Docs Contract
+
+When a repo has `CONTEXT.md`, `CONTEXT-MAP.md`, or `docs/adr/`, treat those files as binding language and decision inputs. Use glossary terms in designs, specs, task files, hypotheses, test names, review findings, and PR descriptions.
+
+`CONTEXT.md` is a glossary, not a spec. Do not put behavior, implementation steps, or requirements there. If required language is missing or conflicts, use `domain-modeling` or `grill-with-docs` before locking the wording.
+
+If implementation would contradict an ADR, surface the conflict explicitly instead of silently overriding it.
 
 ## Lanes
 

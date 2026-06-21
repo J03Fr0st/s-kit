@@ -1,16 +1,16 @@
-# Graph Report - s-kit  (2026-06-20)
+# Graph Report - s-kit  (2026-06-21)
 
 ## Corpus Check
-- 226 files · ~146,278 words
+- 229 files · ~145,918 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 2385 nodes · 2302 edges · 249 communities (203 shown, 46 thin omitted)
+- 2544 nodes · 2457 edges · 260 communities (212 shown, 48 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `69e05d29`
+- Built from commit: `030cad80`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -258,18 +258,29 @@
 - [[_COMMUNITY_Community 246|Community 246]]
 - [[_COMMUNITY_Community 247|Community 247]]
 - [[_COMMUNITY_Community 248|Community 248]]
+- [[_COMMUNITY_Community 249|Community 249]]
+- [[_COMMUNITY_Community 250|Community 250]]
+- [[_COMMUNITY_Community 251|Community 251]]
+- [[_COMMUNITY_Community 252|Community 252]]
+- [[_COMMUNITY_Community 253|Community 253]]
+- [[_COMMUNITY_Community 254|Community 254]]
+- [[_COMMUNITY_Community 255|Community 255]]
+- [[_COMMUNITY_Community 256|Community 256]]
+- [[_COMMUNITY_Community 257|Community 257]]
+- [[_COMMUNITY_Community 258|Community 258]]
+- [[_COMMUNITY_Community 259|Community 259]]
 
 ## God Nodes (most connected - your core abstractions)
-1. `Writing Skills` - 22 edges
-2. `Implementation Log: Ship It Delivery Skill` - 22 edges
-3. `main()` - 21 edges
-4. `Testing Skills With Subagents` - 16 edges
-5. `interface` - 15 edges
-6. `Code Review Reception` - 15 edges
-7. `Workflow` - 15 edges
-8. `Test-Driven Development (TDD)` - 15 edges
-9. `Implementation Log: Brainstorm Companion Hardening` - 14 edges
-10. `Orchestration` - 13 edges
+1. `Implementation Log: Brainstorm Companion Hardening` - 23 edges
+2. `Writing Skills` - 22 edges
+3. `Implementation Log: Ship It Delivery Skill` - 22 edges
+4. `main()` - 21 edges
+5. `Implementation Log: Superpowers Dev Port Review` - 21 edges
+6. `Orchestration` - 17 edges
+7. `Implementation Log: Build Feature Risk Preflight` - 16 edges
+8. `Testing Skills With Subagents` - 16 edges
+9. `interface` - 15 edges
+10. `Code Review Reception` - 15 edges
 
 ## Surprising Connections (you probably didn't know these)
 - None detected - all connections are within the same source files.
@@ -277,11 +288,11 @@
 ## Import Cycles
 - None detected.
 
-## Communities (249 total, 46 thin omitted)
+## Communities (260 total, 48 thin omitted)
 
 ### Community 0 - "Community 0"
-Cohesion: 0.06
-Nodes (35): 10. Discovery relay between waves, 11. Campaign persistence / circuit breaker (already partly present), 12. Scale-adaptive ceremony, 13. Installer / doctor confidence, 14. A dedicated "checker" verification agent, 15. Tagged / multi-context task lists, 16. Speed vs. rigor: a deliberate review-cost decision, 17. Keep tracking upstream process changes (+27 more)
+Cohesion: 0.05
+Nodes (37): 10. Discovery relay between Phases, 10. Discovery relay between Phases, 11. Campaign persistence / circuit breaker (already partly present), 12. Scale-adaptive ceremony, 13. Installer / doctor confidence, 14. A dedicated "checker" verification agent, 15. Tagged / multi-context task lists, 16. Speed vs. rigor: a deliberate review-cost decision (+29 more)
 
 ### Community 1 - "Community 1"
 Cohesion: 0.14
@@ -304,8 +315,8 @@ Cohesion: 0.08
 Nodes (23): 1. Add CI and Release Trust, 2. Add an `s-kit doctor` Check, 3. Add Spec-to-Issues Export, 4. Add Lightweight Playbooks, 5. Add Build-Feature Run Reports, 6. Strengthen Security Audit Coverage, 7. Add Template Overrides and Scale-Adaptive Ceremony Later, 8. Decide Where to Lean on Host Primitives vs. Custom Orchestration (+15 more)
 
 ### Community 6 - "Community 6"
-Cohesion: 0.09
-Nodes (21): Common Rationalizations, Debugging Integration, Example: Bug Fix, Final Rule, Good Tests, GREEN - Minimal Code, Overview, Red Flags - STOP and Start Over (+13 more)
+Cohesion: 0.06
+Nodes (30): 1. Planning, 2. Tracer Bullet, 3. Incremental Loop, 4. Refactor, Anti-Pattern: Horizontal Slices, Checklist Per Cycle, Common Rationalizations, Debugging Integration (+22 more)
 
 ### Community 7 - "Community 7"
 Cohesion: 0.10
@@ -320,32 +331,32 @@ Cohesion: 0.10
 Nodes (19): Bulletproofing Elements, Creation Log: Systematic Debugging Skill, Enhancement 1: TDD Reference, Extraction Decisions, Final Outcome, Initial Version, Iterations, Key Insight (+11 more)
 
 ### Community 10 - "Community 10"
-Cohesion: 0.10
-Nodes (19): Build Feature, Error Handling, Host Adapter, Key Principles, Orchestration, Prerequisites, Status Values, Step 1: Load the Spec (+11 more)
+Cohesion: 0.08
+Nodes (23): Build Feature, Error Handling, Host Adapter, Key Principles, Orchestration, Prerequisites, Status Values, Step 1: Load the Spec (+15 more)
 
 ### Community 11 - "Community 11"
 Cohesion: 0.21
 Nodes (17): sync-to-codex-plugin.sh script, append_git_ignored_directory_excludes(), append_git_ignored_file_excludes(), apply_to_preview_checkout(), confirm(), copy_local_destination_overlay(), copy_preserved_destination_metadata(), die() (+9 more)
 
 ### Community 12 - "Community 12"
-Cohesion: 0.11
-Nodes (18): Acceptance Criteria, API Endpoints, Code Snippets, Dependencies, Description, Environment Variables, Files to Create, Files to Modify (+10 more)
+Cohesion: 0.10
+Nodes (19): Phase, Acceptance Criteria, API Endpoints, Code Snippets, Dependencies, Description, Environment Variables, Files to Create (+11 more)
 
 ### Community 13 - "Community 13"
-Cohesion: 0.11
-Nodes (18): Acceptance Criteria, API Endpoints, Code Snippets, Dependencies, Description, Environment Variables, Files to Create, Files to Modify (+10 more)
+Cohesion: 0.10
+Nodes (19): Phase, Acceptance Criteria, API Endpoints, Code Snippets, Dependencies, Description, Environment Variables, Files to Create (+11 more)
 
 ### Community 14 - "Community 14"
-Cohesion: 0.11
-Nodes (18): Acceptance Criteria, API Endpoints, Code Snippets, Dependencies, Description, Environment Variables, Files to Create, Files to Modify (+10 more)
+Cohesion: 0.10
+Nodes (19): Phase, Acceptance Criteria, API Endpoints, Code Snippets, Dependencies, Description, Environment Variables, Files to Create (+11 more)
 
 ### Community 15 - "Community 15"
-Cohesion: 0.11
-Nodes (18): Acceptance Criteria, API Endpoints, Code Snippets, Dependencies, Description, Environment Variables, Files to Create, Files to Modify (+10 more)
+Cohesion: 0.10
+Nodes (19): Phase, Acceptance Criteria, API Endpoints, Code Snippets, Dependencies, Description, Environment Variables, Files to Create (+11 more)
 
 ### Community 16 - "Community 16"
-Cohesion: 0.11
-Nodes (18): Acceptance Criteria, API Endpoints, Code Snippets, Dependencies, Description, Environment Variables, Files to Create, Files to Modify (+10 more)
+Cohesion: 0.10
+Nodes (19): Phase, Acceptance Criteria, API Endpoints, Code Snippets, Dependencies, Description, Environment Variables, Files to Create (+11 more)
 
 ### Community 17 - "Community 17"
 Cohesion: 0.11
@@ -408,8 +419,8 @@ Cohesion: 0.13
 Nodes (14): Critical Rules, Instructions, Optional: Map Existing Patterns First, Plan Feature, Step 1: Verify Approved Design, Step 2: Derive the Spec Folder, Step 3: Decompose into Tasks, Step 4: Build the Dependency Graph (+6 more)
 
 ### Community 32 - "Community 32"
-Cohesion: 0.15
-Nodes (12): 2026-06-01 - Design Approved, 2026-06-01 - Spec Created, 2026-06-01 - Wave 1 Completed, 2026-06-01 - Wave 1 Spec Compliance Review Failed, 2026-06-01 - Wave 1 Started, 2026-06-01 - Wave 2 Completed, 2026-06-01 - Wave 2 Started, 2026-06-01 - Wave 3 Code Quality Review Failed (+4 more)
+Cohesion: 0.09
+Nodes (21): 2026-06-01 - Phase 1 Completed, 2026-06-01 - Phase 1 Spec Compliance Review Failed, 2026-06-01 - Phase 1 Started, 2026-06-01 - Phase 2 Completed, 2026-06-01 - Phase 2 Started, 2026-06-01 - Phase 3 Code Quality Review Failed, 2026-06-01 - Phase 3 Codex Hook Surface Verified, 2026-06-01 - Phase 3 Completed (+13 more)
 
 ### Community 33 - "Community 33"
 Cohesion: 0.15
@@ -456,16 +467,16 @@ Cohesion: 0.18
 Nodes (5): afterFirst, afterSecond, firstOutput, result, secondOutput
 
 ### Community 44 - "Community 44"
-Cohesion: 0.17
-Nodes (11): Canonical Workflow, How to Access Skills, Instruction Priority, Lanes, Platform Adaptation, Red Flags, Skill Priority, Skill Types (+3 more)
+Cohesion: 0.15
+Nodes (12): Canonical Workflow, Domain Docs Contract, How to Access Skills, Instruction Priority, Lanes, Platform Adaptation, Red Flags, Skill Priority (+4 more)
 
 ### Community 45 - "Community 45"
 Cohesion: 0.18
 Nodes (11): Avoid assuming tools are installed, Create verifiable intermediate outputs, MCP tool references, Next steps, Package dependencies, Returns: "OK" or lists conflicts, Runtime environment, Technical notes (+3 more)
 
 ### Community 46 - "Community 46"
-Cohesion: 0.20
-Nodes (9): Dependency Graph, Overview, Quick Links, Superpowers Dev Port Review, Task Status, Wave 1, Wave 2, Wave 3 (+1 more)
+Cohesion: 0.14
+Nodes (13): Phase 1, Phase 2, Phase 3, Phases, Dependency Graph, Overview, Phase 1, Phase 2 (+5 more)
 
 ### Community 47 - "Community 47"
 Cohesion: 0.20
@@ -761,31 +772,31 @@ Nodes (6): stop-server.sh script, cleanup_alive_metadata(), is_valid_server_id()
 
 ### Community 163 - "Community 163"
 Cohesion: 0.11
-Nodes (18): Acceptance Criteria, API Endpoints, Code Snippets, Dependencies, Description, Environment Variables, Files to Create, Files to Modify (+10 more)
+Nodes (18): Phase, Acceptance Criteria, API Endpoints, Code Snippets, Dependencies, Description, Environment Variables, Files to Create (+10 more)
 
 ### Community 164 - "Community 164"
-Cohesion: 0.11
-Nodes (18): Acceptance Criteria, API Endpoints, Code Snippets, Dependencies, Description, Environment Variables, Files to Create, Files to Modify (+10 more)
+Cohesion: 0.10
+Nodes (19): Phase, Acceptance Criteria, API Endpoints, Code Snippets, Dependencies, Description, Environment Variables, Files to Create (+11 more)
 
 ### Community 165 - "Community 165"
-Cohesion: 0.11
-Nodes (18): Acceptance Criteria, API Endpoints, Code Snippets, Dependencies, Description, Environment Variables, Files to Create, Files to Modify (+10 more)
+Cohesion: 0.10
+Nodes (19): Phase, Acceptance Criteria, API Endpoints, Code Snippets, Dependencies, Description, Environment Variables, Files to Create (+11 more)
 
 ### Community 166 - "Community 166"
 Cohesion: 0.20
 Nodes (9): Alternatives Considered, Approved Approach, Architecture, Configuration and Inputs, Context, Decisions, Design: Build Feature Risk Preflight, Risks and Constraints (+1 more)
 
 ### Community 167 - "Community 167"
-Cohesion: 0.20
-Nodes (9): Build Feature Risk Preflight, Dependency Graph, Overview, Quick Links, Task Status, Wave 1, Wave 2, Wave 3 (+1 more)
+Cohesion: 0.14
+Nodes (13): Phase 1, Phase 2, Phase 3, Phases, Build Feature Risk Preflight, Dependency Graph, Overview, Phase 1 (+5 more)
 
 ### Community 168 - "Community 168"
 Cohesion: 0.20
 Nodes (9): actionRequiredPath, allowedTaskStatuses, created, designPath, feature, implementationLogPath, requirementsPath, specPath (+1 more)
 
 ### Community 169 - "Community 169"
-Cohesion: 0.18
-Nodes (10): 2026-06-09 - Design Approved, 2026-06-09 - Final Integration Status, 2026-06-09 - Spec Created, 2026-06-09 - Wave 1 Result, 2026-06-09 - Wave 1 Started, 2026-06-09 - Wave 2 Result, 2026-06-09 - Wave 2 Started, 2026-06-09 - Wave 3 Result (+2 more)
+Cohesion: 0.12
+Nodes (16): 2026-06-09 - Phase 1 Result, 2026-06-09 - Phase 1 Started, 2026-06-09 - Phase 2 Result, 2026-06-09 - Phase 2 Started, 2026-06-09 - Phase 3 Result, 2026-06-09 - Phase 3 Started, 2026-06-09 - Design Approved, 2026-06-09 - Final Integration Status (+8 more)
 
 ### Community 170 - "Community 170"
 Cohesion: 0.25
@@ -796,32 +807,32 @@ Cohesion: 0.50
 Nodes (4): Build evaluations first, Develop Skills iteratively with Claude, Evaluation and iteration, Observe how Claude navigates Skills
 
 ### Community 173 - "Community 173"
-Cohesion: 0.07
-Nodes (29): 2026-06-10 - Design Approved, 2026-06-10 - Final Integration Review, 2026-06-10 - Spec Created, 2026-06-10 - Wave 1 Started, 2026-06-10 - Wave 2 Started, 2026-06-10 - Wave 3 Started, Baseline Failure Attribution, Implementation Log: Workflow Optimization Bundle (+21 more)
+Cohesion: 0.20
+Nodes (10): 2026-06-10 - Phase 1 Started, Phase 1 Code Quality Review, Phase 1 Coder Results, Phase 1 Complete, Phase 1 Dispatch, Phase 1 Fix, Phase 1 Risk Preflight, Phase 1 Simplification Pass (+2 more)
 
 ### Community 174 - "Community 174"
-Cohesion: 0.12
-Nodes (16): Acceptance Criteria, Code Snippets, Dependencies, Description, Files to Create, Files to Modify, Final Verification, GREEN (+8 more)
+Cohesion: 0.11
+Nodes (17): Phase, Acceptance Criteria, Code Snippets, Dependencies, Description, Files to Create, Files to Modify, Final Verification (+9 more)
 
 ### Community 175 - "Community 175"
 Cohesion: 0.12
-Nodes (15): Acceptance Criteria, Dependencies, Description, Files to Create, Files to Modify, Final Verification, GREEN, Implementation Steps (+7 more)
+Nodes (16): Phase, Acceptance Criteria, Dependencies, Description, Files to Create, Files to Modify, Final Verification, GREEN (+8 more)
 
 ### Community 176 - "Community 176"
 Cohesion: 0.12
-Nodes (15): Acceptance Criteria, Dependencies, Description, Files to Create, Files to Modify, Final Verification, GREEN, Implementation Steps (+7 more)
+Nodes (16): Phase, Acceptance Criteria, Dependencies, Description, Files to Create, Files to Modify, Final Verification, GREEN (+8 more)
 
 ### Community 177 - "Community 177"
 Cohesion: 0.12
-Nodes (15): Acceptance Criteria, Dependencies, Description, Files to Create, Files to Modify, Final Verification, GREEN, Implementation Steps (+7 more)
+Nodes (16): Phase, Acceptance Criteria, Dependencies, Description, Files to Create, Files to Modify, Final Verification, GREEN (+8 more)
 
 ### Community 178 - "Community 178"
 Cohesion: 0.12
-Nodes (15): Acceptance Criteria, Dependencies, Description, Files to Create, Files to Modify, Final Verification, GREEN, Implementation Steps (+7 more)
+Nodes (16): Phase, Acceptance Criteria, Dependencies, Description, Files to Create, Files to Modify, Final Verification, GREEN (+8 more)
 
 ### Community 179 - "Community 179"
 Cohesion: 0.12
-Nodes (15): Acceptance Criteria, Dependencies, Description, Files to Create, Files to Modify, Final Verification, GREEN, Implementation Steps (+7 more)
+Nodes (16): Phase, Acceptance Criteria, Dependencies, Description, Files to Create, Files to Modify, Final Verification, GREEN (+8 more)
 
 ### Community 180 - "Community 180"
 Cohesion: 0.14
@@ -832,8 +843,8 @@ Cohesion: 0.11
 Nodes (18): 1. Check Prerequisites, 1. Gate on a Clean Worktree, 2. Detect the Platform, 2. Inspect Git State, 3. Detect the Target Branch, 3. Find Commits to Ship, 4. Ensure a Feature Branch, 4. Inspect Commits and Diff (+10 more)
 
 ### Community 182 - "Community 182"
-Cohesion: 0.20
-Nodes (9): Dependency Graph, Overview, Quick Links, Task Status, Wave 1, Wave 2, Wave 3, Waves (+1 more)
+Cohesion: 0.14
+Nodes (13): Phase 1, Phase 2, Phase 3, Phases, Dependency Graph, Overview, Phase 1, Phase 2 (+5 more)
 
 ### Community 183 - "Community 183"
 Cohesion: 0.20
@@ -869,19 +880,19 @@ Nodes (5): Common Workflows, GitHub CLI, Output Rules, Prerequisites, Safety
 
 ### Community 193 - "Community 193"
 Cohesion: 0.11
-Nodes (18): Acceptance Criteria, API Endpoints, Code Snippets, Dependencies, Description, Environment Variables, Files to Create, Files to Modify (+10 more)
+Nodes (18): Phase, Acceptance Criteria, API Endpoints, Code Snippets, Dependencies, Description, Environment Variables, Files to Create (+10 more)
 
 ### Community 194 - "Community 194"
 Cohesion: 0.11
-Nodes (18): Acceptance Criteria, API Endpoints, Code Snippets, Dependencies, Description, Environment Variables, Files to Create, Files to Modify (+10 more)
+Nodes (18): Phase, Acceptance Criteria, API Endpoints, Code Snippets, Dependencies, Description, Environment Variables, Files to Create (+10 more)
 
 ### Community 195 - "Community 195"
 Cohesion: 0.11
-Nodes (18): Acceptance Criteria, API Endpoints, Code Snippets, Dependencies, Description, Environment Variables, Files to Create, Files to Modify (+10 more)
+Nodes (18): Phase, Acceptance Criteria, API Endpoints, Code Snippets, Dependencies, Description, Environment Variables, Files to Create (+10 more)
 
 ### Community 196 - "Community 196"
 Cohesion: 0.11
-Nodes (18): Acceptance Criteria, API Endpoints, Code Snippets, Dependencies, Description, Environment Variables, Files to Create, Files to Modify (+10 more)
+Nodes (18): Phase, Acceptance Criteria, API Endpoints, Code Snippets, Dependencies, Description, Environment Variables, Files to Create (+10 more)
 
 ### Community 197 - "Community 197"
 Cohesion: 0.15
@@ -889,7 +900,7 @@ Nodes (12): Alternatives Considered, Approved Approach, Architecture, Configurat
 
 ### Community 198 - "Community 198"
 Cohesion: 0.20
-Nodes (9): Dependency Graph, Overview, Quick Links, Ship It Delivery Skill, Task Status, Wave 1, Wave 2, Wave 3 (+1 more)
+Nodes (9): Phase 1, Phase 2, Phase 3, Phases, Dependency Graph, Overview, Quick Links, Ship It Delivery Skill (+1 more)
 
 ### Community 199 - "Community 199"
 Cohesion: 0.08
@@ -901,47 +912,47 @@ Nodes (7): Acceptance Criteria, Assumptions, Goals, Non-Goals, Requirements: Shi
 
 ### Community 201 - "Community 201"
 Cohesion: 0.09
-Nodes (22): 2026-06-14 - Design Approved, 2026-06-14 - Spec Created, 2026-06-14 - Wave 1 Code Quality Review, 2026-06-14 - Wave 1 Fix Cycle 1, 2026-06-14 - Wave 1 Post-Fix Code Quality Review, 2026-06-14 - Wave 1 Post-Fix Simplification, 2026-06-14 - Wave 1 Post-Fix Spec Compliance Review, 2026-06-14 - Wave 1 Simplification (+14 more)
+Nodes (22): 2026-06-14 - Phase 1 Code Quality Review, 2026-06-14 - Phase 1 Fix Cycle 1, 2026-06-14 - Phase 1 Post-Fix Code Quality Review, 2026-06-14 - Phase 1 Post-Fix Simplification, 2026-06-14 - Phase 1 Post-Fix Spec Compliance Review, 2026-06-14 - Phase 1 Simplification, 2026-06-14 - Phase 1 Spec Compliance Review, 2026-06-14 - Phase 1 Started (+14 more)
 
 ### Community 203 - "Community 203"
 Cohesion: 0.13
 Nodes (15): assert, cleanup(), CONTENT_DIR, fs, http, path, runTests(), SECURITY_HEADERS (+7 more)
 
 ### Community 204 - "Community 204"
-Cohesion: 0.11
-Nodes (18): Acceptance Criteria, API Endpoints, Code Snippets, Dependencies, Description, Environment Variables, Files to Create, Files to Modify (+10 more)
+Cohesion: 0.10
+Nodes (19): Phase, Acceptance Criteria, API Endpoints, Code Snippets, Dependencies, Description, Environment Variables, Files to Create (+11 more)
 
 ### Community 205 - "Community 205"
-Cohesion: 0.11
-Nodes (18): Acceptance Criteria, API Endpoints, Code Snippets, Dependencies, Description, Environment Variables, Files to Create, Files to Modify (+10 more)
+Cohesion: 0.10
+Nodes (19): Phase, Acceptance Criteria, API Endpoints, Code Snippets, Dependencies, Description, Environment Variables, Files to Create (+11 more)
 
 ### Community 206 - "Community 206"
 Cohesion: 0.11
-Nodes (17): Acceptance Criteria, Code Snippets, Dependencies, Description, Environment Variables, Files to Create, Files to Modify, Final Verification (+9 more)
+Nodes (18): Phase, Acceptance Criteria, Code Snippets, Dependencies, Description, Environment Variables, Files to Create, Files to Modify (+10 more)
 
 ### Community 207 - "Community 207"
 Cohesion: 0.11
-Nodes (17): Acceptance Criteria, Code Snippets, Dependencies, Description, Environment Variables, Files to Create, Files to Modify, Final Verification (+9 more)
+Nodes (18): Phase, Acceptance Criteria, Code Snippets, Dependencies, Description, Environment Variables, Files to Create, Files to Modify (+10 more)
 
 ### Community 208 - "Community 208"
-Cohesion: 0.12
-Nodes (16): Acceptance Criteria, Code Snippets, Dependencies, Description, Files to Create, Files to Modify, Final Verification, GREEN (+8 more)
+Cohesion: 0.11
+Nodes (17): Phase, Acceptance Criteria, Code Snippets, Dependencies, Description, Files to Create, Files to Modify, Final Verification (+9 more)
 
 ### Community 209 - "Community 209"
 Cohesion: 0.30
 Nodes (9): assert_alive(), assert_dead(), assert_eq(), fail(), pass(), start_impostor(), wait_for_info(), write_state() (+1 more)
 
 ### Community 210 - "Community 210"
-Cohesion: 0.13
-Nodes (14): 2026-06-14 - Design Approved, 2026-06-14 - Final Reviews, 2026-06-14 - Final Verification, 2026-06-14 - Spec Created, 2026-06-14 - Wave 1 Assignment, 2026-06-14 - Wave 1 Completed, 2026-06-14 - Wave 1 Started, 2026-06-14 - Wave 2 Completed (+6 more)
+Cohesion: 0.08
+Nodes (23): 2026-06-14 - Phase 1 Assignment, 2026-06-14 - Phase 1 Completed, 2026-06-14 - Phase 1 Started, 2026-06-14 - Phase 2 Completed, 2026-06-14 - Phase 2 Started, 2026-06-14 - Phase 3 Completed, 2026-06-14 - Phase 3 Started, 2026-06-14 - Phase 4 Completed (+15 more)
 
 ### Community 211 - "Community 211"
 Cohesion: 0.18
 Nodes (8): assert, createElement(), fs, HELPER_PATH, loadBrowser(), path, source, vm
 
 ### Community 212 - "Community 212"
-Cohesion: 0.18
-Nodes (10): Brainstorm Companion Hardening, Dependency Graph, Overview, Quick Links, Task Status, Wave 1, Wave 2, Wave 3 (+2 more)
+Cohesion: 0.12
+Nodes (15): Phase 1, Phase 2, Phase 3, Phase 4, Phases, Brainstorm Companion Hardening, Dependency Graph, Overview (+7 more)
 
 ### Community 213 - "Community 213"
 Cohesion: 0.20
@@ -964,20 +975,20 @@ Cohesion: 0.33
 Nodes (4): assert, { browserLauncherForPlatform }, path, SERVER_PATH
 
 ### Community 219 - "Community 219"
-Cohesion: 0.12
-Nodes (16): Acceptance Criteria, Code Snippets, Dependencies, Description, Files to Create, Files to Modify, Final Verification, GREEN (+8 more)
+Cohesion: 0.11
+Nodes (17): Phase, Acceptance Criteria, Code Snippets, Dependencies, Description, Files to Create, Files to Modify, Final Verification (+9 more)
 
 ### Community 220 - "Community 220"
 Cohesion: 0.12
-Nodes (15): Acceptance Criteria, Dependencies, Description, Files to Create, Files to Modify, Final Verification, GREEN, Implementation Steps (+7 more)
+Nodes (16): Phase, Acceptance Criteria, Dependencies, Description, Files to Create, Files to Modify, Final Verification, GREEN (+8 more)
 
 ### Community 221 - "Community 221"
 Cohesion: 0.12
-Nodes (15): Acceptance Criteria, Dependencies, Description, Files to Create, Files to Modify, Final Verification, GREEN, Implementation Steps (+7 more)
+Nodes (16): Phase, Acceptance Criteria, Dependencies, Description, Files to Create, Files to Modify, Final Verification, GREEN (+8 more)
 
 ### Community 222 - "Community 222"
 Cohesion: 0.12
-Nodes (15): Acceptance Criteria, Dependencies, Description, Files to Create, Files to Modify, Final Verification, GREEN, Implementation Steps (+7 more)
+Nodes (16): Phase, Acceptance Criteria, Dependencies, Description, Files to Create, Files to Modify, Final Verification, GREEN (+8 more)
 
 ### Community 223 - "Community 223"
 Cohesion: 0.13
@@ -988,16 +999,16 @@ Cohesion: 0.20
 Nodes (9): actionRequiredPath, allowedTaskStatuses, created, designPath, feature, implementationLogPath, requirementsPath, specPath (+1 more)
 
 ### Community 225 - "Community 225"
-Cohesion: 0.22
-Nodes (8): Dependency Graph, Overview, Quick and Bug Workflows, Quick Links, Task Status, Wave 1, Wave 2, Waves
+Cohesion: 0.17
+Nodes (11): Phase 1, Phase 2, Phases, Dependency Graph, Overview, Phase 1, Phase 2, Phases (+3 more)
 
 ### Community 226 - "Community 226"
 Cohesion: 0.25
 Nodes (7): Acceptance Criteria, Assumptions, Goals, Non-Goals, Requirements: Quick and Bug Workflows, Summary, Technical Constraints
 
 ### Community 227 - "Community 227"
-Cohesion: 0.25
-Nodes (7): 2026-06-17 - Baseline Verification, 2026-06-17 - Design Approved, 2026-06-17 - Implementation Started, 2026-06-17 - Spec Created, 2026-06-17 - Wave 1 Complete, 2026-06-17 - Wave 2 Complete, Implementation Log: Quick and Bug Workflows
+Cohesion: 0.20
+Nodes (9): 2026-06-17 - Phase 1 Complete, 2026-06-17 - Phase 2 Complete, 2026-06-17 - Baseline Verification, 2026-06-17 - Design Approved, 2026-06-17 - Implementation Started, 2026-06-17 - Phase 1 Complete, 2026-06-17 - Phase 2 Complete, 2026-06-17 - Spec Created (+1 more)
 
 ### Community 229 - "Community 229"
 Cohesion: 0.25
@@ -1005,23 +1016,23 @@ Nodes (7): Common Mistakes, Escalation, Overview, Quick Change, Related Skills, 
 
 ### Community 230 - "Community 230"
 Cohesion: 0.11
-Nodes (17): Acceptance Criteria, API Endpoints, Code Snippets, Dependencies, Description, Environment Variables, Files to Create, Files to Modify (+9 more)
+Nodes (18): Phase, Acceptance Criteria, API Endpoints, Code Snippets, Dependencies, Description, Environment Variables, Files to Create (+10 more)
 
 ### Community 231 - "Community 231"
 Cohesion: 0.11
-Nodes (17): Acceptance Criteria, API Endpoints, Code Snippets, Dependencies, Description, Environment Variables, Files to Create, Files to Modify (+9 more)
+Nodes (18): Phase, Acceptance Criteria, API Endpoints, Code Snippets, Dependencies, Description, Environment Variables, Files to Create (+10 more)
 
 ### Community 232 - "Community 232"
 Cohesion: 0.11
-Nodes (17): Acceptance Criteria, API Endpoints, Code Snippets, Dependencies, Description, Environment Variables, Files to Create, Files to Modify (+9 more)
+Nodes (18): Phase, Acceptance Criteria, API Endpoints, Code Snippets, Dependencies, Description, Environment Variables, Files to Create (+10 more)
 
 ### Community 233 - "Community 233"
 Cohesion: 0.11
-Nodes (17): Acceptance Criteria, API Endpoints, Code Snippets, Dependencies, Description, Environment Variables, Files to Create, Files to Modify (+9 more)
+Nodes (18): Phase, Acceptance Criteria, API Endpoints, Code Snippets, Dependencies, Description, Environment Variables, Files to Create (+10 more)
 
 ### Community 234 - "Community 234"
-Cohesion: 0.18
-Nodes (10): Dependency Graph, Engineering Skills Integration, Overview, Quick Links, Task Status, Wave 1, Wave 2, Wave 3 (+2 more)
+Cohesion: 0.12
+Nodes (15): Phase 1, Phase 2, Phase 3, Phase 4, Phases, Dependency Graph, Engineering Skills Integration, Overview (+7 more)
 
 ### Community 235 - "Community 235"
 Cohesion: 0.20
@@ -1060,32 +1071,68 @@ Cohesion: 0.40
 Nodes (4): End State, Shape, UI Prototype, Verification
 
 ### Community 244 - "Community 244"
-Cohesion: 0.50
-Nodes (3): 2026-06-20 - Design Approved, 2026-06-20 - Spec Created, Implementation Log: Engineering Skills Integration
+Cohesion: 0.40
+Nodes (4): 2026-06-20 - Design Approved, 2026-06-20 - Implementation Completed, 2026-06-20 - Spec Created, Implementation Log: Engineering Skills Integration
 
 ### Community 245 - "Community 245"
 Cohesion: 0.50
 Nodes (3): Comparison Table, Design It Twice, Process
 
+### Community 249 - "Community 249"
+Cohesion: 0.50
+Nodes (3): Bad Tests, Good and Bad Tests, Good Tests
+
+### Community 252 - "Community 252"
+Cohesion: 0.11
+Nodes (18): Acceptance Criteria, API Endpoints, Code Snippets, Dependencies, Description, Environment Variables, Files to Create, Files to Modify (+10 more)
+
+### Community 253 - "Community 253"
+Cohesion: 0.15
+Nodes (12): ADR, Context, Context: s-kit, Design, Glossary, Lane, Phase, Phase Risk Preflight (+4 more)
+
+### Community 254 - "Community 254"
+Cohesion: 0.22
+Nodes (9): 2026-06-10 - Phase 1 Started, Phase 1 Code Quality Review, Phase 1 Coder Results, Phase 1 Complete, Phase 1 Dispatch, Phase 1 Fix, Phase 1 Risk Preflight, Phase 1 Simplification Pass (+1 more)
+
+### Community 255 - "Community 255"
+Cohesion: 0.25
+Nodes (8): 2026-06-10 - Phase 3 Started, Phase 3 Code Quality Review, Phase 3 Coder Result, Phase 3 Complete, Phase 3 Fix, Phase 3 Risk Preflight, Phase 3 Simplification Pass, Phase 3 Spec Compliance Review
+
+### Community 256 - "Community 256"
+Cohesion: 0.25
+Nodes (8): 2026-06-10 - Phase 3 Started, Phase 3 Code Quality Review, Phase 3 Coder Result, Phase 3 Complete, Phase 3 Fix, Phase 3 Risk Preflight, Phase 3 Simplification Pass, Phase 3 Spec Compliance Review
+
+### Community 257 - "Community 257"
+Cohesion: 0.29
+Nodes (7): 2026-06-10 - Phase 2 Started, Phase 2 Code Quality Review, Phase 2 Coder Result, Phase 2 Complete, Phase 2 Risk Preflight, Phase 2 Simplification Pass, Phase 2 Spec Compliance Review
+
+### Community 258 - "Community 258"
+Cohesion: 0.29
+Nodes (7): 2026-06-10 - Phase 2 Started, Phase 2 Code Quality Review, Phase 2 Coder Result, Phase 2 Complete, Phase 2 Risk Preflight, Phase 2 Simplification Pass, Phase 2 Spec Compliance Review
+
+### Community 259 - "Community 259"
+Cohesion: 0.40
+Nodes (4): 2026-06-10 - Design Approved, 2026-06-10 - Final Integration Review, 2026-06-10 - Spec Created, Implementation Log: Workflow Optimization Bundle
+
 ## Knowledge Gaps
-- **1628 isolated node(s):** `name`, `description`, `name`, `email`, `plugins` (+1623 more)
+- **1769 isolated node(s):** `name`, `description`, `name`, `email`, `plugins` (+1764 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **46 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **48 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
+- **Why does `Implementation Log: Workflow Optimization Bundle` connect `Community 259` to `Community 256`, `Community 257`, `Community 258`, `Community 173`, `Community 254`, `Community 255`?**
+  _High betweenness centrality (0.001) - this node is a cross-community bridge._
+- **Why does `2026-06-10 - Phase 1 Started` connect `Community 254` to `Community 259`, `Community 173`?**
+  _High betweenness centrality (0.001) - this node is a cross-community bridge._
+- **Why does `2026-06-10 - Phase 2 Started` connect `Community 258` to `Community 259`?**
+  _High betweenness centrality (0.001) - this node is a cross-community bridge._
 - **What connects `name`, `description`, `name` to the rest of the system?**
-  _1628 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _1769 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
-  _Cohesion score 0.05555555555555555 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.05263157894736842 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**
   _Cohesion score 0.14204545454545456 - nodes in this community are weakly interconnected._
 - **Should `Community 2` be split into smaller, more focused modules?**
   _Cohesion score 0.06666666666666667 - nodes in this community are weakly interconnected._
-- **Should `Community 3` be split into smaller, more focused modules?**
-  _Cohesion score 0.07142857142857142 - nodes in this community are weakly interconnected._
-- **Should `Community 4` be split into smaller, more focused modules?**
-  _Cohesion score 0.08 - nodes in this community are weakly interconnected._
-- **Should `Community 5` be split into smaller, more focused modules?**
-  _Cohesion score 0.08333333333333333 - nodes in this community are weakly interconnected._

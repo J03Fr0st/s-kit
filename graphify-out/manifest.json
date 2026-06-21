@@ -1,17 +1,17 @@
 {
   "D:\\Source\\s-kit\\.claude-plugin\\marketplace.json": {
-    "mtime": 1780312096.8920019,
-    "ast_hash": "d1bbe543b2254483011b77621af026c3",
+    "mtime": 1782064004.4383693,
+    "ast_hash": "3d5d4a7e6f136cb726f2dbd8934b2241",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\.claude-plugin\\plugin.json": {
-    "mtime": 1780312096.8920019,
-    "ast_hash": "c2ba2c38a3ee0b05eb35930d37b78599",
+    "mtime": 1782064004.4393687,
+    "ast_hash": "9392b8bd23969319269e4f3c46ef7434",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\.codex-plugin\\plugin.json": {
-    "mtime": 1780393771.1909482,
-    "ast_hash": "3e82c074652d1e1778500b3a475b69c6",
+    "mtime": 1782064004.4403696,
+    "ast_hash": "89124f5ade101ed3b557367a9b3940fd",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\.codex\\hooks.json": {
@@ -20,8 +20,8 @@
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\.cursor-plugin\\plugin.json": {
-    "mtime": 1780312096.8930056,
-    "ast_hash": "0e04c5caab7dfec1bd11e6177c43b030",
+    "mtime": 1782064004.4413688,
+    "ast_hash": "6cd742939aa87bcf29cf177ca1d8d460",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\.opencode\\package.json": {
@@ -40,13 +40,13 @@
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\specs\\2026-06-01-superpowers-dev-port\\spec.json": {
-    "mtime": 1780337439.9782438,
-    "ast_hash": "ebe8770a8a4f4ef806f472c3cae1021f",
+    "mtime": 1782064203.0088046,
+    "ast_hash": "2043b62875d075ec171fe43766cc8baf",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\gemini-extension.json": {
-    "mtime": 1780312096.8930056,
-    "ast_hash": "b393fa1960b81bb2d735efea23358a40",
+    "mtime": 1782064015.9404652,
+    "ast_hash": "02fcdcda2929fb6f7302493066e06c84",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\hooks\\hooks-cursor.json": {
@@ -105,8 +105,8 @@
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\scripts\\verify-workflow.ps1": {
-    "mtime": 1781680787.402092,
-    "ast_hash": "27d9a17b4faa984b60e3b0f964c1002b",
+    "mtime": 1782064330.531649,
+    "ast_hash": "3f7067d25cd4a16e78294a8817e2bb36",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\skills\\brainstorming\\scripts\\helper.js": {
@@ -125,8 +125,8 @@
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\skills\\plan-feature\\references\\spec-json-template.json": {
-    "mtime": 1781675686.9373567,
-    "ast_hash": "16410e84abee2ca40ff6152626eb9596",
+    "mtime": 1782064203.000804,
+    "ast_hash": "13573f37f4b58bae299452cc07c22835",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\skills\\systematic-debugging\\condition-based-waiting-example.ts": {
@@ -190,8 +190,8 @@
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\tests\\claude-code\\test-build-feature.sh": {
-    "mtime": 1780244965.9888072,
-    "ast_hash": "47e2a67908c828928773fcc3bd3820c3",
+    "mtime": 1782064015.9314656,
+    "ast_hash": "1d690a862d6af07f336169a4e8ffb8aa",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\tests\\claude-code\\test-document-review-system.sh": {
@@ -405,8 +405,8 @@
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\README.md": {
-    "mtime": 1781940262.7434444,
-    "ast_hash": "7a736caf4fbfb02ace4d7101f8e3037d",
+    "mtime": 1782064015.9424665,
+    "ast_hash": "0b1948681c3c5a4ba31c758bc42d81ba",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\RELEASE-NOTES.md": {
@@ -430,8 +430,8 @@
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\agents\\s-kit-coder.md": {
-    "mtime": 1780177151.7611308,
-    "ast_hash": "f42cc9f71b7dd5cee6f83c252d4557fa",
+    "mtime": 1782064015.4848812,
+    "ast_hash": "2bc27f9d3a525cbc3b4fce7fc5e468d0",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\agents\\s-kit-fixer.md": {
@@ -450,13 +450,13 @@
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\agents\\s-kit-spec-reviewer.md": {
-    "mtime": 1781675686.9253564,
-    "ast_hash": "a37bef76b65861a12029f6e903e19425",
+    "mtime": 1782064015.4868815,
+    "ast_hash": "67dbabab5d64aed0c30955c066b8d730",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\comparable-project-enhancements.md": {
-    "mtime": 1780251243.923064,
-    "ast_hash": "1418f205690b3b2c125766e1762206a9",
+    "mtime": 1782064015.533918,
+    "ast_hash": "7841e460f4d688ddf48bc61354559e82",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\design\\2026-06-01-superpowers-dev-port\\design.md": {
@@ -465,13 +465,13 @@
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\eval-harness-strategy.md": {
-    "mtime": 1780335401.6622133,
-    "ast_hash": "ca04e2a965af68550f308b79277ead8a",
+    "mtime": 1782064015.5349176,
+    "ast_hash": "c3765ee197ecde64c2b8994291bd58d9",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\future-development-research.md": {
-    "mtime": 1780251412.8904247,
-    "ast_hash": "789b16a3f859131802f1d3a399711e71",
+    "mtime": 1782064015.535917,
+    "ast_hash": "e1aa89f3bb88cb96654be68cfd6151d0",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\playbooks\\port-new-harness.md": {
@@ -480,8 +480,8 @@
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\specs\\2026-06-01-superpowers-dev-port\\README.md": {
-    "mtime": 1780337439.9802458,
-    "ast_hash": "9e812ebfb065df7c7d021e5aa4b4f210",
+    "mtime": 1782064015.4948845,
+    "ast_hash": "3055a4c59817bf5fe7daee456d1cb749",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\specs\\2026-06-01-superpowers-dev-port\\action-required.md": {
@@ -490,43 +490,43 @@
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\specs\\2026-06-01-superpowers-dev-port\\implementation-log.md": {
-    "mtime": 1780337439.9802458,
-    "ast_hash": "eaba0de2fde9aa3f141336522d7b44b8",
+    "mtime": 1782064015.4938803,
+    "ast_hash": "1a0ed2ef3de2940ae8dad284e0e1a5af",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\specs\\2026-06-01-superpowers-dev-port\\requirements.md": {
-    "mtime": 1780334850.9657345,
-    "ast_hash": "da951b2b9459385e6c91dc28ce229031",
+    "mtime": 1782064015.495884,
+    "ast_hash": "0f3ec268df67c616650bd7f9a6534058",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\specs\\2026-06-01-superpowers-dev-port\\tasks\\task-01-reviewer-safety-scoped-ranges.md": {
-    "mtime": 1780336274.4425993,
-    "ast_hash": "25541cc988e6ee68757a6f8cd428d4c5",
+    "mtime": 1782064015.4898837,
+    "ast_hash": "ba56dcfad83bceab273bb67f3db081e6",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\specs\\2026-06-01-superpowers-dev-port\\tasks\\task-02-harness-porting-playbook.md": {
-    "mtime": 1780336274.4425993,
-    "ast_hash": "6603c55f49ff7fb2abb711f9f5ac8347",
+    "mtime": 1782064015.4908807,
+    "ast_hash": "932e06de7d81bb3357556dec62a1195e",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\specs\\2026-06-01-superpowers-dev-port\\tasks\\task-03-eval-harness-strategy.md": {
-    "mtime": 1780336274.4435992,
-    "ast_hash": "4ed82b85715af8e13e7f348b5ada897b",
+    "mtime": 1782064015.4918802,
+    "ast_hash": "c4c3694e054c2b318de03a64eb6aa7af",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\specs\\2026-06-01-superpowers-dev-port\\tasks\\task-04-action-language-cleanup.md": {
-    "mtime": 1780336866.8540938,
-    "ast_hash": "79675bdf0a43ea180d60c1329e0ea95a",
+    "mtime": 1782064015.4928806,
+    "ast_hash": "17bff003036744de0facc69657038692",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\specs\\2026-06-01-superpowers-dev-port\\tasks\\task-05-codex-native-hooks.md": {
-    "mtime": 1780337439.9792457,
-    "ast_hash": "ab6edc22ff38fc1607911164a2dd6e64",
+    "mtime": 1782064015.4928806,
+    "ast_hash": "7027a0654d69b663088ff2585709b197",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\skills\\brainstorming\\SKILL.md": {
-    "mtime": 1781940262.745445,
-    "ast_hash": "28e2a158962c0540f543fa75b92d9a0e",
+    "mtime": 1782064015.659086,
+    "ast_hash": "c92399dc2fd9362cb89e05120eb1bef9",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\skills\\brainstorming\\references\\design-template.md": {
@@ -550,28 +550,28 @@
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\skills\\build-feature\\SKILL.md": {
-    "mtime": 1781675686.9363563,
-    "ast_hash": "1db246069d2eaa3c69fa6bb91078f356",
+    "mtime": 1782064298.6109836,
+    "ast_hash": "414a1f2c637ad3cc22142c828b1b384f",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\skills\\build-feature\\references\\coder-prompt-template.md": {
-    "mtime": 1781091306.9777493,
-    "ast_hash": "10b0c8c79197965624ea2d52533ab22a",
+    "mtime": 1782064298.6109836,
+    "ast_hash": "42db89c68526f2f941da12446aa4611e",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\skills\\build-feature\\references\\fix-prompt-template.md": {
-    "mtime": 1781001688.4078562,
-    "ast_hash": "f112cecc0abaa53c2eb08490b427c150",
+    "mtime": 1782064298.6129835,
+    "ast_hash": "4e156c47f6180042caf2938dcb62ca6a",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\skills\\build-feature\\references\\review-prompt-template.md": {
-    "mtime": 1781091306.978758,
-    "ast_hash": "36e1075952c7a6b0a21de2195c8eb992",
+    "mtime": 1782064298.611984,
+    "ast_hash": "3c7d4f4da3184a8c2537240d61070691",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\skills\\build-feature\\references\\simplifier-prompt-template.md": {
-    "mtime": 1781091306.979758,
-    "ast_hash": "732afd7c8bd3d830c138078acbfff43f",
+    "mtime": 1782064298.6129835,
+    "ast_hash": "d6b9fd8524be93984e9d6e3bf1503555",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\skills\\dispatching-parallel-agents\\SKILL.md": {
@@ -605,8 +605,8 @@
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\skills\\plan-feature\\SKILL.md": {
-    "mtime": 1781675686.9363563,
-    "ast_hash": "4ce18cc5a458fec7769c2b1c83ab7d5a",
+    "mtime": 1782064298.6079824,
+    "ast_hash": "e08bd0b5e25d2bc7374d239dfe40220c",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\skills\\plan-feature\\references\\action-required-template.md": {
@@ -615,18 +615,18 @@
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\skills\\plan-feature\\references\\readme-template.md": {
-    "mtime": 1781675686.9373567,
-    "ast_hash": "3bef04b3c63f9c49c08242f2b9638864",
+    "mtime": 1782064015.6670833,
+    "ast_hash": "c5eea786191040d8c033ee5d5902216a",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\skills\\plan-feature\\references\\requirements-template.md": {
-    "mtime": 1780177896.3581505,
-    "ast_hash": "e5d77ec85d316188fae4cfca15af0c1b",
+    "mtime": 1782064298.6089833,
+    "ast_hash": "4899be5abf2092187c4e008f62cb6f90",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\skills\\plan-feature\\references\\task-template.md": {
-    "mtime": 1780177896.3626747,
-    "ast_hash": "77980b7c701726269aaf29eb5d0b6fe7",
+    "mtime": 1782064298.609984,
+    "ast_hash": "14269b3327083dc966cdaaa2300cdc4f",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\skills\\receiving-code-review\\SKILL.md": {
@@ -635,8 +635,8 @@
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\skills\\requesting-code-review\\SKILL.md": {
-    "mtime": 1780336392.4938252,
-    "ast_hash": "089f1fee2e939b1b7f5ecc784b9ed948",
+    "mtime": 1782064015.6700838,
+    "ast_hash": "abce993f30584f0c4bc379be61212d75",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\skills\\requesting-code-review\\code-reviewer.md": {
@@ -650,8 +650,8 @@
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\skills\\systematic-debugging\\SKILL.md": {
-    "mtime": 1781940262.7484448,
-    "ast_hash": "7c5f4626ef22a4cd951f0d30159ccb35",
+    "mtime": 1782064298.6079824,
+    "ast_hash": "c8a2edd7ebc3d87e55af138ac1d9b835",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\skills\\systematic-debugging\\condition-based-waiting.md": {
@@ -690,13 +690,8 @@
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\skills\\test-driven-development\\SKILL.md": {
-    "mtime": 1781940262.7474446,
-    "ast_hash": "ab7483c36e9828a5310a80b3432aa530",
-    "semantic_hash": ""
-  },
-  "D:\\Source\\s-kit\\skills\\test-driven-development\\testing-anti-patterns.md": {
-    "mtime": 1779870244.3227735,
-    "ast_hash": "f4373033bf29f06897cd63c994deb2a7",
+    "mtime": 1782063645.9684849,
+    "ast_hash": "e5a311ecfdc30f5d193202d4a0ef28a5",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\skills\\using-git-worktrees\\SKILL.md": {
@@ -705,8 +700,8 @@
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\skills\\using-s-kit\\SKILL.md": {
-    "mtime": 1781940262.744445,
-    "ast_hash": "c0034eb34963b5c143d75f40c0c886b7",
+    "mtime": 1782064298.6069827,
+    "ast_hash": "f58c90094494cccd68e32d730c9aa18b",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\skills\\using-s-kit\\references\\codex-tools.md": {
@@ -885,18 +880,18 @@
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\specs\\2026-06-09-build-feature-risk-preflight\\spec.json": {
-    "mtime": 1781001857.161742,
-    "ast_hash": "6f1436956a1487166d547119d3c07407",
+    "mtime": 1782064203.0078042,
+    "ast_hash": "549506eafaebab8d523f677e0cb4c120",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\design\\2026-06-09-build-feature-risk-preflight\\design.md": {
-    "mtime": 1781000334.7980998,
-    "ast_hash": "f0c870a7b5ed17fd2c4665ae19a5bc04",
+    "mtime": 1782064015.4878845,
+    "ast_hash": "eda140467b6a0cf834600716a25fa6aa",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\specs\\2026-06-09-build-feature-risk-preflight\\README.md": {
-    "mtime": 1781001719.2459035,
-    "ast_hash": "26839a1d5e47a931e74a8127f9c508b7",
+    "mtime": 1782064015.5008874,
+    "ast_hash": "ba7eb520dfcb9ea1a340fb80eaea6182",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\specs\\2026-06-09-build-feature-risk-preflight\\action-required.md": {
@@ -905,33 +900,33 @@
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\specs\\2026-06-09-build-feature-risk-preflight\\implementation-log.md": {
-    "mtime": 1781001857.1637416,
-    "ast_hash": "244790932e9a0c30e4b6dc718231a5ff",
+    "mtime": 1782064015.4998887,
+    "ast_hash": "510592d1b2a627c76b7a3359c735b05c",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\specs\\2026-06-09-build-feature-risk-preflight\\requirements.md": {
-    "mtime": 1781001166.4980855,
-    "ast_hash": "e10c3e0cd257d986cb085622649a48fa",
+    "mtime": 1782064015.5018876,
+    "ast_hash": "731feee33ef4895ad4fc83593bed1fee",
     "semantic_hash": ""
   },
-  "D:\\Source\\s-kit\\docs\\specs\\2026-06-09-build-feature-risk-preflight\\tasks\\task-01-wave-risk-preflight.md": {
+  "D:\\Source\\s-kit\\docs\\specs\\2026-06-09-build-feature-risk-preflight\\tasks\\task-01-Phase-risk-preflight.md": {
     "mtime": 1781001656.3667145,
     "ast_hash": "95dce8bdc934b205541647d7cf9e2d39",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\specs\\2026-06-09-build-feature-risk-preflight\\tasks\\task-02-complete-punch-list-mode.md": {
-    "mtime": 1781001719.2439032,
-    "ast_hash": "e168487fc18569e97397fcd6d0c2feb7",
+    "mtime": 1782064015.4978907,
+    "ast_hash": "18015a9bf7b302a3cb72a77634c3b2d8",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\specs\\2026-06-09-build-feature-risk-preflight\\tasks\\task-03-verification-guardrails.md": {
-    "mtime": 1781001857.162742,
-    "ast_hash": "162e56842c847cd74e057d880c2a74e7",
+    "mtime": 1782064015.4988883,
+    "ast_hash": "bc31f9098aa7510027b9eb3c7558322b",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\specs\\2026-06-10-workflow-optimization-bundle\\spec.json": {
-    "mtime": 1781091306.9697845,
-    "ast_hash": "a7c44e8840d1e55260cc333157d9fb61",
+    "mtime": 1782064203.0068042,
+    "ast_hash": "ab1ed8c2a033b1bc9714347863d75cd8",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\scripts\\verify-hooks.ps1": {
@@ -940,13 +935,13 @@
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\design\\2026-06-10-workflow-optimization-bundle\\design.md": {
-    "mtime": 1781091306.9676855,
-    "ast_hash": "ebfe77c70e85b4775d7e2240be595a82",
+    "mtime": 1782064015.4888823,
+    "ast_hash": "c84f859815c36594227d795ae324a771",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\specs\\2026-06-10-workflow-optimization-bundle\\README.md": {
-    "mtime": 1781091306.9682145,
-    "ast_hash": "339e7ac93ebb6f432605d31c6022286e",
+    "mtime": 1782064015.5088897,
+    "ast_hash": "db370809984860c1e627d8adf1287f6e",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\specs\\2026-06-10-workflow-optimization-bundle\\action-required.md": {
@@ -955,43 +950,43 @@
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\specs\\2026-06-10-workflow-optimization-bundle\\implementation-log.md": {
-    "mtime": 1781091306.9687347,
-    "ast_hash": "bfc86a077048a1d45a872e9112a1d223",
+    "mtime": 1782064015.5078883,
+    "ast_hash": "7c77c41218e4debbb5c2b55b92f8333e",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\specs\\2026-06-10-workflow-optimization-bundle\\requirements.md": {
-    "mtime": 1781091306.9692624,
-    "ast_hash": "713111baf5afac7179783eb7702d3a55",
+    "mtime": 1782064015.5098884,
+    "ast_hash": "d8d683949fcf5411baed138e96bd7fd1",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\specs\\2026-06-10-workflow-optimization-bundle\\tasks\\task-01-routing-lanes-and-mapper-offer.md": {
-    "mtime": 1781091306.9703164,
-    "ast_hash": "867040a193d3f59afa431335ca018f24",
+    "mtime": 1782064015.5028875,
+    "ast_hash": "d563b2b903b444a6872376b11a79b152",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\specs\\2026-06-10-workflow-optimization-bundle\\tasks\\task-02-plan-feature-hardening.md": {
-    "mtime": 1781091306.9708443,
-    "ast_hash": "d782e2135f76f253196693ce4fc396a8",
+    "mtime": 1782064015.5038874,
+    "ast_hash": "462e4189a76b1690ab8816ef562ae31d",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\specs\\2026-06-10-workflow-optimization-bundle\\tasks\\task-03-session-start-slimming.md": {
-    "mtime": 1781091306.9713702,
-    "ast_hash": "a6186d61b55eac7067f7d47ee28dc447",
+    "mtime": 1782064015.5038874,
+    "ast_hash": "c6efcfd9f77f9553c805e75ce3900913",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\specs\\2026-06-10-workflow-optimization-bundle\\tasks\\task-04-verify-hooks-script.md": {
-    "mtime": 1781091306.9718893,
-    "ast_hash": "8fa66651de275d3196f8ee6f45aafc24",
+    "mtime": 1782064015.5048873,
+    "ast_hash": "980f6f3c56a26f4146fa95f4d6441d00",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\specs\\2026-06-10-workflow-optimization-bundle\\tasks\\task-05-read-only-contract-dedupe.md": {
-    "mtime": 1781091306.972415,
-    "ast_hash": "5a33b419b62f7022e946faa9c8328cf0",
+    "mtime": 1782064015.5058894,
+    "ast_hash": "05be07c7fbb81ac06f165a6e585028ef",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\specs\\2026-06-10-workflow-optimization-bundle\\tasks\\task-07-build-feature-orchestration-rework.md": {
-    "mtime": 1781091306.9734597,
-    "ast_hash": "ce43171467032178579358eaf11e1679",
+    "mtime": 1782064015.506889,
+    "ast_hash": "666b2049a5ed87ac77bca6958b15b39d",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\skills\\build-feature\\references\\read-only-review-contract.md": {
@@ -1025,8 +1020,8 @@
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\specs\\2026-06-14-brainstorm-companion-hardening\\spec.json": {
-    "mtime": 1781675694.4387064,
-    "ast_hash": "f0e438fb6861cc41151368f8d81f2b7f",
+    "mtime": 1782064203.0048041,
+    "ast_hash": "9f794428454fedc0265aed7db1e26f96",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\tests\\brainstorm-server\\auth.test.js": {
@@ -1065,8 +1060,8 @@
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\specs\\2026-06-14-brainstorm-companion-hardening\\README.md": {
-    "mtime": 1781675694.437707,
-    "ast_hash": "a2db6b1af1cdd41ca486ecc1ccfd7e0b",
+    "mtime": 1782064015.5174026,
+    "ast_hash": "48ae1aaced0781e9b50f3cf3918da810",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\specs\\2026-06-14-brainstorm-companion-hardening\\action-required.md": {
@@ -1075,8 +1070,8 @@
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\specs\\2026-06-14-brainstorm-companion-hardening\\implementation-log.md": {
-    "mtime": 1781675694.437707,
-    "ast_hash": "5acdbda5f650fd7e242fbb3ccade75bb",
+    "mtime": 1782064015.516402,
+    "ast_hash": "1a298e758b35d298802242015ca77691",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\specs\\2026-06-14-brainstorm-companion-hardening\\requirements.md": {
@@ -1085,33 +1080,33 @@
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\specs\\2026-06-14-brainstorm-companion-hardening\\tasks\\task-01-server-auth-websocket-gate.md": {
-    "mtime": 1781675694.4387064,
-    "ast_hash": "edcf44d7b5aa967a4da45a7aecf61897",
+    "mtime": 1782064015.5108888,
+    "ast_hash": "ae05388a9d86d043e1a4d0f1b713efc1",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\specs\\2026-06-14-brainstorm-companion-hardening\\tasks\\task-02-server-lifecycle-persistence-browser.md": {
-    "mtime": 1781675694.4397068,
-    "ast_hash": "763a83edecb54c3a76f1a457d95e6465",
+    "mtime": 1782064015.5108888,
+    "ast_hash": "c47920e3fe4ab5c4efe467766d19dd8e",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\specs\\2026-06-14-brainstorm-companion-hardening\\tasks\\task-03-helper-key-reconnect.md": {
-    "mtime": 1781675694.4397068,
-    "ast_hash": "0d5c6843aca579257cca6173eefdaa01",
+    "mtime": 1782064015.512395,
+    "ast_hash": "af7fc036dbb90a50c16e8406a8ceed48",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\specs\\2026-06-14-brainstorm-companion-hardening\\tasks\\task-04-start-stop-ownership-flags.md": {
-    "mtime": 1781675694.4397068,
-    "ast_hash": "a260a9db2a5eb32621a82c1b3176ae29",
+    "mtime": 1782064015.514402,
+    "ast_hash": "0c869776a483cedda15e56bacb661ddd",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\specs\\2026-06-14-brainstorm-companion-hardening\\tasks\\task-05-docs-test-wiring.md": {
-    "mtime": 1781675694.4407063,
-    "ast_hash": "63c3b8fe7b59821cb0a50d59c950ac75",
+    "mtime": 1782064015.5154018,
+    "ast_hash": "3f4362f1c515d20b7550cbbf9f8ab7aa",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\specs\\2026-06-17-quick-and-bug-workflows\\spec.json": {
-    "mtime": 1781681225.7492797,
-    "ast_hash": "4d9358e9ef7e7e87096282c637dce15f",
+    "mtime": 1782064203.0038035,
+    "ast_hash": "fde49e7177cc941ad82765ac8edbde85",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\design\\2026-06-17-quick-and-bug-workflows\\design.md": {
@@ -1120,8 +1115,8 @@
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\specs\\2026-06-17-quick-and-bug-workflows\\README.md": {
-    "mtime": 1781681225.7482822,
-    "ast_hash": "a6675a3bd9fbe66cc7db42770e8c8e9d",
+    "mtime": 1782064015.5244026,
+    "ast_hash": "b032f38d0f3c5f358cec943119bdc99c",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\specs\\2026-06-17-quick-and-bug-workflows\\action-required.md": {
@@ -1130,8 +1125,8 @@
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\specs\\2026-06-17-quick-and-bug-workflows\\implementation-log.md": {
-    "mtime": 1781681225.7522805,
-    "ast_hash": "8d0801a11b947bf51b3a8c1d7831ca87",
+    "mtime": 1782064015.5234027,
+    "ast_hash": "2e9f3f4d91e2f4e29f077a102ee43f50",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\specs\\2026-06-17-quick-and-bug-workflows\\requirements.md": {
@@ -1140,23 +1135,23 @@
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\specs\\2026-06-17-quick-and-bug-workflows\\tasks\\task-01-quick-change-skill.md": {
-    "mtime": 1781681225.7502792,
-    "ast_hash": "097e81def6d1d0b440e2370b31920d08",
+    "mtime": 1782064015.5194027,
+    "ast_hash": "43ab55c230c3d34b361b6f8e418ba3de",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\specs\\2026-06-17-quick-and-bug-workflows\\tasks\\task-02-routing-and-docs.md": {
-    "mtime": 1781681225.7502792,
-    "ast_hash": "351c79e38df6b8eec5090dd679fda2b3",
+    "mtime": 1782064015.520403,
+    "ast_hash": "daa4bc26e400bb58a95d31176e14873c",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\specs\\2026-06-17-quick-and-bug-workflows\\tasks\\task-03-bug-lane-contract.md": {
-    "mtime": 1781681225.7512798,
-    "ast_hash": "a5b64db23aa22c08ea759dd69dac2ca9",
+    "mtime": 1782064015.521402,
+    "ast_hash": "c37d1424169aa8c8e58044dc911d5f2a",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\specs\\2026-06-17-quick-and-bug-workflows\\tasks\\task-04-verification-and-trigger-tests.md": {
-    "mtime": 1781681225.7512798,
-    "ast_hash": "9c7ca5cb15d5219f76588b4726c4e7f2",
+    "mtime": 1782064015.5224023,
+    "ast_hash": "b21b2b47738b1c1993ee2a19579ffe5e",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\skills\\quick-change\\SKILL.md": {
@@ -1175,8 +1170,8 @@
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\specs\\2026-06-20-engineering-skills-integration\\spec.json": {
-    "mtime": 1781940098.0380037,
-    "ast_hash": "df339619f661778134a26e4b84134fc5",
+    "mtime": 1782064203.0028045,
+    "ast_hash": "d777227d27cbefe89671e20c1ff4d52b",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\design\\2026-06-20-engineering-skills-integration\\design.md": {
@@ -1185,8 +1180,8 @@
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\specs\\2026-06-20-engineering-skills-integration\\README.md": {
-    "mtime": 1781940098.035003,
-    "ast_hash": "8390d1102f8f52e7f5ad9621a4a4ac68",
+    "mtime": 1782064015.5309181,
+    "ast_hash": "f3fab4edda344fb59147a1fd91fbf9f1",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\specs\\2026-06-20-engineering-skills-integration\\action-required.md": {
@@ -1195,8 +1190,8 @@
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\specs\\2026-06-20-engineering-skills-integration\\implementation-log.md": {
-    "mtime": 1781940098.037004,
-    "ast_hash": "4d463494aec50668db6142c7a10c9dce",
+    "mtime": 1782064015.5309181,
+    "ast_hash": "2071fe06a296af160b537f822f534f19",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\specs\\2026-06-20-engineering-skills-integration\\requirements.md": {
@@ -1205,23 +1200,23 @@
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\specs\\2026-06-20-engineering-skills-integration\\tasks\\task-01-skill-trigger-tests.md": {
-    "mtime": 1781940098.0390038,
-    "ast_hash": "4d6e31ea72ab05dbb9f9f89a66cabdb6",
+    "mtime": 1782064015.5264022,
+    "ast_hash": "55fa5b07d5843089d283c16e8899345a",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\specs\\2026-06-20-engineering-skills-integration\\tasks\\task-02-new-engineering-skills.md": {
-    "mtime": 1781940098.0400038,
-    "ast_hash": "6d91260587e56c571b8cbfccb8991ace",
+    "mtime": 1782064015.5279095,
+    "ast_hash": "e5f4dd5b5a6318f3f7fe47db6114336d",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\specs\\2026-06-20-engineering-skills-integration\\tasks\\task-03-workflow-integration.md": {
-    "mtime": 1781940098.0410094,
-    "ast_hash": "1ac696df33272b0c9e4ce7fce4cd8c62",
+    "mtime": 1782064015.5289183,
+    "ast_hash": "40e347d4e837bad6825c0ebe3dce487d",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\docs\\specs\\2026-06-20-engineering-skills-integration\\tasks\\task-04-verification-surfaces.md": {
-    "mtime": 1781940098.0410094,
-    "ast_hash": "025943ecd10ec95d76c878b72712e873",
+    "mtime": 1782064015.5299182,
+    "ast_hash": "536f0dbbe9008efa851afe7bc681bc84",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\skills\\codebase-design\\DEEPENING.md": {
@@ -1297,6 +1292,31 @@
   "D:\\Source\\s-kit\\tests\\skill-triggering\\prompts\\prototype.txt": {
     "mtime": 1781940128.3554547,
     "ast_hash": "059f67424f28e22d5af73315d1e000ae",
+    "semantic_hash": ""
+  },
+  "D:\\Source\\s-kit\\skills\\test-driven-development\\mocking.md": {
+    "mtime": 1782063646.1390488,
+    "ast_hash": "c5505e8da8f516c7dacebd01c58a4c2c",
+    "semantic_hash": ""
+  },
+  "D:\\Source\\s-kit\\skills\\test-driven-development\\refactoring.md": {
+    "mtime": 1782063646.3085878,
+    "ast_hash": "ecbf516d99a591169adce39a8a933f2e",
+    "semantic_hash": ""
+  },
+  "D:\\Source\\s-kit\\skills\\test-driven-development\\tests.md": {
+    "mtime": 1782063646.4806535,
+    "ast_hash": "253c991bba867959c0146c72b93a6f6f",
+    "semantic_hash": ""
+  },
+  "D:\\Source\\s-kit\\CONTEXT.md": {
+    "mtime": 1782064298.605982,
+    "ast_hash": "835898922f6e7cdafe6e0c5faa6037dd",
+    "semantic_hash": ""
+  },
+  "D:\\Source\\s-kit\\docs\\specs\\2026-06-09-build-feature-risk-preflight\\tasks\\task-01-phase-risk-preflight.md": {
+    "mtime": 1782064015.4968824,
+    "ast_hash": "1611747eca88ba3b40be54a9b309762f",
     "semantic_hash": ""
   }
 }

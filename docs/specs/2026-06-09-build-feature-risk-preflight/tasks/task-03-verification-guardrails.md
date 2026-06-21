@@ -4,7 +4,7 @@
 
 done-with-concerns
 
-## Wave
+## Phase
 
 3
 
@@ -17,7 +17,7 @@ Add verification guardrails so the new `build-feature` risk preflight and comple
 **Depends on:** task-02-complete-punch-list-mode.md
 **Blocks:** None
 
-**Context from dependencies:** task-01 adds Wave Risk Preflight to build-feature and prompt templates. task-02 adds complete punch-list mode and targeted no-op simplification guidance. This task protects those workflow contracts in the existing verification script.
+**Context from dependencies:** task-01 adds Phase Risk Preflight to build-feature and prompt templates. task-02 adds complete punch-list mode and targeted no-op simplification guidance. This task protects those workflow contracts in the existing verification script.
 
 ## Files to Create
 
@@ -34,7 +34,7 @@ None.
 1. Inspect existing `scripts/verify-workflow.ps1` required-text checks.
 2. Add checks for the new workflow concepts using concise required strings.
 3. Required coverage should include:
-   - `Wave Risk Preflight` in `skills/build-feature/SKILL.md`.
+   - `Phase Risk Preflight` in `skills/build-feature/SKILL.md`.
    - Preflight prompt placeholder or section in coder, review, and simplifier prompt templates.
    - Complete punch-list behavior in `skills/build-feature/SKILL.md`.
    - Complete punch-list review support in the review prompt template.
@@ -49,8 +49,8 @@ Pattern to follow:
 
 ```powershell
 foreach ($requiredText in @(
-  'Wave Risk Preflight',
-  '{wave_risk_preflight}'
+  'Phase Risk Preflight',
+  '{Phase_risk_preflight}'
 )) {
   if (-not $buildFeatureSkill.Contains($requiredText)) {
     Add-Failure "build-feature workflow must include risk preflight text: $requiredText"

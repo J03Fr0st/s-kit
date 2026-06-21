@@ -60,7 +60,7 @@ or responds to a realistic prompt. Examples include:
 - A user explicitly asks for a skill and the agent invokes it before acting.
 - A natural prompt triggers the intended skill without over-triggering unrelated
   skills.
-- `build-feature` follows the wave/task/ownership model in an implementation
+- `build-feature` follows the Phase/task/ownership model in an implementation
   scenario.
 - A review or debugging workflow preserves required posture across multiple
   steps.

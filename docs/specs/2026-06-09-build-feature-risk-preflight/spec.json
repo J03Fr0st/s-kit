@@ -17,10 +17,10 @@
   ],
   "tasks": [
     {
-      "id": "task-01-wave-risk-preflight",
-      "title": "Wave Risk Preflight",
-      "file": "tasks/task-01-wave-risk-preflight.md",
-      "wave": 1,
+      "id": "task-01-Phase-risk-preflight",
+      "title": "Phase Risk Preflight",
+      "file": "tasks/task-01-Phase-risk-preflight.md",
+      "phase": 1,
       "status": "complete",
       "dependsOn": [],
       "blocks": [
@@ -44,10 +44,10 @@
       "id": "task-02-complete-punch-list-mode",
       "title": "Complete Punch-List Mode",
       "file": "tasks/task-02-complete-punch-list-mode.md",
-      "wave": 2,
+      "phase": 2,
       "status": "complete",
       "dependsOn": [
-        "task-01-wave-risk-preflight"
+        "task-01-Phase-risk-preflight"
       ],
       "blocks": [
         "task-03-verification-guardrails"
@@ -70,7 +70,7 @@
       "id": "task-03-verification-guardrails",
       "title": "Verification Guardrails",
       "file": "tasks/task-03-verification-guardrails.md",
-      "wave": 3,
+      "phase": 3,
       "status": "done-with-concerns",
       "dependsOn": [
         "task-02-complete-punch-list-mode"

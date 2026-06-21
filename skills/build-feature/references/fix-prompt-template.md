@@ -11,9 +11,9 @@ You are fixing specific issues found during review. Address every issue listed b
 
 {issues}
 
-## Wave Risk Preflight
+## Phase Risk Preflight
 
-{wave_risk_preflight}
+{phase_risk_preflight}
 
 ## Boundary Context
 
@@ -27,7 +27,7 @@ You are fixing specific issues found during review. Address every issue listed b
 
 1. Fix each issue listed above. The review provided file paths, line numbers, and suggested fixes — use those as your starting point.
 2. Keep the issue source clear: simplification issues must restore a behavior-preserving simplification path; spec-compliance issues must align implementation with the task/design; code-quality issues must improve implementation quality without changing the approved scope.
-3. Account for the Wave Risk Preflight and Boundary Context while fixing only the listed issues.
+3. Account for the Phase Risk Preflight, Boundary Context, glossary terms, and ADR constraints while fixing only the listed issues.
 4. If the issues came from complete punch-list mode, address the full punch list for this task group before reporting success.
 5. Run the task's targeted verification commands and the project's lint/typecheck commands after making fixes. Resolve any new errors your fixes introduce.
 6. Do NOT commit your changes.
@@ -47,7 +47,7 @@ You are fixing specific issues found during review. Address every issue listed b
   - Issue 2: src/api/users.ts:15 — Unused import 'Session' — Severity: low — Suggested fix: remove the import
   ```
 
-- **{wave_risk_preflight}**: the Wave Risk Preflight for the current wave. This helps the fix agent avoid resolving one issue while breaking a shared contract.
+- **{phase_risk_preflight}**: the Phase Risk Preflight for the current Phase. This helps the fix agent avoid resolving one issue while breaking a shared contract.
 
 - **{boundary_context}**: same-boundary or complete punch-list context from the fix loop. Use `None` when the fix is from a normal first-pass review failure.
 

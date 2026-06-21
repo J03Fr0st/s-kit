@@ -10,9 +10,9 @@
 
 - Source design: `docs/design/2026-06-14-brainstorm-companion-hardening/design.md`
 - Initial task count: 5
-- Initial wave count: 4
+- Initial Phase count: 4
 
-## 2026-06-14 - Wave 1 Started
+## 2026-06-14 - Phase 1 Started
 
 - Tasks: `task-01-server-auth-websocket-gate`
 - Starting statuses: `task-01-server-auth-websocket-gate=in-progress`
@@ -21,7 +21,7 @@
   - `cd tests/brainstorm-server && node ws-protocol.test.js`
   - `cd tests/brainstorm-server && node server.test.js`
 
-## 2026-06-14 - Wave 1 Assignment
+## 2026-06-14 - Phase 1 Assignment
 
 - Assigned `task-01-server-auth-websocket-gate` to a worker agent.
 - Scope:
@@ -30,7 +30,7 @@
   - modify `tests/brainstorm-server/server.test.js`
   - modify `tests/brainstorm-server/ws-protocol.test.js`
 
-## 2026-06-14 - Wave 1 Completed
+## 2026-06-14 - Phase 1 Completed
 
 - Task completed: `task-01-server-auth-websocket-gate`
 - Coder result: created `tests/brainstorm-server/auth.test.js`; modified `skills/brainstorming/scripts/server.cjs`, `tests/brainstorm-server/server.test.js`, and `tests/brainstorm-server/ws-protocol.test.js`.
@@ -43,7 +43,7 @@
   - `cd tests/brainstorm-server && node server.test.js` - PASS, 25 passed
 - Final status: `task-01-server-auth-websocket-gate=complete`
 
-## 2026-06-14 - Wave 2 Started
+## 2026-06-14 - Phase 2 Started
 
 - Tasks: `task-02-server-lifecycle-persistence-browser`, `task-03-helper-key-reconnect`
 - Starting statuses:
@@ -54,7 +54,7 @@
   - `cd tests/brainstorm-server && node lifecycle.test.js`
   - `cd tests/brainstorm-server && node helper.test.js`
 
-## 2026-06-14 - Wave 2 Completed
+## 2026-06-14 - Phase 2 Completed
 
 - Tasks completed:
   - `task-02-server-lifecycle-persistence-browser`
@@ -80,7 +80,7 @@
   - `task-02-server-lifecycle-persistence-browser=complete`
   - `task-03-helper-key-reconnect=complete`
 
-## 2026-06-14 - Wave 3 Started
+## 2026-06-14 - Phase 3 Started
 
 - Tasks: `task-04-start-stop-ownership-flags`
 - Starting status: `task-04-start-stop-ownership-flags=in-progress`
@@ -89,7 +89,7 @@
   - `cd tests/brainstorm-server && bash stop-server.test.sh`
   - `cd tests/brainstorm-server && bash windows-lifecycle.test.sh`
 
-## 2026-06-14 - Wave 3 Completed
+## 2026-06-14 - Phase 3 Completed
 
 - Task completed: `task-04-start-stop-ownership-flags`
 - Coder result: modified `skills/brainstorming/scripts/start-server.sh`, `skills/brainstorming/scripts/stop-server.sh`, and `tests/brainstorm-server/windows-lifecycle.test.sh`; created `tests/brainstorm-server/start-server.test.sh` and `tests/brainstorm-server/stop-server.test.sh`.
@@ -104,7 +104,7 @@
 - Note: `bash` on PATH resolves to a broken WSL relay in this environment, so shell verification used Git Bash explicitly.
 - Final status: `task-04-start-stop-ownership-flags=complete`
 
-## 2026-06-14 - Wave 4 Started
+## 2026-06-14 - Phase 4 Started
 
 - Tasks: `task-05-docs-test-wiring`
 - Starting status: `task-05-docs-test-wiring=in-progress`
@@ -116,7 +116,7 @@
   - `npm run verify:workflow`
   - `npm run verify:hooks`
 
-## 2026-06-14 - Wave 4 Completed
+## 2026-06-14 - Phase 4 Completed
 
 - Task completed: `task-05-docs-test-wiring`
 - Coder result: modified `package.json`, `tests/brainstorm-server/package.json`, and `skills/brainstorming/visual-companion.md`.

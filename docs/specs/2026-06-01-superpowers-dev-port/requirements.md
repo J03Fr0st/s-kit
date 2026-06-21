@@ -44,5 +44,5 @@ The work must preserve `s-kit`'s compact, canonical workflow: `brainstorming -> 
 - Keep dated design/spec paths canonical: `docs/design/YYYY-MM-DD-feature/design.md` and `docs/specs/YYYY-MM-DD-feature/`.
 - Use existing verifiers where possible and extend them deliberately when adding new surfaces.
 - Keep docs and task files ASCII-compatible unless existing file content requires otherwise.
-- Avoid same-wave tasks modifying the same files.
+- Avoid same-Phase tasks modifying the same files.
 - Use `apply_patch` or normal editor-safe edits; do not generate specs or code by ad hoc shell writes.

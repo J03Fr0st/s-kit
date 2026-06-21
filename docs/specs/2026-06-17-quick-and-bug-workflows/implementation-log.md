@@ -8,9 +8,9 @@
 
 ## 2026-06-17 - Spec Created
 
-- Created initial implementation spec with 4 tasks across 2 waves.
-- Wave 1 contains independent skill, routing/docs, and bug-lane contract tasks.
-- Wave 2 contains verifier, doctor, and trigger-test integration after Wave 1 artifacts exist.
+- Created initial implementation spec with 4 tasks across 2 Phases.
+- Phase 1 contains independent skill, routing/docs, and bug-lane contract tasks.
+- Phase 2 contains verifier, doctor, and trigger-test integration after Phase 1 artifacts exist.
 
 ## 2026-06-17 - Baseline Verification
 
@@ -24,7 +24,7 @@
 - Execution mode: sequential in current session.
 - Reason: subagent tooling was available, but delegation was not explicitly requested in this chat; the implementation preserved the build-feature gates without dispatching parallel workers.
 
-## 2026-06-17 - Wave 1 Complete
+## 2026-06-17 - Phase 1 Complete
 
 - task-01-quick-change-skill: created `skills/quick-change/SKILL.md`.
 - task-02-routing-and-docs: updated `skills/using-s-kit/SKILL.md` and `README.md`.
@@ -34,7 +34,7 @@
   - `Select-String` checks for quick and bug routing in `skills/using-s-kit/SKILL.md` passed.
   - `Select-String` checks for `s-kit Bug Lane Contract`, `test-driven-development`, `verification-before-completion`, and `.s-kit/debug` passed.
 
-## 2026-06-17 - Wave 2 Complete
+## 2026-06-17 - Phase 2 Complete
 
 - task-04-verification-and-trigger-tests: updated `scripts/verify-branding.ps1`, `scripts/doctor.ps1`, `scripts/verify-skill-names.ps1`, `scripts/verify-workflow.ps1`, `tests/skill-triggering/run-all.sh`, and `tests/explicit-skill-requests/run-all.sh`.
 - Created trigger fixtures:

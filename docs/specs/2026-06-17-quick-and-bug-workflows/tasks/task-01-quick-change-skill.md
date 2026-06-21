@@ -4,7 +4,7 @@
 
 complete
 
-## Wave
+## Phase
 
 1
 
@@ -14,7 +14,7 @@ Create a first-class `quick-change` skill for small, clear, low-blast-radius edi
 
 ## Dependencies
 
-**Depends on:** None (Wave 1)
+**Depends on:** None (Phase 1)
 **Blocks:** task-04-verification-and-trigger-tests.md
 
 **Context from dependencies:** None. This task creates the new skill that later verifier and trigger tests will require.

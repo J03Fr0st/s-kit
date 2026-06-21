@@ -26,9 +26,9 @@ graph TD
     task-03-eval-strategy --> task-05-codex-hooks
 ```
 
-## Waves
+## Phases
 
-| Wave | Tasks | Description |
+| Phase | Tasks | Description |
 |------|-------|-------------|
 | 1 | task-01, task-02, task-03 | Independent safety, documentation, and eval-strategy groundwork |
 | 2 | task-04 | Shared skill prose cleanup after reviewer prompt safety is in place |
@@ -36,16 +36,16 @@ graph TD
 
 ## Task Status
 
-### Wave 1
+### Phase 1
 
 - [x] [task-01-reviewer-safety-scoped-ranges](./tasks/task-01-reviewer-safety-scoped-ranges.md) — Reviewer safety and scoped ranges
 - [x] [task-02-harness-porting-playbook](./tasks/task-02-harness-porting-playbook.md) — Harness porting playbook
 - [x] [task-03-eval-harness-strategy](./tasks/task-03-eval-harness-strategy.md) — Eval harness strategy
 
-### Wave 2
+### Phase 2
 
 - [x] [task-04-action-language-cleanup](./tasks/task-04-action-language-cleanup.md) — Action-language cleanup
 
-### Wave 3
+### Phase 3
 
 - [x] [task-05-codex-native-hooks](./tasks/task-05-codex-native-hooks.md) — Codex native hook compatibility

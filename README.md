@@ -1,6 +1,6 @@
 # s-kit
 
-`s-kit` is a personal agent workflow kit for turning ideas into dated, reviewable specs and then executing those specs through focused implementation waves.
+`s-kit` is a personal agent workflow kit for turning ideas into dated, reviewable specs and then executing those specs through focused implementation Phases.
 
 The core workflow is:
 
@@ -8,7 +8,7 @@ The core workflow is:
 brainstorming -> plan-feature -> build-feature -> verification/review -> ship-it
 ```
 
-`brainstorming` is the front door. It clarifies the idea, explores options, presents the proposed design for approval, offers `grill-me` as an optional stress-test, and writes the approved solution to `docs/design/YYYY-MM-DD-{feature-name}/design.md`. `plan-feature` expands the approved design into a matching dated spec folder under `docs/specs/YYYY-MM-DD-{feature-name}/`, including a manifest and execution log. `build-feature` reads the spec and matching design, works through task waves, runs a behavior-preserving simplification pass before spec-compliance and code-quality review gates, and tracks progress in the spec files.
+`brainstorming` is the front door. It clarifies the idea, explores options, presents the proposed design for approval, offers `grill-me` as an optional stress-test, and writes the approved solution to `docs/design/YYYY-MM-DD-{feature-name}/design.md`. `plan-feature` expands the approved design into a matching dated spec folder under `docs/specs/YYYY-MM-DD-{feature-name}/`, including a manifest and execution log. `build-feature` reads the spec and matching design, works through task Phases, runs a behavior-preserving simplification pass before spec-compliance and code-quality review gates, and tracks progress in the spec files.
 
 For smaller work, `s-kit` has scale-aware lanes. `quick-change` handles clear, low-risk edits with direct verification and normally skips dated design/spec folders. Bug fixes use `systematic-debugging -> test-driven-development -> verification-before-completion` and also skip dated specs unless the investigation grows into design or architecture work.
 
@@ -52,7 +52,7 @@ The repo keeps packaging surfaces for:
        └── task-02-{name}.md
    ```
 
-6. Use `build-feature` to execute a spec wave by wave.
+6. Use `build-feature` to execute a spec Phase by Phase.
 7. Use the supporting skills for TDD, debugging, review, verification, worktrees, branch finishing, and skill authoring when they apply.
 
 ## Skills
@@ -61,7 +61,7 @@ Primary workflow:
 
 - `brainstorming` - collaborative design and approval gate
 - `plan-feature` - expands an approved `docs/design/.../design.md` into a matching dated, self-contained feature spec
-- `build-feature` - executes feature specs by dependency wave
+- `build-feature` - executes feature specs by dependency Phase
 
 Supporting workflow:
 
@@ -91,7 +91,7 @@ The repo also includes a compact first-class agent catalog for runtimes that sup
 
 - [`s-kit-codebase-mapper`](agents/s-kit-codebase-mapper.md) - maps repository structure, conventions, verification commands, and risks before planning.
 - [`s-kit-pattern-mapper`](agents/s-kit-pattern-mapper.md) - finds local implementation patterns that specs and coders should follow.
-- [`s-kit-spec-reviewer`](agents/s-kit-spec-reviewer.md) - checks dated specs for coverage, wave safety, verification quality, and manifest consistency.
+- [`s-kit-spec-reviewer`](agents/s-kit-spec-reviewer.md) - checks dated specs for coverage, Phase safety, verification quality, and manifest consistency.
 - [`s-kit-coder`](agents/s-kit-coder.md) - implements one spec task with scoped file ownership and verification evidence.
 - [`s-kit-code-simplifier`](agents/s-kit-code-simplifier.md) - refines recently changed code for clarity while preserving behavior, scope, and verification evidence.
 - [`s-kit-code-reviewer`](agents/s-kit-code-reviewer.md) - reviews completed work for spec compliance, correctness, security, maintainability, and tests.
@@ -100,7 +100,7 @@ The repo also includes a compact first-class agent catalog for runtimes that sup
 
 ## Verification
 
-Run `npm test` before publishing changes. It checks the OpenCode plugin syntax, branding/path cleanup, agent catalog integrity, and workflow invariants such as matching `docs/design/` and `docs/specs/` folders, required manifests/logs, task verification plans, task statuses, and same-wave file ownership.
+Run `npm test` before publishing changes. It checks the OpenCode plugin syntax, branding/path cleanup, agent catalog integrity, and workflow invariants such as matching `docs/design/` and `docs/specs/` folders, required manifests/logs, task verification plans, task statuses, and same-Phase file ownership.
 
 ## Attribution
 
