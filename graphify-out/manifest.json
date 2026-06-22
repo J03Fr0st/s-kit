@@ -405,8 +405,8 @@
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\README.md": {
-    "mtime": 1782064015.9424665,
-    "ast_hash": "0b1948681c3c5a4ba31c758bc42d81ba",
+    "mtime": 1782130368.5179818,
+    "ast_hash": "ac66f19eab6c74301ce046acf24be6bd",
     "semantic_hash": ""
   },
   "D:\\Source\\s-kit\\RELEASE-NOTES.md": {
@@ -1317,6 +1317,11 @@
   "D:\\Source\\s-kit\\docs\\specs\\2026-06-09-build-feature-risk-preflight\\tasks\\task-01-phase-risk-preflight.md": {
     "mtime": 1782064015.4968824,
     "ast_hash": "1611747eca88ba3b40be54a9b309762f",
+    "semantic_hash": ""
+  },
+  "D:\\Source\\s-kit\\skills\\maintainability-review\\SKILL.md": {
+    "mtime": 1782129919.3308086,
+    "ast_hash": "bca3aaf28c18207ba8b98128939112c1",
     "semantic_hash": ""
   }
 }

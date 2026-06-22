@@ -74,6 +74,7 @@ Supporting workflow:
 - `test-driven-development` - test-first implementation discipline
 - `systematic-debugging` - root-cause debugging process
 - `verification-before-completion` - proof before completion claims
+- `maintainability-review` - strict maintainability review for branches, PRs, commit ranges, changed files, or recent code-quality work
 - `requesting-code-review` - review gate for completed work
 - `receiving-code-review` - handles review feedback rigorously
 - `ship-it` - platform-aware delivery that pushes committed work and creates or updates GitHub or Azure DevOps pull requests

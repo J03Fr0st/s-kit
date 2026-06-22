@@ -1,16 +1,16 @@
-# Graph Report - s-kit  (2026-06-21)
+# Graph Report - s-kit  (2026-06-22)
 
 ## Corpus Check
-- 229 files · ~145,918 words
+- 230 files · ~146,953 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 2544 nodes · 2457 edges · 260 communities (212 shown, 48 thin omitted)
+- 2554 nodes · 2466 edges · 261 communities (213 shown, 48 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `030cad80`
+- Built from commit: `6601635f`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -269,6 +269,7 @@
 - [[_COMMUNITY_Community 257|Community 257]]
 - [[_COMMUNITY_Community 258|Community 258]]
 - [[_COMMUNITY_Community 259|Community 259]]
+- [[_COMMUNITY_Community 260|Community 260]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `Implementation Log: Brainstorm Companion Hardening` - 23 edges
@@ -288,7 +289,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (260 total, 48 thin omitted)
+## Communities (261 total, 48 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.05
@@ -1114,8 +1115,12 @@ Nodes (7): 2026-06-10 - Phase 2 Started, Phase 2 Code Quality Review, Phase 2 Co
 Cohesion: 0.40
 Nodes (4): 2026-06-10 - Design Approved, 2026-06-10 - Final Integration Review, 2026-06-10 - Spec Created, Implementation Log: Workflow Optimization Bundle
 
+### Community 260 - "Community 260"
+Cohesion: 0.20
+Nodes (9): Approval Bar, Boundaries, Maintainability Review, Output, Preferred Remedies, Process, Review Priorities, What to Check (+1 more)
+
 ## Knowledge Gaps
-- **1769 isolated node(s):** `name`, `description`, `name`, `email`, `plugins` (+1764 more)
+- **1777 isolated node(s):** `name`, `description`, `name`, `email`, `plugins` (+1772 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **48 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -1126,10 +1131,10 @@ _Questions this graph is uniquely positioned to answer:_
   _High betweenness centrality (0.001) - this node is a cross-community bridge._
 - **Why does `2026-06-10 - Phase 1 Started` connect `Community 254` to `Community 259`, `Community 173`?**
   _High betweenness centrality (0.001) - this node is a cross-community bridge._
-- **Why does `2026-06-10 - Phase 2 Started` connect `Community 258` to `Community 259`?**
+- **Why does `2026-06-10 - Phase 1 Started` connect `Community 173` to `Community 259`?**
   _High betweenness centrality (0.001) - this node is a cross-community bridge._
 - **What connects `name`, `description`, `name` to the rest of the system?**
-  _1769 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _1777 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.05263157894736842 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**

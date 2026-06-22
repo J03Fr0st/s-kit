@@ -6362,7 +6362,7 @@
       "label": "Agents",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L88",
+      "source_location": "L89",
       "id": "readme_agents",
       "community": 55,
       "norm_label": "agents"
@@ -6371,7 +6371,7 @@
       "label": "Verification",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L101",
+      "source_location": "L102",
       "id": "readme_verification",
       "community": 55,
       "norm_label": "verification"
@@ -6380,7 +6380,7 @@
       "label": "Attribution",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L105",
+      "source_location": "L106",
       "id": "readme_attribution",
       "community": 55,
       "norm_label": "attribution"
@@ -6389,7 +6389,7 @@
       "label": "License",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L109",
+      "source_location": "L110",
       "id": "readme_license",
       "community": 55,
       "norm_label": "license"
@@ -16158,6 +16158,96 @@
       "id": "grill_with_docs_skill_handoff",
       "community": 62,
       "norm_label": "handoff"
+    },
+    {
+      "label": "SKILL.md",
+      "file_type": "document",
+      "source_file": "skills/maintainability-review/SKILL.md",
+      "source_location": "L1",
+      "id": "maintainability_review_skill",
+      "community": 260,
+      "norm_label": "skill.md"
+    },
+    {
+      "label": "Maintainability Review",
+      "file_type": "document",
+      "source_file": "skills/maintainability-review/SKILL.md",
+      "source_location": "L7",
+      "id": "maintainability_review_skill_maintainability_review",
+      "community": 260,
+      "norm_label": "maintainability review"
+    },
+    {
+      "label": "Process",
+      "file_type": "document",
+      "source_file": "skills/maintainability-review/SKILL.md",
+      "source_location": "L13",
+      "id": "maintainability_review_skill_process",
+      "community": 260,
+      "norm_label": "process"
+    },
+    {
+      "label": "Review Priorities",
+      "file_type": "document",
+      "source_file": "skills/maintainability-review/SKILL.md",
+      "source_location": "L21",
+      "id": "maintainability_review_skill_review_priorities",
+      "community": 260,
+      "norm_label": "review priorities"
+    },
+    {
+      "label": "What to Check",
+      "file_type": "document",
+      "source_file": "skills/maintainability-review/SKILL.md",
+      "source_location": "L35",
+      "id": "maintainability_review_skill_what_to_check",
+      "community": 260,
+      "norm_label": "what to check"
+    },
+    {
+      "label": "What to Flag Aggressively",
+      "file_type": "document",
+      "source_file": "skills/maintainability-review/SKILL.md",
+      "source_location": "L50",
+      "id": "maintainability_review_skill_what_to_flag_aggressively",
+      "community": 260,
+      "norm_label": "what to flag aggressively"
+    },
+    {
+      "label": "Preferred Remedies",
+      "file_type": "document",
+      "source_file": "skills/maintainability-review/SKILL.md",
+      "source_location": "L67",
+      "id": "maintainability_review_skill_preferred_remedies",
+      "community": 260,
+      "norm_label": "preferred remedies"
+    },
+    {
+      "label": "Boundaries",
+      "file_type": "document",
+      "source_file": "skills/maintainability-review/SKILL.md",
+      "source_location": "L82",
+      "id": "maintainability_review_skill_boundaries",
+      "community": 260,
+      "norm_label": "boundaries"
+    },
+    {
+      "label": "Output",
+      "file_type": "document",
+      "source_file": "skills/maintainability-review/SKILL.md",
+      "source_location": "L91",
+      "id": "maintainability_review_skill_output",
+      "community": 260,
+      "norm_label": "output"
+    },
+    {
+      "label": "Approval Bar",
+      "file_type": "document",
+      "source_file": "skills/maintainability-review/SKILL.md",
+      "source_location": "L103",
+      "id": "maintainability_review_skill_approval_bar",
+      "community": 260,
+      "norm_label": "approval bar"
     },
     {
       "label": "SKILL.md",
@@ -30485,9 +30575,9 @@
       "source_file": "CONTEXT.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "context",
-      "target": "context_context_s_kit",
-      "confidence_score": 1.0
+      "target": "context_context_s_kit"
     },
     {
       "relation": "contains",
@@ -30495,9 +30585,9 @@
       "source_file": "CONTEXT.md",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "context_context_s_kit",
-      "target": "context_glossary",
-      "confidence_score": 1.0
+      "target": "context_glossary"
     },
     {
       "relation": "contains",
@@ -30505,9 +30595,9 @@
       "source_file": "CONTEXT.md",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "context_context_s_kit",
-      "target": "context_purpose",
-      "confidence_score": 1.0
+      "target": "context_purpose"
     },
     {
       "relation": "contains",
@@ -30515,9 +30605,9 @@
       "source_file": "CONTEXT.md",
       "source_location": "L57",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "context_glossary",
-      "target": "context_adr",
-      "confidence_score": 1.0
+      "target": "context_adr"
     },
     {
       "relation": "contains",
@@ -30525,9 +30615,9 @@
       "source_file": "CONTEXT.md",
       "source_location": "L51",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "context_glossary",
-      "target": "context_context",
-      "confidence_score": 1.0
+      "target": "context_context"
     },
     {
       "relation": "contains",
@@ -30535,9 +30625,9 @@
       "source_file": "CONTEXT.md",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "context_glossary",
-      "target": "context_design",
-      "confidence_score": 1.0
+      "target": "context_design"
     },
     {
       "relation": "contains",
@@ -30545,9 +30635,9 @@
       "source_file": "CONTEXT.md",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "context_glossary",
-      "target": "context_lane",
-      "confidence_score": 1.0
+      "target": "context_lane"
     },
     {
       "relation": "contains",
@@ -30555,9 +30645,9 @@
       "source_file": "CONTEXT.md",
       "source_location": "L39",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "context_glossary",
-      "target": "context_phase",
-      "confidence_score": 1.0
+      "target": "context_phase"
     },
     {
       "relation": "contains",
@@ -30565,9 +30655,9 @@
       "source_file": "CONTEXT.md",
       "source_location": "L45",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "context_glossary",
-      "target": "context_phase_risk_preflight",
-      "confidence_score": 1.0
+      "target": "context_phase_risk_preflight"
     },
     {
       "relation": "contains",
@@ -30575,9 +30665,9 @@
       "source_file": "CONTEXT.md",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "context_glossary",
-      "target": "context_skill",
-      "confidence_score": 1.0
+      "target": "context_skill"
     },
     {
       "relation": "contains",
@@ -30585,9 +30675,9 @@
       "source_file": "CONTEXT.md",
       "source_location": "L27",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "context_glossary",
-      "target": "context_spec",
-      "confidence_score": 1.0
+      "target": "context_spec"
     },
     {
       "relation": "contains",
@@ -30595,9 +30685,9 @@
       "source_file": "CONTEXT.md",
       "source_location": "L33",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "context_glossary",
-      "target": "context_task",
-      "confidence_score": 1.0
+      "target": "context_task"
     },
     {
       "relation": "contains",
@@ -31375,9 +31465,9 @@
       "source_file": "docs/comparable-project-enhancements.md",
       "source_location": "L91",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_comparable_project_enhancements_ccpm_automazeio",
-      "target": "docs_comparable_project_enhancements_9_worktree_per_phase_isolation",
-      "confidence_score": 1.0
+      "target": "docs_comparable_project_enhancements_9_worktree_per_phase_isolation"
     },
     {
       "relation": "contains",
@@ -31395,9 +31485,9 @@
       "source_file": "docs/comparable-project-enhancements.md",
       "source_location": "L104",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_comparable_project_enhancements_citadel_sethgammon",
-      "target": "docs_comparable_project_enhancements_10_discovery_relay_between_phases",
-      "confidence_score": 1.0
+      "target": "docs_comparable_project_enhancements_10_discovery_relay_between_phases"
     },
     {
       "relation": "contains",
@@ -32715,9 +32805,9 @@
       "source_file": "docs/specs/2026-06-01-superpowers-dev-port/README.md",
       "source_location": "L29",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_01_superpowers_dev_port_readme_superpowers_dev_port_review",
-      "target": "2026_06_01_superpowers_dev_port_readme_phases",
-      "confidence_score": 1.0
+      "target": "2026_06_01_superpowers_dev_port_readme_phases"
     },
     {
       "relation": "contains",
@@ -32775,9 +32865,9 @@
       "source_file": "docs/specs/2026-06-01-superpowers-dev-port/README.md",
       "source_location": "L39",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_01_superpowers_dev_port_readme_task_status",
-      "target": "2026_06_01_superpowers_dev_port_readme_phase_1",
-      "confidence_score": 1.0
+      "target": "2026_06_01_superpowers_dev_port_readme_phase_1"
     },
     {
       "relation": "contains",
@@ -32785,9 +32875,9 @@
       "source_file": "docs/specs/2026-06-01-superpowers-dev-port/README.md",
       "source_location": "L45",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_01_superpowers_dev_port_readme_task_status",
-      "target": "2026_06_01_superpowers_dev_port_readme_phase_2",
-      "confidence_score": 1.0
+      "target": "2026_06_01_superpowers_dev_port_readme_phase_2"
     },
     {
       "relation": "contains",
@@ -32795,9 +32885,9 @@
       "source_file": "docs/specs/2026-06-01-superpowers-dev-port/README.md",
       "source_location": "L49",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_01_superpowers_dev_port_readme_task_status",
-      "target": "2026_06_01_superpowers_dev_port_readme_phase_3",
-      "confidence_score": 1.0
+      "target": "2026_06_01_superpowers_dev_port_readme_phase_3"
     },
     {
       "relation": "contains",
@@ -32955,9 +33045,9 @@
       "source_file": "docs/specs/2026-06-01-superpowers-dev-port/implementation-log.md",
       "source_location": "L31",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_01_superpowers_dev_port_implementation_log_implementation_log_superpowers_dev_port_review",
-      "target": "2026_06_01_superpowers_dev_port_implementation_log_2026_06_01_phase_1_completed",
-      "confidence_score": 1.0
+      "target": "2026_06_01_superpowers_dev_port_implementation_log_2026_06_01_phase_1_completed"
     },
     {
       "relation": "contains",
@@ -32965,9 +33055,9 @@
       "source_file": "docs/specs/2026-06-01-superpowers-dev-port/implementation-log.md",
       "source_location": "L25",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_01_superpowers_dev_port_implementation_log_implementation_log_superpowers_dev_port_review",
-      "target": "2026_06_01_superpowers_dev_port_implementation_log_2026_06_01_phase_1_spec_compliance_review_failed",
-      "confidence_score": 1.0
+      "target": "2026_06_01_superpowers_dev_port_implementation_log_2026_06_01_phase_1_spec_compliance_review_failed"
     },
     {
       "relation": "contains",
@@ -32975,9 +33065,9 @@
       "source_file": "docs/specs/2026-06-01-superpowers-dev-port/implementation-log.md",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_01_superpowers_dev_port_implementation_log_implementation_log_superpowers_dev_port_review",
-      "target": "2026_06_01_superpowers_dev_port_implementation_log_2026_06_01_phase_1_started",
-      "confidence_score": 1.0
+      "target": "2026_06_01_superpowers_dev_port_implementation_log_2026_06_01_phase_1_started"
     },
     {
       "relation": "contains",
@@ -32985,9 +33075,9 @@
       "source_file": "docs/specs/2026-06-01-superpowers-dev-port/implementation-log.md",
       "source_location": "L54",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_01_superpowers_dev_port_implementation_log_implementation_log_superpowers_dev_port_review",
-      "target": "2026_06_01_superpowers_dev_port_implementation_log_2026_06_01_phase_2_completed",
-      "confidence_score": 1.0
+      "target": "2026_06_01_superpowers_dev_port_implementation_log_2026_06_01_phase_2_completed"
     },
     {
       "relation": "contains",
@@ -32995,9 +33085,9 @@
       "source_file": "docs/specs/2026-06-01-superpowers-dev-port/implementation-log.md",
       "source_location": "L45",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_01_superpowers_dev_port_implementation_log_implementation_log_superpowers_dev_port_review",
-      "target": "2026_06_01_superpowers_dev_port_implementation_log_2026_06_01_phase_2_started",
-      "confidence_score": 1.0
+      "target": "2026_06_01_superpowers_dev_port_implementation_log_2026_06_01_phase_2_started"
     },
     {
       "relation": "contains",
@@ -33005,9 +33095,9 @@
       "source_file": "docs/specs/2026-06-01-superpowers-dev-port/implementation-log.md",
       "source_location": "L82",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_01_superpowers_dev_port_implementation_log_implementation_log_superpowers_dev_port_review",
-      "target": "2026_06_01_superpowers_dev_port_implementation_log_2026_06_01_phase_3_code_quality_review_failed",
-      "confidence_score": 1.0
+      "target": "2026_06_01_superpowers_dev_port_implementation_log_2026_06_01_phase_3_code_quality_review_failed"
     },
     {
       "relation": "contains",
@@ -33015,9 +33105,9 @@
       "source_file": "docs/specs/2026-06-01-superpowers-dev-port/implementation-log.md",
       "source_location": "L76",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_01_superpowers_dev_port_implementation_log_implementation_log_superpowers_dev_port_review",
-      "target": "2026_06_01_superpowers_dev_port_implementation_log_2026_06_01_phase_3_codex_hook_surface_verified",
-      "confidence_score": 1.0
+      "target": "2026_06_01_superpowers_dev_port_implementation_log_2026_06_01_phase_3_codex_hook_surface_verified"
     },
     {
       "relation": "contains",
@@ -33025,9 +33115,9 @@
       "source_file": "docs/specs/2026-06-01-superpowers-dev-port/implementation-log.md",
       "source_location": "L88",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_01_superpowers_dev_port_implementation_log_implementation_log_superpowers_dev_port_review",
-      "target": "2026_06_01_superpowers_dev_port_implementation_log_2026_06_01_phase_3_completed",
-      "confidence_score": 1.0
+      "target": "2026_06_01_superpowers_dev_port_implementation_log_2026_06_01_phase_3_completed"
     },
     {
       "relation": "contains",
@@ -33035,9 +33125,9 @@
       "source_file": "docs/specs/2026-06-01-superpowers-dev-port/implementation-log.md",
       "source_location": "L66",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_01_superpowers_dev_port_implementation_log_implementation_log_superpowers_dev_port_review",
-      "target": "2026_06_01_superpowers_dev_port_implementation_log_2026_06_01_phase_3_started",
-      "confidence_score": 1.0
+      "target": "2026_06_01_superpowers_dev_port_implementation_log_2026_06_01_phase_3_started"
     },
     {
       "relation": "contains",
@@ -33205,9 +33295,9 @@
       "source_file": "docs/specs/2026-06-01-superpowers-dev-port/tasks/task-01-reviewer-safety-scoped-ranges.md",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tasks_task_01_reviewer_safety_scoped_ranges_task_01_reviewer_safety_and_scoped_ranges",
-      "target": "tasks_task_01_reviewer_safety_scoped_ranges_phase",
-      "confidence_score": 1.0
+      "target": "tasks_task_01_reviewer_safety_scoped_ranges_phase"
     },
     {
       "relation": "contains",
@@ -33395,9 +33485,9 @@
       "source_file": "docs/specs/2026-06-01-superpowers-dev-port/tasks/task-02-harness-porting-playbook.md",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tasks_task_02_harness_porting_playbook_task_02_harness_porting_playbook",
-      "target": "tasks_task_02_harness_porting_playbook_phase",
-      "confidence_score": 1.0
+      "target": "tasks_task_02_harness_porting_playbook_phase"
     },
     {
       "relation": "contains",
@@ -33585,9 +33675,9 @@
       "source_file": "docs/specs/2026-06-01-superpowers-dev-port/tasks/task-03-eval-harness-strategy.md",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tasks_task_03_eval_harness_strategy_task_03_eval_harness_strategy",
-      "target": "tasks_task_03_eval_harness_strategy_phase",
-      "confidence_score": 1.0
+      "target": "tasks_task_03_eval_harness_strategy_phase"
     },
     {
       "relation": "contains",
@@ -33775,9 +33865,9 @@
       "source_file": "docs/specs/2026-06-01-superpowers-dev-port/tasks/task-04-action-language-cleanup.md",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tasks_task_04_action_language_cleanup_task_04_action_language_cleanup",
-      "target": "tasks_task_04_action_language_cleanup_phase",
-      "confidence_score": 1.0
+      "target": "tasks_task_04_action_language_cleanup_phase"
     },
     {
       "relation": "contains",
@@ -33965,9 +34055,9 @@
       "source_file": "docs/specs/2026-06-01-superpowers-dev-port/tasks/task-05-codex-native-hooks.md",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tasks_task_05_codex_native_hooks_task_05_codex_native_hook_compatibility",
-      "target": "tasks_task_05_codex_native_hooks_phase",
-      "confidence_score": 1.0
+      "target": "tasks_task_05_codex_native_hooks_phase"
     },
     {
       "relation": "contains",
@@ -34115,9 +34205,9 @@
       "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/README.md",
       "source_location": "L26",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_09_build_feature_risk_preflight_readme_build_feature_risk_preflight",
-      "target": "2026_06_09_build_feature_risk_preflight_readme_phases",
-      "confidence_score": 1.0
+      "target": "2026_06_09_build_feature_risk_preflight_readme_phases"
     },
     {
       "relation": "contains",
@@ -34175,9 +34265,9 @@
       "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/README.md",
       "source_location": "L36",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_09_build_feature_risk_preflight_readme_task_status",
-      "target": "2026_06_09_build_feature_risk_preflight_readme_phase_1",
-      "confidence_score": 1.0
+      "target": "2026_06_09_build_feature_risk_preflight_readme_phase_1"
     },
     {
       "relation": "contains",
@@ -34185,9 +34275,9 @@
       "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/README.md",
       "source_location": "L40",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_09_build_feature_risk_preflight_readme_task_status",
-      "target": "2026_06_09_build_feature_risk_preflight_readme_phase_2",
-      "confidence_score": 1.0
+      "target": "2026_06_09_build_feature_risk_preflight_readme_phase_2"
     },
     {
       "relation": "contains",
@@ -34195,9 +34285,9 @@
       "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/README.md",
       "source_location": "L44",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_09_build_feature_risk_preflight_readme_task_status",
-      "target": "2026_06_09_build_feature_risk_preflight_readme_phase_3",
-      "confidence_score": 1.0
+      "target": "2026_06_09_build_feature_risk_preflight_readme_phase_3"
     },
     {
       "relation": "contains",
@@ -34305,9 +34395,9 @@
       "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/implementation-log.md",
       "source_location": "L24",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_09_build_feature_risk_preflight_implementation_log_implementation_log_build_feature_risk_preflight",
-      "target": "2026_06_09_build_feature_risk_preflight_implementation_log_2026_06_09_phase_1_result",
-      "confidence_score": 1.0
+      "target": "2026_06_09_build_feature_risk_preflight_implementation_log_2026_06_09_phase_1_result"
     },
     {
       "relation": "contains",
@@ -34315,9 +34405,9 @@
       "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/implementation-log.md",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_09_build_feature_risk_preflight_implementation_log_implementation_log_build_feature_risk_preflight",
-      "target": "2026_06_09_build_feature_risk_preflight_implementation_log_2026_06_09_phase_1_started",
-      "confidence_score": 1.0
+      "target": "2026_06_09_build_feature_risk_preflight_implementation_log_2026_06_09_phase_1_started"
     },
     {
       "relation": "contains",
@@ -34325,9 +34415,9 @@
       "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/implementation-log.md",
       "source_location": "L51",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_09_build_feature_risk_preflight_implementation_log_implementation_log_build_feature_risk_preflight",
-      "target": "2026_06_09_build_feature_risk_preflight_implementation_log_2026_06_09_phase_2_result",
-      "confidence_score": 1.0
+      "target": "2026_06_09_build_feature_risk_preflight_implementation_log_2026_06_09_phase_2_result"
     },
     {
       "relation": "contains",
@@ -34335,9 +34425,9 @@
       "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/implementation-log.md",
       "source_location": "L41",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_09_build_feature_risk_preflight_implementation_log_implementation_log_build_feature_risk_preflight",
-      "target": "2026_06_09_build_feature_risk_preflight_implementation_log_2026_06_09_phase_2_started",
-      "confidence_score": 1.0
+      "target": "2026_06_09_build_feature_risk_preflight_implementation_log_2026_06_09_phase_2_started"
     },
     {
       "relation": "contains",
@@ -34345,9 +34435,9 @@
       "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/implementation-log.md",
       "source_location": "L80",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_09_build_feature_risk_preflight_implementation_log_implementation_log_build_feature_risk_preflight",
-      "target": "2026_06_09_build_feature_risk_preflight_implementation_log_2026_06_09_phase_3_result",
-      "confidence_score": 1.0
+      "target": "2026_06_09_build_feature_risk_preflight_implementation_log_2026_06_09_phase_3_result"
     },
     {
       "relation": "contains",
@@ -34355,9 +34445,9 @@
       "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/implementation-log.md",
       "source_location": "L69",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_09_build_feature_risk_preflight_implementation_log_implementation_log_build_feature_risk_preflight",
-      "target": "2026_06_09_build_feature_risk_preflight_implementation_log_2026_06_09_phase_3_started",
-      "confidence_score": 1.0
+      "target": "2026_06_09_build_feature_risk_preflight_implementation_log_2026_06_09_phase_3_started"
     },
     {
       "relation": "contains",
@@ -34445,9 +34535,9 @@
       "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-01-phase-risk-preflight.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tasks_task_01_phase_risk_preflight",
-      "target": "tasks_task_01_phase_risk_preflight_task_01_phase_risk_preflight",
-      "confidence_score": 1.0
+      "target": "tasks_task_01_phase_risk_preflight_task_01_phase_risk_preflight"
     },
     {
       "relation": "contains",
@@ -34455,9 +34545,9 @@
       "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-01-phase-risk-preflight.md",
       "source_location": "L92",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tasks_task_01_phase_risk_preflight_task_01_phase_risk_preflight",
-      "target": "tasks_task_01_phase_risk_preflight_acceptance_criteria",
-      "confidence_score": 1.0
+      "target": "tasks_task_01_phase_risk_preflight_acceptance_criteria"
     },
     {
       "relation": "contains",
@@ -34465,9 +34555,9 @@
       "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-01-phase-risk-preflight.md",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tasks_task_01_phase_risk_preflight_task_01_phase_risk_preflight",
-      "target": "tasks_task_01_phase_risk_preflight_dependencies",
-      "confidence_score": 1.0
+      "target": "tasks_task_01_phase_risk_preflight_dependencies"
     },
     {
       "relation": "contains",
@@ -34475,9 +34565,9 @@
       "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-01-phase-risk-preflight.md",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tasks_task_01_phase_risk_preflight_task_01_phase_risk_preflight",
-      "target": "tasks_task_01_phase_risk_preflight_description",
-      "confidence_score": 1.0
+      "target": "tasks_task_01_phase_risk_preflight_description"
     },
     {
       "relation": "contains",
@@ -34485,9 +34575,9 @@
       "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-01-phase-risk-preflight.md",
       "source_location": "L22",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tasks_task_01_phase_risk_preflight_task_01_phase_risk_preflight",
-      "target": "tasks_task_01_phase_risk_preflight_files_to_create",
-      "confidence_score": 1.0
+      "target": "tasks_task_01_phase_risk_preflight_files_to_create"
     },
     {
       "relation": "contains",
@@ -34495,9 +34585,9 @@
       "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-01-phase-risk-preflight.md",
       "source_location": "L26",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tasks_task_01_phase_risk_preflight_task_01_phase_risk_preflight",
-      "target": "tasks_task_01_phase_risk_preflight_files_to_modify",
-      "confidence_score": 1.0
+      "target": "tasks_task_01_phase_risk_preflight_files_to_modify"
     },
     {
       "relation": "contains",
@@ -34505,9 +34595,9 @@
       "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-01-phase-risk-preflight.md",
       "source_location": "L101",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tasks_task_01_phase_risk_preflight_task_01_phase_risk_preflight",
-      "target": "tasks_task_01_phase_risk_preflight_notes",
-      "confidence_score": 1.0
+      "target": "tasks_task_01_phase_risk_preflight_notes"
     },
     {
       "relation": "contains",
@@ -34515,9 +34605,9 @@
       "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-01-phase-risk-preflight.md",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tasks_task_01_phase_risk_preflight_task_01_phase_risk_preflight",
-      "target": "tasks_task_01_phase_risk_preflight_phase",
-      "confidence_score": 1.0
+      "target": "tasks_task_01_phase_risk_preflight_phase"
     },
     {
       "relation": "contains",
@@ -34525,9 +34615,9 @@
       "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-01-phase-risk-preflight.md",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tasks_task_01_phase_risk_preflight_task_01_phase_risk_preflight",
-      "target": "tasks_task_01_phase_risk_preflight_status",
-      "confidence_score": 1.0
+      "target": "tasks_task_01_phase_risk_preflight_status"
     },
     {
       "relation": "contains",
@@ -34535,9 +34625,9 @@
       "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-01-phase-risk-preflight.md",
       "source_location": "L33",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tasks_task_01_phase_risk_preflight_task_01_phase_risk_preflight",
-      "target": "tasks_task_01_phase_risk_preflight_technical_details",
-      "confidence_score": 1.0
+      "target": "tasks_task_01_phase_risk_preflight_technical_details"
     },
     {
       "relation": "contains",
@@ -34545,9 +34635,9 @@
       "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-01-phase-risk-preflight.md",
       "source_location": "L75",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tasks_task_01_phase_risk_preflight_task_01_phase_risk_preflight",
-      "target": "tasks_task_01_phase_risk_preflight_verification_plan",
-      "confidence_score": 1.0
+      "target": "tasks_task_01_phase_risk_preflight_verification_plan"
     },
     {
       "relation": "contains",
@@ -34555,9 +34645,9 @@
       "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-01-phase-risk-preflight.md",
       "source_location": "L71",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tasks_task_01_phase_risk_preflight_technical_details",
-      "target": "tasks_task_01_phase_risk_preflight_api_endpoints",
-      "confidence_score": 1.0
+      "target": "tasks_task_01_phase_risk_preflight_api_endpoints"
     },
     {
       "relation": "contains",
@@ -34565,9 +34655,9 @@
       "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-01-phase-risk-preflight.md",
       "source_location": "L51",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tasks_task_01_phase_risk_preflight_technical_details",
-      "target": "tasks_task_01_phase_risk_preflight_code_snippets",
-      "confidence_score": 1.0
+      "target": "tasks_task_01_phase_risk_preflight_code_snippets"
     },
     {
       "relation": "contains",
@@ -34575,9 +34665,9 @@
       "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-01-phase-risk-preflight.md",
       "source_location": "L67",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tasks_task_01_phase_risk_preflight_technical_details",
-      "target": "tasks_task_01_phase_risk_preflight_environment_variables",
-      "confidence_score": 1.0
+      "target": "tasks_task_01_phase_risk_preflight_environment_variables"
     },
     {
       "relation": "contains",
@@ -34585,9 +34675,9 @@
       "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-01-phase-risk-preflight.md",
       "source_location": "L35",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tasks_task_01_phase_risk_preflight_technical_details",
-      "target": "tasks_task_01_phase_risk_preflight_implementation_steps",
-      "confidence_score": 1.0
+      "target": "tasks_task_01_phase_risk_preflight_implementation_steps"
     },
     {
       "relation": "contains",
@@ -34595,9 +34685,9 @@
       "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-01-phase-risk-preflight.md",
       "source_location": "L87",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tasks_task_01_phase_risk_preflight_verification_plan",
-      "target": "tasks_task_01_phase_risk_preflight_final_verification",
-      "confidence_score": 1.0
+      "target": "tasks_task_01_phase_risk_preflight_final_verification"
     },
     {
       "relation": "contains",
@@ -34605,9 +34695,9 @@
       "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-01-phase-risk-preflight.md",
       "source_location": "L82",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tasks_task_01_phase_risk_preflight_verification_plan",
-      "target": "tasks_task_01_phase_risk_preflight_green",
-      "confidence_score": 1.0
+      "target": "tasks_task_01_phase_risk_preflight_green"
     },
     {
       "relation": "contains",
@@ -34615,9 +34705,9 @@
       "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-01-phase-risk-preflight.md",
       "source_location": "L77",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tasks_task_01_phase_risk_preflight_verification_plan",
-      "target": "tasks_task_01_phase_risk_preflight_red",
-      "confidence_score": 1.0
+      "target": "tasks_task_01_phase_risk_preflight_red"
     },
     {
       "relation": "contains",
@@ -34705,9 +34795,9 @@
       "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-02-complete-punch-list-mode.md",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tasks_task_02_complete_punch_list_mode_task_02_complete_punch_list_mode",
-      "target": "tasks_task_02_complete_punch_list_mode_phase",
-      "confidence_score": 1.0
+      "target": "tasks_task_02_complete_punch_list_mode_phase"
     },
     {
       "relation": "contains",
@@ -34895,9 +34985,9 @@
       "source_file": "docs/specs/2026-06-09-build-feature-risk-preflight/tasks/task-03-verification-guardrails.md",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tasks_task_03_verification_guardrails_task_03_verification_guardrails",
-      "target": "tasks_task_03_verification_guardrails_phase",
-      "confidence_score": 1.0
+      "target": "tasks_task_03_verification_guardrails_phase"
     },
     {
       "relation": "contains",
@@ -35045,9 +35135,9 @@
       "source_file": "docs/specs/2026-06-10-workflow-optimization-bundle/README.md",
       "source_location": "L30",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_10_workflow_optimization_bundle_readme_workflow_optimization_bundle",
-      "target": "2026_06_10_workflow_optimization_bundle_readme_phases",
-      "confidence_score": 1.0
+      "target": "2026_06_10_workflow_optimization_bundle_readme_phases"
     },
     {
       "relation": "contains",
@@ -35105,9 +35195,9 @@
       "source_file": "docs/specs/2026-06-10-workflow-optimization-bundle/README.md",
       "source_location": "L40",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_10_workflow_optimization_bundle_readme_task_status",
-      "target": "2026_06_10_workflow_optimization_bundle_readme_phase_1",
-      "confidence_score": 1.0
+      "target": "2026_06_10_workflow_optimization_bundle_readme_phase_1"
     },
     {
       "relation": "contains",
@@ -35115,9 +35205,9 @@
       "source_file": "docs/specs/2026-06-10-workflow-optimization-bundle/README.md",
       "source_location": "L47",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_10_workflow_optimization_bundle_readme_task_status",
-      "target": "2026_06_10_workflow_optimization_bundle_readme_phase_2",
-      "confidence_score": 1.0
+      "target": "2026_06_10_workflow_optimization_bundle_readme_phase_2"
     },
     {
       "relation": "contains",
@@ -35125,9 +35215,9 @@
       "source_file": "docs/specs/2026-06-10-workflow-optimization-bundle/README.md",
       "source_location": "L50",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_10_workflow_optimization_bundle_readme_task_status",
-      "target": "2026_06_10_workflow_optimization_bundle_readme_phase_3",
-      "confidence_score": 1.0
+      "target": "2026_06_10_workflow_optimization_bundle_readme_phase_3"
     },
     {
       "relation": "contains",
@@ -35205,9 +35295,9 @@
       "source_file": "docs/specs/2026-06-10-workflow-optimization-bundle/implementation-log.md",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_10_workflow_optimization_bundle_implementation_log_implementation_log_workflow_optimization_bundle",
-      "target": "2026_06_10_workflow_optimization_bundle_implementation_log_2026_06_10_phase_1_started",
-      "confidence_score": 1.0
+      "target": "2026_06_10_workflow_optimization_bundle_implementation_log_2026_06_10_phase_1_started"
     },
     {
       "relation": "contains",
@@ -35215,9 +35305,9 @@
       "source_file": "docs/specs/2026-06-10-workflow-optimization-bundle/implementation-log.md",
       "source_location": "L76",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_10_workflow_optimization_bundle_implementation_log_implementation_log_workflow_optimization_bundle",
-      "target": "2026_06_10_workflow_optimization_bundle_implementation_log_2026_06_10_phase_2_started",
-      "confidence_score": 1.0
+      "target": "2026_06_10_workflow_optimization_bundle_implementation_log_2026_06_10_phase_2_started"
     },
     {
       "relation": "contains",
@@ -35225,9 +35315,9 @@
       "source_file": "docs/specs/2026-06-10-workflow-optimization-bundle/implementation-log.md",
       "source_location": "L113",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_10_workflow_optimization_bundle_implementation_log_implementation_log_workflow_optimization_bundle",
-      "target": "2026_06_10_workflow_optimization_bundle_implementation_log_2026_06_10_phase_3_started",
-      "confidence_score": 1.0
+      "target": "2026_06_10_workflow_optimization_bundle_implementation_log_2026_06_10_phase_3_started"
     },
     {
       "relation": "contains",
@@ -35245,9 +35335,9 @@
       "source_file": "docs/specs/2026-06-10-workflow-optimization-bundle/implementation-log.md",
       "source_location": "L46",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_10_workflow_optimization_bundle_implementation_log_2026_06_10_phase_1_started",
-      "target": "2026_06_10_workflow_optimization_bundle_implementation_log_baseline_failure_attribution",
-      "confidence_score": 1.0
+      "target": "2026_06_10_workflow_optimization_bundle_implementation_log_baseline_failure_attribution"
     },
     {
       "relation": "contains",
@@ -35255,9 +35345,9 @@
       "source_file": "docs/specs/2026-06-10-workflow-optimization-bundle/implementation-log.md",
       "source_location": "L61",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_10_workflow_optimization_bundle_implementation_log_2026_06_10_phase_1_started",
-      "target": "2026_06_10_workflow_optimization_bundle_implementation_log_phase_1_code_quality_review",
-      "confidence_score": 1.0
+      "target": "2026_06_10_workflow_optimization_bundle_implementation_log_phase_1_code_quality_review"
     },
     {
       "relation": "contains",
@@ -35265,9 +35355,9 @@
       "source_file": "docs/specs/2026-06-10-workflow-optimization-bundle/implementation-log.md",
       "source_location": "L38",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_10_workflow_optimization_bundle_implementation_log_2026_06_10_phase_1_started",
-      "target": "2026_06_10_workflow_optimization_bundle_implementation_log_phase_1_coder_results",
-      "confidence_score": 1.0
+      "target": "2026_06_10_workflow_optimization_bundle_implementation_log_phase_1_coder_results"
     },
     {
       "relation": "contains",
@@ -35275,9 +35365,9 @@
       "source_file": "docs/specs/2026-06-10-workflow-optimization-bundle/implementation-log.md",
       "source_location": "L71",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_10_workflow_optimization_bundle_implementation_log_2026_06_10_phase_1_started",
-      "target": "2026_06_10_workflow_optimization_bundle_implementation_log_phase_1_complete",
-      "confidence_score": 1.0
+      "target": "2026_06_10_workflow_optimization_bundle_implementation_log_phase_1_complete"
     },
     {
       "relation": "contains",
@@ -35285,9 +35375,9 @@
       "source_file": "docs/specs/2026-06-10-workflow-optimization-bundle/implementation-log.md",
       "source_location": "L34",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_10_workflow_optimization_bundle_implementation_log_2026_06_10_phase_1_started",
-      "target": "2026_06_10_workflow_optimization_bundle_implementation_log_phase_1_dispatch",
-      "confidence_score": 1.0
+      "target": "2026_06_10_workflow_optimization_bundle_implementation_log_phase_1_dispatch"
     },
     {
       "relation": "contains",
@@ -35295,9 +35385,9 @@
       "source_file": "docs/specs/2026-06-10-workflow-optimization-bundle/implementation-log.md",
       "source_location": "L66",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_10_workflow_optimization_bundle_implementation_log_2026_06_10_phase_1_started",
-      "target": "2026_06_10_workflow_optimization_bundle_implementation_log_phase_1_fix",
-      "confidence_score": 1.0
+      "target": "2026_06_10_workflow_optimization_bundle_implementation_log_phase_1_fix"
     },
     {
       "relation": "contains",
@@ -35305,9 +35395,9 @@
       "source_file": "docs/specs/2026-06-10-workflow-optimization-bundle/implementation-log.md",
       "source_location": "L24",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_10_workflow_optimization_bundle_implementation_log_2026_06_10_phase_1_started",
-      "target": "2026_06_10_workflow_optimization_bundle_implementation_log_phase_1_risk_preflight",
-      "confidence_score": 1.0
+      "target": "2026_06_10_workflow_optimization_bundle_implementation_log_phase_1_risk_preflight"
     },
     {
       "relation": "contains",
@@ -35315,9 +35405,9 @@
       "source_file": "docs/specs/2026-06-10-workflow-optimization-bundle/implementation-log.md",
       "source_location": "L51",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_10_workflow_optimization_bundle_implementation_log_2026_06_10_phase_1_started",
-      "target": "2026_06_10_workflow_optimization_bundle_implementation_log_phase_1_simplification_pass",
-      "confidence_score": 1.0
+      "target": "2026_06_10_workflow_optimization_bundle_implementation_log_phase_1_simplification_pass"
     },
     {
       "relation": "contains",
@@ -35325,9 +35415,9 @@
       "source_file": "docs/specs/2026-06-10-workflow-optimization-bundle/implementation-log.md",
       "source_location": "L57",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_10_workflow_optimization_bundle_implementation_log_2026_06_10_phase_1_started",
-      "target": "2026_06_10_workflow_optimization_bundle_implementation_log_phase_1_spec_compliance_review",
-      "confidence_score": 1.0
+      "target": "2026_06_10_workflow_optimization_bundle_implementation_log_phase_1_spec_compliance_review"
     },
     {
       "relation": "contains",
@@ -35345,9 +35435,9 @@
       "source_file": "docs/specs/2026-06-10-workflow-optimization-bundle/implementation-log.md",
       "source_location": "L105",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_10_workflow_optimization_bundle_implementation_log_2026_06_10_phase_2_started",
-      "target": "2026_06_10_workflow_optimization_bundle_implementation_log_phase_2_code_quality_review",
-      "confidence_score": 1.0
+      "target": "2026_06_10_workflow_optimization_bundle_implementation_log_phase_2_code_quality_review"
     },
     {
       "relation": "contains",
@@ -35355,9 +35445,9 @@
       "source_file": "docs/specs/2026-06-10-workflow-optimization-bundle/implementation-log.md",
       "source_location": "L92",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_10_workflow_optimization_bundle_implementation_log_2026_06_10_phase_2_started",
-      "target": "2026_06_10_workflow_optimization_bundle_implementation_log_phase_2_coder_result",
-      "confidence_score": 1.0
+      "target": "2026_06_10_workflow_optimization_bundle_implementation_log_phase_2_coder_result"
     },
     {
       "relation": "contains",
@@ -35365,9 +35455,9 @@
       "source_file": "docs/specs/2026-06-10-workflow-optimization-bundle/implementation-log.md",
       "source_location": "L109",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_10_workflow_optimization_bundle_implementation_log_2026_06_10_phase_2_started",
-      "target": "2026_06_10_workflow_optimization_bundle_implementation_log_phase_2_complete",
-      "confidence_score": 1.0
+      "target": "2026_06_10_workflow_optimization_bundle_implementation_log_phase_2_complete"
     },
     {
       "relation": "contains",
@@ -35375,9 +35465,9 @@
       "source_file": "docs/specs/2026-06-10-workflow-optimization-bundle/implementation-log.md",
       "source_location": "L82",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_10_workflow_optimization_bundle_implementation_log_2026_06_10_phase_2_started",
-      "target": "2026_06_10_workflow_optimization_bundle_implementation_log_phase_2_risk_preflight",
-      "confidence_score": 1.0
+      "target": "2026_06_10_workflow_optimization_bundle_implementation_log_phase_2_risk_preflight"
     },
     {
       "relation": "contains",
@@ -35385,9 +35475,9 @@
       "source_file": "docs/specs/2026-06-10-workflow-optimization-bundle/implementation-log.md",
       "source_location": "L96",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_10_workflow_optimization_bundle_implementation_log_2026_06_10_phase_2_started",
-      "target": "2026_06_10_workflow_optimization_bundle_implementation_log_phase_2_simplification_pass",
-      "confidence_score": 1.0
+      "target": "2026_06_10_workflow_optimization_bundle_implementation_log_phase_2_simplification_pass"
     },
     {
       "relation": "contains",
@@ -35395,9 +35485,9 @@
       "source_file": "docs/specs/2026-06-10-workflow-optimization-bundle/implementation-log.md",
       "source_location": "L101",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_10_workflow_optimization_bundle_implementation_log_2026_06_10_phase_2_started",
-      "target": "2026_06_10_workflow_optimization_bundle_implementation_log_phase_2_spec_compliance_review",
-      "confidence_score": 1.0
+      "target": "2026_06_10_workflow_optimization_bundle_implementation_log_phase_2_spec_compliance_review"
     },
     {
       "relation": "contains",
@@ -35405,9 +35495,9 @@
       "source_file": "docs/specs/2026-06-10-workflow-optimization-bundle/implementation-log.md",
       "source_location": "L141",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_10_workflow_optimization_bundle_implementation_log_2026_06_10_phase_3_started",
-      "target": "2026_06_10_workflow_optimization_bundle_implementation_log_phase_3_code_quality_review",
-      "confidence_score": 1.0
+      "target": "2026_06_10_workflow_optimization_bundle_implementation_log_phase_3_code_quality_review"
     },
     {
       "relation": "contains",
@@ -35415,9 +35505,9 @@
       "source_file": "docs/specs/2026-06-10-workflow-optimization-bundle/implementation-log.md",
       "source_location": "L128",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_10_workflow_optimization_bundle_implementation_log_2026_06_10_phase_3_started",
-      "target": "2026_06_10_workflow_optimization_bundle_implementation_log_phase_3_coder_result",
-      "confidence_score": 1.0
+      "target": "2026_06_10_workflow_optimization_bundle_implementation_log_phase_3_coder_result"
     },
     {
       "relation": "contains",
@@ -35425,9 +35515,9 @@
       "source_file": "docs/specs/2026-06-10-workflow-optimization-bundle/implementation-log.md",
       "source_location": "L149",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_10_workflow_optimization_bundle_implementation_log_2026_06_10_phase_3_started",
-      "target": "2026_06_10_workflow_optimization_bundle_implementation_log_phase_3_complete",
-      "confidence_score": 1.0
+      "target": "2026_06_10_workflow_optimization_bundle_implementation_log_phase_3_complete"
     },
     {
       "relation": "contains",
@@ -35435,9 +35525,9 @@
       "source_file": "docs/specs/2026-06-10-workflow-optimization-bundle/implementation-log.md",
       "source_location": "L145",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_10_workflow_optimization_bundle_implementation_log_2026_06_10_phase_3_started",
-      "target": "2026_06_10_workflow_optimization_bundle_implementation_log_phase_3_fix",
-      "confidence_score": 1.0
+      "target": "2026_06_10_workflow_optimization_bundle_implementation_log_phase_3_fix"
     },
     {
       "relation": "contains",
@@ -35445,9 +35535,9 @@
       "source_file": "docs/specs/2026-06-10-workflow-optimization-bundle/implementation-log.md",
       "source_location": "L119",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_10_workflow_optimization_bundle_implementation_log_2026_06_10_phase_3_started",
-      "target": "2026_06_10_workflow_optimization_bundle_implementation_log_phase_3_risk_preflight",
-      "confidence_score": 1.0
+      "target": "2026_06_10_workflow_optimization_bundle_implementation_log_phase_3_risk_preflight"
     },
     {
       "relation": "contains",
@@ -35455,9 +35545,9 @@
       "source_file": "docs/specs/2026-06-10-workflow-optimization-bundle/implementation-log.md",
       "source_location": "L132",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_10_workflow_optimization_bundle_implementation_log_2026_06_10_phase_3_started",
-      "target": "2026_06_10_workflow_optimization_bundle_implementation_log_phase_3_simplification_pass",
-      "confidence_score": 1.0
+      "target": "2026_06_10_workflow_optimization_bundle_implementation_log_phase_3_simplification_pass"
     },
     {
       "relation": "contains",
@@ -35465,9 +35555,9 @@
       "source_file": "docs/specs/2026-06-10-workflow-optimization-bundle/implementation-log.md",
       "source_location": "L137",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_10_workflow_optimization_bundle_implementation_log_2026_06_10_phase_3_started",
-      "target": "2026_06_10_workflow_optimization_bundle_implementation_log_phase_3_spec_compliance_review",
-      "confidence_score": 1.0
+      "target": "2026_06_10_workflow_optimization_bundle_implementation_log_phase_3_spec_compliance_review"
     },
     {
       "relation": "contains",
@@ -35625,9 +35715,9 @@
       "source_file": "docs/specs/2026-06-10-workflow-optimization-bundle/tasks/task-01-routing-lanes-and-mapper-offer.md",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tasks_task_01_routing_lanes_and_mapper_offer_task_01_routing_lanes_and_codebase_mapper_offer",
-      "target": "tasks_task_01_routing_lanes_and_mapper_offer_phase",
-      "confidence_score": 1.0
+      "target": "tasks_task_01_routing_lanes_and_mapper_offer_phase"
     },
     {
       "relation": "contains",
@@ -35785,9 +35875,9 @@
       "source_file": "docs/specs/2026-06-10-workflow-optimization-bundle/tasks/task-02-plan-feature-hardening.md",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tasks_task_02_plan_feature_hardening_task_02_plan_feature_hardening",
-      "target": "tasks_task_02_plan_feature_hardening_phase",
-      "confidence_score": 1.0
+      "target": "tasks_task_02_plan_feature_hardening_phase"
     },
     {
       "relation": "contains",
@@ -35945,9 +36035,9 @@
       "source_file": "docs/specs/2026-06-10-workflow-optimization-bundle/tasks/task-03-session-start-slimming.md",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tasks_task_03_session_start_slimming_task_03_session_start_hook_slimming",
-      "target": "tasks_task_03_session_start_slimming_phase",
-      "confidence_score": 1.0
+      "target": "tasks_task_03_session_start_slimming_phase"
     },
     {
       "relation": "contains",
@@ -36105,9 +36195,9 @@
       "source_file": "docs/specs/2026-06-10-workflow-optimization-bundle/tasks/task-04-verify-hooks-script.md",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tasks_task_04_verify_hooks_script_task_04_hooks_and_packaging_sync_verification_script",
-      "target": "tasks_task_04_verify_hooks_script_phase",
-      "confidence_score": 1.0
+      "target": "tasks_task_04_verify_hooks_script_phase"
     },
     {
       "relation": "contains",
@@ -36275,9 +36365,9 @@
       "source_file": "docs/specs/2026-06-10-workflow-optimization-bundle/tasks/task-05-read-only-contract-dedupe.md",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tasks_task_05_read_only_contract_dedupe_task_05_read_only_review_contract_dedupe",
-      "target": "tasks_task_05_read_only_contract_dedupe_phase",
-      "confidence_score": 1.0
+      "target": "tasks_task_05_read_only_contract_dedupe_phase"
     },
     {
       "relation": "contains",
@@ -36435,9 +36525,9 @@
       "source_file": "docs/specs/2026-06-10-workflow-optimization-bundle/tasks/task-07-build-feature-orchestration-rework.md",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tasks_task_07_build_feature_orchestration_rework_task_07_build_feature_orchestration_rework",
-      "target": "tasks_task_07_build_feature_orchestration_rework_phase",
-      "confidence_score": 1.0
+      "target": "tasks_task_07_build_feature_orchestration_rework_phase"
     },
     {
       "relation": "contains",
@@ -36555,9 +36645,9 @@
       "source_file": "docs/specs/2026-06-14-brainstorm-companion-hardening/README.md",
       "source_location": "L32",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_14_brainstorm_companion_hardening_readme_brainstorm_companion_hardening",
-      "target": "2026_06_14_brainstorm_companion_hardening_readme_phases",
-      "confidence_score": 1.0
+      "target": "2026_06_14_brainstorm_companion_hardening_readme_phases"
     },
     {
       "relation": "contains",
@@ -36625,9 +36715,9 @@
       "source_file": "docs/specs/2026-06-14-brainstorm-companion-hardening/README.md",
       "source_location": "L43",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_14_brainstorm_companion_hardening_readme_task_status",
-      "target": "2026_06_14_brainstorm_companion_hardening_readme_phase_1",
-      "confidence_score": 1.0
+      "target": "2026_06_14_brainstorm_companion_hardening_readme_phase_1"
     },
     {
       "relation": "contains",
@@ -36635,9 +36725,9 @@
       "source_file": "docs/specs/2026-06-14-brainstorm-companion-hardening/README.md",
       "source_location": "L46",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_14_brainstorm_companion_hardening_readme_task_status",
-      "target": "2026_06_14_brainstorm_companion_hardening_readme_phase_2",
-      "confidence_score": 1.0
+      "target": "2026_06_14_brainstorm_companion_hardening_readme_phase_2"
     },
     {
       "relation": "contains",
@@ -36645,9 +36735,9 @@
       "source_file": "docs/specs/2026-06-14-brainstorm-companion-hardening/README.md",
       "source_location": "L50",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_14_brainstorm_companion_hardening_readme_task_status",
-      "target": "2026_06_14_brainstorm_companion_hardening_readme_phase_3",
-      "confidence_score": 1.0
+      "target": "2026_06_14_brainstorm_companion_hardening_readme_phase_3"
     },
     {
       "relation": "contains",
@@ -36655,9 +36745,9 @@
       "source_file": "docs/specs/2026-06-14-brainstorm-companion-hardening/README.md",
       "source_location": "L53",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_14_brainstorm_companion_hardening_readme_task_status",
-      "target": "2026_06_14_brainstorm_companion_hardening_readme_phase_4",
-      "confidence_score": 1.0
+      "target": "2026_06_14_brainstorm_companion_hardening_readme_phase_4"
     },
     {
       "relation": "contains",
@@ -36805,9 +36895,9 @@
       "source_file": "docs/specs/2026-06-14-brainstorm-companion-hardening/implementation-log.md",
       "source_location": "L24",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_14_brainstorm_companion_hardening_implementation_log_implementation_log_brainstorm_companion_hardening",
-      "target": "2026_06_14_brainstorm_companion_hardening_implementation_log_2026_06_14_phase_1_assignment",
-      "confidence_score": 1.0
+      "target": "2026_06_14_brainstorm_companion_hardening_implementation_log_2026_06_14_phase_1_assignment"
     },
     {
       "relation": "contains",
@@ -36815,9 +36905,9 @@
       "source_file": "docs/specs/2026-06-14-brainstorm-companion-hardening/implementation-log.md",
       "source_location": "L33",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_14_brainstorm_companion_hardening_implementation_log_implementation_log_brainstorm_companion_hardening",
-      "target": "2026_06_14_brainstorm_companion_hardening_implementation_log_2026_06_14_phase_1_completed",
-      "confidence_score": 1.0
+      "target": "2026_06_14_brainstorm_companion_hardening_implementation_log_2026_06_14_phase_1_completed"
     },
     {
       "relation": "contains",
@@ -36825,9 +36915,9 @@
       "source_file": "docs/specs/2026-06-14-brainstorm-companion-hardening/implementation-log.md",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_14_brainstorm_companion_hardening_implementation_log_implementation_log_brainstorm_companion_hardening",
-      "target": "2026_06_14_brainstorm_companion_hardening_implementation_log_2026_06_14_phase_1_started",
-      "confidence_score": 1.0
+      "target": "2026_06_14_brainstorm_companion_hardening_implementation_log_2026_06_14_phase_1_started"
     },
     {
       "relation": "contains",
@@ -36835,9 +36925,9 @@
       "source_file": "docs/specs/2026-06-14-brainstorm-companion-hardening/implementation-log.md",
       "source_location": "L57",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_14_brainstorm_companion_hardening_implementation_log_implementation_log_brainstorm_companion_hardening",
-      "target": "2026_06_14_brainstorm_companion_hardening_implementation_log_2026_06_14_phase_2_completed",
-      "confidence_score": 1.0
+      "target": "2026_06_14_brainstorm_companion_hardening_implementation_log_2026_06_14_phase_2_completed"
     },
     {
       "relation": "contains",
@@ -36845,9 +36935,9 @@
       "source_file": "docs/specs/2026-06-14-brainstorm-companion-hardening/implementation-log.md",
       "source_location": "L46",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_14_brainstorm_companion_hardening_implementation_log_implementation_log_brainstorm_companion_hardening",
-      "target": "2026_06_14_brainstorm_companion_hardening_implementation_log_2026_06_14_phase_2_started",
-      "confidence_score": 1.0
+      "target": "2026_06_14_brainstorm_companion_hardening_implementation_log_2026_06_14_phase_2_started"
     },
     {
       "relation": "contains",
@@ -36855,9 +36945,9 @@
       "source_file": "docs/specs/2026-06-14-brainstorm-companion-hardening/implementation-log.md",
       "source_location": "L92",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_14_brainstorm_companion_hardening_implementation_log_implementation_log_brainstorm_companion_hardening",
-      "target": "2026_06_14_brainstorm_companion_hardening_implementation_log_2026_06_14_phase_3_completed",
-      "confidence_score": 1.0
+      "target": "2026_06_14_brainstorm_companion_hardening_implementation_log_2026_06_14_phase_3_completed"
     },
     {
       "relation": "contains",
@@ -36865,9 +36955,9 @@
       "source_file": "docs/specs/2026-06-14-brainstorm-companion-hardening/implementation-log.md",
       "source_location": "L83",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_14_brainstorm_companion_hardening_implementation_log_implementation_log_brainstorm_companion_hardening",
-      "target": "2026_06_14_brainstorm_companion_hardening_implementation_log_2026_06_14_phase_3_started",
-      "confidence_score": 1.0
+      "target": "2026_06_14_brainstorm_companion_hardening_implementation_log_2026_06_14_phase_3_started"
     },
     {
       "relation": "contains",
@@ -36875,9 +36965,9 @@
       "source_file": "docs/specs/2026-06-14-brainstorm-companion-hardening/implementation-log.md",
       "source_location": "L119",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_14_brainstorm_companion_hardening_implementation_log_implementation_log_brainstorm_companion_hardening",
-      "target": "2026_06_14_brainstorm_companion_hardening_implementation_log_2026_06_14_phase_4_completed",
-      "confidence_score": 1.0
+      "target": "2026_06_14_brainstorm_companion_hardening_implementation_log_2026_06_14_phase_4_completed"
     },
     {
       "relation": "contains",
@@ -36885,9 +36975,9 @@
       "source_file": "docs/specs/2026-06-14-brainstorm-companion-hardening/implementation-log.md",
       "source_location": "L107",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_14_brainstorm_companion_hardening_implementation_log_implementation_log_brainstorm_companion_hardening",
-      "target": "2026_06_14_brainstorm_companion_hardening_implementation_log_2026_06_14_phase_4_started",
-      "confidence_score": 1.0
+      "target": "2026_06_14_brainstorm_companion_hardening_implementation_log_2026_06_14_phase_4_started"
     },
     {
       "relation": "contains",
@@ -37055,9 +37145,9 @@
       "source_file": "docs/specs/2026-06-14-brainstorm-companion-hardening/tasks/task-01-server-auth-websocket-gate.md",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tasks_task_01_server_auth_websocket_gate_task_01_server_auth_and_websocket_protocol_gate",
-      "target": "tasks_task_01_server_auth_websocket_gate_phase",
-      "confidence_score": 1.0
+      "target": "tasks_task_01_server_auth_websocket_gate_phase"
     },
     {
       "relation": "contains",
@@ -37245,9 +37335,9 @@
       "source_file": "docs/specs/2026-06-14-brainstorm-companion-hardening/tasks/task-02-server-lifecycle-persistence-browser.md",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tasks_task_02_server_lifecycle_persistence_browser_task_02_server_lifecycle_persistence_and_browser_launch",
-      "target": "tasks_task_02_server_lifecycle_persistence_browser_phase",
-      "confidence_score": 1.0
+      "target": "tasks_task_02_server_lifecycle_persistence_browser_phase"
     },
     {
       "relation": "contains",
@@ -37425,9 +37515,9 @@
       "source_file": "docs/specs/2026-06-14-brainstorm-companion-hardening/tasks/task-03-helper-key-reconnect.md",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tasks_task_03_helper_key_reconnect_task_03_helper_key_and_reconnect_behavior",
-      "target": "tasks_task_03_helper_key_reconnect_phase",
-      "confidence_score": 1.0
+      "target": "tasks_task_03_helper_key_reconnect_phase"
     },
     {
       "relation": "contains",
@@ -37615,9 +37705,9 @@
       "source_file": "docs/specs/2026-06-14-brainstorm-companion-hardening/tasks/task-04-start-stop-ownership-flags.md",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tasks_task_04_start_stop_ownership_flags_task_04_start_stop_ownership_and_runtime_flags",
-      "target": "tasks_task_04_start_stop_ownership_flags_phase",
-      "confidence_score": 1.0
+      "target": "tasks_task_04_start_stop_ownership_flags_phase"
     },
     {
       "relation": "contains",
@@ -37785,9 +37875,9 @@
       "source_file": "docs/specs/2026-06-14-brainstorm-companion-hardening/tasks/task-05-docs-test-wiring.md",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tasks_task_05_docs_test_wiring_task_05_docs_and_test_package_wiring",
-      "target": "tasks_task_05_docs_test_wiring_phase",
-      "confidence_score": 1.0
+      "target": "tasks_task_05_docs_test_wiring_phase"
     },
     {
       "relation": "contains",
@@ -37925,9 +38015,9 @@
       "source_file": "docs/specs/2026-06-17-quick-and-bug-workflows/README.md",
       "source_location": "L28",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_17_quick_and_bug_workflows_readme_quick_and_bug_workflows",
-      "target": "2026_06_17_quick_and_bug_workflows_readme_phases",
-      "confidence_score": 1.0
+      "target": "2026_06_17_quick_and_bug_workflows_readme_phases"
     },
     {
       "relation": "contains",
@@ -37975,9 +38065,9 @@
       "source_file": "docs/specs/2026-06-17-quick-and-bug-workflows/README.md",
       "source_location": "L37",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_17_quick_and_bug_workflows_readme_task_status",
-      "target": "2026_06_17_quick_and_bug_workflows_readme_phase_1",
-      "confidence_score": 1.0
+      "target": "2026_06_17_quick_and_bug_workflows_readme_phase_1"
     },
     {
       "relation": "contains",
@@ -37985,9 +38075,9 @@
       "source_file": "docs/specs/2026-06-17-quick-and-bug-workflows/README.md",
       "source_location": "L42",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_17_quick_and_bug_workflows_readme_task_status",
-      "target": "2026_06_17_quick_and_bug_workflows_readme_phase_2",
-      "confidence_score": 1.0
+      "target": "2026_06_17_quick_and_bug_workflows_readme_phase_2"
     },
     {
       "relation": "contains",
@@ -38065,9 +38155,9 @@
       "source_file": "docs/specs/2026-06-17-quick-and-bug-workflows/implementation-log.md",
       "source_location": "L27",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_17_quick_and_bug_workflows_implementation_log_implementation_log_quick_and_bug_workflows",
-      "target": "2026_06_17_quick_and_bug_workflows_implementation_log_2026_06_17_phase_1_complete",
-      "confidence_score": 1.0
+      "target": "2026_06_17_quick_and_bug_workflows_implementation_log_2026_06_17_phase_1_complete"
     },
     {
       "relation": "contains",
@@ -38075,9 +38165,9 @@
       "source_file": "docs/specs/2026-06-17-quick-and-bug-workflows/implementation-log.md",
       "source_location": "L37",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_17_quick_and_bug_workflows_implementation_log_implementation_log_quick_and_bug_workflows",
-      "target": "2026_06_17_quick_and_bug_workflows_implementation_log_2026_06_17_phase_2_complete",
-      "confidence_score": 1.0
+      "target": "2026_06_17_quick_and_bug_workflows_implementation_log_2026_06_17_phase_2_complete"
     },
     {
       "relation": "contains",
@@ -38245,9 +38335,9 @@
       "source_file": "docs/specs/2026-06-17-quick-and-bug-workflows/tasks/task-01-quick-change-skill.md",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tasks_task_01_quick_change_skill_task_01_quick_change_skill",
-      "target": "tasks_task_01_quick_change_skill_phase",
-      "confidence_score": 1.0
+      "target": "tasks_task_01_quick_change_skill_phase"
     },
     {
       "relation": "contains",
@@ -38415,9 +38505,9 @@
       "source_file": "docs/specs/2026-06-17-quick-and-bug-workflows/tasks/task-02-routing-and-docs.md",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tasks_task_02_routing_and_docs_task_02_routing_and_docs",
-      "target": "tasks_task_02_routing_and_docs_phase",
-      "confidence_score": 1.0
+      "target": "tasks_task_02_routing_and_docs_phase"
     },
     {
       "relation": "contains",
@@ -38575,9 +38665,9 @@
       "source_file": "docs/specs/2026-06-17-quick-and-bug-workflows/tasks/task-03-bug-lane-contract.md",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tasks_task_03_bug_lane_contract_task_03_bug_lane_contract",
-      "target": "tasks_task_03_bug_lane_contract_phase",
-      "confidence_score": 1.0
+      "target": "tasks_task_03_bug_lane_contract_phase"
     },
     {
       "relation": "contains",
@@ -38735,9 +38825,9 @@
       "source_file": "docs/specs/2026-06-17-quick-and-bug-workflows/tasks/task-04-verification-and-trigger-tests.md",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tasks_task_04_verification_and_trigger_tests_task_04_verification_and_trigger_tests",
-      "target": "tasks_task_04_verification_and_trigger_tests_phase",
-      "confidence_score": 1.0
+      "target": "tasks_task_04_verification_and_trigger_tests_phase"
     },
     {
       "relation": "contains",
@@ -38855,9 +38945,9 @@
       "source_file": "docs/specs/2026-06-20-engineering-skills-integration/README.md",
       "source_location": "L28",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_20_engineering_skills_integration_readme_engineering_skills_integration",
-      "target": "2026_06_20_engineering_skills_integration_readme_phases",
-      "confidence_score": 1.0
+      "target": "2026_06_20_engineering_skills_integration_readme_phases"
     },
     {
       "relation": "contains",
@@ -38925,9 +39015,9 @@
       "source_file": "docs/specs/2026-06-20-engineering-skills-integration/README.md",
       "source_location": "L39",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_20_engineering_skills_integration_readme_task_status",
-      "target": "2026_06_20_engineering_skills_integration_readme_phase_1",
-      "confidence_score": 1.0
+      "target": "2026_06_20_engineering_skills_integration_readme_phase_1"
     },
     {
       "relation": "contains",
@@ -38935,9 +39025,9 @@
       "source_file": "docs/specs/2026-06-20-engineering-skills-integration/README.md",
       "source_location": "L42",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_20_engineering_skills_integration_readme_task_status",
-      "target": "2026_06_20_engineering_skills_integration_readme_phase_2",
-      "confidence_score": 1.0
+      "target": "2026_06_20_engineering_skills_integration_readme_phase_2"
     },
     {
       "relation": "contains",
@@ -38945,9 +39035,9 @@
       "source_file": "docs/specs/2026-06-20-engineering-skills-integration/README.md",
       "source_location": "L45",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_20_engineering_skills_integration_readme_task_status",
-      "target": "2026_06_20_engineering_skills_integration_readme_phase_3",
-      "confidence_score": 1.0
+      "target": "2026_06_20_engineering_skills_integration_readme_phase_3"
     },
     {
       "relation": "contains",
@@ -38955,9 +39045,9 @@
       "source_file": "docs/specs/2026-06-20-engineering-skills-integration/README.md",
       "source_location": "L48",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "2026_06_20_engineering_skills_integration_readme_task_status",
-      "target": "2026_06_20_engineering_skills_integration_readme_phase_4",
-      "confidence_score": 1.0
+      "target": "2026_06_20_engineering_skills_integration_readme_phase_4"
     },
     {
       "relation": "contains",
@@ -39125,9 +39215,9 @@
       "source_file": "docs/specs/2026-06-20-engineering-skills-integration/tasks/task-01-skill-trigger-tests.md",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tasks_task_01_skill_trigger_tests_task_01_skill_trigger_tests",
-      "target": "tasks_task_01_skill_trigger_tests_phase",
-      "confidence_score": 1.0
+      "target": "tasks_task_01_skill_trigger_tests_phase"
     },
     {
       "relation": "contains",
@@ -39305,9 +39395,9 @@
       "source_file": "docs/specs/2026-06-20-engineering-skills-integration/tasks/task-02-new-engineering-skills.md",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tasks_task_02_new_engineering_skills_task_02_new_engineering_skills",
-      "target": "tasks_task_02_new_engineering_skills_phase",
-      "confidence_score": 1.0
+      "target": "tasks_task_02_new_engineering_skills_phase"
     },
     {
       "relation": "contains",
@@ -39485,9 +39575,9 @@
       "source_file": "docs/specs/2026-06-20-engineering-skills-integration/tasks/task-03-workflow-integration.md",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tasks_task_03_workflow_integration_task_03_workflow_integration",
-      "target": "tasks_task_03_workflow_integration_phase",
-      "confidence_score": 1.0
+      "target": "tasks_task_03_workflow_integration_phase"
     },
     {
       "relation": "contains",
@@ -39665,9 +39755,9 @@
       "source_file": "docs/specs/2026-06-20-engineering-skills-integration/tasks/task-04-verification-surfaces.md",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tasks_task_04_verification_surfaces_task_04_verification_surfaces",
-      "target": "tasks_task_04_verification_surfaces_phase",
-      "confidence_score": 1.0
+      "target": "tasks_task_04_verification_surfaces_phase"
     },
     {
       "relation": "contains",
@@ -40325,9 +40415,9 @@
       "source_file": "skills/build-feature/SKILL.md",
       "source_location": "L101",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "build_feature_skill_orchestration",
-      "target": "build_feature_skill_step_2_process_each_phase",
-      "confidence_score": 1.0
+      "target": "build_feature_skill_step_2_process_each_phase"
     },
     {
       "relation": "contains",
@@ -40345,9 +40435,9 @@
       "source_file": "skills/build-feature/SKILL.md",
       "source_location": "L107",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "build_feature_skill_orchestration",
-      "target": "build_feature_skill_step_3_prepare_phase_tasks",
-      "confidence_score": 1.0
+      "target": "build_feature_skill_step_3_prepare_phase_tasks"
     },
     {
       "relation": "contains",
@@ -40365,9 +40455,9 @@
       "source_file": "skills/build-feature/SKILL.md",
       "source_location": "L125",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "build_feature_skill_orchestration",
-      "target": "build_feature_skill_step_3a_phase_risk_preflight",
-      "confidence_score": 1.0
+      "target": "build_feature_skill_step_3a_phase_risk_preflight"
     },
     {
       "relation": "contains",
@@ -40445,9 +40535,9 @@
       "source_file": "skills/build-feature/SKILL.md",
       "source_location": "L283",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "build_feature_skill_orchestration",
-      "target": "build_feature_skill_step_8_complete_the_phase",
-      "confidence_score": 1.0
+      "target": "build_feature_skill_step_8_complete_the_phase"
     },
     {
       "relation": "contains",
@@ -41438,6 +41528,96 @@
       "confidence_score": 1.0,
       "source": "grill_with_docs_skill_grill_with_docs",
       "target": "grill_with_docs_skill_when_to_use"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills/maintainability-review/SKILL.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "maintainability_review_skill",
+      "target": "maintainability_review_skill_maintainability_review",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills/maintainability-review/SKILL.md",
+      "source_location": "L103",
+      "weight": 1.0,
+      "source": "maintainability_review_skill_maintainability_review",
+      "target": "maintainability_review_skill_approval_bar",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills/maintainability-review/SKILL.md",
+      "source_location": "L82",
+      "weight": 1.0,
+      "source": "maintainability_review_skill_maintainability_review",
+      "target": "maintainability_review_skill_boundaries",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills/maintainability-review/SKILL.md",
+      "source_location": "L91",
+      "weight": 1.0,
+      "source": "maintainability_review_skill_maintainability_review",
+      "target": "maintainability_review_skill_output",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills/maintainability-review/SKILL.md",
+      "source_location": "L67",
+      "weight": 1.0,
+      "source": "maintainability_review_skill_maintainability_review",
+      "target": "maintainability_review_skill_preferred_remedies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills/maintainability-review/SKILL.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "maintainability_review_skill_maintainability_review",
+      "target": "maintainability_review_skill_process",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills/maintainability-review/SKILL.md",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "maintainability_review_skill_maintainability_review",
+      "target": "maintainability_review_skill_review_priorities",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills/maintainability-review/SKILL.md",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "maintainability_review_skill_maintainability_review",
+      "target": "maintainability_review_skill_what_to_check",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skills/maintainability-review/SKILL.md",
+      "source_location": "L50",
+      "weight": 1.0,
+      "source": "maintainability_review_skill_maintainability_review",
+      "target": "maintainability_review_skill_what_to_flag_aggressively",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -43565,9 +43745,9 @@
       "source_file": "skills/using-s-kit/SKILL.md",
       "source_location": "L52",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "using_s_kit_skill",
-      "target": "using_s_kit_skill_domain_docs_contract",
-      "confidence_score": 1.0
+      "target": "using_s_kit_skill_domain_docs_contract"
     },
     {
       "relation": "contains",
@@ -48321,5 +48501,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "030cad80e8d2562ae6a5aed69c5814c3705c36b0"
+  "built_at_commit": "6601635f2084f799adfbc5689826332f890eec87"
 }
